@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-montserrat);
+}
+
+h1 {
+	font-family: var(--font-dancing-script);
+	font-weight: 300;
+}
+
+h2 {
+	font-weight: 200;
+}
