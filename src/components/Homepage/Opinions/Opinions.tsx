@@ -1,7 +1,9 @@
+import styles from './styles/styles.module.scss';
+
 export default function OpinionsSection() {
 	return (
-		<div>
+		<section className={styles.opinions}>
 			<h2>Opinie</h2>
-		</div>
+		</section>
 	);
 }
