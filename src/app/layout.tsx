@@ -1,5 +1,7 @@
 import { Montserrat, Dancing_Script } from 'next/font/google';
 import type { Metadata } from 'next';
+import Providers from '@/context/Providers';
+
 import '../styles/globals.scss';
 
 const montserrat = Montserrat({
@@ -27,7 +29,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pl'>
-			<body className={`${montserrat.variable} ${dancingScript.variable}`}>{children}</body>
+			<body className={`${montserrat.variable} ${dancingScript.variable}`}>
+				<Providers>{children}</Providers>
+			</body>
 		</html>
 	);
 }

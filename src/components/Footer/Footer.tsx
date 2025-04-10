@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useFooterLinksContext } from '@/hooks/useFooterLinksContext';
 import { footerHomeItems, footerMoreItems, footerOfferItems } from './footerItems/footerItems';
 import { FaFacebookSquare, FaInstagram, FaRegCopyright } from 'react-icons/fa';
 
@@ -6,6 +9,8 @@ import styles from './styles/styles.module.scss';
 
 export default function Footer() {
 	const currentYear = new Date().getFullYear();
+
+	const { showSpecialLinks } = useFooterLinksContext();
 
 	return (
 		<footer className={styles.footer}>
@@ -26,11 +31,19 @@ export default function Footer() {
 				<div className={styles.footer__box}>
 					<h3>Home</h3>
 					<ul>
-						{footerHomeItems.map((item, id) => (
-							<li key={id}>
-								<Link href={item.href}>{item.content}</Link>
+						{!showSpecialLinks ? (
+							<>
+								{footerHomeItems.map((item, id) => (
+									<li key={id}>
+										<Link href={item.href}>{item.content}</Link>
+									</li>
+								))}
+							</>
+						) : (
+							<li>
+								<Link href='/'>Strona główna</Link>
 							</li>
-						))}
+						)}
 					</ul>
 				</div>
 				<div className={styles.footer__box}>
