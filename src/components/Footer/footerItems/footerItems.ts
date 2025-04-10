@@ -1,7 +1,7 @@
 import { FooterItemsModel } from '@/models/footer.model';
 
 export const footerHomeItems: FooterItemsModel[] = [
-	{ href: '#o-mnie', content: 'O mnie' },
+	{ href: '#pomysl', content: 'Pomysł' },
 	{ href: '#oferta', content: 'Oferta' },
 	{ href: '#opinie', content: 'Opinie' },
 	{ href: '#blog', content: 'Blog' },
