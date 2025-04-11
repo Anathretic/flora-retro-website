@@ -3,7 +3,7 @@ import { NavbarTitleModel } from '@/models/header.model';
 
 import styles from '../styles/styles.module.scss';
 
-export const NavbarTitle: React.FC<NavbarTitleModel> = ({ divRef, isScrolled }) => {
+export const NavbarTitle: React.FC<NavbarTitleModel> = ({ divRef }) => {
 	const scrollToTop = () => {
 		const { current } = divRef;
 
@@ -20,7 +20,7 @@ export const NavbarTitle: React.FC<NavbarTitleModel> = ({ divRef, isScrolled }) 
 
 	return (
 		<div className={styles.navbar__title} onClick={scrollToTop}>
-			<div className={`${styles['navbar__title-box']} ${isScrolled ? styles['white-color'] : styles['gray-color']}`}>
+			<div className={styles['navbar__title-box']}>
 				<p>Miejsce na logo</p>
 			</div>
 		</div>

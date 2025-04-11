@@ -50,7 +50,7 @@ export default function Header() {
 		<header ref={divRef}>
 			<div className={`${styles.header} ${isScrolled ? styles['header--is-scrolled'] : ''}`}>
 				<div className={styles.header__container}>
-					<NavbarTitle divRef={divRef} isScrolled={isScrolled} />
+					<NavbarTitle divRef={divRef} />
 					<div className={styles['navbar__mobile-container']}>
 						<HiMenuAlt4
 							className={styles['navbar__mobile-burger-btn']}

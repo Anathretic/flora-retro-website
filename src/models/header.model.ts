@@ -10,5 +10,4 @@ export interface NavbarItemModel extends DefaultNavbarModel {
 
 export interface NavbarTitleModel {
 	divRef: React.RefObject<HTMLDivElement | null>;
-	isScrolled: boolean;
 }
