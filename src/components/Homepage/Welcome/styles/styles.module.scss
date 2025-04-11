@@ -1,3 +1,104 @@
 .welcome {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	min-height: 100vh;
+	width: 100%;
+	background-image: url('../../../../images/sections/welcome-section/hero-bg.jpg');
+	background-size: cover;
+	background-position: center;
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		color: var(--white-color);
+	}
+
+	&__title {
+		font-size: 4.5rem;
+		font-weight: 300;
+		font-family: var(--font-fleur-de-leah);
+		text-align: center;
+	}
+
+	&__button {
+		display: block;
+	}
+
+	&__arrow {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%);
+		padding: 0.25em;
+	}
+
+	&__arrow-icon {
+		font-size: 52px;
+		color: var(--white-color);
+	}
+}
+
+@media screen and (min-width: 350px) {
+	.welcome {
+		&__title {
+			font-size: 5.5rem;
+		}
+	}
+}
+
+@media screen and (min-width: 400px) {
+	.welcome {
+		&__title {
+			font-size: 5.85rem;
+		}
+	}
+}
+
+@media screen and (min-width: 640px) {
+	.welcome {
+		&__title {
+			font-size: 7rem;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (min-height: 640px) {
+	.welcome {
+		background-image: url('../../../../images/sections/welcome-section/hero-bg-xl.jpg');
+
+		&__title {
+			font-size: 8rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.welcome {
+		padding-top: 40px;
+
+		&__title {
+			padding-bottom: 4rem;
+			font-size: 10rem;
+		}
+
+		&__arrow {
+			bottom: 2em;
+		}
+
+		&__arrow-icon {
+			font-size: 60px;
+		}
+	}
+}
+
+@media screen and (min-width: 1536px) {
+	.welcome {
+		&__title {
+			font-size: 11rem;
+		}
+	}
 }

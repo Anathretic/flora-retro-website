@@ -43,11 +43,15 @@
 		justify-content: center;
 	}
 
+	&__title-box {
+		color: var(--white-color);
+	}
+
 	&__desktop {
 		display: none;
 	}
 
-	&__navbar__mobile-container {
+	&__mobile-container {
 		display: block;
 	}
 
@@ -99,14 +103,6 @@
 	}
 }
 
-.white-color {
-	color: var(--white-color);
-}
-
-.gray-color {
-	color: var(--dark-blue-color);
-}
-
 @media screen and (max-height: 350px) {
 	.navbar {
 		&__mobile-list {
@@ -136,7 +132,7 @@
 			display: block;
 		}
 
-		&__navbar__mobile-container {
+		&__mobile-container {
 			display: none;
 		}
 

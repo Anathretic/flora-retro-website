@@ -1,4 +1,4 @@
-import { Montserrat, Dancing_Script } from 'next/font/google';
+import { Montserrat, Dancing_Script, Fleur_De_Leah } from 'next/font/google';
 import type { Metadata } from 'next';
 import Providers from '@/context/Providers';
 
@@ -16,6 +16,13 @@ const dancingScript = Dancing_Script({
 	variable: '--font-dancing-script',
 });
 
+const fleurDeLeah = Fleur_De_Leah({
+	subsets: ['latin'],
+	display: 'swap',
+	weight: '400',
+	variable: '--font-fleur-de-leah',
+});
+
 export const metadata: Metadata = {
 	title: 'Flora Retro - Pracownia Dekoracji - Izabela Szczygieł',
 	description:
@@ -29,7 +36,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pl'>
-			<body className={`${montserrat.variable} ${dancingScript.variable}`}>
+			<body className={`${montserrat.variable} ${dancingScript.variable} ${fleurDeLeah.variable}`}>
 				<Providers>{children}</Providers>
 			</body>
 		</html>
