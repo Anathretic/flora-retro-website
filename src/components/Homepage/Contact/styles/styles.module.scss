@@ -1,3 +1,166 @@
 .contact {
-	min-height: 100vh;
+	padding-top: 30px;
+	margin-bottom: 3rem;
+	width: 100%;
+
+	&__container,
+	&__title-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__title {
+		padding-bottom: 2.5rem;
+		font-size: 2.5rem;
+		text-align: center;
+		font-weight: 300;
+	}
+
+	&__title-box,
+	&__form {
+		width: 100%;
+	}
+
+	&__title-box,
+	&__form {
+		max-width: 600px;
+	}
+
+	&__title-box {
+		position: relative;
+		padding-bottom: 2.5rem;
+	}
+
+	&__title-subtext,
+	&__title-info-box {
+		width: 90%;
+		max-width: 400px;
+		text-align: center;
+	}
+
+	&__title-subtext {
+		padding: 1rem;
+		line-height: 1.8em;
+
+		span {
+			font-weight: 600;
+		}
+
+		a {
+			color: var(--dark-blue-color);
+			text-underline-offset: 2px;
+			transition: color 0.3s;
+		}
+	}
+
+	&__title-info-box {
+		padding: 2rem 0;
+		list-style-type: none;
+
+		li {
+			padding: 0.5em;
+			width: 100%;
+		}
+
+		p {
+			padding: 0.25rem 0;
+			font-weight: 300;
+		}
+
+		p:first-of-type {
+			font-weight: 600;
+		}
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.contact {
+		&__title-info-box {
+			li {
+				padding: 0.5em 0;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.contact {
+		&__title-info-box {
+			list-style-type: disc;
+			text-align: left;
+			max-width: 250px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (min-height: 500px) {
+	.contact {
+		margin-bottom: 4rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.contact {
+		&__title-subtext {
+			a:hover {
+				color: var(--gray-color);
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1358px) {
+	.contact {
+		padding-top: 70px;
+		margin-bottom: 5rem;
+
+		&__container,
+		&__title-box {
+			align-items: start;
+		}
+
+		&__container {
+			flex-direction: row;
+		}
+
+		&__title-box {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			margin-left: 4rem;
+		}
+
+		&__title,
+		&__title-subtext {
+			text-align: left;
+			font-size: 1.05rem;
+		}
+
+		&__title {
+			padding: 0.5rem 0.85rem 0 0.9rem;
+			margin-left: -3px;
+			width: 100%;
+			font-size: 3.5rem;
+		}
+
+		&__title-info-box {
+			padding: 2rem 2.25rem;
+			max-width: 400px;
+			font-size: 1.05rem;
+		}
+
+		&__form {
+			margin-right: 2.5rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1720px) {
+	.contact {
+		&__title-box {
+			margin-left: 2em;
+		}
+	}
 }
