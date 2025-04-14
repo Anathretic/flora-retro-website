@@ -18,20 +18,23 @@ export default function NotFound() {
 
 	return (
 		<>
-			<section className={styles.notfound}>
-				<div className={styles.notfound__container}>
-					<Image className={styles.notfound__img} src={NotFoundImage} alt='Obrazek informujący o braku strony' />
-					<div className={styles.notfound__box}>
-						<h1 className={styles.notfound__title}>Ups! Strony nie znaleziono..</h1>
-						<p className={styles.notfound__credits}>
-							Chyba link się nie zgadza.. Skorzystaj z przycisku poniżej i zacznij swoje poszukiwanie od głównej strony!
-						</p>
-						<Link href='/' className={styles.notfound__btn} aria-label='Powrót na stronę główną'>
-							Powrót
-						</Link>
+			<main>
+				<section className={styles.notfound}>
+					<div className={styles.notfound__container}>
+						<Image className={styles.notfound__img} src={NotFoundImage} alt='Obrazek informujący o braku strony' />
+						<div className={styles.notfound__box}>
+							<h1 className={styles.notfound__title}>Ups! Strony nie znaleziono..</h1>
+							<p className={styles.notfound__credits}>
+								Chyba link się nie zgadza.. Skorzystaj z przycisku poniżej i zacznij swoje poszukiwanie od głównej
+								strony!
+							</p>
+							<Link href='/' className={styles.notfound__btn} aria-label='Powrót na stronę główną'>
+								Powrót
+							</Link>
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</main>
 			<Footer />
 		</>
 	);
