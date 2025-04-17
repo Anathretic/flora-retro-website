@@ -1,3 +1,186 @@
 .idea {
-	min-height: 100vh;
+	position: relative;
+	padding: 30px 0 40px;
+	width: 100%;
+	overflow: hidden;
+
+	&__container,
+	&__content-container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&__container {
+		padding: 1em 0;
+		margin: 0 auto;
+		max-width: 2160px;
+	}
+
+	&__content-container {
+		padding: 1em 2em 2em;
+		text-align: center;
+	}
+
+	&__title {
+		padding-bottom: 2.5rem;
+		font-size: 2.5rem;
+		text-align: center;
+		font-weight: 300;
+	}
+
+	&__content-box {
+		padding: 2em 0;
+		width: 100%;
+		max-width: 350px;
+		text-align: left;
+		z-index: 10;
+
+		h3 {
+			padding-top: 1.25rem;
+			font-size: 1.5em;
+			font-weight: 400;
+		}
+
+		p {
+			padding: 1.25em 0 1em;
+			font-weight: 200;
+			line-height: 1.5em;
+		}
+
+		span {
+			font-weight: 500;
+		}
+	}
+
+	&__content-box:first-of-type {
+		padding: 0 0 2em;
+	}
+
+	&__content-box:last-of-type {
+		padding: 2em 0 0;
+	}
+
+	&__special-decoration {
+		height: 1px;
+		width: 50px;
+		color: var(--dark-blue-color);
+		border: 1px solid var(--dark-blue-color);
+		margin-bottom: 1em;
+	}
+
+	&__special-block {
+		position: absolute;
+		bottom: 0;
+		width: 40%;
+		height: 40px;
+		background-color: var(--dark-blue-color);
+
+		&--left {
+			left: -50px;
+			transform: skew(45deg);
+		}
+
+		&--right {
+			right: -50px;
+			transform: skew(-45deg);
+		}
+	}
+}
+
+@media screen and (min-width: 350px) {
+	.idea {
+		&__title {
+			font-size: 2.75rem;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.idea {
+		&__content-box {
+			max-width: 460px;
+		}
+
+		&__special-block {
+			width: 35%;
+			height: 50px;
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.idea {
+		&__container {
+			padding-top: 0;
+			padding-bottom: 3.2em;
+		}
+
+		&__title {
+			font-size: 3rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.idea {
+		&__container {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+@media screen and (min-width: 1358px) {
+	.idea {
+		padding-top: 70px;
+
+		&__content-container {
+			display: grid;
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+			padding: 4em 0 2em;
+			max-width: 1180px;
+		}
+
+		&__title {
+			padding: 0.5rem 0.85rem;
+			font-size: 3.5rem;
+		}
+
+		&__content-box {
+			align-self: start;
+			justify-self: center;
+			text-align: center;
+
+			h3 {
+				font-size: 1.6em;
+			}
+
+			p {
+				font-size: 1.05em;
+			}
+		}
+
+		&__content-box:first-of-type,
+		&__content-box:last-of-type {
+			padding: 2em 0;
+		}
+
+		&__special-decoration {
+			display: none;
+		}
+
+		&__special-block {
+			height: 45px;
+			width: 42%;
+
+			&--right {
+				display: none;
+			}
+		}
+	}
 }
