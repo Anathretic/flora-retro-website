@@ -1,7 +1,7 @@
 export const navbarItems = [
 	{
-		title: 'pomysł',
-		section: '/#pomysl',
+		title: 'idea',
+		section: '/#idea',
 	},
 	{
 		title: 'oferta',

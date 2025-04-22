@@ -1,0 +1,53 @@
+.carousel-animation {
+	animation: scroll-left 80s linear infinite;
+}
+
+@keyframes scroll-left {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-575%);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.carousel-animation {
+		animation: scroll-left 140s linear infinite;
+	}
+
+	@keyframes scroll-left {
+		0% {
+			transform: translateX(100%);
+		}
+		100% {
+			transform: translateX(-550%);
+		}
+	}
+}
+
+@media screen and (min-width: 1358px) {
+	.carousel-animation {
+		animation: scroll-left 180s linear infinite;
+	}
+
+	@keyframes scroll-left {
+		0% {
+			transform: translateX(100%);
+		}
+		100% {
+			transform: translateX(-340%);
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	@keyframes scroll-left {
+		0% {
+			transform: translateX(100%);
+		}
+		100% {
+			transform: translateX(-300%);
+		}
+	}
+}
