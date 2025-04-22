@@ -8,7 +8,7 @@ import { OpinionsDataModel } from '@/models/opinions.model';
 import styles from './styles/styles.module.scss';
 import animations from './styles/animations.module.scss';
 
-export default function Opinions() {
+export default function OpinionsSection() {
 	const [stopAnimation, setStopAnimation] = useState(false);
 
 	return (

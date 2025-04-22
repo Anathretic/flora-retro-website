@@ -3,7 +3,7 @@ import ContactForm from '@/components/Forms/ContactForm';
 
 import styles from './styles/styles.module.scss';
 
-export default function Contact() {
+export default function ContactSection() {
 	return (
 		<section className={styles.contact} id='kontakt'>
 			<div className={styles.contact__container}>
