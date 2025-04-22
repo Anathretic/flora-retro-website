@@ -3,12 +3,12 @@
 import { useEffect } from 'react';
 import { useFooterLinksContext } from '@/hooks/useFooterLinksContext';
 
-import BlogSection from './Blog/Blog';
-import ContactSection from './Contact/Contact';
+import WelcomeSection from './Welcome/Welcome';
 import IdeaSection from './Idea/Idea';
 import OfferSection from './Offer/Offer';
 import OpinionsSection from './Opinions/Opinions';
-import WelcomeSection from './Welcome/Welcome';
+import BlogSection from './Blog/Blog';
+import ContactSection from './Contact/Contact';
 
 export default function Homepage() {
 	const { setShowSpecialLinks } = useFooterLinksContext();
