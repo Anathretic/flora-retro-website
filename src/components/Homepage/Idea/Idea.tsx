@@ -4,7 +4,7 @@ import styles from './styles/styles.module.scss';
 
 export default function IdeaSection() {
 	return (
-		<section id='pomysl' className={styles.idea}>
+		<section id='idea' className={styles.idea}>
 			<div className={styles.idea__container}>
 				<h2 className={styles.idea__title}>Idea</h2>
 				<div className={styles['idea__content-container']}>

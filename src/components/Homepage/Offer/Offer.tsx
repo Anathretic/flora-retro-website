@@ -21,8 +21,6 @@ export default function OfferSection() {
 					))}
 				</div>
 			</div>
-			<div className={`${styles['offer__special-block']} ${styles['offer__special-block--left']}`} />
-			<div className={`${styles['offer__special-block']} ${styles['offer__special-block--right']}`} />
 		</section>
 	);
 }
