@@ -25,11 +25,11 @@ export default function PrivacyPolicyPage() {
 							<p>
 								Niniejsza Polityka Prywatności określa zasady zbierania, przetwarzania i ochrony danych osobowych
 								użytkowników strony internetowej Flora Retro - Pracownia Dekoracyjna (dalej: Strona), dostępnej pod
-								adresem: <Link href='/'>flora-retro.pl</Link>. Dbamy o ochronę prywatności naszych użytkowników i
-								zapewniamy najwyższy poziom bezpieczeństwa danych osobowych. Zbieranie danych osobowych odbywa się
-								zgodnie z przepisami prawa, w szczególności z Rozporządzeniem Parlamentu Europejskiego i Rady (UE)
-								2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych
-								osobowych (RODO).
+								adresem: <Link href='/'>flora-retro.pl</Link>. Dbam o ochronę prywatności moich użytkowników i zapewniam
+								najwyższy poziom bezpieczeństwa danych osobowych. Zbieranie danych osobowych odbywa się zgodnie z
+								przepisami prawa, w szczególności z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia
+								27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych
+								(RODO).
 							</p>
 						</div>
 						<div className={styles['terms-and-conditions__box']}>
@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
 						<div className={styles['terms-and-conditions__box']}>
 							<h2>3. Zakres zbieranych danych</h2>
 							<p>
-								Podczas korzystania z naszej strony internetowej, w tym formularzy kontaktowych, zbieramy dane osobowe w
+								Podczas korzystania z mojej strony internetowej, w tym formularzy kontaktowych, zbieram dane osobowe w
 								następujących przypadkach:
 							</p>
 							<ul>
@@ -112,10 +112,10 @@ export default function PrivacyPolicyPage() {
 						<div className={styles['terms-and-conditions__box']}>
 							<h2>8. Google reCAPTCHA</h2>
 							<p>
-								Na naszej stronie internetowej korzystamy z usługi Google reCAPTCHA, której celem jest ochrona
-								formularzy przed automatycznym wypełnianiem przez boty. Google reCAPTCHA zbiera dane dotyczące
-								urządzenia użytkownika, takie jak adres IP, dane o przeglądarce, a także inne dane techniczne niezbędne
-								do weryfikacji. Przetwarzanie tych danych odbywa się zgodnie z polityką prywatności Google, dostępną pod
+								Na mojej stronie internetowej korzystamy z usługi Google reCAPTCHA, której celem jest ochrona formularzy
+								przed automatycznym wypełnianiem przez boty. Google reCAPTCHA zbiera dane dotyczące urządzenia
+								użytkownika, takie jak adres IP, dane o przeglądarce, a także inne dane techniczne niezbędne do
+								weryfikacji. Przetwarzanie tych danych odbywa się zgodnie z polityką prywatności Google, dostępną pod
 								adresem:{' '}
 								<a
 									href='https://cloud.google.com/security/products/recaptcha'
@@ -137,14 +137,14 @@ export default function PrivacyPolicyPage() {
 								<li>Prawo do sprzeciwu wobec przetwarzania danych</li>
 							</ul>
 							<p>
-								Aby skorzystać ze swoich praw, skontaktuj się z nami pod adresem e-mail: <span>flora_retro@o2.pl</span>
+								Aby skorzystać ze swoich praw, skontaktuj się ze mną pod adresem e-mail: <span>flora_retro@o2.pl</span>
 							</p>
 						</div>
 						<div className={styles['terms-and-conditions__box']}>
 							<h2>10. Bezpieczeństwo danych</h2>
 							<p>
-								Dokładamy wszelkich starań, aby chronić Twoje dane osobowe przed dostępem osób nieupoważnionych, ich
-								utratą, zniszczeniem lub uszkodzeniem. Stosujemy odpowiednie środki techniczne i organizacyjne w celu
+								Dokładam wszelkich starań, aby chronić Twoje dane osobowe przed dostępem osób nieupoważnionych, ich
+								utratą, zniszczeniem lub uszkodzeniem. Stosuję odpowiednie środki techniczne i organizacyjne w celu
 								zapewnienia bezpieczeństwa przetwarzanych danych.
 							</p>
 						</div>
@@ -152,7 +152,7 @@ export default function PrivacyPolicyPage() {
 							<h2>11. Zmiany w Polityce Prywatności</h2>
 							<p>
 								Niniejsza polityka prywatności może ulec zmianie. W przypadku istotnych zmian w sposobie przetwarzania
-								Twoich danych osobowych, poinformujemy Cię o tym poprzez zamieszczenie odpowiedniej informacji na naszej
+								Twoich danych osobowych, poinformuję Cię o tym poprzez zamieszczenie odpowiedniej informacji na mojej
 								stronie internetowej. Zmiany wchodzą w życie w momencie ich opublikowania na stronie.
 							</p>
 						</div>

@@ -19,17 +19,21 @@
 		flex-direction: column;
 	}
 
-	&__container {
+	&__container,
+	&__wrapper {
 		width: 100%;
+	}
+
+	&__container {
 		max-width: 2160px;
 	}
 
 	&__wrapper {
 		padding: 1em 0 50px;
-		width: 100%;
 	}
 
 	&__title {
+		padding-bottom: 2.5rem;
 		color: var(--white-color);
 		font-size: 2.5rem;
 		text-align: center;
@@ -107,7 +111,7 @@
 }
 
 @media screen and (min-width: 350px) {
-	.idea {
+	.offer {
 		&__title {
 			font-size: 2.75rem;
 		}
@@ -140,10 +144,6 @@
 
 @media screen and (min-width: 768px) {
 	.offer {
-		&__title {
-			font-size: 2.75rem;
-		}
-
 		&__box {
 			width: 50%;
 		}
@@ -195,8 +195,8 @@
 		}
 
 		&__box {
-			width: 30%;
-			max-width: 420px;
+			width: 50%;
+			max-width: 450px;
 		}
 
 		&__box-special-text {
@@ -224,7 +224,6 @@
 		&__box {
 			padding: 2em 1em;
 			margin: 0 1em;
-			width: 35%;
 
 			a {
 				font-size: 1.1em;
@@ -237,7 +236,6 @@
 	.offer {
 		&__box {
 			margin: 0 3em;
-			max-width: 430px;
 		}
 	}
 }
