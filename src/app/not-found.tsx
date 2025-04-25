@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useFooterLinksContext } from '@/hooks/useFooterLinksContext';
 import { Footer } from '@/components';
 
-import NotFoundImage from '../images/not-found-image.png';
+import NotFoundImage from '../images/subpages/not-found-subpage/not-found-image.png';
 import styles from '../styles/not-found/styles.module.scss';
 
 export default function NotFound() {
