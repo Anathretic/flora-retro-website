@@ -1,4 +1,4 @@
-import BlogCarousel from './components/BlogCarousel';
+import Carousel from '@/components/Carousel/Carousel';
 import { blogData } from './data/blogData';
 
 import styles from './styles/styles.module.scss';
@@ -9,7 +9,7 @@ export default function BlogSection() {
 			<div className={styles.blog__container}>
 				<div className={styles.blog__wrapper}>
 					<h2 className={styles.blog__title}>Blog</h2>
-					<BlogCarousel slides={blogData} />
+					<Carousel slides={blogData} />
 				</div>
 			</div>
 			<div className={`${styles['blog__special-block']} ${styles['blog__special-block--left']}`} />

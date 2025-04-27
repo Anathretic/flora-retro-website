@@ -1,16 +1,17 @@
-export interface BlogSlideDataBoxModel {
+export interface SlideDataBoxModel {
 	id: number;
 	main_title: string;
+	image: boolean;
 }
 
-export interface BlogSlideModel {
-	slide: BlogSlideDataBoxModel;
+export interface SlideModel {
+	slide: SlideDataBoxModel;
 	current: number;
 	handleSlideClick: (id: number) => void;
 }
 
 export interface SliderModel {
-	slides: BlogSlideDataBoxModel[];
+	slides: SlideDataBoxModel[];
 }
 
 export interface SliderControlModel {

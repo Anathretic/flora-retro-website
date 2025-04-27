@@ -27,7 +27,7 @@ export const offerData = [
 	{
 		id: 1,
 		offer: {
-			subpage: 'wynajem-auta',
+			subpage: 'wynajem-samochodu',
 			text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati pariatur recusandae, excepturi eligendi, corporis sapiente minima qui quo ratione velit sunt illo facere cumque dignissimos unde eos itaque animi veniam.',
 			title: 'Wynajem',
 			offerPlusesArray: [
