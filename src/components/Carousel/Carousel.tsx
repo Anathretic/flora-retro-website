@@ -3,12 +3,12 @@
 import { useState } from 'react';
 import Slide from './components/Slide';
 import SliderControl from './components/SliderControl';
-import { SliderModel } from '@/models/blogCarousel.model';
+import { SliderModel } from '@/models/carousel.model';
 
 import styles from './styles/styles.module.scss';
 
-export default function BlogCarousel({ slides }: SliderModel) {
-	const [current, setCurrent] = useState(0);
+export default function Carousel({ slides }: SliderModel) {
+	const [current, setCurrent] = useState(1);
 
 	const handlePreviousClick = () => {
 		const previous = current - 1;

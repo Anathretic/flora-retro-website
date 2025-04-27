@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { useRef } from 'react';
-import { BlogSlideModel } from '@/models/blogCarousel.model';
+import { SlideModel } from '@/models/carousel.model';
 import { scrollToTop } from '@/utils/scrollToTopUtils';
 
 import styles from '../styles/styles.module.scss';
 
-export default function Slide({ slide, current, handleSlideClick }: BlogSlideModel) {
-	const { id, main_title } = slide;
+export default function Slide({ slide, current, handleSlideClick }: SlideModel) {
+	const { id, main_title, image } = slide;
 	const slideRef = useRef<HTMLLIElement>(null);
 
 	const handleMouseMove = (e: React.MouseEvent) => {
@@ -39,14 +39,16 @@ export default function Slide({ slide, current, handleSlideClick }: BlogSlideMod
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}>
 			<div className={styles['slide__image-wrapper']}>
-				<div className={`${styles.slide__image} ${styles[`slide__image--${id}`]}`} />
+				<div className={`${styles.slide__image} ${styles[`slide__image--${!image ? id : `${id}-car`}`]}`} />
 			</div>
-			<article className={styles.slide__content}>
-				<h3 className={styles.slide__headline}>{main_title}</h3>
-				<Link href='/' className={`${styles.slide__action} ${styles.btn}`} onClick={scrollToTop}>
-					Przeczytaj
-				</Link>
-			</article>
+			{!image && (
+				<article className={styles.slide__content}>
+					<h3 className={styles.slide__headline}>{main_title}</h3>
+					<Link href='/' className={`${styles.slide__action} ${styles.btn}`} onClick={scrollToTop}>
+						Przeczytaj
+					</Link>
+				</article>
+			)}
 		</li>
 	);
 }

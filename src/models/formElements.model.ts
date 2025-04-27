@@ -29,3 +29,7 @@ export interface SubmitModel {
 	buttonText: string;
 	setButtonText: Dispatch<SetStateAction<string>>;
 }
+
+export interface ReturnButtonModel {
+	isLoading: boolean;
+}

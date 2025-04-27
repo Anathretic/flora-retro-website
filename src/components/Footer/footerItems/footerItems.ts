@@ -10,7 +10,7 @@ export const footerHomeItems: FooterItemsModel[] = [
 
 export const footerOfferItems: FooterItemsModel[] = [
 	{ href: '/dekoracje', content: 'Dekoracje' },
-	{ href: '/wynajem-auta', content: 'Wynajem auta' },
+	{ href: '/wynajem-samochodu', content: 'Wynajem samochodu' },
 ];
 
 export const footerMoreItems: FooterItemsModel[] = [

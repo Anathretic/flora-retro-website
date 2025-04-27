@@ -8,7 +8,13 @@ import { contactFormInputsConfig } from './inputsConfig/inputsConfig';
 import { useFormSubmits } from '@/hooks/useFormSubmits';
 import { contactSchema } from '@/schemas/schemas';
 import { ContactFormModel } from '@/models/form.model';
-import { FormSubmit, InputElement, ReCaptchaV2Component, TextareaElement } from './components/FormElements';
+import {
+	FormSubmit,
+	InputElement,
+	ReCaptchaV2Component,
+	ReturnButton,
+	TextareaElement,
+} from './components/FormElements';
 
 import styles from '../Homepage/Contact/styles/styles.module.scss';
 
@@ -18,6 +24,7 @@ export default function ContactForm() {
 	const [buttonText, setButtonText] = useState(initialButtonState);
 	const [reCaptchaErrorValue, setReCaptchaErrorValue] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
+	const [isSubpage, setIsSubpage] = useState(false);
 	const {
 		register,
 		handleSubmit,
@@ -48,6 +55,14 @@ export default function ContactForm() {
 		}
 	}, []);
 
+	const checkPathnameValue = () => {
+		setIsSubpage(document.location.pathname !== '/');
+	};
+
+	useEffect(() => {
+		checkPathnameValue();
+	});
+
 	return (
 		<form className={styles.contact__form} onSubmit={handleSubmit(ContactSubmit)}>
 			{contactFormInputs.map((input, id) => (
@@ -72,6 +87,7 @@ export default function ContactForm() {
 			/>
 			<ReCaptchaV2Component refCaptcha={refCaptcha} reCaptchaErrorValue={reCaptchaErrorValue} />
 			<FormSubmit buttonText={buttonText} setButtonText={setButtonText} isLoading={isLoading} />
+			{isSubpage && <ReturnButton isLoading={isLoading} />}
 		</form>
 	);
 }

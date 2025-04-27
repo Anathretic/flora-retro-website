@@ -1,8 +1,10 @@
+import Link from 'next/link';
 import React, { useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { InputAndTextareaModel, ReCaptchaV2Model, SubmitModel } from '@/models/formElements.model';
 import Loader from '@/components/Loader/Loader';
+import { scrollToTop } from '@/utils/scrollToTopUtils';
+import { InputAndTextareaModel, ReCaptchaV2Model, ReturnButtonModel, SubmitModel } from '@/models/formElements.model';
 
 import styles from '../styles/styles.module.scss';
 
@@ -87,6 +89,19 @@ export const FormSubmit: React.FC<SubmitModel> = ({ isLoading, buttonText, setBu
 	return (
 		<div className={styles.form__box}>
 			{isLoading ? <Loader /> : <input className={styles.form__submit} type='submit' value={buttonText} />}
+		</div>
+	);
+};
+
+export const ReturnButton: React.FC<ReturnButtonModel> = ({ isLoading }) => {
+	return (
+		<div className={styles.form__box}>
+			<Link
+				className={`${styles['form__return-btn']} ${isLoading && styles['form__return-btn--opacity']}`}
+				href='/'
+				onClick={scrollToTop}>
+				Powrót
+			</Link>
 		</div>
 	);
 };
