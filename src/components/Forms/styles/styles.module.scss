@@ -28,6 +28,7 @@
 
 	&__input,
 	&__textarea {
+		position: relative;
 		padding: 0.95em 3.25em 0.95em 0.75em;
 		width: 100%;
 		color: var(--dark-blue-color);

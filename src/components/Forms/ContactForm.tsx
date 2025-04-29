@@ -16,12 +16,12 @@ import {
 	TextareaElement,
 } from './components/FormElements';
 
+import * as yup from 'yup';
+
 import styles from '../Homepage/Contact/styles/styles.module.scss';
 
-const initialButtonState = 'Wyślij';
-
 export default function ContactForm() {
-	const [buttonText, setButtonText] = useState(initialButtonState);
+	const [buttonText, setButtonText] = useState('Wyślij');
 	const [reCaptchaErrorValue, setReCaptchaErrorValue] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
 	const [isSubpage, setIsSubpage] = useState(false);
@@ -34,9 +34,11 @@ export default function ContactForm() {
 		defaultValues: {
 			firstname: '',
 			email: '',
+			phone: '',
 			message: '',
+			date: '',
 		},
-		resolver: yupResolver(contactSchema),
+		resolver: yupResolver(contactSchema(isSubpage) as yup.ObjectSchema<ContactFormModel>),
 	});
 
 	const refCaptcha = useRef<ReCAPTCHA>(null);
@@ -47,7 +49,7 @@ export default function ContactForm() {
 		setIsLoading,
 		refCaptcha,
 	});
-	const contactFormInputs = contactFormInputsConfig(errors, register);
+	const contactFormInputs = contactFormInputsConfig(errors, register, isSubpage);
 
 	useEffect(() => {
 		if (refCaptcha.current?.getValue() === '') {
@@ -74,6 +76,7 @@ export default function ContactForm() {
 					placeholder={input.placeholder}
 					errorMessage={input.errorMessage}
 					aria-invalid={input.isInvalid}
+					min={input.min}
 					{...input.register}
 				/>
 			))}

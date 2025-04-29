@@ -43,6 +43,11 @@ body {
 	-webkit-backdrop-filter: blur(5px);
 }
 
+input[type='date']::-webkit-calendar-picker-indicator {
+	position: absolute;
+	right: 20px;
+}
+
 /* Gallery mosaic */
 
 .image-mosaic {

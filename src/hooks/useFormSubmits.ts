@@ -9,7 +9,7 @@ export function useFormSubmits<T extends FormTypes>({
 	setIsLoading,
 	refCaptcha,
 }: UseFormSubmitsModel<T>) {
-	const ContactSubmit: SubmitHandler<ContactFormModel> = async ({ firstname, email, message }) => {
+	const ContactSubmit: SubmitHandler<ContactFormModel> = async ({ firstname, email, phone, date, message }) => {
 		setIsLoading(true);
 		setReCaptchaErrorValue('');
 
@@ -21,6 +21,8 @@ export function useFormSubmits<T extends FormTypes>({
 		const params = {
 			firstname,
 			email,
+			phone,
+			date,
 			message,
 			'g-recaptcha-response': token,
 		};

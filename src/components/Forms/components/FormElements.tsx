@@ -9,7 +9,7 @@ import { InputAndTextareaModel, ReCaptchaV2Model, ReturnButtonModel, SubmitModel
 import styles from '../styles/styles.module.scss';
 
 export const InputElement: React.FC<InputAndTextareaModel> = React.forwardRef<HTMLInputElement, InputAndTextareaModel>(
-	({ label, inputName, type, placeholder, value, readOnly, errorMessage, ...props }, ref) => {
+	({ label, inputName, type, placeholder, value, readOnly, errorMessage, min, ...props }, ref) => {
 		return (
 			<div className={styles.form__box}>
 				<label className={styles.form__label} htmlFor={inputName}>
@@ -24,6 +24,7 @@ export const InputElement: React.FC<InputAndTextareaModel> = React.forwardRef<HT
 					readOnly={readOnly}
 					ref={ref}
 					autoComplete='off'
+					min={min ? min : undefined}
 					{...props}
 				/>
 				<p className={styles['form__input-error']}>{`${errorMessage === undefined ? '' : errorMessage}`}</p>
