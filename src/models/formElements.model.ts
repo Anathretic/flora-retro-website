@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
-import { FieldError, FieldErrorsImpl, Merge } from 'react-hook-form';
+import { FieldError, FieldErrorsImpl, Merge, UseFormRegister } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { ContactFormModel } from './form.model';
 
@@ -11,10 +11,19 @@ interface DefaultModel {
 	errorMessage: ErrorMessage;
 }
 
-export interface InputAndTextareaModel extends DefaultModel {
+interface InputDefaultModel extends DefaultModel {
 	inputName: string;
 	type?: string;
 	placeholder?: string;
+	min?: string | number;
+}
+
+export interface ContactFormInputConfigModel extends InputDefaultModel {
+	isInvalid: boolean;
+	register: ReturnType<UseFormRegister<ContactFormModel>>;
+}
+
+export interface InputAndTextareaModel extends InputDefaultModel {
 	value?: string;
 	readOnly?: boolean;
 }
