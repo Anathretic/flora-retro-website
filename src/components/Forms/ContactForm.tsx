@@ -42,13 +42,15 @@ export default function ContactForm() {
 	});
 
 	const refCaptcha = useRef<ReCAPTCHA>(null);
-	const { ContactSubmit } = useFormSubmits<ContactFormModel>({
+
+	const { contactSubmit } = useFormSubmits<ContactFormModel>({
 		reset,
 		setButtonText,
 		setReCaptchaErrorValue,
 		setIsLoading,
 		refCaptcha,
 	});
+
 	const contactFormInputs = contactFormInputsConfig(errors, register, isSubpage);
 
 	useEffect(() => {
@@ -66,7 +68,7 @@ export default function ContactForm() {
 	});
 
 	return (
-		<form className={styles.contact__form} onSubmit={handleSubmit(ContactSubmit)}>
+		<form className={styles.contact__form} onSubmit={handleSubmit(contactSubmit)}>
 			{contactFormInputs.map((input, id) => (
 				<InputElement
 					key={id}

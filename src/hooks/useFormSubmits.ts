@@ -9,7 +9,7 @@ export function useFormSubmits<T extends FormTypes>({
 	setIsLoading,
 	refCaptcha,
 }: UseFormSubmitsModel<T>) {
-	const ContactSubmit: SubmitHandler<ContactFormModel> = async ({ firstname, email, phone, date, message }) => {
+	const contactSubmit: SubmitHandler<ContactFormModel> = async ({ firstname, email, phone, date, message }) => {
 		setIsLoading(true);
 		setReCaptchaErrorValue('');
 
@@ -54,5 +54,5 @@ export function useFormSubmits<T extends FormTypes>({
 		}
 	};
 
-	return { ContactSubmit };
+	return { contactSubmit };
 }
