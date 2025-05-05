@@ -2,6 +2,7 @@ export interface SlideDataBoxModel {
 	id: number;
 	main_title: string;
 	image: boolean;
+	href?: string;
 }
 
 export interface SlideModel {
