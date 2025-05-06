@@ -11,12 +11,12 @@ export default function OfferBox({ subpage, text, title, offerPlusesArray }: Off
 			<p className={styles['offer__box-text']}>{text}</p>
 			<p className={styles['offer__box-special-text']}>Dlaczego my?</p>
 			<ul>
-				{offerPlusesArray.map((data, id) => (
+				{offerPlusesArray?.map((data, id) => (
 					<li key={id}>{data.content}</li>
 				))}
 			</ul>
 			<Link
-				href={`/${subpage}`}
+				href={subpage}
 				className={styles['offer__box-button']}
 				onClick={() => {
 					scrollToTop();

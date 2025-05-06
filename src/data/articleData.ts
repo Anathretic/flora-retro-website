@@ -4,7 +4,8 @@ export const articleData = [
 		title: 'Magiczne dekoracje ślubne',
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt quasi molestiae eum sunt ut. Animi nesciunt quasi molestiae eum sunt ut.',
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
-		href: 'artykuly-i-porady/magiczne-dekoracje-slubne',
+		isOnlyImage: false,
+		href: '/artykuly-i-porady/magiczne-dekoracje-slubne',
 		date: '02-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',
@@ -23,7 +24,8 @@ export const articleData = [
 		title: 'Top 5 dekoracji sali weselnej',
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt quasi molestiae eum sunt ut. Animi nesciunt quasi molestiae eum sunt ut.',
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
-		href: 'artykuly-i-porady/top-5-dekoracji-sali-weselnej',
+		isOnlyImage: false,
+		href: '/artykuly-i-porady/top-5-dekoracji-sali-weselnej',
 		date: '04-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',
@@ -42,7 +44,8 @@ export const articleData = [
 		title: 'Jak wybrać auto do ślubu?',
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt quasi molestiae eum sunt ut. Animi nesciunt quasi molestiae eum sunt ut.',
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
-		href: 'artykuly-i-porady/jak-wybrac-auto-do-slubu',
+		isOnlyImage: false,
+		href: '/artykuly-i-porady/jak-wybrac-auto-do-slubu',
 		date: '08-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',
@@ -61,7 +64,8 @@ export const articleData = [
 		title: 'Dekoracje na przyjęcia',
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt quasi molestiae eum sunt ut. Animi nesciunt quasi molestiae eum sunt ut.',
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
-		href: 'artykuly-i-porady/dekoracje-na-przyjecia',
+		isOnlyImage: false,
+		href: '/artykuly-i-porady/dekoracje-na-przyjecia',
 		date: '10-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',
