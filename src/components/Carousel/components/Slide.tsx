@@ -6,7 +6,7 @@ import { scrollToTop } from '@/utils/scrollToTopUtils';
 import styles from '../styles/styles.module.scss';
 
 export default function Slide({ slide, current, handleSlideClick }: SlideModel) {
-	const { id, main_title, image, href } = slide;
+	const { id, title, isOnlyImage, href } = slide;
 	const slideRef = useRef<HTMLLIElement>(null);
 
 	const handleMouseMove = (e: React.MouseEvent) => {
@@ -39,11 +39,11 @@ export default function Slide({ slide, current, handleSlideClick }: SlideModel) 
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}>
 			<div className={styles['slide__image-wrapper']}>
-				<div className={`${styles.slide__image} ${styles[`slide__image--${!image ? id : `${id}-car`}`]}`} />
+				<div className={`${styles.slide__image} ${styles[`slide__image--${!isOnlyImage ? id : `${id}-car`}`]}`} />
 			</div>
-			{!image && (
+			{!isOnlyImage && (
 				<article className={styles.slide__content}>
-					<h3 className={styles.slide__headline}>{main_title}</h3>
+					<h3 className={styles.slide__headline}>{title}</h3>
 					<Link href={`${href}`} className={`${styles.slide__action} ${styles.btn}`} onClick={scrollToTop}>
 						Przeczytaj
 					</Link>

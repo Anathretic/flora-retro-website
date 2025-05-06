@@ -14,7 +14,7 @@ export default function ArticleArrayItem({ title, text, specialText, href }: Art
 				{text}
 				<span>{specialText}</span>
 			</p>
-			<Link href={`/${href}`} onClick={scrollToTop}>
+			<Link href={`${href}`} onClick={scrollToTop}>
 				Przeczytaj
 			</Link>
 		</div>

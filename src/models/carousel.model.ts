@@ -1,7 +1,7 @@
 export interface SlideDataBoxModel {
 	id: number;
-	main_title: string;
-	image: boolean;
+	title: string;
+	isOnlyImage: boolean;
 	href?: string;
 }
 
