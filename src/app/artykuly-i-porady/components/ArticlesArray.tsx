@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import ArticleItem from './ArticleItem';
 import { ArticleItemModel } from '@/models/article.model';
@@ -33,6 +34,9 @@ export default function ArticlesArray() {
 					/>
 				))}
 			</div>
+			<Link href='/' className={styles['articles__btn']} aria-label='Powrót na stronę główną'>
+				Powrót
+			</Link>
 		</section>
 	);
 }
