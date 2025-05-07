@@ -12,6 +12,7 @@ export interface ArticleItemModel {
 	text: string;
 	specialText: string;
 	href: string;
+	image: string;
 }
 
 export interface ArticlePageModel {

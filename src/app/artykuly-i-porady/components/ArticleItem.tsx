@@ -1,14 +1,16 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { scrollToTop } from '@/utils/scrollToTopUtils';
 import { ArticleItemModel } from '@/models/article.model';
-import { TbPackages } from 'react-icons/tb';
 
 import styles from '../styles/styles.module.scss';
 
-export default function ArticleItem({ title, text, specialText, href }: ArticleItemModel) {
+export default function ArticleItem({ title, text, specialText, href, image }: ArticleItemModel) {
 	return (
 		<div className={styles['articles__array-box']}>
-			<TbPackages fontSize={56} color='#24485c' />
+			<div className={styles['articles__array-box-image']}>
+				<Image src={image} alt='Obrazek przedstawiający temat artykułu' width={400} height={300} />
+			</div>
 			<h3>{title}</h3>
 			<p>
 				{text}

@@ -22,7 +22,7 @@ export default function ArticlesArray() {
 
 	return (
 		<section className={styles.articles__array}>
-			<h2 className={styles.articles__title}>Dowiedz się więcej!</h2>
+			<h2 className={styles.articles__title}>Dowiedz się więcej</h2>
 			<div className={styles['articles__array-container']}>
 				{articlesData.map((data: ArticleItemModel, index) => (
 					<ArticleItem
@@ -31,6 +31,7 @@ export default function ArticlesArray() {
 						text={data.text}
 						specialText={data.specialText}
 						href={data.href}
+						image={data.image}
 					/>
 				))}
 			</div>

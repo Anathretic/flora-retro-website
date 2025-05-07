@@ -6,6 +6,7 @@ export const articleData = [
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
 		isOnlyImage: false,
 		href: '/artykuly-i-porady/magiczne-dekoracje-slubne',
+		image: '/blog-images/small/first-blog-image.jpg',
 		date: '02-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',
@@ -26,6 +27,7 @@ export const articleData = [
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
 		isOnlyImage: false,
 		href: '/artykuly-i-porady/top-5-dekoracji-sali-weselnej',
+		image: '/blog-images/small/second-blog-image.jpg',
 		date: '04-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',
@@ -46,6 +48,7 @@ export const articleData = [
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
 		isOnlyImage: false,
 		href: '/artykuly-i-porady/jak-wybrac-auto-do-slubu',
+		image: '/blog-images/small/third-blog-image.jpg',
 		date: '08-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',
@@ -66,6 +69,7 @@ export const articleData = [
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
 		isOnlyImage: false,
 		href: '/artykuly-i-porady/dekoracje-na-przyjecia',
+		image: '/blog-images/small/fourth-blog-image.jpg',
 		date: '10-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',

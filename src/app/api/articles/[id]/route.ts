@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 import { articleData } from '@/data/articleData';
 
-export async function GET(req: Request, { params }: { params: { id: string } }) {
-	const id = params.id;
+export async function GET(req: Request, { params }: { params: Promise<{ id: string }> }) {
+	const { id } = await params;
 
 	if (!id) {
 		return new Response('Id is required', { status: 400 });
