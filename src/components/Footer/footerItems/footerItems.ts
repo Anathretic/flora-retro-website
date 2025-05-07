@@ -1,6 +1,6 @@
-import { FooterItemsModel } from '@/models/footer.model';
+import { FooterItemModel } from '@/models/footer.model';
 
-export const footerHomeItems: FooterItemsModel[] = [
+export const footerHomeItems: FooterItemModel[] = [
 	{ href: '#idea', content: 'Idea' },
 	{ href: '#oferta', content: 'Oferta' },
 	{ href: '#opinie', content: 'Opinie' },
@@ -8,12 +8,12 @@ export const footerHomeItems: FooterItemsModel[] = [
 	{ href: '#kontakt', content: 'Kontakt' },
 ];
 
-export const footerOfferItems: FooterItemsModel[] = [
+export const footerOfferItems: FooterItemModel[] = [
 	{ href: '/dekoracje', content: 'Dekoracje' },
 	{ href: '/wynajem-samochodu', content: 'Wynajem samochodu' },
 ];
 
-export const footerMoreItems: FooterItemsModel[] = [
+export const footerMoreItems: FooterItemModel[] = [
 	{ href: '/artykuly-i-porady', content: 'Artykuły i porady' },
 	{ href: '/polityka-prywatnosci', content: 'Polityka prywatności' },
 ];

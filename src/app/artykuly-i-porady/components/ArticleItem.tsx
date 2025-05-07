@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { ArticleArrayItemModel } from '@/models/articleArray.model';
 import { scrollToTop } from '@/utils/scrollToTopUtils';
+import { ArticleItemModel } from '@/models/article.model';
 import { TbPackages } from 'react-icons/tb';
 
 import styles from '../styles/styles.module.scss';
 
-export default function ArticleArrayItem({ title, text, specialText, href }: ArticleArrayItemModel) {
+export default function ArticleItem({ title, text, specialText, href }: ArticleItemModel) {
 	return (
 		<div className={styles['articles__array-box']}>
 			<TbPackages fontSize={56} color='#24485c' />

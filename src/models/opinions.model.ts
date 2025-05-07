@@ -1,4 +1,4 @@
-export interface OpinionsDataBoxModel {
+interface OpinionModel {
 	title: string;
 	content: string;
 	name: string;
@@ -6,9 +6,9 @@ export interface OpinionsDataBoxModel {
 
 export interface OpinionsDataModel {
 	id: number;
-	opinion: OpinionsDataBoxModel;
+	opinion: OpinionModel;
 }
 
-export interface OpinionsDataBoxPropsModel extends OpinionsDataBoxModel {
+export interface OpinionItemModel extends OpinionModel {
 	setStopAnimation: React.Dispatch<React.SetStateAction<boolean>>;
 }

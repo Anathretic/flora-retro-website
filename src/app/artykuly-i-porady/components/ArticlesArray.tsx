@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import ArticleArrayItem from './ArticleArrayItem';
-import { ArticleArrayItemModel } from '@/models/articleArray.model';
+import ArticleItem from './ArticleItem';
+import { ArticleItemModel } from '@/models/article.model';
 
 import styles from '../styles/styles.module.scss';
 
@@ -23,8 +23,8 @@ export default function ArticlesArray() {
 		<section className={styles.articles__array}>
 			<h2 className={styles.articles__title}>Dowiedz się więcej!</h2>
 			<div className={styles['articles__array-container']}>
-				{articlesData.map((data: ArticleArrayItemModel, index) => (
-					<ArticleArrayItem
+				{articlesData.map((data: ArticleItemModel, index) => (
+					<ArticleItem
 						key={index}
 						title={data.title}
 						text={data.text}

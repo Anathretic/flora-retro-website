@@ -1,10 +1,17 @@
-interface BlogArticle {
+interface BlogArticleModel {
 	firstSubtitle: string;
 	firstParagraph: string;
 	secondSubtitle: string;
 	secondParagraph: string;
 	thirdSubtitle: string;
 	thirdParagraph: string;
+}
+
+export interface ArticleItemModel {
+	title: string;
+	text: string;
+	specialText: string;
+	href: string;
 }
 
 export interface ArticlePageModel {
@@ -15,5 +22,5 @@ export interface ArticlePageModel {
 	isOnlyImage: boolean;
 	href: string;
 	date: string;
-	blogArticle: BlogArticle;
+	blogArticle: BlogArticleModel;
 }

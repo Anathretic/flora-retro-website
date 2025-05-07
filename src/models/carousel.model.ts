@@ -1,4 +1,4 @@
-export interface SlideDataBoxModel {
+interface SlideDataBoxModel {
 	id: number;
 	title: string;
 	isOnlyImage: boolean;
@@ -11,7 +11,7 @@ export interface SlideModel {
 	handleSlideClick: (id: number) => void;
 }
 
-export interface SliderModel {
+export interface CarouselModel {
 	slides: SlideDataBoxModel[];
 }
 

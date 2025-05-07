@@ -1,9 +1,9 @@
 'use client';
 
-import { FooterProvidersProps } from '@/models/footer.model';
 import FooterLinksProvider from './FooterLinksContext';
+import { ProvidersModel } from '@/models/context.model';
 
-export function Providers({ children }: FooterProvidersProps) {
+export function Providers({ children }: ProvidersModel) {
 	return <FooterLinksProvider>{children}</FooterLinksProvider>;
 }
 
