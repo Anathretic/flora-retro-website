@@ -40,6 +40,7 @@
 		color: var(--white-color);
 		font-size: 3rem;
 		font-weight: 300;
+		text-align: center;
 	}
 
 	&__title {
@@ -167,6 +168,10 @@
 
 @media screen and (min-width: 768px) {
 	.articles {
+		&__hero-image {
+			background-image: url('../../../images/subpages/articles-subpage/hero-bg-image-xl.jpg');
+		}
+
 		&__hero-image-title {
 			font-size: 4rem;
 		}

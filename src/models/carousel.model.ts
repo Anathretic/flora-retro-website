@@ -1,7 +1,8 @@
 interface SlideDataBoxModel {
 	id: number;
 	title: string;
-	isOnlyImage: boolean;
+	image: string;
+	largeImage?: string;
 	href?: string;
 }
 

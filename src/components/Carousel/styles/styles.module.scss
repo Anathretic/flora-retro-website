@@ -157,42 +157,6 @@
 				transform: translate(calc(var(--x) / var(--d) * 1px), calc(var(--y) / var(--d) * 1px));
 			}
 		}
-
-		&--0 {
-			background-image: url('/blog-images/small/first-blog-image.jpg');
-		}
-
-		&--1 {
-			background-image: url('/blog-images/small/second-blog-image.jpg');
-		}
-
-		&--2 {
-			background-image: url('/blog-images/small/third-blog-image.jpg');
-		}
-
-		&--3 {
-			background-image: url('/blog-images/small/fourth-blog-image.jpg');
-		}
-
-		&--0-car {
-			background-image: url('../../../images/subpages/rent-car-subpage/car-images/first-image-test.jpg');
-		}
-
-		&--1-car {
-			background-image: url('../../../images/subpages/rent-car-subpage/car-images/first-image-test.jpg');
-		}
-
-		&--2-car {
-			background-image: url('../../../images/subpages/rent-car-subpage/car-images/first-image-test.jpg');
-		}
-
-		&--3-car {
-			background-image: url('../../../images/subpages/rent-car-subpage/car-images/first-image-test.jpg');
-		}
-
-		&--4-car {
-			background-image: url('../../../images/subpages/rent-car-subpage/car-images/first-image-test.jpg');
-		}
 	}
 
 	&__headline {
@@ -232,28 +196,6 @@
 
 		> * + * {
 			margin-top: 2rem;
-		}
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.slide {
-		&__image {
-			&--0 {
-				background-image: url('/blog-images/xl/first-blog-image-xl.jpg');
-			}
-
-			&--1 {
-				background-image: url('/blog-images/xl/second-blog-image-xl.jpg');
-			}
-
-			&--2 {
-				background-image: url('/blog-images/xl/third-blog-image-xl.jpg');
-			}
-
-			&--3 {
-				background-image: url('/blog-images/xl/fourth-blog-image-xl.jpg');
-			}
 		}
 	}
 }

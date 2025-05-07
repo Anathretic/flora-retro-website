@@ -4,9 +4,9 @@ export const articleData = [
 		title: 'Magiczne dekoracje ślubne',
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt quasi molestiae eum sunt ut. Animi nesciunt quasi molestiae eum sunt ut.',
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
-		isOnlyImage: false,
 		href: '/artykuly-i-porady/magiczne-dekoracje-slubne',
 		image: '/blog-images/small/first-blog-image.jpg',
+		largeImage: '/blog-images/xl/first-blog-image-xl.jpg',
 		date: '02-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',
@@ -25,9 +25,9 @@ export const articleData = [
 		title: 'Top 5 dekoracji sali weselnej',
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt quasi molestiae eum sunt ut. Animi nesciunt quasi molestiae eum sunt ut.',
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
-		isOnlyImage: false,
 		href: '/artykuly-i-porady/top-5-dekoracji-sali-weselnej',
 		image: '/blog-images/small/second-blog-image.jpg',
+		largeImage: '/blog-images/xl/second-blog-image-xl.jpg',
 		date: '04-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',
@@ -46,9 +46,9 @@ export const articleData = [
 		title: 'Jak wybrać auto do ślubu?',
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt quasi molestiae eum sunt ut. Animi nesciunt quasi molestiae eum sunt ut.',
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
-		isOnlyImage: false,
 		href: '/artykuly-i-porady/jak-wybrac-auto-do-slubu',
 		image: '/blog-images/small/third-blog-image.jpg',
+		largeImage: '/blog-images/xl/third-blog-image-xl.jpg',
 		date: '08-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',
@@ -67,9 +67,9 @@ export const articleData = [
 		title: 'Dekoracje na przyjęcia',
 		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt quasi molestiae eum sunt ut. Animi nesciunt quasi molestiae eum sunt ut.',
 		specialText: 'Vel quidem dicta voluptates repellat laborum exercitationem eius, nulla saepe, iste ex.',
-		isOnlyImage: false,
 		href: '/artykuly-i-porady/dekoracje-na-przyjecia',
 		image: '/blog-images/small/fourth-blog-image.jpg',
+		largeImage: '/blog-images/xl/fourth-blog-image-xl.jpg',
 		date: '10-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Lorem ipsum dolor',

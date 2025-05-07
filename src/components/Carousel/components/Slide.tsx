@@ -1,13 +1,16 @@
 import Link from 'next/link';
 import { useRef } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { SlideModel } from '@/models/carousel.model';
 import { scrollToTop } from '@/utils/scrollToTopUtils';
 
 import styles from '../styles/styles.module.scss';
 
 export default function Slide({ slide, current, handleSlideClick }: SlideModel) {
-	const { id, title, isOnlyImage, href } = slide;
+	const { id, title, href, image, largeImage } = slide;
 	const slideRef = useRef<HTMLLIElement>(null);
+
+	const isLarge = useMediaQuery({ query: '(min-width: 768px)' });
 
 	const handleMouseMove = (e: React.MouseEvent) => {
 		const el = slideRef.current;
@@ -39,9 +42,12 @@ export default function Slide({ slide, current, handleSlideClick }: SlideModel) 
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}>
 			<div className={styles['slide__image-wrapper']}>
-				<div className={`${styles.slide__image} ${styles[`slide__image--${!isOnlyImage ? id : `${id}-car`}`]}`} />
+				<div
+					style={{ backgroundImage: `url(${largeImage ? (isLarge ? largeImage : image) : image})` }}
+					className={styles.slide__image}
+				/>
 			</div>
-			{!isOnlyImage && (
+			{title && (
 				<article className={styles.slide__content}>
 					<h3 className={styles.slide__headline}>{title}</h3>
 					<Link href={`${href}`} className={`${styles.slide__action} ${styles.btn}`} onClick={scrollToTop}>

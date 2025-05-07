@@ -287,6 +287,17 @@
 	}
 }
 
+@media screen and (min-width: 768px) {
+	.rent-car {
+		&__hero-image {
+			height: 40vh;
+			background-image: url('../../../images/subpages/rent-car-subpage/hero-bg-image-xl.jpg');
+			background-position: center;
+			background-size: cover;
+		}
+	}
+}
+
 @media screen and (min-width: 768px) and (min-height: 500px) {
 	.rent-car {
 		&__gallery {
