@@ -33,8 +33,7 @@ export interface ReCaptchaV2Model {
 	reCaptchaErrorValue: string;
 }
 
-export interface SubmitModel {
-	isLoading: boolean;
+export interface SubmitModel extends ReturnButtonModel {
 	buttonText: string;
 	setButtonText: Dispatch<SetStateAction<string>>;
 }

@@ -2,21 +2,21 @@ export const imageData = [
 	{
 		id: 0,
 		title: '',
-		isOnlyImage: true,
+		image: '/car-images/first-image-test.jpg',
 	},
 	{
 		id: 1,
 		title: '',
-		isOnlyImage: true,
+		image: '/car-images/first-image-test.jpg',
 	},
 	{
 		id: 2,
 		title: '',
-		isOnlyImage: true,
+		image: '/car-images/first-image-test.jpg',
 	},
 	{
 		id: 3,
 		title: '',
-		isOnlyImage: true,
+		image: '/car-images/first-image-test.jpg',
 	},
 ];

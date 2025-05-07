@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { notFound, useParams } from 'next/navigation';
 import { scrollToTop } from '@/utils/scrollToTopUtils';
-import { ArticlePageModel } from '@/models/articlePage.model';
+import { ArticlePageModel } from '@/models/article.model';
 
 import styles from './styles/styles.module.scss';
 

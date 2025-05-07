@@ -1,9 +1,9 @@
-import { OpinionsDataBoxPropsModel } from '@/models/opinions.model';
+import { OpinionItemModel } from '@/models/opinions.model';
 import { FaQuoteRight } from 'react-icons/fa6';
 
 import styles from '../styles/styles.module.scss';
 
-export function OpinionItem({ name, content, title, setStopAnimation }: OpinionsDataBoxPropsModel) {
+export function OpinionItem({ name, content, title, setStopAnimation }: OpinionItemModel) {
 	return (
 		<div
 			className={`${styles.opinions__box} dark-blue-gradient`}
