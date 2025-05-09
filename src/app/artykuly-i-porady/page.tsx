@@ -1,32 +1,26 @@
-'use client';
+import { Metadata } from 'next';
+import ArticlesAndAdvicesPage from './ArticlesAndAdvicesPage/ArticlesAndAdvicesPage';
 
-import { useEffect } from 'react';
-import { useFooterLinksContext } from '@/hooks/useFooterLinksContext';
-import { Footer } from '@/components';
-import ArticlesArray from './components/ArticlesArray';
+export const metadata: Metadata = {
+	title: 'Artykuły i porady',
+	description:
+		'Zbiór inspiracji, wskazówek i porad, które pomogą Ci stworzyć wyjątkową oprawę ślubu i wydarzeń okolicznościowych. Przeczytaj nasze artykuły i przygotuj się perfekcyjnie.',
+	alternates: {
+		canonical: 'https://flora-retro.pl/artykuly-i-porady',
+	},
+	openGraph: {
+		title: 'Artykuły i porady | Flora Retro',
+		description:
+			'Zbiór inspiracji, wskazówek i porad, które pomogą Ci stworzyć wyjątkową oprawę ślubu i wydarzeń okolicznościowych. Przeczytaj nasze artykuły i przygotuj się perfekcyjnie.',
+		url: 'https://flora-retro.pl/artykuly-i-porady',
+		type: 'website',
+	},
+};
 
-import styles from './styles/styles.module.scss';
-
-export default function ArticlesAndAdvicesPage() {
-	const { setShowSpecialLinks } = useFooterLinksContext();
-
-	useEffect(() => {
-		setShowSpecialLinks(true);
-	}, []);
-
+export default function ArticlesAndAdvicesWrapper() {
 	return (
 		<>
-			<main>
-				<div className={styles.articles__container}>
-					<div className={styles.articles__wrapper}>
-						<div className={styles['articles__hero-image']}>
-							<h1 className={styles['articles__hero-image-title']}>Artykuły i porady</h1>
-						</div>
-						<ArticlesArray />
-					</div>
-				</div>
-			</main>
-			<Footer />
+			<ArticlesAndAdvicesPage />
 		</>
 	);
 }

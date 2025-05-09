@@ -1,34 +1,26 @@
-'use client';
+import { Metadata } from 'next';
+import DecorationsPage from './DecorationsPage/DecorationsPage';
 
-import { useEffect } from 'react';
-import { useFooterLinksContext } from '@/hooks/useFooterLinksContext';
-import { Footer } from '@/components';
-import { DecorationsForm, DecorationsGallery, DecorationsInfo } from './components';
+export const metadata: Metadata = {
+	title: 'Dekoracje ślubne i okolicznościowe',
+	description:
+		'Zanurz się w świecie kwiatów i dekoracji tworzonych z pasją. Flora Retro oferuje unikalne dekoracje ślubne i na specjalne okazje.',
+	alternates: {
+		canonical: 'https://flora-retro.pl/dekoracje',
+	},
+	openGraph: {
+		title: 'Dekoracje ślubne i okolicznościowe | Flora Retro',
+		description:
+			'Zanurz się w świecie kwiatów i dekoracji tworzonych z pasją. Flora Retro oferuje unikalne dekoracje ślubne i na specjalne okazje.',
+		url: 'https://flora-retro.pl/dekoracje',
+		type: 'website',
+	},
+};
 
-import styles from './styles/styles.module.scss';
-
-export default function DecorationsPage() {
-	const { setShowSpecialLinks } = useFooterLinksContext();
-
-	useEffect(() => {
-		setShowSpecialLinks(true);
-	}, []);
-
+export default function DecorationsWrapper() {
 	return (
 		<>
-			<main>
-				<div className={styles.decorations__container}>
-					<div className={styles.decorations__wrapper}>
-						<div className={styles['decorations__hero-image']}>
-							<h1 className={styles['decorations__hero-image-title']}>Dekoracje</h1>
-						</div>
-						<DecorationsInfo />
-						<DecorationsGallery />
-						<DecorationsForm />
-					</div>
-				</div>
-			</main>
-			<Footer />
+			<DecorationsPage />
 		</>
 	);
 }

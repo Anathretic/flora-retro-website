@@ -21,7 +21,12 @@ export default function NotFound() {
 			<main>
 				<section className={styles.notfound}>
 					<div className={styles.notfound__container}>
-						<Image className={styles.notfound__img} src={NotFoundImage} alt='Obrazek informujący o braku strony' />
+						<Image
+							className={styles.notfound__img}
+							src={NotFoundImage}
+							alt='Obrazek informujący o braku strony'
+							priority
+						/>
 						<div className={styles.notfound__box}>
 							<h1 className={styles.notfound__title}>Ups! Strony nie znaleziono..</h1>
 							<p className={styles.notfound__credits}>

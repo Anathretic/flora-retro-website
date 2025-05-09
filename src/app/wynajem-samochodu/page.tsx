@@ -1,36 +1,25 @@
-'use client';
+import { Metadata } from 'next';
+import CarHirePage from './CarHirePage/CarHirePage';
 
-import { useEffect } from 'react';
-import { useFooterLinksContext } from '@/hooks/useFooterLinksContext';
-import { Footer } from '@/components';
-import { RentCarBenefits, RentCarForm, RentCarImages } from './components';
+export const metadata: Metadata = {
+	title: 'Wynajem samochodu',
+	description: 'Stylowy wynajem zabytkowego samochodu na ślub i sesję zdjęciową. Dodaj klasy swojemu wyjątkowemu dniu.',
+	alternates: {
+		canonical: 'https://flora-retro.pl/wynajem-samochodu',
+	},
+	openGraph: {
+		title: 'Wynajem samochodu | Flora Retro',
+		description:
+			'Stylowy wynajem zabytkowego samochodu na ślub i sesję zdjęciową. Dodaj klasy swojemu wyjątkowemu dniu.',
+		url: 'https://flora-retro.pl/wynajem-samochodu',
+		type: 'website',
+	},
+};
 
-import styles from './styles/styles.module.scss';
-
-export default function CarHirePage() {
-	const { setShowSpecialLinks } = useFooterLinksContext();
-
-	useEffect(() => {
-		setShowSpecialLinks(true);
-	}, []);
-
+export default function CarHireWrapper() {
 	return (
 		<>
-			<main>
-				<div className={styles['rent-car__container']}>
-					<div className={styles['rent-car__wrapper']}>
-						<div className={styles['rent-car__hero-image']}>
-							<h1 className={styles['rent-car__hero-image-title']}>
-								Wynajem <br /> samochodu
-							</h1>
-						</div>
-						<RentCarBenefits />
-						<RentCarImages />
-						<RentCarForm />
-					</div>
-				</div>
-			</main>
-			<Footer />
+			<CarHirePage />
 		</>
 	);
 }

@@ -15,7 +15,7 @@ export interface ArticleItemModel {
 	image: string;
 }
 
-export interface ArticlePageModel {
+export interface ArticleDataModel {
 	id: number;
 	title: string;
 	text: string;
@@ -24,4 +24,8 @@ export interface ArticlePageModel {
 	href: string;
 	date: string;
 	blogArticle: BlogArticleModel;
+}
+
+export interface ArticlePageModel {
+	article: ArticleDataModel;
 }
