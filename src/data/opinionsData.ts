@@ -22,7 +22,7 @@ export const opinionsData = [
 		opinion: {
 			title: 'Auto z klasą!',
 			content:
-				'Auto prezentowało się niesamowicie – czyste, zadbane, z pięknymi dodatkami ślubnymi. Kierowca punktualny, elegancki i bardzo uprzejmy. Cała podróż przebiegła w świetnej atmosferze. To była prawdziwa wisienka na torcie naszego dnia!',
+				'Auto prezentowało się niesamowicie – czyste, zadbane, z pięknymi dodatkami ślubnymi. Kierowca punktualny, elegancki i bardzo uprzejmy. Cała podróż przebiegła w świetnej atmosferze. To była prawdziwa wisienka na torcie!',
 			name: 'Daria H.',
 		},
 	},
@@ -31,7 +31,7 @@ export const opinionsData = [
 		opinion: {
 			title: 'Wymarzony samochód!',
 			content:
-				'Auto świetne! Szczęka opadła wszystkim gościom! :) Czyste, zadbane, z pięknymi dodatkami. Kierowca punktualny oraz uprzejmy. Najlepszy dzień w naszym życiu!',
+				'Piękny Mercedes! Szczęka opadła wszystkim gościom! :) Czysty, zadbany, z pięknymi dodatkami. Najlepszy dzień w naszym życiu!',
 			name: 'Angelika W.',
 		},
 	},

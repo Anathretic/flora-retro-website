@@ -1,9 +1,14 @@
+import Image from 'next/image';
 import { useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { NavbarTitleModel } from '@/models/header.model';
 
+import WebsiteLogo from '../../../images/website-logo-white.svg';
 import styles from '../styles/styles.module.scss';
 
 export const NavbarTitle: React.FC<NavbarTitleModel> = ({ divRef }) => {
+	const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
 	const scrollToTop = () => {
 		const { current } = divRef;
 
@@ -21,7 +26,7 @@ export const NavbarTitle: React.FC<NavbarTitleModel> = ({ divRef }) => {
 	return (
 		<div className={styles.navbar__title} onClick={scrollToTop}>
 			<div className={styles['navbar__title-box']}>
-				<p>Miejsce na logo</p>
+				<Image src={WebsiteLogo} alt='Logo przekierowujące na górę strony' width={isMobile ? 110 : 125} height={75} />
 			</div>
 		</div>
 	);

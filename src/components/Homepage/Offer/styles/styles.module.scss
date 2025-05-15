@@ -50,18 +50,18 @@
 		border-radius: 1em;
 		text-align: center;
 
-		-webkit-box-shadow: 0px 0px 25px -21px rgba(240, 240, 240, 1);
-		-moz-box-shadow: 0px 0px 25px -21px rgba(240, 240, 240, 1);
-		box-shadow: 0px 0px 25px -21px rgba(240, 240, 240, 1);
-
 		ul {
 			padding: 0 1em 1em 2em;
-			line-height: 1.5em;
+			line-height: 2em;
 			text-align: left;
 
 			li:nth-of-type(4) {
 				color: var(--gray-color);
 			}
+		}
+
+		svg {
+			fill: rgba(255, 255, 255, 0.2);
 		}
 	}
 
@@ -201,6 +201,7 @@
 		}
 
 		&__box {
+			margin: 0 3em;
 			width: 50%;
 			max-width: 450px;
 		}
@@ -223,7 +224,6 @@
 	.offer {
 		&__box {
 			padding: 2em 1em;
-			margin: 0 1em;
 
 			a {
 				font-size: 1.1em;
