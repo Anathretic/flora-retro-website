@@ -10,7 +10,7 @@
 	&__bar {
 		width: 100%;
 		height: 1px;
-		background-color: var(--dark-blue-color);
+		background-color: var(--dark-brown-color);
 
 		&--second {
 			margin-top: 0.65rem;
@@ -42,7 +42,7 @@
 
 		a {
 			padding: 2px 0.35rem 0.35rem;
-			color: var(--dark-blue-color);
+			color: var(--dark-brown-color);
 			text-decoration: none;
 			transition: color 0.3s ease-out;
 		}
@@ -144,7 +144,7 @@
 		}
 
 		&__box a:hover {
-			color: var(--gray-color);
+			color: var(--brown-color);
 		}
 
 		&__box:nth-of-type(3) {
@@ -162,28 +162,39 @@
 			}
 
 			&--second {
-				top: -74%;
-				left: 33%;
+				display: none;
 			}
 
 			&--third {
 				top: -74%;
-				left: 66%;
-			}
-
-			&--fourth {
-				top: -74%;
 				left: 89%;
 			}
 
-			&--fifth {
-				top: -85.5%;
+			&--fourth {
+				top: -85.45%;
 				left: 11%;
 			}
 
-			&--sixth {
-				top: -85.5%;
+			&--fifth {
+				top: -85.45%;
 				right: 8%;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1358px) {
+	.footer {
+		&__flower-icon {
+			&--second {
+				display: block;
+				top: -74%;
+				left: 33%;
+			}
+
+			&--fourth,
+			&--fifth {
+				top: -85.35%;
 			}
 		}
 	}

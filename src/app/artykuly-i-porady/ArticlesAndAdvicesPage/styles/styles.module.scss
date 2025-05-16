@@ -73,7 +73,7 @@
 		h3 {
 			padding: 1em;
 			font-size: 1.5em;
-			font-weight: 200;
+			font-weight: 300;
 			font-style: italic;
 			text-align: center;
 		}
@@ -94,7 +94,7 @@
 			margin: 1em 1em 1.5em;
 			width: 215px;
 			color: var(--white-color);
-			background-color: var(--darker-blue-color);
+			background-color: var(--dark-brown-color);
 			font-family: var(--font-montserrat);
 			font-size: 1em;
 			text-align: center;
@@ -125,7 +125,7 @@
 		margin: 3em 0 0;
 		width: 215px;
 		color: var(--white-color);
-		background-color: var(--darker-blue-color);
+		background-color: var(--dark-brown-color);
 		font-size: 1em;
 		text-align: center;
 		text-decoration: none;
@@ -209,7 +209,7 @@
 				font-size: 1.1em;
 
 				&:hover {
-					background-color: var(--gray-color);
+					background-color: var(--brown-color);
 				}
 			}
 		}
@@ -224,7 +224,7 @@
 			font-size: 1.1em;
 
 			&:hover {
-				background-color: var(--gray-color);
+				background-color: var(--brown-color);
 			}
 		}
 	}

@@ -1,11 +1,11 @@
 .icon {
-	fill: var(--gray-color);
+	fill: var(--brown-color);
 	width: 100%;
 }
 
 .btn {
 	padding: 1rem 2.5rem 1.125rem;
-	background-color: var(--dark-blue-color);
+	background-color: var(--dark-brown-color);
 	color: var(--white-color);
 	border: none;
 	border-radius: 0.125rem;
@@ -22,7 +22,7 @@
 
 @media screen and (min-width: 1024px) {
 	.btn:hover {
-		background-color: var(--gray-color);
+		background-color: var(--brown-color);
 	}
 }
 

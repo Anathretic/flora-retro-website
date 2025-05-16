@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import OfferBox from './components/OfferBox';
 import { OfferDataModel } from '@/models/offer.model';
+import { GiButterfly, GiBee, GiButterflyFlower } from 'react-icons/gi';
 
 import styles from './styles/styles.module.scss';
 
@@ -36,6 +37,10 @@ export default function OfferSection() {
 							/>
 						))}
 				</div>
+				<GiButterflyFlower className={`${styles['offer__special-icon']} ${styles['offer__special-icon--first']}`} />
+				<GiButterflyFlower className={`${styles['offer__special-icon']} ${styles['offer__special-icon--second']}`} />
+				<GiButterfly className={`${styles['offer__special-icon']} ${styles['offer__special-icon--third']}`} />
+				<GiBee className={`${styles['offer__special-icon']} ${styles['offer__special-icon--fourth']}`} />
 			</div>
 		</section>
 	);

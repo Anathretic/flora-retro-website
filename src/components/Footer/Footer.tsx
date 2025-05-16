@@ -76,12 +76,11 @@ export default function Footer() {
 						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--first']}`} />
 						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--second']}`} />
 						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--third']}`} />
-						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--fourth']}`} />
 					</>
 				) : (
 					<>
+						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--fourth']}`} />
 						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--fifth']}`} />
-						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--sixth']}`} />
 					</>
 				)}
 			</div>

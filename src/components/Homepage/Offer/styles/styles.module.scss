@@ -7,7 +7,7 @@
 	padding: 30px 0 40px;
 	width: 100%;
 	min-height: 75vh;
-	background-color: var(--dark-blue-color);
+	background-color: var(--dark-brown-color);
 	overflow: hidden;
 
 	&__container,
@@ -25,7 +25,8 @@
 	}
 
 	&__container {
-		max-width: 2160px;
+		position: relative;
+		max-width: 1720px;
 	}
 
 	&__wrapper {
@@ -45,31 +46,28 @@
 		margin: 1em;
 		width: 90%;
 		max-width: 450px;
-		background-color: var(--darker-blue-color);
+		background-color: var(--brown-color);
 		color: var(--white-color);
 		border-radius: 1em;
 		text-align: center;
+		z-index: 10;
 
 		ul {
 			padding: 0 1em 1em 2em;
 			line-height: 2em;
 			text-align: left;
-
-			li:nth-of-type(4) {
-				color: var(--gray-color);
-			}
 		}
 
 		svg {
-			fill: rgba(255, 255, 255, 0.2);
+			fill: #ffffff33;
 		}
 	}
 
 	&__box-special-text {
 		padding: 0.75em;
-		color: var(--gray-color);
 		font-size: 1.4em;
-		font-weight: 400;
+		font-weight: 200;
+		font-style: italic;
 		line-height: 32px;
 	}
 
@@ -89,7 +87,7 @@
 		padding: 0.85em 3em;
 		margin: 2.75em 1.5em 1.5em;
 		width: 215px;
-		color: var(--darker-blue-color);
+		color: var(--dark-brown-color);
 		background-color: var(--white-color);
 		font-size: 1em;
 		text-align: center;
@@ -107,6 +105,10 @@
 		width: 90%;
 		margin-bottom: 0.75em;
 		border: 1px solid var(--border-color);
+	}
+
+	&__special-icon {
+		display: none;
 	}
 }
 
@@ -169,8 +171,40 @@
 
 			&:hover {
 				color: var(--white-color);
-				background-color: var(--gray-color);
-				box-shadow: inset 0 0 0.25em var(--gray-color), 0 0 0.25em var(--gray-color);
+				background-color: var(--dark-brown-color);
+				box-shadow: inset 0 0 0.25em var(--dark-brown-color), 0 0 0.25em var(--dark-brown-color);
+			}
+		}
+
+		&__special-icon {
+			display: block;
+			position: absolute;
+			color: rgba(255, 255, 255, 0.2);
+
+			&--first {
+				bottom: -50px;
+				right: 0;
+				font-size: 180px;
+			}
+
+			&--second {
+				bottom: -50px;
+				left: -20px;
+				font-size: 250px;
+				transform: scaleX(-1);
+			}
+
+			&--third {
+				top: 5%;
+				right: 5%;
+				font-size: 150px;
+			}
+
+			&--fourth {
+				top: 35%;
+				left: 10%;
+				transform: scaleX(-1);
+				font-size: 125px;
 			}
 		}
 	}
