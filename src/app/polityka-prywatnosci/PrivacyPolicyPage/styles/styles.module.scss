@@ -54,7 +54,7 @@
 		}
 
 		a {
-			color: var(--darker-blue-color);
+			color: var(--dark-brown-color);
 			font-weight: 500;
 			text-decoration: none;
 			transition: color 0.3s;
@@ -78,7 +78,7 @@
 		margin: 3em 0 0;
 		width: 215px;
 		color: var(--white-color);
-		background-color: var(--darker-blue-color);
+		background-color: var(--dark-brown-color);
 		font-size: 1em;
 		text-align: center;
 		text-decoration: none;
@@ -129,7 +129,7 @@
 			font-size: 1.05rem;
 
 			a:hover {
-				color: var(--gray-color);
+				color: var(--brown-color);
 			}
 		}
 
@@ -139,7 +139,7 @@
 			font-size: 1.1em;
 
 			&:hover {
-				background-color: var(--gray-color);
+				background-color: var(--brown-color);
 			}
 		}
 	}

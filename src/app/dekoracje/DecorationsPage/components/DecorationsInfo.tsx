@@ -1,4 +1,6 @@
-import { TbPackages } from 'react-icons/tb';
+import { TbFlower } from 'react-icons/tb';
+import { FaLocationDot } from 'react-icons/fa6';
+import { FaRegHeart, FaHandSparkles } from 'react-icons/fa';
 
 import styles from '../styles/styles.module.scss';
 
@@ -8,55 +10,44 @@ export default function DecorationsInfo() {
 			<h2 className={styles.decorations__title}>Co mnie wyróżnia?</h2>
 			<div className={styles['decorations__info-text-content']}>
 				<div className={styles['decorations__info-text-content-box']}>
-					<TbPackages fontSize={56} color='#24485c' />
-					<h3>Lorem ipsum dolor sit</h3>
+					<FaRegHeart fontSize={56} color='#6b4d45' />
+					<h3>Indywidualne podejście</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt
-						quasi molestiae eum sunt ut a, vel quidem dicta voluptates repellat laborum exercitationem eius, nulla
-						saepe, iste ex.{' '}
-						<span>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae omnis modi, laudantium
-							necessitatibus aperiam mollitia!
-						</span>
+						Każda realizacja to dla mnie nowe wyzwanie i wyjątkowa historia. Zależy mi, aby dekoracje w pełni oddawały
+						osobowość pary młodej oraz charakter uroczystości.{' '}
+						<span>Uważnie słucham potrzeb, doradzam z wyczuciem i tworzę koncepcję</span> dopasowaną do Waszych marzeń –
+						niepowtarzalną, jak i autentyczną.
 					</p>
 				</div>
 				<div className={styles['decorations__info-text-content-box']}>
-					<TbPackages fontSize={56} color='#24485c' />
-					<h3>Lorem ipsum dolor sit</h3>
+					<FaHandSparkles fontSize={56} color='#6b4d45' />
+					<h3>Ręcznie tworzone dekoracje</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt
-						quasi molestiae eum sunt ut a, vel quidem dicta voluptates repellat laborum exercitationem eius, nulla
-						saepe, iste ex.{' '}
-						<span>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae omnis modi, laudantium
-							necessitatibus aperiam mollitia!
-						</span>
+						Wszystkie elementy przygotowuję samodzielnie, wkładając w nie serce, czas i pasję. Rękodzieło pozwala mi
+						dbać o detale i tworzyć rzeczy naprawdę wyjątkowe – od drobnych ozdób po kompleksowe aranżacje przestrzeni.
+						Dzięki temu <span>każdy projekt jest unikalny, pełen duszy i subtelnego piękna.</span>
 					</p>
 				</div>
 				<div className={styles['decorations__info-text-content-box']}>
-					<TbPackages fontSize={56} color='#24485c' />
-					<h3>Lorem ipsum dolor sit</h3>
+					<TbFlower fontSize={56} color='#6b4d45' />
+					<h3>Styl boho & retro z duszą</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt
-						quasi molestiae eum sunt ut a, vel quidem dicta voluptates repellat laborum exercitationem eius, nulla
-						saepe, iste ex.{' '}
+						Moje dekoracje czerpią inspirację z natury, estetyki vintage i swobodnej elegancji stylu boho.{' '}
 						<span>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae omnis modi, laudantium
-							necessitatibus aperiam mollitia!
-						</span>
+							Uwielbiam tworzyć kompozycje z suszonych kwiatów, naturalnych materiałów i starych przedmiotów z historią.
+						</span>{' '}
+						Takie połączenia nadają każdej uroczystości lekkości, romantyzmu i przytulnego klimatu, który zapada w
+						pamięć.
 					</p>
 				</div>
 				<div className={styles['decorations__info-text-content-box']}>
-					<TbPackages fontSize={56} color='#24485c' />
-					<h3>Lorem ipsum dolor sit</h3>
+					<FaLocationDot fontSize={56} color='#6b4d45' />
+					<h3>Lokalnie i z sercem</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt
-						quasi molestiae eum sunt ut a, vel quidem dicta voluptates repellat laborum exercitationem eius, nulla
-						saepe, iste ex.{' '}
-						<span>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae omnis modi, laudantium
-							necessitatibus aperiam mollitia!
-						</span>
+						<span>Działam jako mała, lokalna pracownia</span> – bez pośpiechu, z pełnym zaangażowaniem i otwartością na
+						ludzi. Każde zlecenie traktuję jak osobistą misję, niezależnie od jego skali. Wierzę, że to właśnie
+						bezpośredni kontakt, szczerość i ciepło w relacji z klientem pozwalają tworzyć coś więcej niż tylko
+						dekoracje – prawdziwe wspomnienia.
 					</p>
 				</div>
 			</div>

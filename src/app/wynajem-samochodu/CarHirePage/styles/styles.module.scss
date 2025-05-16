@@ -62,7 +62,7 @@
 
 		&--special {
 			padding-top: 46px;
-			color: var(--dark-blue-color);
+			color: var(--dark-brown-color);
 		}
 	}
 
@@ -90,7 +90,7 @@
 		h3 {
 			padding: 1em;
 			font-size: 1.5em;
-			font-weight: 200;
+			font-weight: 300;
 			font-style: italic;
 			text-align: center;
 		}
@@ -115,7 +115,7 @@
 
 	&__gallery {
 		padding-bottom: min(6em, 4em);
-		background-color: var(--light-gray-color);
+		background-color: var(--light-brown-color);
 		color: var(--white-color);
 		overflow: hidden;
 	}
@@ -160,7 +160,7 @@
 		}
 
 		a {
-			color: var(--dark-blue-color);
+			color: var(--dark-brown-color);
 			text-underline-offset: 2px;
 			transition: color 0.3s;
 		}
@@ -170,7 +170,7 @@
 		padding: 2rem 0;
 		width: 90%;
 		max-width: 400px;
-		gallery-style-type: none;
+		list-style-type: none;
 		text-align: center;
 
 		li {
@@ -180,7 +180,7 @@
 
 		p {
 			padding: 0.25rem 0;
-			font-weight: 300;
+			font-weight: 400;
 
 			span {
 				font-weight: 600;
@@ -215,7 +215,7 @@
 	}
 
 	&__benefits-special-block {
-		background-color: var(--light-gray-color);
+		background-color: var(--light-brown-color);
 	}
 
 	&__gallery-special-block {
@@ -341,7 +341,7 @@
 		}
 
 		&__form-title-subtext a:hover {
-			color: var(--dark-blue-color);
+			color: var(--brown-color);
 		}
 	}
 }
@@ -397,7 +397,7 @@
 			max-width: 400px;
 			justify-content: start;
 			font-size: 1.1rem;
-			gallery-style-type: disc;
+			list-style-type: disc;
 			text-align: left;
 		}
 

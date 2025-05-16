@@ -1,4 +1,7 @@
-import { BsFlower1 } from 'react-icons/bs';
+import { BsCarFrontFill } from 'react-icons/bs';
+import { IoMdRose } from 'react-icons/io';
+import { FaFeatherAlt } from 'react-icons/fa';
+import { HiOutlineSparkles } from 'react-icons/hi';
 
 import styles from './styles/styles.module.scss';
 
@@ -9,47 +12,51 @@ export default function IdeaSection() {
 				<h2 className={styles.idea__title}>Idea</h2>
 				<div className={styles['idea__content-container']}>
 					<div className={styles['idea__content-box']}>
-						<BsFlower1 fontSize={56} />
-						<h3>I. Lorem, ipsum dolor</h3>
+						<FaFeatherAlt fontSize={56} />
+						<h3>I. Piękno w stylu retro</h3>
 						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab tempore numquam recusandae natus ut
-							dignissimos modi eum voluptate repellendus. Ad animi quam corporis, delectus explicabo esse fugiat
-							accusamus nisi, in quae voluptatibus. Incidunt asperiores possimus excepturi et vel odit soluta. Aliquid
-							fugiat animi repellendus itaque quo. Vel quas quos pariatur?
+							W moich dekoracjach łączę miłość ze stylem retro dbając o każdy detal. Czerpię inspirację z dawnych lat, w
+							których elegancja i prostota szły w parze z naturalnym pięknem.{' '}
+							<span>Tworzę aranżacje, które mają duszę</span> – nostalgiczne, harmonijne i pełne ciepła. Wszystko po to,
+							by oprawa uroczystości była <span>niepowtarzalna</span> i zapadła w pamięć na długo.
 						</p>
 					</div>
 					<div className={styles['idea__special-decoration']} />
 					<div className={styles['idea__content-box']}>
-						<BsFlower1 fontSize={56} />
-						<h3>II. Lorem, ipsum dolor</h3>
+						<IoMdRose fontSize={56} />
+						<h3>II. Emocje zamknięte w kwiatach</h3>
 						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab tempore numquam recusandae natus ut
-							dignissimos modi eum voluptate repellendus. Ad animi quam corporis, delectus explicabo esse fugiat
-							accusamus nisi, in quae voluptatibus. Incidunt asperiores possimus excepturi et vel odit soluta. Aliquid
-							fugiat animi repellendus itaque quo. Vel quas quos pariatur?
+							Każdą dekorację tworzę z myślą o emocjach – wzruszeniach, uśmiechach i wspomnieniach, które zostaną z Wami
+							na lata.{' '}
+							<span>
+								Kwiaty traktuję jak słowa, a za ich pomocą opowiadam historię miłości, bliskości i magii chwili.
+							</span>
+							Moim celem jest stworzenie przestrzeni, w której kolory, zapachy i atmosfera współgrają ze sobą.
+							Subtelnie, z wyczuciem, od serca.
 						</p>
 					</div>
 					<div className={styles['idea__special-decoration']} />
 					<div className={styles['idea__content-box']}>
-						<BsFlower1 fontSize={56} />
-						<h3>III. Lorem, ipsum dolor</h3>
+						<HiOutlineSparkles fontSize={56} />
+						<h3>III. Wyjątkowość w każdym detalu</h3>
 						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab tempore numquam recusandae natus ut
-							dignissimos modi eum voluptate repellendus. Ad animi quam corporis, delectus explicabo esse fugiat
-							accusamus nisi, in quae voluptatibus. Incidunt asperiores possimus excepturi et vel odit soluta. Aliquid
-							fugiat animi repellendus itaque quo. Vel quas quos pariatur?
+							<span>Nie tworzę dekoracji „z katalogu”. </span> Każdy projekt jest dla mnie osobisty – dopasowany do Was,
+							do miejsca i do emocji, które chcemy wspólnie podkreślić.{' '}
+							<span>Styl retro jest moją bazą, ale lubię bawić się formą i łączyć go z innymi elementami.</span> Dzięki
+							temu powstają kompozycje, które są naprawdę Wasze – niepowtarzalne i dopracowane w najdrobniejszych
+							szczegółach.
 						</p>
 					</div>
 					<div className={styles['idea__special-decoration']} />
 					<div className={styles['idea__content-box']}>
-						<BsFlower1 fontSize={56} />
-						<h3>IV. Lorem, ipsum dolor</h3>
+						<BsCarFrontFill fontSize={56} />
+						<h3>IV. Dekoracje i klasyka na kołach</h3>
 						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab tempore numquam recusandae natus ut
-							dignissimos modi eum voluptate repellendus. Ad animi quam corporis, delectus explicabo esse fugiat
-							accusamus nisi, in quae voluptatibus.{' '}
-							<span>Incidunt asperiores possimus excepturi et vel odit soluta.</span> Aliquid fugiat animi repellendus
-							itaque quo. Vel quas quos pariatur?
+							Zależy mi, by wszystko tworzyło spójną całość – dlatego{' '}
+							<span>oprócz florystyki oferuję także wynajem stylowego zabytkowego auta.</span> To nie tylko środek
+							transportu, ale piękny, klimatyczny dodatek do dnia ślubu czy sesji zdjęciowej. Samochód – podobnie jak
+							moje dekoracje – jest dopieszczony w każdym calu.{' '}
+							<span>To detal, który robi różnicę i dodaje wydarzeniu charakteru.</span>
 						</p>
 					</div>
 				</div>

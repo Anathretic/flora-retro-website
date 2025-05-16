@@ -10,13 +10,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 	} else {
 		return {
 			title: `${article.title}`,
-			description: article.blogArticle.firstParagraph.slice(0, 150),
+			description: article.text,
 			alternates: {
 				canonical: `https://flora-retro.pl/artykuly-i-porady/${id}`,
 			},
 			openGraph: {
 				title: `${article.title} | Flora Retro`,
-				description: article.blogArticle.firstParagraph.slice(0, 200),
+				description: article.text,
 				url: `https://flora-retro.pl/artykuly-i-porady/${id}`,
 				type: 'article',
 			},

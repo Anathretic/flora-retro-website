@@ -10,7 +10,7 @@
 	&__bar {
 		width: 100%;
 		height: 1px;
-		background-color: var(--dark-blue-color);
+		background-color: var(--dark-brown-color);
 
 		&--second {
 			margin-top: 0.65rem;
@@ -18,6 +18,7 @@
 	}
 
 	&__container {
+		position: relative;
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-around;
@@ -32,11 +33,16 @@
 		h2 {
 			position: relative;
 			display: flex;
+
+			img {
+				margin-top: -5px;
+				margin-left: -9px;
+			}
 		}
 
 		a {
 			padding: 2px 0.35rem 0.35rem;
-			color: var(--dark-blue-color);
+			color: var(--dark-brown-color);
 			text-decoration: none;
 			transition: color 0.3s ease-out;
 		}
@@ -86,6 +92,10 @@
 		text-align: center;
 		text-transform: uppercase;
 	}
+
+	&__flower-icon {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -134,11 +144,58 @@
 		}
 
 		&__box a:hover {
-			color: var(--gray-color);
+			color: var(--brown-color);
 		}
 
 		&__box:nth-of-type(3) {
 			display: block;
+		}
+
+		&__flower-icon {
+			display: block;
+			position: absolute;
+			font-size: 86px;
+
+			&--first {
+				top: -74%;
+				left: 5%;
+			}
+
+			&--second {
+				display: none;
+			}
+
+			&--third {
+				top: -74%;
+				left: 89%;
+			}
+
+			&--fourth {
+				top: -85.45%;
+				left: 11%;
+			}
+
+			&--fifth {
+				top: -85.45%;
+				right: 8%;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1358px) {
+	.footer {
+		&__flower-icon {
+			&--second {
+				display: block;
+				top: -74%;
+				left: 33%;
+			}
+
+			&--fourth,
+			&--fifth {
+				top: -85.35%;
+			}
 		}
 	}
 }

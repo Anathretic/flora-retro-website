@@ -1,62 +1,51 @@
-import { FaCar } from 'react-icons/fa';
+import { RiSteering2Line } from 'react-icons/ri';
+import { SiMercedes } from 'react-icons/si';
+import { FaCrown, FaCameraRetro } from 'react-icons/fa';
 
 import styles from '../styles/styles.module.scss';
 
 export default function RentCarBenefits() {
 	return (
 		<section className={styles['rent-car__benefits']}>
-			<h2 className={styles['rent-car__title']}>Dlaczego gwiazda?</h2>
+			<h2 className={styles['rent-car__title']}>Mercedes W108</h2>
 			<div className={styles['rent-car__benefits-text-content']}>
 				<div className={styles['rent-car__benefits-text-content-box']}>
-					<FaCar fontSize={56} color='#24485c' />
-					<h3>Lorem ipsum dolor sit</h3>
+					<SiMercedes fontSize={56} color='#6b4d45' />
+					<h3>Dlaczego gwiazda?</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt
-						quasi molestiae eum sunt ut a, vel quidem dicta voluptates repellat laborum exercitationem eius, nulla
-						saepe, iste ex.{' '}
+						Mercedes W108 z 1969 roku to coś więcej niż samochód – to klasa sama w sobie.{' '}
+						<span>Stylowy, ponadczasowy i pełen charakteru.</span> Jego obecność na Twoim ślubie czy sesji zdjęciowej
+						wniesie nutę elegancji, nostalgii i filmowego klimatu. <span>Oto Twoja gwiazda!</span>
+					</p>
+				</div>
+				<div className={styles['rent-car__benefits-text-content-box']}>
+					<FaCrown fontSize={56} color='#6b4d45' />
+					<h3>Ponadczasowa elegancja</h3>
+					<p>
+						Klasyczne linie nadwozia, chromowane detale i luksusowe wnętrze tworzą atmosferę, która nigdy nie wychodzi z
+						mody.{' '}
 						<span>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae omnis modi, laudantium
-							necessitatibus aperiam mollitia!
+							Mercedes W108 to samochód z duszą – symbol dobrego stylu, który idealnie wpisuje się w estetykę retro,
+							boho czy glamour.
 						</span>
 					</p>
 				</div>
 				<div className={styles['rent-car__benefits-text-content-box']}>
-					<FaCar fontSize={56} color='#24485c' />
-					<h3>Lorem ipsum dolor sit</h3>
+					<FaCameraRetro fontSize={56} color='#6b4d45' />
+					<h3>Efekt „wow” na zdjęciach</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt
-						quasi molestiae eum sunt ut a, vel quidem dicta voluptates repellat laborum exercitationem eius, nulla
-						saepe, iste ex.{' '}
-						<span>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae omnis modi, laudantium
-							necessitatibus aperiam mollitia!
-						</span>
+						Auto robi niesamowite wrażenie – zarówno na żywo, jak i na zdjęciach. Idealne jako tło sesji ślubnej,
+						dodatek do pleneru czy centralny punkt przejazdu.{' '}
+						<span>Wnosi wyjątkowy klimat i sprawia, że każda chwila wygląda jak kadr z filmu.</span>
 					</p>
 				</div>
 				<div className={styles['rent-car__benefits-text-content-box']}>
-					<FaCar fontSize={56} color='#24485c' />
-					<h3>Lorem ipsum dolor sit</h3>
+					<RiSteering2Line fontSize={56} color='#6b4d45' />
+					<h3>Komfort i klasa z innej epoki</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt
-						quasi molestiae eum sunt ut a, vel quidem dicta voluptates repellat laborum exercitationem eius, nulla
-						saepe, iste ex.{' '}
-						<span>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae omnis modi, laudantium
-							necessitatibus aperiam mollitia!
-						</span>
-					</p>
-				</div>
-				<div className={styles['rent-car__benefits-text-content-box']}>
-					<FaCar fontSize={56} color='#24485c' />
-					<h3>Lorem ipsum dolor sit</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae in deleniti animi nesciunt
-						quasi molestiae eum sunt ut a, vel quidem dicta voluptates repellat laborum exercitationem eius, nulla
-						saepe, iste ex.{' '}
-						<span>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae omnis modi, laudantium
-							necessitatibus aperiam mollitia!
-						</span>
+						Choć ma już swoje lata, Mercedes ten wciąż oferuje niezrównany komfort podróży.{' '}
+						<span>Miękkie fotele, przestronne wnętrze i stylowy szofer sprawiają,</span> że każda przejażdżka staje się
+						częścią niezapomnianego doświadczenia.
 					</p>
 				</div>
 			</div>

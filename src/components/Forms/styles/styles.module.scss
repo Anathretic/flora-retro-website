@@ -31,9 +31,9 @@
 		position: relative;
 		padding: 0.95em 3.25em 0.95em 0.75em;
 		width: 100%;
-		color: var(--dark-blue-color);
+		color: var(--dark-brown-color);
 		background-color: transparent;
-		border: 1px solid var(--dark-blue-color);
+		border: 1px solid var(--dark-brown-color);
 		font-family: var(--font-montserrat);
 		font-size: 0.9em;
 		letter-spacing: 1px;
@@ -50,8 +50,8 @@
 	&__input,
 	&__textarea {
 		&:focus {
-			border-color: var(--gray-color);
-			outline: var(--gray-color);
+			border-color: var(--brown-color);
+			outline: var(--brown-color);
 		}
 
 		&::placeholder {
@@ -92,7 +92,7 @@
 		margin: 1em 1em 1.25em;
 		width: 215px;
 		color: var(--white-color);
-		background-color: var(--darker-blue-color);
+		background-color: var(--dark-brown-color);
 		font-family: var(--font-montserrat);
 		font-size: 1em;
 		text-align: center;
@@ -150,7 +150,7 @@
 
 		&__submit:hover,
 		&__return-btn:hover {
-			background-color: var(--gray-color);
+			background-color: var(--brown-color);
 		}
 	}
 }

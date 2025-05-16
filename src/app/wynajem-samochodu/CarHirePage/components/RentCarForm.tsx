@@ -11,9 +11,9 @@ export default function RentCarForm() {
 				<div className={styles['rent-car__form-title-box']}>
 					<h2 className={styles['rent-car__form-title']}>Zaczynamy?</h2>
 					<p id='formularz' className={styles['rent-car__form-title-subtext']}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates numquam eos eaque, eligendi
-						quod dolores facere qui odio necessitatibus, rerum blanditiis! Pariatur est dicta quasi odit a deserunt!
-						Temporibus, reprehenderit tempore!
+						<span>Zachwycił Cię ten klasyk?</span> Cudownie, niech stanie się częścią Twojego wyjątkowego dnia! Jeśli
+						masz pytania dotyczące wynajmu, dostępności lub chcesz omówić szczegóły przejazdu, wypełnij formularz lub
+						zadzwoń. Chętnie odpowiem i pomogę spełnić marzenie :)
 					</p>
 					<p className={styles['rent-car__form-title-subtext']}>
 						<span>Pamiętaj!</span> Wysyłając formularz wyrażasz zgodę na przetwarzanie Twoich danych zgodnie z
@@ -24,21 +24,16 @@ export default function RentCarForm() {
 					</p>
 					<ul className={styles['rent-car__form-title-info-box']}>
 						<li>
-							<p>Lorem, ipsum:</p>
-							<p className={styles['rent-car__form-special-text']}>
-								Lorem ipsum dolor sit amet sit amet.{' '}
-								<span>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, dignissimos laudantium! Accusamus,
-									natus illo.
-								</span>{' '}
-								Lorem ipsum dolor sit.
-							</p>
+							<p>E-mail:</p>
+							<p>flora_retro@o2.pl</p>
 						</li>
 						<li>
-							<p>Lorem, ipsum:</p>
-							<p>
-								- Lorem, ipsum dolor - <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
-							</p>
+							<p>Telefon:</p>
+							<p>+48 789 049 376</p>
+						</li>
+						<li>
+							<p>NIP:</p>
+							<p>922-289-02-46</p>
 						</li>
 					</ul>
 				</div>

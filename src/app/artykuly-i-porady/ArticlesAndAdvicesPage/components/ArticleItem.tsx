@@ -13,8 +13,7 @@ export default function ArticleItem({ title, text, specialText, href, image }: A
 			</div>
 			<h3>{title}</h3>
 			<p>
-				{text}
-				<span>{specialText}</span>
+				{text} <span>{specialText}</span>
 			</p>
 			<Link href={`${href}`} onClick={scrollToTop}>
 				Przeczytaj
