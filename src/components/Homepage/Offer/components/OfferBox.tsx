@@ -7,9 +7,9 @@ import { BsCarFrontFill } from 'react-icons/bs';
 
 import styles from '../styles/styles.module.scss';
 
-export default function OfferBox({ subpage, text, title, offerPlusesArray }: OfferBoxModel) {
+export default function OfferBox({ id, subpage, text, title, offerPlusesArray }: OfferBoxModel) {
 	return (
-		<div className={styles.offer__box}>
+		<div className={`${styles.offer__box} ${styles[`offer__box--${id}`]}`}>
 			<h3 className={styles['offer__box-title']}>{title}</h3>
 			<p className={styles['offer__box-text']}>{text}</p>
 			<p className={styles['offer__box-special-text']}>Co zapewniam?</p>

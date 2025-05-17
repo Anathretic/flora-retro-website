@@ -49,6 +49,8 @@
 		background-color: var(--brown-color);
 		color: var(--white-color);
 		border-radius: 1em;
+		background-position: center;
+		background-size: cover;
 		text-align: center;
 		z-index: 10;
 
@@ -60,6 +62,14 @@
 
 		svg {
 			fill: #ffffff33;
+		}
+
+		&--0 {
+			background-image: url('../../../../images/sections/offer-section/first-offer-box-image.jpg');
+		}
+
+		&--1 {
+			background-image: url('../../../../images/sections/offer-section/second-offer-box-image.jpg');
 		}
 	}
 

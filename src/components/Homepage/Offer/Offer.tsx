@@ -30,6 +30,7 @@ export default function OfferSection() {
 						offerData.map(({ offer }, id: number) => (
 							<OfferBox
 								key={id}
+								id={id}
 								subpage={offer.subpage}
 								text={offer.text}
 								title={offer.title}
