@@ -30,7 +30,7 @@ export default function IdeaSection() {
 							na lata.{' '}
 							<span>
 								Kwiaty traktuję jak słowa, a za ich pomocą opowiadam historię miłości, bliskości i magii chwili.
-							</span>
+							</span>{' '}
 							Moim celem jest stworzenie przestrzeni, w której kolory, zapachy i atmosfera współgrają ze sobą.
 							Subtelnie, z wyczuciem, od serca.
 						</p>

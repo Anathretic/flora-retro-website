@@ -22,7 +22,12 @@
 		flex-direction: column;
 	}
 
-	&__container {
+	&__container,
+	&__benefits,
+	&__gallery,
+	&__gallery-container,
+	&__gallery-wrapper,
+	&__form {
 		position: relative;
 	}
 
@@ -47,18 +52,20 @@
 		background-size: cover;
 	}
 
+	&__hero-image-title,
+	&__title {
+		text-align: center;
+		font-weight: 300;
+	}
+
 	&__hero-image-title {
 		color: var(--white-color);
 		font-size: 3rem;
-		font-weight: 300;
-		text-align: center;
 	}
 
 	&__title {
 		padding: 0 0.35rem 2rem;
 		font-size: 2.5rem;
-		text-align: center;
-		font-weight: 300;
 
 		&--special {
 			padding-top: 46px;
@@ -67,7 +74,6 @@
 	}
 
 	&__benefits {
-		position: relative;
 		padding: 50px 0 2rem;
 		overflow: hidden;
 	}
@@ -82,6 +88,7 @@
 		max-width: 300px;
 		border: none;
 		border-radius: 1.5em;
+		text-align: center;
 
 		-webkit-box-shadow: 0px 0px 10px 2px rgba(25, 50, 63, 0.25);
 		-moz-box-shadow: 0px 0px 10px 2px rgba(25, 50, 63, 0.25);
@@ -92,12 +99,10 @@
 			font-size: 1.5em;
 			font-weight: 300;
 			font-style: italic;
-			text-align: center;
 		}
 
 		p {
 			padding: 0 0.75em 2em;
-			text-align: center;
 			font-weight: 350;
 			line-height: 1.6em;
 
@@ -105,12 +110,6 @@
 				font-weight: 700;
 			}
 		}
-	}
-
-	&__gallery,
-	&__gallery-container,
-	&__gallery-wrapper {
-		position: relative;
 	}
 
 	&__gallery {
@@ -128,7 +127,6 @@
 	}
 
 	&__form {
-		position: relative;
 		padding: 30px 0 40px;
 		overflow: hidden;
 	}
@@ -148,11 +146,15 @@
 		padding-bottom: 2.5rem;
 	}
 
-	&__form-title-subtext {
-		padding: 1rem;
+	&__form-title-subtext,
+	&__form-title-info-box {
 		width: 90%;
 		max-width: 400px;
 		text-align: center;
+	}
+
+	&__form-title-subtext {
+		padding: 1rem;
 		line-height: 1.8em;
 
 		span {
@@ -168,10 +170,7 @@
 
 	&__form-title-info-box {
 		padding: 2rem 0;
-		width: 90%;
-		max-width: 400px;
 		list-style-type: none;
-		text-align: center;
 
 		li {
 			padding: 0.5em;
@@ -247,10 +246,7 @@
 			font-size: 3.35rem;
 		}
 
-		&__title {
-			font-size: 2.75rem;
-		}
-
+		&__title,
 		&__form-title {
 			font-size: 2.75rem;
 		}
@@ -312,7 +308,8 @@
 			font-size: 4.5rem;
 		}
 
-		&__content-wrapper {
+		&__content-wrapper,
+		&__benefits-text-content {
 			width: 100%;
 			max-width: 1000px;
 			flex-direction: row;
@@ -325,11 +322,8 @@
 		&__benefits-text-content {
 			display: flex;
 			justify-content: center;
-			flex-direction: row;
 			flex-wrap: wrap;
-			width: 100%;
 			padding-bottom: 3em;
-			max-width: 1000px;
 		}
 
 		&__benefits-text-content-box {
@@ -352,7 +346,8 @@
 			font-size: 5rem;
 		}
 
-		&__benefits {
+		&__benefits,
+		&__form {
 			padding-top: 70px;
 		}
 
@@ -362,10 +357,6 @@
 			&--special {
 				padding: 70px 0 64px;
 			}
-		}
-
-		&__form {
-			padding-top: 70px;
 		}
 
 		&__form-container {

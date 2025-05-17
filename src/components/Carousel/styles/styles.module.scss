@@ -34,16 +34,18 @@
 	max-width: 645px;
 	max-height: 750px;
 
-	&__wrapper {
+	&__wrapper,
+	&__controls {
 		position: absolute;
 		display: flex;
+	}
+
+	&__wrapper {
 		margin: 0 calc(4vmin * -1);
 		transition: transform 0.6s cubic-bezier(0.25, 1, 0.35, 1);
 	}
 
 	&__controls {
-		position: absolute;
-		display: flex;
 		justify-content: center;
 		top: calc(100% + 1rem);
 		width: 100%;
@@ -123,8 +125,12 @@
 		}
 	}
 
-	&__image-wrapper {
+	&__image-wrapper,
+	&__image {
 		position: absolute;
+	}
+
+	&__image-wrapper {
 		top: 0%;
 		left: 0%;
 		height: 100%;
@@ -140,7 +146,6 @@
 	&__image {
 		--d: 20;
 
-		position: absolute;
 		height: 110%;
 		width: 110%;
 		top: -5%;
@@ -158,9 +163,12 @@
 			}
 		}
 	}
+	&__headline,
+	&__content {
+		position: relative;
+	}
 
 	&__headline {
-		position: relative;
 		color: var(--white-color);
 		padding-bottom: 5vmin;
 		font-size: 5vmin;
@@ -171,7 +179,6 @@
 	&__content {
 		--d: 60;
 
-		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;

@@ -28,16 +28,16 @@ export interface InputAndTextareaModel extends InputDefaultModel {
 	readOnly?: boolean;
 }
 
-export interface ReCaptchaV2Model {
-	refCaptcha: React.RefObject<ReCAPTCHA | null>;
-	reCaptchaErrorValue: string;
-}
-
 export interface SubmitModel extends ReturnButtonModel {
 	buttonText: string;
 	setButtonText: Dispatch<SetStateAction<string>>;
 }
 
-export interface ReturnButtonModel {
+export type ReCaptchaV2Model = {
+	refCaptcha: React.RefObject<ReCAPTCHA | null>;
+	reCaptchaErrorValue: string;
+};
+
+export type ReturnButtonModel = {
 	isLoading: boolean;
-}
+};

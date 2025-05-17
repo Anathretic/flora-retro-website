@@ -1,7 +1,7 @@
-interface PlusesArrayModel {
+type PlusesArrayModel = {
 	id: number;
 	content: string;
-}
+};
 
 export interface OfferBoxModel {
 	subpage: string;

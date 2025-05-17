@@ -21,10 +21,15 @@
 		flex-direction: column;
 	}
 
+	&__container,
+	&__wrapper,
+	&__carousel-container {
+		width: 100%;
+	}
+
 	&__container {
 		padding: 1em 0;
 		margin: 0 auto;
-		width: 100%;
 		max-width: 2160px;
 	}
 
@@ -37,14 +42,12 @@
 	}
 
 	&__wrapper {
-		width: 100%;
 		padding: 3em 0;
 		overflow: hidden;
 	}
 
 	&__carousel-container {
 		display: flex;
-		width: 100%;
 	}
 
 	&__box {
