@@ -20,15 +20,18 @@
 		max-width: 2160px;
 	}
 
+	&__content-container,
+	&__title {
+		text-align: center;
+	}
+
 	&__content-container {
 		padding: 1em 2em 2em;
-		text-align: center;
 	}
 
 	&__title {
 		padding-bottom: 2.5rem;
 		font-size: 2.5rem;
-		text-align: center;
 		font-weight: 300;
 	}
 

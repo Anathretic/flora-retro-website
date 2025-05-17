@@ -15,7 +15,8 @@
 		flex-direction: column;
 	}
 
-	&__container {
+	&__container,
+	&__array {
 		position: relative;
 	}
 
@@ -36,22 +37,23 @@
 		background-size: cover;
 	}
 
+	&__hero-image-title,
+	&__title {
+		font-weight: 300;
+		text-align: center;
+	}
+
 	&__hero-image-title {
 		color: var(--white-color);
 		font-size: 3rem;
-		font-weight: 300;
-		text-align: center;
 	}
 
 	&__title {
 		padding: 0 0.35rem 2rem;
 		font-size: 2.5rem;
-		text-align: center;
-		font-weight: 300;
 	}
 
 	&__array {
-		position: relative;
 		padding: 50px 0 2rem;
 		overflow: hidden;
 	}

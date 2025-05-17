@@ -2,13 +2,13 @@ import { Dispatch, SetStateAction } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { UseFormReset } from 'react-hook-form';
 
-type DefaultFormModel = {
+interface DefaultFormModel {
 	firstname: string;
 	email: string;
 	message: string;
 	phone: string;
 	date: string;
-};
+}
 
 export type ContactFormModel = Pick<DefaultFormModel, 'firstname' | 'email' | 'phone' | 'message' | 'date'>;
 

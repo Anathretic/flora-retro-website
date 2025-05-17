@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
 
-export interface ProvidersModel {
+export type ProvidersModel = {
 	children: ReactNode;
-}
+};
