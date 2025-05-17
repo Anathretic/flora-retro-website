@@ -7,27 +7,13 @@ export default function DecorationsGallery() {
 				<h2 className={styles.decorations__title}>Galeria</h2>
 				<div className={styles['decorations__gallery-mosaic-container']}>
 					<div className='image-mosaic'>
-						<div className={`${styles['decorations__gallery-image--first']} card card-tall card-wide card-with-bg `}>
-							<span>Pracuję nad tym..</span>
-						</div>
-						<div className={`${styles['decorations__gallery-image--second']} card card-tall card-with-bg`}>
-							<span>Pracuję nad tym..</span>
-						</div>
-						<div className={`${styles['decorations__gallery-image--third']} card card-with-bg`}>
-							<span>Pracuję nad tym..</span>
-						</div>
-						<div className={`${styles['decorations__gallery-image--fourth']} card card-with-bg`}>
-							<span>Pracuję nad tym..</span>
-						</div>
-						<div className={`${styles['decorations__gallery-image--fifth']} card card-with-bg`}>
-							<span>Pracuję nad tym..</span>
-						</div>
-						<div className={`${styles['decorations__gallery-image--sixth']} card card-with-bg`}>
-							<span>Pracuję nad tym..</span>
-						</div>
-						<div className={`${styles['decorations__gallery-image--seventh']} card card-wide card-with-bg`}>
-							<span>Pracuję nad tym..</span>
-						</div>
+						<div className={`${styles['decorations__gallery-image--first']} card card-tall card-wide card-with-bg `} />
+						<div className={`${styles['decorations__gallery-image--second']} card card-tall card-with-bg`} />
+						<div className={`${styles['decorations__gallery-image--third']} card card-with-bg`} />
+						<div className={`${styles['decorations__gallery-image--fourth']} card card-with-bg`} />
+						<div className={`${styles['decorations__gallery-image--fifth']} card card-with-bg`} />
+						<div className={`${styles['decorations__gallery-image--sixth']} card card-with-bg`} />
+						<div className={`${styles['decorations__gallery-image--seventh']} card card-wide card-with-bg`} />
 					</div>
 				</div>
 			</div>
