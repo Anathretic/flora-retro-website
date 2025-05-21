@@ -59,7 +59,7 @@ export const articleData = [
 				'Samochody retro, takie jak klasyczne Rolls-Royce, Cadillac czy Mercedes z lat 60., to świetny wybór, jeśli marzycie o eleganckim, klasycznym wyglądzie. Takie pojazdy doskonale komponują się z motywem vintage, który wciąż jest na topie w 2025 roku. Z kolei limuzyny to zdecydowanie wybór dla tych, którzy cenią sobie przestronność i komfort – idealne na długie przejazdy, zwłaszcza gdy ceremonia odbywa się w odległym miejscu. Limuzyny mogą być też pięknie udekorowane kwiatami, wstążkami i balonami, tworząc harmonijną całość z resztą dekoracji weselnych.',
 			thirdSubtitle: 'Nowoczesność kontra klasyka – SUV-y na ślub',
 			thirdParagraph:
-				'SUV-y, choć mniej klasyczne, stają się coraz bardziej popularne wśród par, które szukają nowoczesności i komfortu. Dobrej jakości, elegancki SUV świetnie nadaje się do transportu w stylu glamour i komfortowym. Niezależnie od tego, jaki pojazd wybierzecie, pamiętajcie o detalu – ozdoby w postaci kwiatów, wstążek czy tabliczek „Just Married” to detale, które podkreślają urok pojazdu i nadają mu osobistego charakteru.',
+				'SUV-y, choć mniej klasyczne, stają się coraz bardziej popularne wśród par, które szukają nowoczesności i komfortu. Dobrej jakości, elegancki SUV świetnie nadaje się do transportu w stylu glamour. Niezależnie od tego, jaki pojazd wybierzecie, pamiętajcie o detalu – ozdoby w postaci kwiatów, wstążek czy tabliczek „Just Married” to detale, które podkreślają urok pojazdu i nadają mu osobistego charakteru.',
 		},
 	},
 	{

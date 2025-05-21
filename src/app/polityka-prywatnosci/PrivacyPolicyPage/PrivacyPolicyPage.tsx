@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
 							<h2>1. Informacje ogólne</h2>
 							<p>
 								Niniejsza Polityka Prywatności określa zasady zbierania, przetwarzania i ochrony danych osobowych
-								użytkowników strony internetowej Flora Retro - Pracownia Dekoracyjna (dalej: Strona), dostępnej pod
+								użytkowników strony internetowej Flora Retro - Pracownia Dekoracji (dalej: Strona), dostępnej pod
 								adresem: <Link href='/'>flora-retro.pl</Link>. Dbam o ochronę prywatności moich użytkowników i zapewniam
 								najwyższy poziom bezpieczeństwa danych osobowych. Zbieranie danych osobowych odbywa się zgodnie z
 								przepisami prawa, w szczególności z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia

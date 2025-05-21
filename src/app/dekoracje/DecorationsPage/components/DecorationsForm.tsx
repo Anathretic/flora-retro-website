@@ -11,9 +11,9 @@ export default function DecorationsForm() {
 				<div className={styles['decorations__form-title-box']}>
 					<h2 className={styles['decorations__form-title']}>Zaczynamy?</h2>
 					<p className={styles['decorations__form-title-subtext']}>
-						<span>Marzysz o dekoracji jak z bajki? </span> Jesteś we właściwym miejscu! Jeśli masz pytanie, chcesz
-						omówić szczegóły lub po prostu dowiedzieć się więcej, skorzystaj z formularza kontaktowego albo zadzwoń – z
-						przyjemnością odpowiem na wszystkie pytania i pomogę Ci stworzyć wyjątkową oprawę Twojego dnia.
+						Marzysz o dekoracji jak z bajki? Jesteś we właściwym miejscu! Jeśli masz pytanie, chcesz omówić szczegóły
+						lub po prostu dowiedzieć się więcej, skorzystaj z formularza kontaktowego albo zadzwoń – z przyjemnością
+						odpowiem na wszystkie pytania i pomogę Ci stworzyć wyjątkową oprawę Twojego dnia.
 					</p>
 					<p className={styles['decorations__form-title-subtext']}>
 						<span>Pamiętaj!</span> Wysyłając formularz wyrażasz zgodę na przetwarzanie Twoich danych zgodnie z
@@ -37,7 +37,7 @@ export default function DecorationsForm() {
 						</li>
 					</ul>
 				</div>
-				<ContactForm />
+				<ContactForm subject='Dekoracje' />
 			</div>
 		</section>
 	);

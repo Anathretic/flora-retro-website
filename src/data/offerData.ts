@@ -25,7 +25,7 @@ export const offerData = [
 		id: 1,
 		offer: {
 			subpage: '/wynajem-samochodu',
-			text: 'Ten samochód ma swój charakter – tak jak Wasz ślub. To klasyka z nutą nostalgii, która świetnie wpisuje się w romantyczne kadry i wyjątkowe momenty. Dbam o każdy szczegół, by podróż była nie tylko wygodna, ale i niezapomniana. Detale mają znaczenie – także na czterech kołach.',
+			text: 'Mercedes W108 to samochód z charakterem – tak jak Wasz ślub. Klasyka z nutą nostalgii, która świetnie wpisuje się w romantyczne kadry i wyjątkowe momenty. Dbam o każdy szczegół, by podróż była nie tylko wygodna, ale i niezapomniana. Detale mają znaczenie – także na czterech kołach.',
 			title: 'Wynajem',
 			offerPlusesArray: [
 				{

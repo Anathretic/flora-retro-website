@@ -7,7 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { contactFormInputsConfig } from './inputsConfig/inputsConfig';
 import { useFormSubmits } from '@/hooks/useFormSubmits';
 import { contactSchema } from '@/schemas/schemas';
-import { ContactFormModel } from '@/models/form.model';
+import { ContactFormComponentModel, ContactFormModel } from '@/models/form.model';
 import {
 	FormSubmit,
 	InputElement,
@@ -20,7 +20,7 @@ import * as yup from 'yup';
 
 import styles from '../Homepage/Contact/styles/styles.module.scss';
 
-export default function ContactForm() {
+export default function ContactForm({ subject }: ContactFormComponentModel) {
 	const [buttonText, setButtonText] = useState('Wyślij');
 	const [reCaptchaErrorValue, setReCaptchaErrorValue] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
@@ -48,6 +48,7 @@ export default function ContactForm() {
 		setButtonText,
 		setReCaptchaErrorValue,
 		setIsLoading,
+		subject,
 		refCaptcha,
 	});
 

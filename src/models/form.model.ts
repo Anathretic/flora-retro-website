@@ -10,6 +10,10 @@ interface DefaultFormModel {
 	date: string;
 }
 
+export type ContactFormComponentModel = {
+	subject: string;
+};
+
 export type ContactFormModel = Pick<DefaultFormModel, 'firstname' | 'email' | 'phone' | 'message' | 'date'>;
 
 // ------------------ useFormSubmits --------------------
@@ -21,6 +25,7 @@ export interface UseFormSubmitsModel<T extends FormTypes> {
 	setIsLoading: Dispatch<SetStateAction<boolean>>;
 	setReCaptchaErrorValue: Dispatch<SetStateAction<string>>;
 	setButtonText: Dispatch<SetStateAction<string>>;
+	subject: string;
 	refCaptcha?: React.RefObject<ReCAPTCHA | null>;
 }
 
