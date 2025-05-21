@@ -7,6 +7,7 @@ export function useFormSubmits<T extends FormTypes>({
 	setButtonText,
 	setReCaptchaErrorValue,
 	setIsLoading,
+	subject,
 	refCaptcha,
 }: UseFormSubmitsModel<T>) {
 	const contactSubmit: SubmitHandler<ContactFormModel> = async ({ firstname, email, phone, date, message }) => {
@@ -20,6 +21,7 @@ export function useFormSubmits<T extends FormTypes>({
 
 		const params = {
 			firstname,
+			subject,
 			email,
 			phone,
 			date,

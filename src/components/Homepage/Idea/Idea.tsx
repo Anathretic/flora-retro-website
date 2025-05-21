@@ -40,7 +40,7 @@ export default function IdeaSection() {
 						<HiOutlineSparkles fontSize={56} />
 						<h3>III. Wyjątkowość w każdym detalu</h3>
 						<p>
-							<span>Nie tworzę dekoracji „z katalogu”. </span> Każdy projekt jest dla mnie osobisty – dopasowany do Was,
+							<span>Nie tworzę dekoracji „z katalogu”. </span> Każdy projekt jest dla mnie osobisty - dopasowany do Was,
 							do miejsca i do emocji, które chcemy wspólnie podkreślić.{' '}
 							<span>Styl retro jest moją bazą, ale lubię bawić się formą i łączyć go z innymi elementami.</span> Dzięki
 							temu powstają kompozycje, które są naprawdę Wasze – niepowtarzalne i dopracowane w najdrobniejszych

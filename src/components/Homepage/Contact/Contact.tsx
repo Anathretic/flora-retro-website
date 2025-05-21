@@ -32,7 +32,7 @@ export default function ContactSection() {
 						</li>
 					</ul>
 				</div>
-				<ContactForm />
+				<ContactForm subject='Kontakt' />
 			</div>
 		</section>
 	);

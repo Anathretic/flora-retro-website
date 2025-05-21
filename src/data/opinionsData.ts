@@ -4,7 +4,7 @@ export const opinionsData = [
 		opinion: {
 			title: 'Dekoracja marzeń!',
 			content:
-				'Z całego serca polecam! Sala wyglądała jak z bajki – elegancko, stylowo i z klasą. Wszystko dopracowane w najmniejszym szczególe, a goście byli zachwyceni klimatem. Kontakt bez zarzutu, elastyczni i bardzo pomocni. Dziękujemy!',
+				'Z całego serca polecam! Sala wyglądała jak z bajki – elegancko, stylowo i z klasą. Wszystko dopracowane w najmniejszym szczególe, a goście byli zachwyceni klimatem. Kontakt bez zarzutu. Dziękujemy!',
 			name: 'Adrianna B.',
 		},
 	},
@@ -13,7 +13,7 @@ export const opinionsData = [
 		opinion: {
 			title: 'Piękno w prostocie',
 			content:
-				'Dekoracje na komunię córki były przepiękne – subtelne, delikatne i bardzo gustowne. Drobny minus za lekkie opóźnienie w montażu, ale finalny efekt zdecydowanie to wynagrodził. Polecam z czystym sumieniem.',
+				'Dekoracje na komunię córki były przepiękne. Subtelne, delikatne i bardzo gustowne. Drobny minus za lekkie opóźnienie w montażu, ale finalny efekt zdecydowanie to wynagrodził. Polecam z czystym sumieniem.',
 			name: 'Joanna S.',
 		},
 	},
@@ -30,8 +30,7 @@ export const opinionsData = [
 		id: 3,
 		opinion: {
 			title: 'Wymarzony samochód!',
-			content:
-				'Piękny Mercedes! Szczęka opadła wszystkim gościom! :) Czysty, zadbany, z pięknymi dodatkami. Najlepszy dzień w naszym życiu!',
+			content: 'Piękny Mercedes! Szczęka opadła wszystkim gościom :) Najlepszy dzień w naszym życiu!',
 			name: 'Angelika W.',
 		},
 	},
@@ -40,7 +39,7 @@ export const opinionsData = [
 		opinion: {
 			title: 'Przepięknie!',
 			content:
-				'Sala, jak i kościół udekorowane przepięknie! Każdy detal dopieszczony. Widoczne serce włożone w wykonaną pracę. Serdecznie polecam! ',
+				'Sala, jak i kościół udekorowane obłędnie! Każdy detal dopieszczony. Widoczne serce włożone w wykonaną pracę. Serdecznie polecam! ',
 			name: 'Aleksandra Cz.',
 		},
 	},

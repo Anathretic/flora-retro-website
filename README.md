@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Flora Retro
 
-## Getting Started
+## About
 
-First, run the development server:
+Flora Retro is a commercial website for a company specializing in wedding and event decorations. The site showcases the company’s services, highlights selected past projects, and provides a way for customers to get in touch. The design emphasizes elegance and user-friendly navigation to reflect the aesthetic values of the event industry.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Coding & Problems
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I chose Next.js for this project to explore its approach to server-side rendering (SSR) and static site generation (SSG). Next.js offers powerful tools for SEO, performance optimization, and API integration, making it a great fit for commercial websites. This project also gave me the opportunity to deepen my understanding of React and experiment with features such as file-based routing, dynamic paths, and image optimization.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Links, Tools & Tech-stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Used:** React (incl. react-hook-form), Next.js, TypeScript, SASS, Yup
 
-## Learn More
+**Tools:** [EmailJS](https://www.emailjs.com/), [Google reCaptcha](https://www.google.com/recaptcha/about/)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**URL:** TBA

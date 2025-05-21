@@ -11,9 +11,9 @@ export default function RentCarForm() {
 				<div className={styles['rent-car__form-title-box']}>
 					<h2 className={styles['rent-car__form-title']}>Zaczynamy?</h2>
 					<p id='formularz' className={styles['rent-car__form-title-subtext']}>
-						<span>Zachwycił Cię ten klasyk?</span> Cudownie, niech stanie się częścią Twojego wyjątkowego dnia! Jeśli
-						masz pytania dotyczące wynajmu, dostępności lub chcesz omówić szczegóły przejazdu, wypełnij formularz lub
-						zadzwoń. Chętnie odpowiem i pomogę spełnić marzenie :)
+						Zachwycił Cię ten klasyk? Cudownie, niech stanie się częścią Twojego wyjątkowego dnia! Jeśli masz pytania
+						dotyczące wynajmu, dostępności lub chcesz omówić szczegóły przejazdu, wypełnij formularz lub zadzwoń.
+						Chętnie odpowiem i pomogę spełnić marzenie :)
 					</p>
 					<p className={styles['rent-car__form-title-subtext']}>
 						<span>Pamiętaj!</span> Wysyłając formularz wyrażasz zgodę na przetwarzanie Twoich danych zgodnie z
@@ -37,7 +37,7 @@ export default function RentCarForm() {
 						</li>
 					</ul>
 				</div>
-				<ContactForm />
+				<ContactForm subject='Wynajem samochodu' />
 			</div>
 		</section>
 	);
