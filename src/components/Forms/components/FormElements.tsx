@@ -62,16 +62,13 @@ export const ReCaptchaV2Component: React.FC<ReCaptchaV2Model> = ({ refCaptcha, r
 	const isMobile = useMediaQuery({ query: '(max-width: 499px)' });
 
 	return (
-		<div className={styles['form__recaptcha-box']}>
+		<div className={`${styles['form__recaptcha-box']} ${reCaptchaErrorValue && styles['form__recaptcha-error']}`}>
 			<ReCAPTCHA
 				key={isMobile ? 'compact-recaptcha' : 'normal-recaptcha'}
 				size={isMobile ? 'compact' : 'normal'}
 				sitekey={process.env.NEXT_PUBLIC_SITE_KEY!}
 				ref={refCaptcha}
 			/>
-			<div className={styles['form__recaptcha-error']}>
-				<p>{reCaptchaErrorValue}</p>
-			</div>
 		</div>
 	);
 };

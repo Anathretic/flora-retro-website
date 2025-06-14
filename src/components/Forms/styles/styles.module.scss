@@ -20,10 +20,17 @@
 
 	&__recaptcha-box {
 		padding: 1em 0 1em 4px;
+
+		div div div div iframe {
+			border: 1px solid transparent;
+			border-radius: 0.35em;
+		}
 	}
 
 	&__label {
 		padding-bottom: 0.25em;
+		width: 100%;
+		text-align: start;
 	}
 
 	&__input,
@@ -65,25 +72,19 @@
 	}
 
 	&__input-error,
-	&__textarea-error,
-	&__recaptcha-error {
-		color: var(--error-color);
-		text-align: center;
-	}
-
-	&__input-error,
 	&__textarea-error {
 		padding-top: 0.25em;
 		height: 1em;
 		width: 100%;
+		color: var(--error-color);
 		font-size: 0.8em;
+		text-align: center;
 	}
 
 	&__recaptcha-error {
-		padding: 8px;
-		height: 2px;
-		width: 90%;
-		font-size: 0.95em;
+		div div div div iframe {
+			border: 3px solid var(--error-color);
+		}
 	}
 
 	&__submit,
@@ -117,7 +118,8 @@
 @media screen and (min-width: 400px) {
 	.form {
 		&__input,
-		&__textarea {
+		&__textarea,
+		&__label {
 			width: 90%;
 		}
 	}
@@ -143,8 +145,7 @@
 			font-size: 0.9rem;
 		}
 
-		&__textarea-error,
-		&__recaptcha-error {
+		&__textarea-error {
 			font-size: 0.95em;
 		}
 
