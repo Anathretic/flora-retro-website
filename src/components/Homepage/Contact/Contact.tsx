@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import ContactForm from '@/components/Forms/ContactForm';
+import { FiMail, FiPhone } from 'react-icons/fi';
+import { FaBriefcase, FaRegBuilding } from 'react-icons/fa';
 
 import styles from './styles/styles.module.scss';
 
@@ -19,16 +21,41 @@ export default function ContactSection() {
 					</p>
 					<ul className={styles['contact__title-info-box']}>
 						<li>
-							<p>E-mail:</p>
-							<p>flora_retro@o2.pl</p>
+							<div>
+								<FiMail />
+							</div>
+							<div>
+								<p>E-mail:</p>
+								<p>flora_retro@o2.pl</p>
+							</div>
 						</li>
 						<li>
-							<p>Telefon:</p>
-							<p>+48 789 049 376</p>
+							<div>
+								<FiPhone />
+							</div>
+							<div>
+								<p>Telefon:</p>
+								<p>+48 789 049 376</p>
+							</div>
 						</li>
 						<li>
-							<p>NIP:</p>
-							<p>922-289-02-46</p>
+							<div>
+								<FaRegBuilding />
+							</div>
+							<div>
+								<p>Biuro:</p>
+								<p>ul. Wieś Wierzchowiny 19A</p>
+								<p>22-400 Wierzchowiny</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<FaBriefcase />
+							</div>
+							<div>
+								<p>NIP:</p>
+								<p>922-289-02-46</p>
+							</div>
 						</li>
 					</ul>
 				</div>

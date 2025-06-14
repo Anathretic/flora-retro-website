@@ -48,6 +48,81 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	right: 20px;
 }
 
+/* Opinions Carousel */
+
+.carousel {
+	max-width: 320px;
+	width: 100%;
+}
+
+.carousel .slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel .control-arrow {
+	background: none !important;
+	width: 40px;
+	height: 40px;
+	top: 50% !important;
+	transform: translateY(-50%);
+	transition: opacity 0.3s;
+	opacity: 0.9;
+
+	&:focus,
+	&:active,
+	&:hover {
+		background: none !important;
+	}
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+.carousel .control-prev {
+	left: -5px !important;
+}
+
+.carousel .control-next {
+	right: -5px !important;
+}
+
+@media screen and (min-width: 350px) {
+	.carousel {
+		max-width: 350px;
+	}
+}
+
+@media screen and (min-width: 400px) {
+	.carousel {
+		max-width: 400px;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.carousel {
+		max-width: 500px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.carousel {
+		max-width: 600px;
+	}
+
+	.carousel .slide {
+		padding-top: 0.5em;
+	}
+}
+
+@media screen and (min-width: 1358px) {
+	.carousel {
+		max-width: 900px;
+	}
+}
+
 /* Gallery mosaic */
 
 .image-mosaic {

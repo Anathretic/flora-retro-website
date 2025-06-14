@@ -1,4 +1,5 @@
-export const scrollToTop = () => {
+export const scrollToTop = (e?: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+	if (e?.ctrlKey) return;
 	const body = document.querySelector('#root');
 	body?.scrollIntoView();
 };

@@ -1,4 +1,4 @@
-interface OpinionModel {
+export interface OpinionItemModel {
 	title: string;
 	content: string;
 	name: string;
@@ -6,9 +6,5 @@ interface OpinionModel {
 
 export interface OpinionsDataModel {
 	id: number;
-	opinion: OpinionModel;
-}
-
-export interface OpinionItemModel extends OpinionModel {
-	setStopAnimation: React.Dispatch<React.SetStateAction<boolean>>;
+	opinion: OpinionItemModel;
 }
