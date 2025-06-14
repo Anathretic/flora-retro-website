@@ -18,12 +18,7 @@ export default function OfferBox({ id, subpage, text, title, offerPlusesArray }:
 					<li key={id}>{data.content}</li>
 				))}
 			</ul>
-			<Link
-				href={subpage}
-				className={styles['offer__box-button']}
-				onClick={() => {
-					scrollToTop();
-				}}>
+			<Link href={subpage} className={styles['offer__box-button']} onClick={scrollToTop}>
 				Sprawdź
 			</Link>
 			{title === 'Wynajem' ? (

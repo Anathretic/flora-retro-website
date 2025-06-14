@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import { useFooterLinksContext } from '@/hooks/useFooterLinksContext';
 import { Footer } from '@/components';
+import { scrollToTop } from '@/utils/scrollToTopUtils';
 
 import styles from './styles/styles.module.scss';
 
@@ -162,7 +163,11 @@ export default function PrivacyPolicyPage() {
 								Konrad Wojtyło
 							</a>
 						</div>
-						<Link href='/' className={styles['terms-and-conditions__btn']} aria-label='Powrót na stronę główną'>
+						<Link
+							href='/'
+							className={styles['terms-and-conditions__btn']}
+							aria-label='Powrót na stronę główną'
+							onClick={scrollToTop}>
 							Powrót
 						</Link>
 					</div>
