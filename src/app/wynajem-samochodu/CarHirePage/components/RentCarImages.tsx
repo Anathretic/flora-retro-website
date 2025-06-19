@@ -19,7 +19,7 @@ export default function RentCarImages() {
 	}, []);
 
 	return (
-		<section className={styles['rent-car__gallery']}>
+		<section className={styles['rent-car__gallery']} id='galeria'>
 			<div className={styles['rent-car__gallery-container']}>
 				<div className={styles['rent-car__gallery-wrapper']}>
 					<h2 className={`${styles['rent-car__title']} ${styles['rent-car__title--special']}`}>Galeria</h2>

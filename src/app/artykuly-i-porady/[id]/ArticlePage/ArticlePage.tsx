@@ -1,12 +1,14 @@
 'use client';
 
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { scrollToTop } from '@/utils/scrollToTopUtils';
 import { ArticlePageModel } from '@/models/article.model';
 
 import styles from './styles/styles.module.scss';
 
 export default function ArticlePage({ article }: ArticlePageModel) {
+	const router = useRouter();
+
 	return (
 		<main>
 			<article className={styles.article}>
@@ -27,9 +29,14 @@ export default function ArticlePage({ article }: ArticlePageModel) {
 								<h2>{article.blogArticle.thirdSubtitle}</h2>
 								<p>{article.blogArticle.thirdParagraph}</p>
 							</div>
-							<Link href='/artykuly-i-porady' className={styles.article__btn} onClick={scrollToTop}>
+							<button
+								className={styles.article__btn}
+								onClick={() => {
+									router.back();
+									scrollToTop();
+								}}>
 								Powrót
-							</Link>
+							</button>
 						</>
 					)}
 				</div>

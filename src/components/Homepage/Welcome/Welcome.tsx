@@ -10,8 +10,11 @@ export default function WelcomeSection() {
 			<div className={styles.welcome__container}>
 				<h1 className={styles.welcome__title}>Flora Retro</h1>
 				<p>Pracownia dekoracji</p>
+				<Link href='/dekoracje' className={styles['welcome__special-btn']}>
+					Ozdabiam!
+				</Link>
 			</div>
-			<Link href='/#oferta' className={styles.welcome__button}>
+			<Link href='/#idea' className={styles.welcome__button}>
 				<div className={`${styles.welcome__arrow} ${animations['arrow-bounce-animation']}`}>
 					<SlArrowDown className={styles['welcome__arrow-icon']} />
 				</div>

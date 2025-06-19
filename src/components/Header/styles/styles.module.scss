@@ -34,12 +34,14 @@
 .navbar {
 	&__title,
 	&__title-box,
-	&__mobile-list {
+	&__mobile-list,
+	&__instagram-icon {
 		display: flex;
 		align-items: center;
 	}
 
-	&__title {
+	&__title,
+	&__instagram-icon {
 		justify-content: center;
 	}
 
@@ -101,6 +103,12 @@
 		text-decoration: none;
 		transition: color 0.3s ease-out;
 	}
+
+	&__instagram-icon-link {
+		padding: 0.5rem;
+		color: var(--white-color);
+		transition: color 0.3s ease-out;
+	}
 }
 
 @media screen and (max-height: 350px) {
@@ -147,8 +155,21 @@
 			list-style-type: none;
 		}
 
+		&__title-box img {
+			width: 125px;
+			height: auto;
+		}
+
 		&__item {
 			margin: 0 1rem;
+		}
+
+		&__instagram-icon-margin {
+			margin-left: 0.75rem;
+		}
+
+		&__instagram-icon {
+			margin-top: 5px;
 		}
 	}
 }
@@ -180,7 +201,8 @@
 	}
 
 	.navbar {
-		&__item-link:hover {
+		&__item-link:hover,
+		&__instagram-icon-link:hover {
 			color: var(--light-gray-color);
 		}
 	}
@@ -199,6 +221,12 @@
 		&__container {
 			padding: 0 8rem;
 			max-width: 2460px;
+		}
+	}
+
+	.navbar {
+		&__instagram-icon {
+			margin: 5px 1rem 0 1.5rem;
 		}
 	}
 }

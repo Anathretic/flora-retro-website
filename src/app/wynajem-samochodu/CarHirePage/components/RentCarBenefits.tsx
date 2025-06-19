@@ -6,7 +6,7 @@ import styles from '../styles/styles.module.scss';
 
 export default function RentCarBenefits() {
 	return (
-		<section className={styles['rent-car__benefits']}>
+		<section className={styles['rent-car__benefits']} id='informacje'>
 			<h2 className={styles['rent-car__title']}>Mercedes W108</h2>
 			<div className={styles['rent-car__benefits-text-content']}>
 				<div className={styles['rent-car__benefits-text-content-box']}>

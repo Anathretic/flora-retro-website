@@ -13,7 +13,7 @@ export const opinionsData = [
 		opinion: {
 			title: 'Piękno w prostocie',
 			content:
-				'Dekoracje na komunię córki były przepiękne. Subtelne, delikatne i bardzo gustowne. Drobny minus za lekkie opóźnienie w montażu, ale finalny efekt zdecydowanie to wynagrodził. Polecam z czystym sumieniem.',
+				'Dekoracje na komunię córki były przepiękne. Subtelne, delikatne i bardzo gustowne. Finalny efekt OSZAŁAMIAJĄCY! Polecam z czystym sumieniem.',
 			name: 'Joanna S.',
 		},
 	},
