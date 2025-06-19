@@ -1,4 +1,4 @@
-export const navbarItems = [
+export const homepageNavbarItems = [
 	{
 		title: 'idea',
 		section: '/#idea',
@@ -18,5 +18,43 @@ export const navbarItems = [
 	{
 		title: 'kontakt',
 		section: '/#kontakt',
+	},
+];
+
+export const decorationNavbarItems = [
+	{
+		title: 'home',
+		section: '/',
+	},
+	{
+		title: 'informacje',
+		section: '/dekoracje/#informacje',
+	},
+	{
+		title: 'galeria',
+		section: '/dekoracje/#galeria',
+	},
+	{
+		title: 'rezerwacja',
+		section: '/dekoracje/#rezerwacja',
+	},
+];
+
+export const carHireNavbarItems = [
+	{
+		title: 'home',
+		section: '/',
+	},
+	{
+		title: 'informacje',
+		section: '/wynajem-samochodu/#informacje',
+	},
+	{
+		title: 'galeria',
+		section: '/wynajem-samochodu/#galeria',
+	},
+	{
+		title: 'rezerwacja',
+		section: '/wynajem-samochodu/#rezerwacja',
 	},
 ];

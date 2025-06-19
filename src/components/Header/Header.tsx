@@ -1,16 +1,17 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { navbarItems } from './components/navbarData/navbarItems';
 import { NavbarTitle } from './components/NavbarTitle';
 import { NavbarItem } from './components/NavbarItem';
+import { NavbarInstagramIcon } from './components/NavbarInstagramIcon';
+import { HeaderModel } from '@/models/header.model';
 import { AiOutlineClose } from 'react-icons/ai';
 import { HiMenuAlt4 } from 'react-icons/hi';
 
 import styles from './styles/styles.module.scss';
 import animations from './styles/animations.module.scss';
 
-export default function Header() {
+export default function Header({ navbarItems }: HeaderModel) {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [isAnimating, setIsAnimating] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -76,6 +77,7 @@ export default function Header() {
 											onClick={handleMenuClose}
 										/>
 									))}
+									<NavbarInstagramIcon onClick={handleMenuClose} />
 								</ul>
 							</nav>
 						)}
@@ -85,6 +87,7 @@ export default function Header() {
 							{navbarItems.map(({ title, section }) => (
 								<NavbarItem key={title} title={title} section={section} />
 							))}
+							<NavbarInstagramIcon />
 						</ul>
 					</nav>
 				</div>

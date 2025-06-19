@@ -6,7 +6,7 @@ import styles from '../styles/styles.module.scss';
 
 export default function DecorationsInfo() {
 	return (
-		<section className={styles.decorations__info}>
+		<section className={styles.decorations__info} id='informacje'>
 			<h2 className={styles.decorations__title}>Co mnie wyróżnia?</h2>
 			<div className={styles['decorations__info-text-content']}>
 				<div className={styles['decorations__info-text-content-box']}>

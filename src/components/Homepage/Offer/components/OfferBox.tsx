@@ -12,14 +12,16 @@ export default function OfferBox({ id, subpage, text, title, offerPlusesArray }:
 		<div className={`${styles.offer__box} ${styles[`offer__box--${id}`]}`}>
 			<h3 className={styles['offer__box-title']}>{title}</h3>
 			<p className={styles['offer__box-text']}>{text}</p>
-			<p className={styles['offer__box-special-text']}>Co zapewniam?</p>
+			<p className={styles['offer__box-special-text']}>
+				{title === 'Wynajem' ? 'To Ci zapewniam..' : 'Dla Ciebie stworzę..'}
+			</p>
 			<ul>
 				{offerPlusesArray?.map((data, id) => (
 					<li key={id}>{data.content}</li>
 				))}
 			</ul>
 			<Link href={subpage} className={styles['offer__box-button']} onClick={scrollToTop}>
-				Sprawdź
+				Poproszę!
 			</Link>
 			{title === 'Wynajem' ? (
 				<BsCarFrontFill fontSize={42} style={{ marginTop: '10px' }} />

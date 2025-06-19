@@ -2,7 +2,7 @@ import styles from '../styles/styles.module.scss';
 
 export default function DecorationsGallery() {
 	return (
-		<section className={styles.decorations__gallery}>
+		<section className={styles.decorations__gallery} id='galeria'>
 			<div className={styles['decorations__gallery-container']}>
 				<h2 className={styles.decorations__title}>Galeria</h2>
 				<div className={styles['decorations__gallery-mosaic-container']}>
