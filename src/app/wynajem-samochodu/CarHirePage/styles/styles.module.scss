@@ -46,7 +46,7 @@
 	}
 
 	&__hero-image {
-		height: 40vh;
+		height: 60vh;
 		background-image: url('../../../../images/subpages/rent-car-subpage/hero-bg-image.jpg');
 		background-position: center;
 		background-size: cover;
@@ -85,9 +85,9 @@
 	&__benefits-text-content-box {
 		margin: 2em;
 		padding: 2em 0.5em 0;
-		max-width: 300px;
+		max-width: 325px;
 		border: none;
-		border-radius: 1em;
+		border-radius: 0.5em;
 		text-align: center;
 
 		-webkit-box-shadow: 0px 0px 10px 2px rgba(25, 50, 63, 0.25);
@@ -97,7 +97,7 @@
 		h3 {
 			padding: 1em;
 			font-size: 1.5em;
-			font-weight: 300;
+			font-weight: 400;
 			font-style: italic;
 		}
 
@@ -203,6 +203,13 @@
 		p:first-of-type {
 			font-weight: 600;
 		}
+
+		a {
+			color: var(--dark-brown-color);
+			text-underline-offset: 2px;
+			transition: color 0.3s;
+			cursor: pointer;
+		}
 	}
 
 	&__form-special-text {
@@ -290,7 +297,7 @@
 @media screen and (max-height: 500px) {
 	.rent-car {
 		&__hero-image {
-			height: 60vh;
+			height: 100vh;
 		}
 
 		&__hero-image-title {
@@ -320,10 +327,11 @@
 @media screen and (min-width: 768px) {
 	.rent-car {
 		&__hero-image {
-			height: 40vh;
 			background-image: url('../../../../images/subpages/rent-car-subpage/hero-bg-image-xl.jpg');
-			background-position: center;
-			background-size: cover;
+		}
+
+		&__benefits-text-content-box {
+			max-width: 350px;
 		}
 	}
 }
@@ -338,6 +346,10 @@
 
 @media screen and (min-width: 1024px) {
 	.rent-car {
+		&__hero-image {
+			height: 57vh;
+		}
+
 		&__hero-image-title {
 			font-size: 4.5rem;
 		}
@@ -368,7 +380,8 @@
 			padding-bottom: 3rem;
 		}
 
-		&__form-title-subtext a:hover {
+		&__form-title-subtext a:hover,
+		&__form-title-info-box a:hover {
 			color: var(--brown-color);
 		}
 	}

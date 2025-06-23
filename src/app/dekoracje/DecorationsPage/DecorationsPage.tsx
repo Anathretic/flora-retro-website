@@ -12,7 +12,7 @@ export default function DecorationsPage() {
 	const { setShowSpecialLinks } = useFooterLinksContext();
 
 	useEffect(() => {
-		setShowSpecialLinks(true);
+		setShowSpecialLinks(false);
 	}, []);
 
 	return (

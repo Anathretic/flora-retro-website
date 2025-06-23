@@ -16,7 +16,7 @@ export const offerData = [
 				},
 				{
 					id: 2,
-					content: 'Rozumienie potrzeb klienta',
+					content: 'Wystrój zgodny z Tobą',
 				},
 			],
 		},

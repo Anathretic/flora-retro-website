@@ -84,7 +84,6 @@
 		text-decoration: none;
 		border: none;
 		border-radius: 2px;
-		box-shadow: inset 0 0 0.25em var(--white-color), 0 0 0.25em var(--white-color);
 		letter-spacing: 1px;
 		transition: background-color 0.3s, box-shadow 0.3s;
 		cursor: pointer;
@@ -102,7 +101,7 @@
 @media screen and (min-width: 500px) {
 	.terms-and-conditions {
 		&__btn {
-			padding: 1em 4em;
+			padding: 0.85em 4em;
 		}
 	}
 }
@@ -140,7 +139,6 @@
 
 			&:hover {
 				background-color: var(--brown-color);
-				box-shadow: inset 0 0 0.25em var(--brown-color), 0 0 0.25em var(--brown-color);
 			}
 		}
 	}

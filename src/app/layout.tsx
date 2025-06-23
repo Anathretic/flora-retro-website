@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Montserrat, Dancing_Script, Fleur_De_Leah } from 'next/font/google';
 import Providers from '@/context/Providers';
+import CookieBanner from '@/components/CookieBanner/CookieBanner';
 
 import '../styles/globals.scss';
 
@@ -97,6 +98,7 @@ export default function RootLayout({
 		<html lang='pl'>
 			<body className={`${montserrat.variable} ${dancingScript.variable} ${fleurDeLeah.variable}`}>
 				<Providers>{children}</Providers>
+				<CookieBanner />
 			</body>
 		</html>
 	);

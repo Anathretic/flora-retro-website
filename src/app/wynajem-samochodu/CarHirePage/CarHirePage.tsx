@@ -12,7 +12,7 @@ export default function CarHirePage() {
 	const { setShowSpecialLinks } = useFooterLinksContext();
 
 	useEffect(() => {
-		setShowSpecialLinks(true);
+		setShowSpecialLinks(false);
 	}, []);
 
 	return (

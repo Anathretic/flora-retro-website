@@ -13,7 +13,7 @@ export default function OfferBox({ id, subpage, text, title, offerPlusesArray }:
 			<h3 className={styles['offer__box-title']}>{title}</h3>
 			<p className={styles['offer__box-text']}>{text}</p>
 			<p className={styles['offer__box-special-text']}>
-				{title === 'Wynajem' ? 'To Ci zapewniam..' : 'Dla Ciebie stworzę..'}
+				{title === 'Wynajem' ? 'To Ci zapewniam:' : 'Z myślą o Tobie:'}
 			</p>
 			<ul>
 				{offerPlusesArray?.map((data, id) => (
