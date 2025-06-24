@@ -3,7 +3,7 @@ import { ArticleDataModel } from '@/models/article.model';
 
 export async function getArticleById(id: string): Promise<ArticleDataModel | null> {
 	try {
-		const res = await fetch(`http://localhost:3000/api/articles/${id}`, {
+		const res = await fetch(`https://flora-retro.pl/api/articles/${id}`, {
 			next: { revalidate: 60 },
 		});
 
