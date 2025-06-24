@@ -14,4 +14,9 @@ export const imageData = [
 		title: '',
 		image: '/car-images/third-car-image.jpg',
 	},
+	{
+		id: 3,
+		title: '',
+		image: '/car-images/fourth-car-image.jpg',
+	},
 ];

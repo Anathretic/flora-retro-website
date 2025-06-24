@@ -32,8 +32,7 @@ const CookieBanner: React.FC = ({ ...otherProps }) => {
 			expires={1}
 			{...otherProps}>
 			<p className={styles['cookie-banner-text']}>
-				Ta strona używa plików cookie wyłącznie w celach technicznych (np. google reCaptcha). Dowiedz się więcej z
-				naszej{' '}
+				Ta strona używa plików cookie wyłącznie w celach technicznych (np. google reCaptcha). Dowiedz się więcej z mojej{' '}
 				<Link href='/polityka-prywatnosci' className={styles['cookie-banner-link']} onClick={scrollToTop}>
 					polityki prywatności
 				</Link>

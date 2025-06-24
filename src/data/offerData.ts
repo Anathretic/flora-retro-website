@@ -16,7 +16,7 @@ export const offerData = [
 				},
 				{
 					id: 2,
-					content: 'Wystrój zgodny z Tobą',
+					content: 'Wystrój zgodny z oczekiwaniami',
 				},
 			],
 		},
