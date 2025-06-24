@@ -1,9 +1,11 @@
+export const dynamic = 'force-dynamic';
+
 import { notFound } from 'next/navigation';
 import { getArticleById } from '@/helpers/getArticleByIdHelper';
 import ArticlePage from './ArticlePage/ArticlePage';
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
-	const { id } = await params;
+	const id = (await params).id;
 	const article = await getArticleById(id);
 
 	if (!article) {
@@ -26,12 +28,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 }
 
 export default async function ArticleWrapper({ params }: { params: Promise<{ id: string }> }) {
-	const { id } = await params;
+	const id = (await params).id;
 	const article = await getArticleById(id);
 
 	if (!article) {
 		notFound();
+	} else {
+		return <>{article && <ArticlePage article={article} />}</>;
 	}
-
-	return <>{article && <ArticlePage article={article} />}</>;
 }
