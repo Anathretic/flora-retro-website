@@ -5,11 +5,11 @@ import { ArticleItemModel } from '@/models/article.model';
 
 import styles from '../styles/styles.module.scss';
 
-export default function ArticleItem({ title, text, specialText, href, image }: ArticleItemModel) {
+export default function ArticleItem({ title, text, specialText, href, image, alt }: ArticleItemModel) {
 	return (
 		<div className={styles['articles__array-box']}>
 			<div className={styles['articles__array-box-image']}>
-				<Image src={image} alt='Obrazek przedstawiający temat artykułu' width={400} height={300} />
+				<Image src={image} alt={alt} width={400} height={300} />
 			</div>
 			<h3>{title}</h3>
 			<p>

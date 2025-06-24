@@ -7,7 +7,7 @@ import { scrollToTop } from '@/utils/scrollToTopUtils';
 import styles from '../styles/styles.module.scss';
 
 export default function Slide({ slide, current, handleSlideClick }: SlideModel) {
-	const { id, title, href, image, largeImage } = slide;
+	const { id, title, href, image, largeImage, alt } = slide;
 	const slideRef = useRef<HTMLLIElement>(null);
 
 	const isLarge = useMediaQuery({ query: '(min-width: 768px)' });
@@ -42,18 +42,15 @@ export default function Slide({ slide, current, handleSlideClick }: SlideModel) 
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}>
 			<div className={styles['slide__image-wrapper']}>
-				<div
-					style={{ backgroundImage: `url(${largeImage ? (isLarge ? largeImage : image) : image})` }}
-					className={styles.slide__image}
-				/>
+				<img src={`${largeImage ? (isLarge ? largeImage : image) : image}`} alt={alt} className={styles.slide__image} />
 			</div>
 			{title && (
-				<article className={styles.slide__content}>
+				<div className={styles.slide__content}>
 					<h3 className={styles.slide__headline}>{title}</h3>
 					<Link href={`${href}`} className={`${styles.slide__action} ${styles.btn}`} onClick={scrollToTop}>
 						Przeczytaj
 					</Link>
-				</article>
+				</div>
 			)}
 		</li>
 	);

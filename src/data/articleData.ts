@@ -7,6 +7,7 @@ export const articleData = [
 		href: '/artykuly-i-porady/magiczne-dekoracje-slubne',
 		image: '/blog-images/small/first-blog-image.jpg',
 		largeImage: '/blog-images/xl/first-blog-image-xl.jpg',
+		alt: 'Obraz przedstawiający udekorowany drewniany stół',
 		date: '02-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Wybór dekoracji – klucz do stworzenia wyjątkowej atmosfery',
@@ -28,6 +29,7 @@ export const articleData = [
 		href: '/artykuly-i-porady/top-5-dekoracji-sali-weselnej',
 		image: '/blog-images/small/second-blog-image.jpg',
 		largeImage: '/blog-images/xl/second-blog-image-xl.jpg',
+		alt: 'Obraz przedstawiający stroik weselny',
 		date: '14-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Zaskocz gości nietypowym ustawieniem stołów',
@@ -49,6 +51,7 @@ export const articleData = [
 		href: '/artykuly-i-porady/jak-wybrac-auto-do-slubu',
 		image: '/blog-images/small/third-blog-image.jpg',
 		largeImage: '/blog-images/xl/third-blog-image-xl.jpg',
+		alt: 'Obraz przedstawiający stary samochód, który jest udekorowany do ślubu',
 		date: '26-05-2025',
 		blogArticle: {
 			firstSubtitle: 'Klasyki motoryzacyjne – elegancja i styl',
@@ -70,6 +73,7 @@ export const articleData = [
 		href: '/artykuly-i-porady/dekoracje-na-przyjecia',
 		image: '/blog-images/small/fourth-blog-image.jpg',
 		largeImage: '/blog-images/xl/fourth-blog-image-xl.jpg',
+		alt: 'Obraz przedstawiający konfetti lecące na ludzi biorących udział w imprezie',
 		date: '08-06-2025',
 		blogArticle: {
 			firstSubtitle: 'Papierowe dekoracje – kreatywny i ekologiczny wybór',

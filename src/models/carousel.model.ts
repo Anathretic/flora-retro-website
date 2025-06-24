@@ -4,6 +4,7 @@ interface SlideDataBoxModel {
 	image: string;
 	largeImage?: string;
 	href?: string;
+	alt?: string;
 }
 
 export interface SlideModel {
