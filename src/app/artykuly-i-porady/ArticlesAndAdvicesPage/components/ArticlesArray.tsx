@@ -32,6 +32,7 @@ export default function ArticlesArray() {
 						specialText={data.specialText}
 						href={data.href}
 						image={data.image}
+						alt={data.alt}
 					/>
 				))}
 			</div>
