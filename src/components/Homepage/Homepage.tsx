@@ -14,7 +14,7 @@ export default function Homepage() {
 	const { setShowSpecialLinks } = useFooterLinksContext();
 
 	useEffect(() => {
-		setShowSpecialLinks(false);
+		setShowSpecialLinks(true);
 	}, []);
 
 	return (

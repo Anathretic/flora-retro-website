@@ -86,7 +86,7 @@ export default function ContactForm({ subject }: ContactFormComponentModel) {
 			<TextareaElement
 				label='Wiadomość:'
 				inputName='message'
-				placeholder='Wprowadź wiadomość..'
+				placeholder='Wprowadź wiadomość'
 				errorMessage={errors.message?.message}
 				aria-invalid={errors.message ? true : false}
 				{...register('message')}

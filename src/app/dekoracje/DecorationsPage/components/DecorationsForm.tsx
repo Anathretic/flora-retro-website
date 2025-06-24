@@ -31,7 +31,7 @@ export default function DecorationsForm() {
 							</div>
 							<div>
 								<p>E-mail:</p>
-								<p>flora_retro@o2.pl</p>
+								<a href='mailto:flora_retro@o2.pl'>flora_retro@o2.pl</a>
 							</div>
 						</li>
 						<li>
@@ -40,7 +40,7 @@ export default function DecorationsForm() {
 							</div>
 							<div>
 								<p>Telefon:</p>
-								<p>+48 789 049 376</p>
+								<a href='tel:+48789049376'>+48 789 049 376</a>
 							</div>
 						</li>
 						<li>

@@ -48,6 +48,24 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	right: 20px;
 }
 
+@media screen and (min-width: 1358px) {
+	#cookie-btn {
+		margin-right: 5.975rem !important;
+	}
+}
+
+@media screen and (min-width: 1536px) {
+	#cookie-btn {
+		margin-right: 8.9rem !important;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	#cookie-btn {
+		margin-right: 7.75rem !important;
+	}
+}
+
 /* Opinions Carousel */
 
 .carousel {

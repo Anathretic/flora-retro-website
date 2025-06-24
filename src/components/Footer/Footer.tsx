@@ -34,22 +34,20 @@ export default function Footer() {
 					</div>
 				</div>
 				<div className={styles.footer__box}>
-					<h3>Home</h3>
-					<ul>
-						{!showSpecialLinks ? (
-							<>
-								{footerHomeItems.map((item, id) => (
-									<li key={id}>
-										<Link href={item.href}>{item.content}</Link>
-									</li>
-								))}
-							</>
-						) : (
-							<li>
-								<Link href='/'>Strona główna</Link>
-							</li>
-						)}
-					</ul>
+					{showSpecialLinks && (
+						<>
+							<h3>Home</h3>
+							<ul>
+								<>
+									{footerHomeItems.map((item, id) => (
+										<li key={id}>
+											<Link href={item.href}>{item.content}</Link>
+										</li>
+									))}
+								</>
+							</ul>
+						</>
+					)}
 				</div>
 				<div className={styles.footer__box}>
 					<h3>Oferta</h3>
@@ -71,7 +69,7 @@ export default function Footer() {
 						))}
 					</ul>
 				</div>
-				{!showSpecialLinks ? (
+				{showSpecialLinks ? (
 					<>
 						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--first']}`} />
 						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--second']}`} />

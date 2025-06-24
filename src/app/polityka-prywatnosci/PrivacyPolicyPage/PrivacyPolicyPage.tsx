@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
 	const { setShowSpecialLinks } = useFooterLinksContext();
 
 	useEffect(() => {
-		setShowSpecialLinks(true);
+		setShowSpecialLinks(false);
 	}, []);
 
 	return (
@@ -44,10 +44,10 @@ export default function PrivacyPolicyPage() {
 									<span>Adres:</span> Wieś Wierzchowiny 19A, 22-400 Wierzchowiny
 								</li>
 								<li>
-									<span>E-mail:</span> flora_retro@o2.pl
+									<span>E-mail:</span> <a href='mailto:flora_retro@o2.pl'>flora_retro@o2.pl</a>
 								</li>
 								<li>
-									<span>Telefon:</span> +48 789 049 376
+									<span>Telefon:</span> <a href='tel:+48789049376'>+48 789 049 376</a>
 								</li>
 								<li>
 									<span>NIP:</span> 922-289-02-46
@@ -138,7 +138,8 @@ export default function PrivacyPolicyPage() {
 								<li>Prawo do sprzeciwu wobec przetwarzania danych</li>
 							</ul>
 							<p>
-								Aby skorzystać ze swoich praw, skontaktuj się ze mną pod adresem e-mail: <span>flora_retro@o2.pl</span>
+								Aby skorzystać ze swoich praw, skontaktuj się ze mną pod adresem e-mail:{' '}
+								<a href='mailto:flora_retro@o2.pl'>flora_retro@o2.pl</a>
 							</p>
 						</div>
 						<div className={styles['terms-and-conditions__box']}>

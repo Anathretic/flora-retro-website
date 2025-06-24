@@ -11,7 +11,7 @@ export default function ArticlesAndAdvicesPage() {
 	const { setShowSpecialLinks } = useFooterLinksContext();
 
 	useEffect(() => {
-		setShowSpecialLinks(true);
+		setShowSpecialLinks(false);
 	}, []);
 
 	return (

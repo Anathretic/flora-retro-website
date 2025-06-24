@@ -48,7 +48,7 @@
 		max-width: 450px;
 		background-color: var(--white-color);
 		color: var(--dark-brown-color);
-		border-radius: 1em;
+		border-radius: 0.5em;
 		background-position: center;
 		background-size: cover;
 		text-align: center;
@@ -76,7 +76,7 @@
 		padding: 0.25em 0;
 		font-family: var(--font-dancing-script);
 		font-size: 3.5em;
-		font-weight: 500;
+		font-weight: 300;
 	}
 
 	&__box-text {
@@ -94,10 +94,9 @@
 		text-align: center;
 		text-decoration: none;
 		border: none;
-		border-radius: 2px;
-		box-shadow: inset 0 0 0.25em var(--white-color), 0 0 0.25em var(--white-color);
+		border-radius: 0.125em;
 		letter-spacing: 1px;
-		transition: background-color 0.3s, box-shadow 0.3s;
+		transition: background-color 0.3s;
 		cursor: pointer;
 	}
 
@@ -165,7 +164,6 @@
 
 			&:hover {
 				background-color: var(--brown-color);
-				box-shadow: inset 0 0 0.25em var(--brown-color), 0 0 0.25em var(--brown-color);
 			}
 		}
 
