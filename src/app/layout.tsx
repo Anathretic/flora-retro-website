@@ -66,11 +66,6 @@ export const metadata: Metadata = {
 		description:
 			'Kwiaty, dekoracje i stylizacje ślubne z duszą. Pracownia dekoracyjna tworzona przez Izabelę Szczygieł.',
 	},
-	icons: {
-		icon: '/favicon.png',
-		shortcut: '/favicon.png',
-		apple: '/favicon.png',
-	},
 	alternates: {
 		canonical: 'https://flora-retro.pl/',
 	},
