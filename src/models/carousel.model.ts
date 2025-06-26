@@ -22,3 +22,22 @@ export interface SliderControlModel {
 	title: string;
 	handleClick: () => void;
 }
+
+// -------- Hooks ---------
+
+export interface CarouselOptionsModel {
+	setCurrent: React.Dispatch<React.SetStateAction<number>>;
+	current: number;
+	slides: SlideDataBoxModel[];
+}
+
+export interface CarouselTouchModel {
+	onSwipeLeft: () => void;
+	onSwipeRight: () => void;
+}
+
+export interface SlideOptionsModel {
+	slideRef: React.RefObject<HTMLLIElement | null>;
+}
+
+// ------------------------

@@ -210,8 +210,12 @@
 @media screen and (min-width: 1536px) {
 	.header {
 		&__container {
-			padding: 0 8rem;
+			padding: 0 9.5rem 0 10rem;
 			max-width: 2460px;
+
+			&--subpage {
+				padding: 0 8rem 0 10rem;
+			}
 		}
 	}
 
@@ -225,7 +229,11 @@
 @media screen and (min-width: 1920px) {
 	.header {
 		&__container {
-			padding: 0 7rem;
+			padding: 0 7.5rem;
+
+			&--subpage {
+				padding: 0 8.05rem;
+			}
 		}
 	}
 

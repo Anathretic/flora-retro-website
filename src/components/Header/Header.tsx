@@ -1,5 +1,6 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { NavbarTitle } from './components/NavbarTitle';
 import { NavbarItem } from './components/NavbarItem';
@@ -15,6 +16,8 @@ export default function Header({ navbarItems }: HeaderModel) {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [isAnimating, setIsAnimating] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
+
+	const pathname = usePathname();
 
 	const divRef = useRef<HTMLDivElement | null>(null);
 
@@ -50,7 +53,7 @@ export default function Header({ navbarItems }: HeaderModel) {
 	return (
 		<header ref={divRef}>
 			<div className={`${styles.header} ${isScrolled ? styles['header--is-scrolled'] : ''}`}>
-				<div className={styles.header__container}>
+				<div className={`${styles.header__container} ${pathname !== '/' && styles['header__container--subpage']}`}>
 					<NavbarTitle divRef={divRef} />
 					<div className={styles['navbar__mobile-container']}>
 						<HiMenuAlt4

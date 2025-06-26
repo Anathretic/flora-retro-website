@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { useCarouselOptions } from '@/hooks/useCarouselOptions';
+import { useCarouselTouch } from '@/hooks/useCarouselTouch';
 import Slide from './components/Slide';
 import SliderControl from './components/SliderControl';
 import { CarouselModel } from '@/models/carousel.model';
@@ -10,36 +12,29 @@ import styles from './styles/styles.module.scss';
 export default function Carousel({ slides }: CarouselModel) {
 	const [current, setCurrent] = useState(1);
 
-	const handlePreviousClick = () => {
-		const previous = current - 1;
-		setCurrent(previous < 0 ? slides.length - 1 : previous);
-	};
+	const { handleNextClick, handlePreviousClick, handleSlideClick, wrapperTransform } = useCarouselOptions({
+		setCurrent,
+		current,
+		slides,
+	});
 
-	const handleNextClick = () => {
-		const next = current + 1;
-		setCurrent(next === slides.length ? 0 : next);
-	};
-
-	const handleSlideClick = (id: number) => {
-		if (current !== id) {
-			setCurrent(id);
-		}
-	};
-
-	const wrapperTransform = {
-		transform: `translateX(-${(current * 100) / slides.length}%)`,
-	};
+	const sliderRef = useCarouselTouch({
+		onSwipeLeft: handleNextClick,
+		onSwipeRight: handlePreviousClick,
+	});
 
 	return (
-		<div className={styles.slider}>
+		<div className={styles.slider} ref={sliderRef}>
 			<ul className={styles.slider__wrapper} style={wrapperTransform}>
 				{slides.map(slide => (
 					<Slide key={slide.id} slide={slide} current={current} handleSlideClick={handleSlideClick} />
 				))}
 			</ul>
-			<div className={styles.slider__controls}>
-				<SliderControl type='previous' title='Poprzedni slajd' handleClick={handlePreviousClick} />
-				<SliderControl type='next' title='Następny slajd' handleClick={handleNextClick} />
+			<div className={styles['slider__controls-wrapper']}>
+				<div className={styles.slider__controls}>
+					<SliderControl type='previous' title='Poprzedni slajd' handleClick={handlePreviousClick} />
+					<SliderControl type='next' title='Następny slajd' handleClick={handleNextClick} />
+				</div>
 			</div>
 		</div>
 	);
