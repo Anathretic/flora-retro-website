@@ -9,6 +9,16 @@ import styles from './styles/styles.module.scss';
 export default function ArticlePage({ article }: ArticlePageModel) {
 	const router = useRouter();
 
+	const handleBack = () => {
+		const cameFromExternal = document.referrer === '' || !document.referrer.includes(window.location.hostname);
+
+		if (cameFromExternal) {
+			router.replace('/');
+		} else {
+			router.back();
+		}
+	};
+
 	return (
 		<main>
 			<article className={styles.article}>
@@ -32,7 +42,7 @@ export default function ArticlePage({ article }: ArticlePageModel) {
 							<button
 								className={styles.article__btn}
 								onClick={() => {
-									router.back();
+									handleBack();
 									scrollToTop();
 								}}>
 								Powrót

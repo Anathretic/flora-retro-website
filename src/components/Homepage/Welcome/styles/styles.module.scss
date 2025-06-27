@@ -19,7 +19,7 @@
 
 		p {
 			font-size: 1.25rem;
-			font-weight: 200;
+			font-weight: 250;
 			text-align: center;
 		}
 	}
@@ -53,17 +53,7 @@
 	}
 
 	&__arrow {
-		position: absolute;
-		display: block;
-		padding: 3em 1em;
-		bottom: -2em;
-		left: 50%;
-		transform: translate(-50%);
-	}
-
-	&__arrow-icon {
-		font-size: 52px;
-		color: var(--white-color);
+		display: none;
 	}
 }
 
@@ -133,6 +123,24 @@
 			p {
 				font-size: 1.6rem;
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 990px) and (min-height: 500px) {
+	.welcome {
+		&__arrow {
+			position: absolute;
+			display: block;
+			padding: 3em 1em;
+			bottom: -2em;
+			left: 50%;
+			transform: translate(-50%);
+		}
+
+		&__arrow-icon {
+			font-size: 52px;
+			color: var(--white-color);
 		}
 	}
 }
