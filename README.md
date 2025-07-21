@@ -15,3 +15,5 @@ I chose Next.js for this project to explore its approach to server-side renderin
 **Tools:** [EmailJS](https://www.emailjs.com/), [Google reCaptcha](https://www.google.com/recaptcha/about/)
 
 **URL:** [Flora Retro](https://flora-retro.pl/)
+
+_This project is closed-source and proprietary. See the LICENSE file for more details._
