@@ -2,9 +2,6 @@ import Link from 'next/link';
 import { scrollToTop } from '@/utils/scrollToTopUtils';
 import { OfferBoxModel } from '@/models/offer.model';
 
-import { PiFlowerFill } from 'react-icons/pi';
-import { BsCarFrontFill } from 'react-icons/bs';
-
 import styles from '../styles/styles.module.scss';
 
 export default function OfferBox({ id, subpage, text, title, offerPlusesArray }: OfferBoxModel) {
@@ -21,13 +18,8 @@ export default function OfferBox({ id, subpage, text, title, offerPlusesArray }:
 				))}
 			</ul>
 			<Link href={subpage} className={styles['offer__box-button']} onClick={scrollToTop}>
-				Poproszę!
+				<p>Poproszę!</p>
 			</Link>
-			{title === 'Wynajem' ? (
-				<BsCarFrontFill fontSize={42} style={{ marginTop: '10px' }} />
-			) : (
-				<PiFlowerFill fontSize={42} style={{ marginTop: '10px' }} />
-			)}
 		</div>
 	);
 }

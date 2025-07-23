@@ -214,7 +214,7 @@
 	&__headline {
 		color: var(--white-color);
 		padding-bottom: 5vmin;
-		font-size: 5vmin;
+		font-size: clamp(24px, 5vmin, 50px);
 		font-weight: 500;
 		font-style: italic;
 	}
@@ -251,14 +251,6 @@
 	.slide {
 		height: 70vmin;
 		width: 70vmin;
-	}
-}
-
-@media screen and (min-width: 1920px) {
-	.slide {
-		&__headline {
-			font-size: 50px;
-		}
 	}
 }
 
