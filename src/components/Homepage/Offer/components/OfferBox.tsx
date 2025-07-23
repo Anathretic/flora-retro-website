@@ -5,7 +5,6 @@ import { OfferBoxModel } from '@/models/offer.model';
 import styles from '../styles/styles.module.scss';
 
 export default function OfferBox({ id, subpage, text, title, offerPlusesArray }: OfferBoxModel) {
-	console.log(id);
 	return (
 		<div className={`${styles.offer__box} ${styles[`offer__box--${id}`]}`}>
 			<h3 className={styles['offer__box-title']}>{title}</h3>

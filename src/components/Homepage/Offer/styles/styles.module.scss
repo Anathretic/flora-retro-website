@@ -44,7 +44,7 @@
 	&__box {
 		padding: 1em;
 		margin: 1em;
-		width: 90%;
+		min-width: 255px;
 		max-width: 320px;
 		height: 600px;
 		color: var(--dark-brown-color);
@@ -91,23 +91,56 @@
 	}
 
 	&__box-button {
-		padding: 0.85em 3em;
-		margin: 1.25em 1.5em 1.5em;
-		width: 215px;
+		position: relative;
+		margin: 0;
+		width: 230px;
+		height: 130px;
 		color: var(--white-color);
-		background-color: var(--dark-brown-color);
-		font-size: 1em;
+		background-image: url('../../../../images/sections/offer-section/button.svg');
+		background-position: center;
+		background-size: cover;
+		font-size: 0.9em;
 		text-align: center;
 		text-decoration: none;
 		border: none;
-		border-radius: 0.125em;
 		letter-spacing: 1px;
-		transition: background-color 0.3s;
+		transition: all 0.3s;
 		cursor: pointer;
+
+		p {
+			position: absolute;
+			top: 11px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 
 	&__special-icon {
 		display: none;
+	}
+}
+
+@media screen and (min-width: 285px) {
+	.offer {
+		&__box {
+			width: 90%;
+		}
+	}
+}
+
+@media screen and (min-width: 302px) and (max-width: 342px) {
+	.offer {
+		&__box-button {
+			margin: 1.5em 0 0;
+		}
+	}
+}
+
+@media screen and (min-width: 343px) {
+	.offer {
+		&__box-button {
+			margin: 1.5em 1.5em 1.5em;
+		}
 	}
 }
 
@@ -136,7 +169,14 @@
 		}
 
 		&__box-button {
-			margin: 2.5em 1.5em 1.5em;
+			margin: 3.25em 1.5em 1.5em;
+			width: 300px;
+			height: 83px;
+			font-size: 1em;
+
+			p {
+				top: 16px;
+			}
 		}
 	}
 }
@@ -152,7 +192,7 @@
 		}
 
 		&__box-button:hover {
-			background-color: var(--brown-color);
+			transform: scale(1.05);
 		}
 
 		&__special-icon {
