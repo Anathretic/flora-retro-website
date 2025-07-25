@@ -5,6 +5,7 @@ export const offerData = [
 			subpage: '/dekoracje',
 			text: 'Kwiaty, światło, tkaniny – z tych elementów tworzę przestrzeń pełną emocji. Zależy mi, by dekoracje nie były tylko tłem, ale częścią historii.',
 			title: 'Dekoracje',
+			subtitle: 'Z myślą o Tobie',
 			offerPlusesArray: [
 				{
 					id: 0,
@@ -27,6 +28,7 @@ export const offerData = [
 			subpage: '/wynajem-samochodu',
 			text: 'Mercedes W108 to samochód z charakterem – tak jak Wasz ślub. Klasyka z nutą nostalgii, która świetnie wpiszę się w uczucie.',
 			title: 'Wynajem',
+			subtitle: 'To Ci zapewniam',
 			offerPlusesArray: [
 				{
 					id: 0,
@@ -39,6 +41,52 @@ export const offerData = [
 				{
 					id: 2,
 					content: 'Elastyczne warunki',
+				},
+			],
+		},
+	},
+	{
+		id: 2,
+		offer: {
+			subpage: '/scianki-balonowe',
+			text: 'Ścianki z balonów wnoszą do każdej uroczystości odrobinę magii. To lekka, kolorowa oprawa, która pięknie wygląda na zdjęciach.',
+			title: 'Ścianki',
+			subtitle: 'Twój moment',
+			offerPlusesArray: [
+				{
+					id: 0,
+					content: 'Indywidualne podejście',
+				},
+				{
+					id: 1,
+					content: 'Prawdziwy efekt WOW',
+				},
+				{
+					id: 2,
+					content: 'Magia kolorów',
+				},
+			],
+		},
+	},
+	{
+		id: 3,
+		offer: {
+			subpage: '/wypozyczalnia-dekoracji',
+			text: 'Nie wszystko trzeba mieć na własność – czasem lepiej po prostu wypożyczyć. Mam dekoracje, które nie nadwyrężą waszego budżetu.',
+			title: 'Wypożycz',
+			subtitle: 'Na Twój dzień',
+			offerPlusesArray: [
+				{
+					id: 0,
+					content: 'Bogaty asortyment',
+				},
+				{
+					id: 1,
+					content: 'Oszczędność czasu',
+				},
+				{
+					id: 2,
+					content: 'Nie chomikujesz',
 				},
 			],
 		},

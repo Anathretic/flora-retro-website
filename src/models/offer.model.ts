@@ -8,6 +8,7 @@ export interface OfferBoxModel {
 	subpage: string;
 	text: string;
 	title: string;
+	subtitle: string;
 	offerPlusesArray: PlusesArrayModel[];
 }
 

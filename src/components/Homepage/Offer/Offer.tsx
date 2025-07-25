@@ -33,6 +33,7 @@ export default function OfferSection() {
 								subpage={offer.subpage}
 								text={offer.text}
 								title={offer.title}
+								subtitle={offer.subtitle}
 								offerPlusesArray={offer.offerPlusesArray}
 							/>
 						))}

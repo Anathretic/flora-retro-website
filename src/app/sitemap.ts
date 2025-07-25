@@ -30,6 +30,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			priority: 0.7,
 		},
 		{
+			url: `${baseUrl}/wypozyczalnia-dekoracji`,
+			lastModified: date,
+			changeFrequency: 'monthly',
+			priority: 0.8,
+		},
+		{
+			url: `${baseUrl}/scianki-balonowe`,
+			lastModified: date,
+			changeFrequency: 'monthly',
+			priority: 0.8,
+		},
+		{
 			url: `${baseUrl}/polityka-prywatnosci`,
 			lastModified: date,
 			changeFrequency: 'monthly',
