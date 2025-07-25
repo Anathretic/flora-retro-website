@@ -53,8 +53,39 @@
 	}
 
 	&__hero-image-title {
+		padding: 1em 0.5em 1em;
 		color: var(--white-color);
 		font-size: 3rem;
+	}
+
+	&__hero-image-btn,
+	&__hero-image-link {
+		padding: 0.85em 3em;
+		width: 215px;
+		color: var(--white-color);
+		background-color: var(--brown-color);
+		font-size: 1em;
+		font-family: inherit;
+		text-align: center;
+		text-decoration: none;
+		border: none;
+		border-radius: 0.125em;
+		letter-spacing: 1px;
+		transition: background-color 0.3s;
+		cursor: pointer;
+
+		&--after-click {
+			background-color: var(--dark-brown-color);
+			cursor: default;
+		}
+	}
+
+	&__hero-image-link {
+		display: block;
+	}
+
+	&__hero-image-btn {
+		display: none;
 	}
 
 	&__title {
@@ -249,12 +280,10 @@
 	}
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 315px) {
 	.decorations {
-		&__form-title-info-box li {
-			margin: 0.5em 0;
-			align-items: start;
-			flex-direction: column;
+		&__hero-image-title {
+			font-size: 2.5rem;
 		}
 	}
 }
@@ -263,6 +292,16 @@
 	.decorations {
 		&__gallery-container {
 			padding: 1.5em 0.5em 0;
+		}
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.decorations {
+		&__form-title-info-box li {
+			margin: 0.5em 0;
+			align-items: start;
+			flex-direction: column;
 		}
 	}
 }
@@ -366,6 +405,17 @@
 	}
 }
 
+@media screen and (min-width: 768px) and (min-height: 500px) {
+	.decorations {
+		&__hero-image-link {
+			padding: 0.95em 0;
+			max-width: 250px;
+			width: 250px;
+			text-align: center;
+		}
+	}
+}
+
 @media screen and (min-width: 868px) and (max-width: 1358px) {
 	.decorations {
 		&__gallery-container {
@@ -390,6 +440,22 @@
 
 		&__hero-image-title {
 			font-size: 4.5rem;
+		}
+
+		&__hero-image-link {
+			display: none;
+		}
+
+		&__hero-image-btn {
+			display: block;
+			padding: 0.95em 0;
+			max-width: 250px;
+			width: 250px;
+			text-align: center;
+
+			&:hover {
+				background-color: var(--dark-brown-color);
+			}
 		}
 
 		&__content-wrapper,
@@ -516,6 +582,14 @@
 			&--right {
 				display: none;
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 1536px) {
+	.decorations {
+		&__hero-image-btn {
+			font-size: 1.1em;
 		}
 	}
 }
