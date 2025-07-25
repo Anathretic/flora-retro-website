@@ -11,6 +11,8 @@ export const footerHomeItems: FooterItemModel[] = [
 export const footerOfferItems: FooterItemModel[] = [
 	{ href: '/dekoracje', content: 'Dekoracje' },
 	{ href: '/wynajem-samochodu', content: 'Wynajem samochodu' },
+	{ href: '/scianki-balonowe', content: 'Ścianki balonowe' },
+	{ href: '/wypozyczalnia-dekoracji', content: 'Wypożyczalnia' },
 ];
 
 export const footerMoreItems: FooterItemModel[] = [
