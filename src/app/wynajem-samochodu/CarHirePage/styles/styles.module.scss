@@ -59,8 +59,39 @@
 	}
 
 	&__hero-image-title {
+		padding: 1em 0.5em 1em;
 		color: var(--white-color);
 		font-size: 3rem;
+	}
+
+	&__hero-image-btn,
+	&__hero-image-link {
+		padding: 0.85em 3em;
+		width: 215px;
+		color: var(--white-color);
+		background-color: var(--brown-color);
+		font-size: 1em;
+		font-family: inherit;
+		text-align: center;
+		text-decoration: none;
+		border: none;
+		border-radius: 0.125em;
+		letter-spacing: 1px;
+		transition: background-color 0.3s;
+		cursor: pointer;
+
+		&--after-click {
+			background-color: var(--dark-brown-color);
+			cursor: default;
+		}
+	}
+
+	&__hero-image-link {
+		display: block;
+	}
+
+	&__hero-image-btn {
+		display: none;
 	}
 
 	&__title {
@@ -243,20 +274,20 @@
 	}
 }
 
+@media screen and (max-width: 315px) {
+	.rent-car {
+		&__hero-image-title {
+			font-size: 2.5rem;
+		}
+	}
+}
+
 @media screen and (max-width: 350px) {
 	.rent-car {
 		&__form-title-info-box li {
 			margin: 0.5em 0;
 			align-items: start;
 			flex-direction: column;
-		}
-	}
-}
-
-@media screen and (max-width: 315px) {
-	.rent-car {
-		&__hero-image-title {
-			font-size: 2.5rem;
 		}
 	}
 }
@@ -308,12 +339,16 @@
 
 @media screen and (min-width: 768px) {
 	.rent-car {
+		&__hero-image {
+			background-image: url('../../../../images/subpages/rent-car-subpage/hero-bg-image-xl.jpg');
+		}
+
 		&__hero-image-title {
 			font-size: 4rem;
 		}
 
 		&__benefits-text-content-box {
-			max-width: 325px;
+			max-width: 350px;
 		}
 
 		&__benefits-special-block,
@@ -324,20 +359,15 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
-	.rent-car {
-		&__hero-image {
-			background-image: url('../../../../images/subpages/rent-car-subpage/hero-bg-image-xl.jpg');
-		}
-
-		&__benefits-text-content-box {
-			max-width: 350px;
-		}
-	}
-}
-
 @media screen and (min-width: 768px) and (min-height: 500px) {
 	.rent-car {
+		&__hero-image-link {
+			padding: 0.95em 0;
+			max-width: 250px;
+			width: 250px;
+			text-align: center;
+		}
+
 		&__gallery {
 			padding-bottom: 4em;
 		}
@@ -352,6 +382,22 @@
 
 		&__hero-image-title {
 			font-size: 4.5rem;
+		}
+
+		&__hero-image-link {
+			display: none;
+		}
+
+		&__hero-image-btn {
+			display: block;
+			padding: 0.95em 0;
+			max-width: 250px;
+			width: 250px;
+			text-align: center;
+
+			&:hover {
+				background-color: var(--dark-brown-color);
+			}
 		}
 
 		&__content-wrapper,
@@ -466,6 +512,14 @@
 	.rent-car {
 		&__gallery {
 			padding-bottom: 6em;
+		}
+	}
+}
+
+@media screen and (min-width: 1536px) {
+	.rent-car {
+		&__hero-image-btn {
+			font-size: 1.1em;
 		}
 	}
 }
