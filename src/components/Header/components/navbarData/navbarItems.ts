@@ -58,3 +58,22 @@ export const carHireNavbarItems = [
 		section: '/wynajem-samochodu/#rezerwacja',
 	},
 ];
+
+export const balloonWallsNavbarItems = [
+	{
+		title: 'home',
+		section: '/',
+	},
+	{
+		title: 'informacje',
+		section: '/scianki-balonowe/#informacje',
+	},
+	{
+		title: 'galeria',
+		section: '/scianki-balonowe/#galeria',
+	},
+	{
+		title: 'rezerwacja',
+		section: '/scianki-balonowe/#rezerwacja',
+	},
+];
