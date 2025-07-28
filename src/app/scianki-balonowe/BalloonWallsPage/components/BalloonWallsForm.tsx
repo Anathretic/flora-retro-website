@@ -6,25 +6,25 @@ import { FaBriefcase, FaRegBuilding } from 'react-icons/fa';
 
 import styles from '../styles/styles.module.scss';
 
-export default function RentCarForm() {
+export default function BalloonWallsForm() {
 	return (
-		<section className={styles['rent-car__form']} id='rezerwacja'>
-			<div className={styles['rent-car__form-container']}>
-				<div className={styles['rent-car__form-title-box']}>
-					<h2 className={styles['rent-car__form-title']}>Jedziemy?</h2>
-					<p id='formularz' className={styles['rent-car__form-title-subtext']}>
-						Zachwycił Cię ten klasyk? Cudownie, niech stanie się częścią Twojego wyjątkowego dnia! Jeśli masz pytania
-						dotyczące wynajmu, dostępności lub chcesz omówić szczegóły przejazdu, wypełnij formularz lub zadzwoń.
-						Chętnie odpowiem na każde pytanie :)
+		<section className={styles['balloon-walls__form']} id='rezerwacja'>
+			<div className={styles['balloon-walls__form-container']}>
+				<div className={styles['balloon-walls__form-title-box']}>
+					<h2 className={styles['balloon-walls__form-title']}>Zaczynamy?</h2>
+					<p className={styles['balloon-walls__form-title-subtext']}>
+						Marzysz o dekoracji jak z bajki? Jesteś we właściwym miejscu! Jeśli masz pytanie, chcesz omówić szczegóły
+						lub po prostu dowiedzieć się więcej, skorzystaj z formularza kontaktowego albo zadzwoń – z przyjemnością
+						odpowiem na wszystkie pytania i pomogę Ci stworzyć wyjątkową oprawę!
 					</p>
-					<p className={styles['rent-car__form-title-subtext']}>
+					<p className={styles['balloon-walls__form-title-subtext']}>
 						<span>Pamiętaj!</span> Wysyłając formularz wyrażasz zgodę na przetwarzanie Twoich danych zgodnie z
 						obowiązującą{' '}
 						<Link href='/polityka-prywatnosci' onClick={scrollToTop}>
 							polityką prywatności.
 						</Link>
 					</p>
-					<ul className={styles['rent-car__form-title-info-box']}>
+					<ul className={styles['balloon-walls__form-title-info-box']}>
 						<li>
 							<div>
 								<FiMail />
@@ -64,7 +64,7 @@ export default function RentCarForm() {
 						</li>
 					</ul>
 				</div>
-				<ContactForm subject='Wynajem samochodu' />
+				<ContactForm subject='Ścianki balonowe' />
 			</div>
 		</section>
 	);

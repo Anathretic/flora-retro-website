@@ -11,7 +11,7 @@ export default function DecorationsForm() {
 		<section className={styles.decorations__form} id='rezerwacja'>
 			<div className={styles['decorations__form-container']}>
 				<div className={styles['decorations__form-title-box']}>
-					<h2 className={styles['decorations__form-title']}>Zaczynamy?</h2>
+					<h2 className={styles['decorations__form-title']}>Dekorujemy?</h2>
 					<p className={styles['decorations__form-title-subtext']}>
 						Marzysz o dekoracji jak z bajki? Jesteś we właściwym miejscu! Jeśli masz pytanie, chcesz omówić szczegóły
 						lub po prostu dowiedzieć się więcej, skorzystaj z formularza kontaktowego albo zadzwoń – z przyjemnością
