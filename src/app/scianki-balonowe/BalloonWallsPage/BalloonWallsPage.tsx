@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useFooterLinksContext } from '@/hooks/useFooterLinksContext';
 import { Footer, Header } from '@/components';
-import { decorationNavbarItems } from '@/components/Header/components/navbarData/navbarItems';
+import { balloonWallsNavbarItems } from '@/components/Header/components/navbarData/navbarItems';
 import { BalloonWallsForm, BalloonWallsGallery, BalloonWallsInfo } from './components';
 
 import styles from './styles/styles.module.scss';
@@ -23,7 +23,7 @@ export default function BalloonWallsPage() {
 
 	return (
 		<>
-			<Header navbarItems={decorationNavbarItems} />
+			<Header navbarItems={balloonWallsNavbarItems} />
 			<main>
 				<div className={styles['balloon-walls__container']}>
 					<div className={styles['balloon-walls__wrapper']}>

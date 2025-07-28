@@ -41,7 +41,7 @@
 
 	&__hero-image {
 		height: 60vh;
-		background-image: url('../../../../images/subpages/decorations-subpage/hero-bg-image.jpg');
+		background-image: url('../../../../images/subpages/balloon-walls-subpage/hero-bg-image.jpg');
 		background-position: center;
 		background-size: cover;
 	}
@@ -360,20 +360,15 @@
 		}
 
 		&__gallery-image--second,
-		&__gallery-image--fourth,
-		&__gallery-image--sixth {
+		&__gallery-image--fourth {
 			display: none !important;
-		}
-
-		&__gallery-image--seventh {
-			grid-column: 1/-1;
 		}
 	}
 }
 
 @media screen and (min-width: 540px) {
 	.balloon-walls {
-		&__gallery-image--seventh {
+		&__gallery-image--fifth {
 			grid-column: 1/-1;
 		}
 	}
@@ -393,8 +388,8 @@
 			padding: 30px 0 96px;
 		}
 
-		&__gallery-image--seventh {
-			grid-column: 2/4;
+		&__gallery-image--fifth {
+			grid-column: 3/4;
 		}
 
 		&__info-special-block,
@@ -470,7 +465,7 @@
 		}
 
 		&__hero-image {
-			background-image: url('../../../../images/subpages/decorations-subpage/hero-bg-image-xl.jpg');
+			background-image: url('../../../../images/subpages/balloon-walls-subpage/hero-bg-image-xl.jpg');
 		}
 
 		&__info-text-content {

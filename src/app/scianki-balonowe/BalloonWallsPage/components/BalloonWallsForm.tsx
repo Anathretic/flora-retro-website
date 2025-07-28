@@ -13,7 +13,7 @@ export default function BalloonWallsForm() {
 				<div className={styles['balloon-walls__form-title-box']}>
 					<h2 className={styles['balloon-walls__form-title']}>Zaczynamy?</h2>
 					<p className={styles['balloon-walls__form-title-subtext']}>
-						Marzysz o dekoracji jak z bajki? Jesteś we właściwym miejscu! Jeśli masz pytanie, chcesz omówić szczegóły
+						Marzysz o własnej ściance do zdjęć? Jesteś we właściwym miejscu! Jeśli masz pytanie, chcesz omówić szczegóły
 						lub po prostu dowiedzieć się więcej, skorzystaj z formularza kontaktowego albo zadzwoń – z przyjemnością
 						odpowiem na wszystkie pytania i pomogę Ci stworzyć wyjątkową oprawę!
 					</p>

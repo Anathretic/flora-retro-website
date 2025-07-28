@@ -8,45 +8,29 @@ export default function BalloonWallsGallery() {
 				<div className={styles['balloon-walls__gallery-mosaic-container']}>
 					<div className='image-mosaic'>
 						<img
-							src='/decoration-images/first-decoration-image.jpg'
+							src='/balloon-walls-images/first-balloon-walls-image.jpg'
 							alt='Obraz przedstawiający bukiet fioletowych kwiatów'
 							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--first']} card card-tall card-wide card-with-bg`}
 						/>
-
 						<img
-							src='/decoration-images/second-decoration-image.jpg'
+							src='/balloon-walls-images/second-balloon-walls-image.jpg'
 							alt='Obraz przedstawiający udekorowaną salę weselną'
 							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--second']} card card-tall card-with-bg`}
 						/>
-
 						<img
-							src='/decoration-images/third-decoration-image.jpg'
+							src='/balloon-walls-images/third-balloon-walls-image.jpg'
 							alt='Obraz przedstawiający udekorowaną salę weselną'
 							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--third']} card card-with-bg`}
 						/>
-
 						<img
-							src='/decoration-images/fourth-decoration-image.jpg'
+							src='/balloon-walls-images/fourth-balloon-walls-image.jpg'
 							alt='Obraz przedstawiający dekorację weselnego stołu'
 							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--fourth']} card card-with-bg`}
 						/>
-
 						<img
-							src='/decoration-images/fifth-decoration-image.jpeg'
+							src='/balloon-walls-images/fifth-balloon-walls-image.jpg'
 							alt='Obraz przedstawiający ślubną dekorację kościoła'
 							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--fifth']} card card-with-bg`}
-						/>
-
-						<img
-							src='/decoration-images/sixth-decoration-image.jpg'
-							alt='Obraz przedstawiający udekorowaną salę weselną'
-							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--sixth']} card card-with-bg`}
-						/>
-
-						<img
-							src='/decoration-images/seventh-decoration-image.jpg'
-							alt='Obraz przedstawiający bukiety różowych róż'
-							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--seventh']} card card-wide card-with-bg`}
 						/>
 					</div>
 				</div>
