@@ -164,6 +164,12 @@ export default function PrivacyPolicyPage() {
 								Konrad Wojtyło
 							</a>
 						</div>
+						<div className={styles['terms-and-conditions__box']}>
+							<p>Audyt UX/UI - poprawa user-flow i designu:</p>
+							<a href='https://www.linkedin.com/in/kaliszmalgorzata/' target='_blank' rel='noreferrer'>
+								Małgorzata Kalisz
+							</a>
+						</div>
 						<Link
 							href='/'
 							className={styles['terms-and-conditions__btn']}

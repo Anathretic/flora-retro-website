@@ -1,22 +1,22 @@
-interface BlogArticleModel {
+type BlogArticleModel = {
 	firstSubtitle: string;
 	firstParagraph: string;
 	secondSubtitle: string;
 	secondParagraph: string;
 	thirdSubtitle: string;
 	thirdParagraph: string;
-}
+};
 
-export interface ArticleItemModel {
+export type ArticleItemModel = {
 	title: string;
 	text: string;
 	specialText: string;
 	href: string;
 	image: string;
 	alt: string;
-}
+};
 
-export interface ArticleDataModel {
+export type ArticleDataModel = {
 	id: number;
 	title: string;
 	text: string;
@@ -25,8 +25,8 @@ export interface ArticleDataModel {
 	href: string;
 	date: string;
 	blogArticle: BlogArticleModel;
-}
+};
 
-export interface ArticlePageModel {
+export type ArticlePageModel = {
 	article: ArticleDataModel;
-}
+};

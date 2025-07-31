@@ -105,12 +105,32 @@
 		cursor: pointer;
 	}
 
+	&__submit {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__submit--is-loading {
+		pointer-events: none;
+	}
+
 	&__return-btn {
 		opacity: 1;
 
 		&--opacity {
+			pointer-events: none;
 			opacity: 0;
+			cursor: default;
 		}
+	}
+
+	&__loader {
+		height: 1.2em;
+		aspect-ratio: 2.5;
+		--_g: no-repeat radial-gradient(farthest-side, #e0e0e0 90%, #0000);
+		background: var(--_g), var(--_g), var(--_g), var(--_g);
+		background-size: 20% 50%;
 	}
 }
 
@@ -151,6 +171,10 @@
 		&__submit:hover,
 		&__return-btn:hover {
 			background-color: var(--brown-color);
+		}
+
+		&__loader {
+			height: 22px;
 		}
 	}
 }

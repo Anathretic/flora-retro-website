@@ -3,16 +3,16 @@ type PlusesArrayModel = {
 	content: string;
 };
 
-export interface OfferBoxModel {
+export type OfferBoxModel = {
 	id: number;
 	subpage: string;
 	text: string;
 	title: string;
 	subtitle: string;
 	offerPlusesArray: PlusesArrayModel[];
-}
+};
 
-export interface OfferDataModel {
+export type OfferDataModel = {
 	id: number;
 	offer: OfferBoxModel;
-}
+};

@@ -303,3 +303,16 @@
 		}
 	}
 }
+
+@media screen and (min-width: 1720px) {
+	.offer {
+		&__box {
+			margin: 0 4em;
+
+			&--2,
+			&--3 {
+				margin-top: 5em;
+			}
+		}
+	}
+}
