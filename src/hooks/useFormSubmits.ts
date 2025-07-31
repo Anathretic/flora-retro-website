@@ -1,6 +1,7 @@
 import { SubmitHandler } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
-import { ContactFormModel, FormTypes, UseFormSubmitsModel } from '../models/form.model';
+import { ContactFormModel } from '@/models/form.model';
+import { FormTypes, UseFormSubmitsModel } from '@/models/hooks.model';
 
 export function useFormSubmits<T extends FormTypes>({
 	reset,

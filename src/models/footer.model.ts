@@ -1,9 +1,9 @@
-export interface FooterItemModel {
+export type FooterItemModel = {
 	href: string;
 	content: string;
-}
+};
 
-export interface FooterLinksContextModel {
+export type FooterLinksContextModel = {
 	showSpecialLinks: boolean;
 	setShowSpecialLinks: React.Dispatch<React.SetStateAction<boolean>>;
-}
+};

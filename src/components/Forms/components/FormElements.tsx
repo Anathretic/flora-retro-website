@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import ReCAPTCHA from 'react-google-recaptcha';
-import Loader from '@/components/Loader/Loader';
+import { FormLoader } from './FormLoader';
 import { scrollToTop } from '@/utils/scrollToTopUtils';
 import { InputAndTextareaModel, ReCaptchaV2Model, ReturnButtonModel, SubmitModel } from '@/models/formElements.model';
 
@@ -86,7 +86,9 @@ export const FormSubmit: React.FC<SubmitModel> = ({ isLoading, buttonText, setBu
 
 	return (
 		<div className={styles.form__box}>
-			{isLoading ? <Loader /> : <input className={styles.form__submit} type='submit' value={buttonText} />}
+			<button className={`${styles.form__submit} ${isLoading && styles['form__submit--is-loading']}`} type='submit'>
+				{isLoading ? <FormLoader /> : buttonText}
+			</button>
 		</div>
 	);
 };

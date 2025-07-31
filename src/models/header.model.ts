@@ -2,17 +2,17 @@ export type NavbarInstagramIconModel = {
 	onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 };
 
-export interface NavbarItemModel {
+export type NavbarItemModel = {
 	title: string;
 	section: string;
 	classProps?: string;
 	onClick?: React.MouseEventHandler<HTMLAnchorElement>;
-}
+};
 
-export interface NavbarTitleModel {
+export type NavbarTitleModel = {
 	divRef: React.RefObject<HTMLDivElement | null>;
-}
+};
 
-export interface HeaderModel {
+export type HeaderModel = {
 	navbarItems: NavbarItemModel[];
-}
+};

@@ -9,26 +9,11 @@ import styles from './styles/styles.module.scss';
 const CookieBanner: React.FC = ({ ...otherProps }) => {
 	return (
 		<CookieConsent
-			buttonId='cookie-btn'
+			disableStyles={true}
+			containerClasses={`${styles['cookie-banner-container']}`}
+			buttonClasses={`${styles['cookie-banner-button']}`}
 			location='bottom'
-			buttonText='OK'
-			style={{
-				color: '#fff',
-				backgroundColor: '#6b4d45',
-				fontSize: '12px',
-				padding: '10px',
-				textAlign: 'center',
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-			}}
-			buttonStyle={{
-				backgroundColor: '#ffdf00',
-				fontSize: '14px',
-				padding: '10px',
-				width: '100px',
-				borderRadius: '8px',
-			}}
+			buttonText='Zamknij'
 			expires={1}
 			{...otherProps}>
 			<p className={styles['cookie-banner-text']}>

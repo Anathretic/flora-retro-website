@@ -1,10 +1,10 @@
-export interface OpinionItemModel {
+export type OpinionItemModel = {
 	title: string;
 	content: string;
 	name: string;
-}
+};
 
-export interface OpinionsDataModel {
+export type OpinionsDataModel = {
 	id: number;
 	opinion: OpinionItemModel;
-}
+};
