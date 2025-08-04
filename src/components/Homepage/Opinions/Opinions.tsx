@@ -2,23 +2,24 @@
 
 import { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import { getOpinionsData } from '@/helpers/getDataHelper';
 import { OpinionItem } from './components/OpinionItem';
 import { OpinionsDataModel } from '@/models/opinions.model';
 
 import styles from './styles/styles.module.scss';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import './styles/carousel.scss';
 
 export default function OpinionsSection() {
 	const [opinionsData, setOpinionsData] = useState<OpinionsDataModel[] | null>(null);
 
-	const fetchOpinionsData = async () => {
-		const res = await fetch('/api/opinions');
-		const data = await res.json();
+	const fetchOpinions = async () => {
+		const data = await getOpinionsData();
 		setOpinionsData(data);
 	};
 
 	useEffect(() => {
-		fetchOpinionsData();
+		fetchOpinions();
 	}, []);
 
 	return (

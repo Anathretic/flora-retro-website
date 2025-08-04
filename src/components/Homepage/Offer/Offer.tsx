@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { getOfferData } from '@/helpers/getDataHelper';
 import OfferBox from './components/OfferBox';
 import { OfferDataModel } from '@/models/offer.model';
 import { GiButterfly, GiBee, GiButterflyFlower } from 'react-icons/gi';
@@ -10,14 +11,13 @@ import styles from './styles/styles.module.scss';
 export default function OfferSection() {
 	const [offerData, setOfferData] = useState<OfferDataModel[] | null>(null);
 
-	const fetchOfferData = async () => {
-		const res = await fetch('/api/offer');
-		const data = await res.json();
+	const fetchOffers = async () => {
+		const data = await getOfferData();
 		setOfferData(data);
 	};
 
 	useEffect(() => {
-		fetchOfferData();
+		fetchOffers();
 	}, []);
 
 	return (
@@ -34,7 +34,7 @@ export default function OfferSection() {
 								text={offer.text}
 								title={offer.title}
 								subtitle={offer.subtitle}
-								offerPlusesArray={offer.offerPlusesArray}
+								keyValueArray={offer.keyValueArray}
 							/>
 						))}
 				</div>

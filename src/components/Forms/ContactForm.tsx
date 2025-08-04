@@ -54,15 +54,15 @@ export default function ContactForm({ subject }: ContactFormComponentModel) {
 
 	const contactFormInputs = contactFormInputsConfig(errors, register, isSubpage);
 
+	const checkPathnameValue = () => {
+		setIsSubpage(document.location.pathname !== '/');
+	};
+
 	useEffect(() => {
 		if (refCaptcha.current?.getValue() === '') {
 			setReCaptchaErrorValue('');
 		}
 	}, []);
-
-	const checkPathnameValue = () => {
-		setIsSubpage(document.location.pathname !== '/');
-	};
 
 	useEffect(() => {
 		checkPathnameValue();

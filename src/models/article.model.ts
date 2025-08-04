@@ -7,16 +7,7 @@ type BlogArticleModel = {
 	thirdParagraph: string;
 };
 
-export type ArticleItemModel = {
-	title: string;
-	text: string;
-	specialText: string;
-	href: string;
-	image: string;
-	alt: string;
-};
-
-export type ArticleDataModel = {
+type DefaultArticleModel = {
 	id: number;
 	title: string;
 	text: string;
@@ -25,7 +16,16 @@ export type ArticleDataModel = {
 	href: string;
 	date: string;
 	blogArticle: BlogArticleModel;
+	image: string;
+	alt: string;
 };
+
+export type ArticleItemModel = Pick<DefaultArticleModel, 'title' | 'text' | 'specialText' | 'href' | 'image' | 'alt'>;
+
+export type ArticleDataModel = Pick<
+	DefaultArticleModel,
+	'id' | 'title' | 'text' | 'specialText' | 'isOnlyImage' | 'href' | 'date' | 'blogArticle'
+>;
 
 export type ArticlePageModel = {
 	article: ArticleDataModel;

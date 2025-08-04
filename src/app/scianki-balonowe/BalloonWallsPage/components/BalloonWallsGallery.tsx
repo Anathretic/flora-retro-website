@@ -1,5 +1,7 @@
 import styles from '../styles/styles.module.scss';
 
+import '../styles/gallery.scss';
+
 export default function BalloonWallsGallery() {
 	return (
 		<section className={styles['balloon-walls__gallery']} id='galeria'>

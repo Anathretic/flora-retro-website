@@ -1,6 +1,7 @@
-import { TbFlower } from 'react-icons/tb';
-import { FaLocationDot } from 'react-icons/fa6';
-import { FaRegHeart, FaHandSparkles } from 'react-icons/fa';
+import { GoHeart } from 'react-icons/go';
+import { VscTools } from 'react-icons/vsc';
+import { PiFlower } from 'react-icons/pi';
+import { IoLocationOutline } from 'react-icons/io5';
 
 import styles from '../styles/styles.module.scss';
 
@@ -10,7 +11,7 @@ export default function DecorationsInfo() {
 			<h2 className={styles.decorations__title}>Co mnie wyróżnia?</h2>
 			<div className={styles['decorations__info-text-content']}>
 				<div className={styles['decorations__info-text-content-box']}>
-					<FaRegHeart fontSize={56} color='#6b4d45' />
+					<GoHeart fontSize={56} color='#6b4d45' />
 					<h3>Indywidualne podejście</h3>
 					<p>
 						Każda realizacja to dla mnie nowe wyzwanie i wyjątkowa historia. Zależy mi, aby dekoracje w pełni oddawały
@@ -20,7 +21,7 @@ export default function DecorationsInfo() {
 					</p>
 				</div>
 				<div className={styles['decorations__info-text-content-box']}>
-					<FaHandSparkles fontSize={56} color='#6b4d45' />
+					<VscTools fontSize={56} color='#6b4d45' />
 					<h3>Ręcznie tworzone dekoracje</h3>
 					<p>
 						Wszystkie elementy przygotowuję samodzielnie, wkładając w nie serce, czas i pasję. Rękodzieło pozwala mi
@@ -29,7 +30,7 @@ export default function DecorationsInfo() {
 					</p>
 				</div>
 				<div className={styles['decorations__info-text-content-box']}>
-					<TbFlower fontSize={56} color='#6b4d45' />
+					<PiFlower fontSize={56} color='#6b4d45' />
 					<h3>Styl boho & retro z duszą</h3>
 					<p>
 						Moje dekoracje czerpią inspirację z natury, estetyki vintage i swobodnej elegancji stylu boho.{' '}
@@ -41,7 +42,7 @@ export default function DecorationsInfo() {
 					</p>
 				</div>
 				<div className={styles['decorations__info-text-content-box']}>
-					<FaLocationDot fontSize={56} color='#6b4d45' />
+					<IoLocationOutline fontSize={56} color='#6b4d45' />
 					<h3>Lokalnie i z sercem</h3>
 					<p>
 						<span>Działam jako mała, lokalna pracownia</span> – bez pośpiechu, z pełnym zaangażowaniem i otwartością na

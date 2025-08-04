@@ -1,4 +1,4 @@
-type PlusesArrayModel = {
+type KeyValueModel = {
 	id: number;
 	content: string;
 };
@@ -9,7 +9,7 @@ export type OfferBoxModel = {
 	text: string;
 	title: string;
 	subtitle: string;
-	offerPlusesArray: PlusesArrayModel[];
+	keyValueArray: KeyValueModel[];
 };
 
 export type OfferDataModel = {
