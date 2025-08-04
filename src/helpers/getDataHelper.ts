@@ -4,7 +4,7 @@ import { OpinionsDataModel } from '@/models/opinions.model';
 import { ArticleDataModel, ArticleItemModel } from '@/models/article.model';
 import { SlideDataBoxModel } from '@/models/carousel.model';
 
-const URL = 'https://flora-retro.pl';
+const URL = 'https://flora-retro.pl/';
 
 export async function getOfferData(): Promise<OfferDataModel[] | null> {
 	try {

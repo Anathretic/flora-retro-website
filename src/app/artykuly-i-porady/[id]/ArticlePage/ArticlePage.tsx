@@ -10,12 +10,14 @@ export default function ArticlePage({ article }: ArticlePageModel) {
 	const router = useRouter();
 
 	const handleBack = () => {
-		const cameFromExternal = document.referrer === '' || !document.referrer.includes(window.location.hostname);
-
-		if (cameFromExternal) {
+		try {
+			if (window.history.length > 2) {
+				router.back();
+			} else {
+				router.replace('/');
+			}
+		} catch {
 			router.replace('/');
-		} else {
-			router.back();
 		}
 	};
 
