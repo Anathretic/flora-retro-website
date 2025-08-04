@@ -1,7 +1,7 @@
-import { TbFeather } from 'react-icons/tb';
 import { HiOutlineChatBubbleLeftRight } from 'react-icons/hi2';
-import { LuTimer } from 'react-icons/lu';
-import { FaRegSmileBeam } from 'react-icons/fa';
+import { PiTimer } from 'react-icons/pi';
+import { HiOutlineHandRaised } from 'react-icons/hi2';
+import { LiaSmileBeamSolid } from 'react-icons/lia';
 
 import styles from '../styles/styles.module.scss';
 
@@ -23,7 +23,7 @@ export default function BalloonWallsInfo() {
 					</p>
 				</div>
 				<div className={styles['balloon-walls__info-text-content-box']}>
-					<LuTimer fontSize={56} color='#6b4d45' />
+					<PiTimer fontSize={56} color='#6b4d45' />
 					<h3>Czas jest kluczowy</h3>
 					<p>
 						Każdy balon przechodzi przez moje ręce. Dosłownie. Kompozycja nie powstaje w programie — powstaje w realnym
@@ -36,17 +36,19 @@ export default function BalloonWallsInfo() {
 					</p>
 				</div>
 				<div className={styles['balloon-walls__info-text-content-box']}>
-					<TbFeather fontSize={56} color='#6b4d45' />
-					<h3>Balony nie krzyczą</h3>
+					<HiOutlineHandRaised fontSize={56} color='#6b4d45' />
+					<h3>To się czuje</h3>
 					<p>
-						To nie musi być cukierkowa eksplozja. Czasem wystarczy kilka matowych balonów, lniana zasłona i fragment
-						drewnianej ramy z odzysku. Nie chodzi o to, żeby było dużo — tylko żeby było z wyczuciem.
-						<span> Lubię, gdy dekoracja nie zagłusza emocji, tylko je podkreśla</span>. Daję miejsce na oddech, na
-						światło, na niedopowiedzenia. Stawiam na autentyczność.
+						Nie mam projektu w 3D. Składam wszystko stopniowo i bez pośpiechu. Czasem coś poprawiam kilka razy, zanim
+						powiem: „tak, właśnie tak ma być”.{' '}
+						<span>
+							Ta robota przypomina lepienie ciasta: trzeba wyczuć moment i zaufać rękom, i właśnie to lubię najbardziej.
+						</span>{' '}
+						Dekoracja rodzi się wtedy, gdy dłonie już wiedzą, co robić, nawet jeśli głowa jeszcze się waha.
 					</p>
 				</div>
 				<div className={styles['balloon-walls__info-text-content-box']}>
-					<FaRegSmileBeam fontSize={56} color='#6b4d45' />
+					<LiaSmileBeamSolid fontSize={56} color='#6b4d45' />
 					<h3>Nie tylko zdjęcia</h3>
 					<p>
 						Ścianka to nie tylko tło pod aparat. To miejsce, przy którym ktoś się przytuli, ktoś inny się wzruszy, a

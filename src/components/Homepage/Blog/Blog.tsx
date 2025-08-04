@@ -1,21 +1,22 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { getBlogArticlesData } from '@/helpers/getDataHelper';
 import Carousel from '@/components/Carousel/Carousel';
+import { SlideDataBoxModel } from '@/models/carousel.model';
 
 import styles from './styles/styles.module.scss';
 
 export default function BlogSection() {
-	const [slides, setSlides] = useState([]);
+	const [slides, setSlides] = useState<SlideDataBoxModel[]>([]);
 
-	const fetchSlidesData = async () => {
-		const res = await fetch('/api/articles');
-		const data = await res.json();
-		setSlides(data);
+	const fetchBlogArticles = async () => {
+		const data = await getBlogArticlesData();
+		if (data) setSlides(data);
 	};
 
 	useEffect(() => {
-		fetchSlidesData();
+		fetchBlogArticles();
 	}, []);
 
 	return (

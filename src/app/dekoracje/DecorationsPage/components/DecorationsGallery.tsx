@@ -1,5 +1,7 @@
 import styles from '../styles/styles.module.scss';
 
+import '../styles/gallery.scss';
+
 export default function DecorationsGallery() {
 	return (
 		<section className={styles.decorations__gallery} id='galeria'>

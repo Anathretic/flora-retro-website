@@ -5,11 +5,11 @@ import { useCarouselOptions } from '@/hooks/useCarouselOptions';
 import { useCarouselTouch } from '@/hooks/useCarouselTouch';
 import Slide from './components/Slide';
 import SliderControl from './components/SliderControl';
-import { CarouselModel } from '@/models/carousel.model';
+import { CarouselDataModel } from '@/models/carousel.model';
 
 import styles from './styles/styles.module.scss';
 
-export default function Carousel({ slides }: CarouselModel) {
+export default function Carousel({ slides }: CarouselDataModel) {
 	const [current, setCurrent] = useState(1);
 
 	const { handleNextClick, handlePreviousClick, handleSlideClick, wrapperTransform } = useCarouselOptions({

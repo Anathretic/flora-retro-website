@@ -44,7 +44,7 @@ export const contactFormInputsConfig = (
 			label: 'Data:',
 			inputName: 'date',
 			type: 'date',
-			placeholder: '',
+			placeholder: 'dd.mm.rrrr',
 			errorMessage: errors.date?.message,
 			isInvalid: !!errors.date,
 			register: register('date'),

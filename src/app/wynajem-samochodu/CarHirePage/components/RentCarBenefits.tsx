@@ -1,6 +1,7 @@
-import { RiSteering2Line } from 'react-icons/ri';
 import { SiMercedes } from 'react-icons/si';
-import { FaCrown, FaCameraRetro } from 'react-icons/fa';
+import { PiCrown } from 'react-icons/pi';
+import { FaCameraRetro } from 'react-icons/fa';
+import { GiSofa } from 'react-icons/gi';
 
 import styles from '../styles/styles.module.scss';
 
@@ -19,7 +20,7 @@ export default function RentCarBenefits() {
 					</p>
 				</div>
 				<div className={styles['rent-car__benefits-text-content-box']}>
-					<FaCrown fontSize={56} color='#6b4d45' />
+					<PiCrown fontSize={56} color='#6b4d45' />
 					<h3>Ponadczasowa elegancja</h3>
 					<p>
 						Klasyczne linie nadwozia, chromowane detale i luksusowe wnętrze tworzą atmosferę, która nigdy nie wychodzi z
@@ -40,7 +41,7 @@ export default function RentCarBenefits() {
 					</p>
 				</div>
 				<div className={styles['rent-car__benefits-text-content-box']}>
-					<RiSteering2Line fontSize={56} color='#6b4d45' />
+					<GiSofa fontSize={56} color='#6b4d45' />
 					<h3>Komfort i klasa z innej epoki</h3>
 					<p>
 						Choć ma już swoje lata, Mercedes ten wciąż oferuje niezrównany komfort podróży.{' '}

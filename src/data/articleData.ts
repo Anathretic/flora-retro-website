@@ -2,7 +2,7 @@ export const articleData = [
 	{
 		id: 0,
 		title: 'Magiczne dekoracje ślubne',
-		text: 'Dekoracje to dusza ceremonii – potrafią zmienić zwykłą przestrzeń w bajkowe miejsce pełne emocji. W artykule pokazujemy, jak stworzyć wyjątkową atmosferę.',
+		text: 'Dekoracje to dusza ceremonii – potrafią zmienić zwykłą przestrzeń w bajkowe miejsce pełne emocji. W artykule pokazuję, jak stworzyć wyjątkową atmosferę.',
 		specialText: 'To opowieść o detalach, które zostają w pamięci na zawsze.',
 		href: '/artykuly-i-porady/magiczne-dekoracje-slubne',
 		image: '/blog-images/small/first-blog-image.jpg',
@@ -24,7 +24,7 @@ export const articleData = [
 	{
 		id: 1,
 		title: 'Top 5 dekoracji sali weselnej',
-		text: 'Jak sprawić, żeby sala zachwyciła wszystkich gości już od progu? W tym tekście zebraliśmy pięć dekoracyjnych pomysłów, które królują w sezonie 2025.',
+		text: 'Jak sprawić, żeby sala zachwyciła wszystkich gości już od progu? W tym tekście zebrałam pięć dekoracyjnych pomysłów, które królują w sezonie 2025.',
 		specialText: 'Rustykalne dodatki, nastrojowe światła i przemyślana kolorystyka zrobią całą robotę.',
 		href: '/artykuly-i-porady/top-5-dekoracji-sali-weselnej',
 		image: '/blog-images/small/second-blog-image.jpg',
@@ -46,7 +46,7 @@ export const articleData = [
 	{
 		id: 2,
 		title: 'Jak wybrać auto do ślubu?',
-		text: 'Samochód ślubny to nie tylko środek transportu, ale też część całej oprawy – powinien pasować do klimatu ceremonii. W artykule podpowiadamy, na co zwrócić uwagę przy wyborze auta, by było stylowo i komfortowo.',
+		text: 'Samochód ślubny to nie tylko środek transportu, ale też część całej oprawy – powinien pasować do klimatu ceremonii. W artykule podpowiadam, na co zwrócić uwagę przy wyborze auta, by było stylowo i komfortowo.',
 		specialText: 'Dzielimy się inspiracjami, jak go efektownie udekorować!',
 		href: '/artykuly-i-porady/jak-wybrac-auto-do-slubu',
 		image: '/blog-images/small/third-blog-image.jpg',
@@ -85,6 +85,50 @@ export const articleData = [
 			thirdSubtitle: 'Personalizacja w dekoracjach – detale, które robią różnicę',
 			thirdParagraph:
 				'Na każdym przyjęciu nie może zabraknąć personalizacji, zwłaszcza jeśli chodzi o detale takie jak winietki, karty menu czy specjalne upominki dla gości. To te małe rzeczy tworzą niezapomnianą atmosferę i sprawiają, że przyjęcie staje się niepowtarzalne.',
+		},
+	},
+	{
+		id: 4,
+		title: 'Stół weselny, który zachwyci',
+		text: 'Stół weselny to centralny punkt sali – powinien zachwycać nie tylko smakiem, ale też wyglądem. Sprawdź moje propozycje na modne i eleganckie dekoracje stołu w 2025 roku.',
+		specialText: 'Zainspiruj się detalami, które tworzą klimat przyjęcia.',
+		href: '/artykuly-i-porady/stol-weselny-ktory-zachwyci',
+		image: '/blog-images/small/fifth-blog-image.jpg',
+		largeImage: '/blog-images/xl/fifth-blog-image-xl.jpg',
+		alt: 'Stół weselny udekorowany kwiatami, świecami i elegancką zastawą',
+		date: '28-06-2025',
+		blogArticle: {
+			firstSubtitle: 'Stół, który opowiada historię',
+			firstParagraph:
+				'Stół weselny to nie tylko miejsce, gdzie podawane są potrawy – to przestrzeń, która powinna współgrać z całością dekoracji i stylem ceremonii. W 2025 roku modne są kompozycje, które łączą elegancję z naturalnymi materiałami. Obrusy lniane, serwetki z motywem roślinnym i ręcznie robiona papeteria to tylko kilka sposobów na wyróżnienie stołu. Świeczniki, kwiaty sezonowe i personalizowane detale, jak tabliczki z imionami, sprawią, że każdy gość poczuje się wyjątkowo.',
+			secondSubtitle: 'Kwiaty i świece – duet idealny',
+			secondParagraph:
+				'Kwiaty w dekoracjach stołu grają kluczową rolę. Najczęściej wybierane to eustomy, róże ogrodowe, piwonie czy gipsówka – lekkie i romantyczne. Kwiaty najlepiej prezentują się w towarzystwie świec w szklanych lampionach lub świecznikach w stylu vintage. Te dwa elementy – kwiaty i światło – tworzą niezwykle nastrojową kompozycję. Nowością są niskie, rozproszone bukiety zamiast wysokich aranżacji, które pozwalają na lepszy kontakt między gośćmi.',
+			thirdSubtitle: 'Minimalizm z duszą, czyli mniej znaczy więcej',
+			thirdParagraph:
+				'W 2025 roku obserwujemy powrót do minimalizmu z charakterem. Dekoracje stołu powinny być przemyślane, ale nie przytłaczające. Czasem wystarczy jedna dominująca kompozycja w centrum stołu i kilka drobnych akcentów, by osiągnąć efekt „wow”. Jeśli planujecie wesele w plenerze lub w stodole, warto postawić na drewno, szkło i neutralne kolory, które podkreślą naturalne piękno miejsca. Klucz to spójność – całość musi ze sobą harmonizować.',
+		},
+	},
+	{
+		id: 5,
+		title: 'Idealna papeteria ślubna',
+		text: 'Zaproszenia to pierwszy kontakt gości z klimatem Waszego ślubu. Zadbaj, by były spójne z całą oprawą i odzwierciedlały Wasz styl. Podpowiadam, na co zwrócić uwagę.',
+		specialText: 'To nie tylko informacja – to początek opowieści o Waszym dniu.',
+		href: '/artykuly-i-porady/idealna-papeteria-slubna',
+		image: '/blog-images/small/sixth-blog-image.jpg',
+		largeImage: '/blog-images/xl/sixth-blog-image-xl.jpg',
+		alt: 'Zaproszenie ślubne postawione na dużym prezencie',
+		date: '21-07-2025',
+		blogArticle: {
+			firstSubtitle: 'Papeteria jako wizytówka ślubu',
+			firstParagraph:
+				'Wybór zaproszeń ślubnych to nie lada wyzwanie – muszą być nie tylko estetyczne, ale też oddawać charakter ceremonii. W 2025 roku popularne są minimalistyczne projekty z tłoczeniami, a także rustykalne i vintage z naturalnymi papierami, i ręcznym zdobieniem. Dla par szukających czegoś nowoczesnego polecamy akwarelowe grafiki i zaproszenia w formacie harmonijki z dodatkami w kolorze przewodnim wesela.',
+			secondSubtitle: 'Detale, które robią wrażenie',
+			secondParagraph:
+				'Warto zainwestować w dodatki, które uzupełnią papeterię – np. personalizowane koperty, pieczęcie lakowe, naklejki z inicjałami czy mini zdjęcia pary młodej. Coraz więcej osób decyduje się też na komplet papeterii, który oprócz zaproszeń zawiera także RSVP, karty informacyjne oraz mapkę dojazdu. Estetyka i spójność tych elementów wpływają na ogólne wrażenie i pokazują, że wszystko zostało starannie przemyślane.',
+			thirdSubtitle: 'Eko i DIY – kreatywność w modzie',
+			thirdParagraph:
+				'W duchu eko coraz popularniejsze są zaproszenia z recyklingowanego papieru lub wykonane ręcznie przez pary młode. To piękny sposób na wprowadzenie gości w osobisty klimat ślubu. Można też skorzystać z usług lokalnych artystów lub drukarni oferujących małe nakłady na papierze czerpanym. Dla kreatywnych – opcja DIY pozwala stworzyć coś naprawdę unikalnego, co pozostanie w pamięci gości na długo.',
 		},
 	},
 ];

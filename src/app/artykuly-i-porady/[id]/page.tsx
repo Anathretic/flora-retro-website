@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getArticleById } from '@/helpers/getArticleByIdHelper';
+import { getArticleById } from '@/helpers/getDataHelper';
 import ArticlePage from './ArticlePage/ArticlePage';
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
