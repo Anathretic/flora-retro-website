@@ -3,70 +3,41 @@ import { OfferDataModel } from '@/models/offer.model';
 import { OpinionsDataModel } from '@/models/opinions.model';
 import { ArticleDataModel, ArticleItemModel } from '@/models/article.model';
 import { SlideDataBoxModel } from '@/models/carousel.model';
+import { clientFetchWithCache } from '@/utils/clientFetchWithCacheUtils';
 
-const URL = 'https://flora-retro.pl/';
+const URL = process.env.NEXT_PUBLIC_URL;
 
-export async function getOfferData(): Promise<OfferDataModel[] | null> {
-	try {
-		const res = await fetch(`${URL}/api/offer`);
-		if (!res.ok) return null;
-		const data = await res.json();
-		return data;
-	} catch (error) {
-		console.error('Błąd podczas pobierania ofert:', error);
-		return null;
-	}
-}
+export const getOfferData = () =>
+	clientFetchWithCache<OfferDataModel[]>({
+		key: 'offerData',
+		url: `${URL}/api/offer`,
+	});
 
-export async function getOpinionsData(): Promise<OpinionsDataModel[] | null> {
-	try {
-		const res = await fetch(`${URL}/api/opinions`);
-		if (!res.ok) return null;
-		const data = await res.json();
-		return data;
-	} catch (error) {
-		console.error('Błąd podczas pobierania opinii:', error);
-		return null;
-	}
-}
+export const getOpinionsData = () =>
+	clientFetchWithCache<OpinionsDataModel[]>({
+		key: 'opinionsData',
+		url: `${URL}/api/opinions`,
+	});
 
-export async function getBlogArticlesData(): Promise<SlideDataBoxModel[] | null> {
-	try {
-		const res = await fetch(`${URL}/api/articles`);
-		if (!res.ok) return null;
-		const data = await res.json();
-		return data;
-	} catch (error) {
-		console.error('Błąd podczas pobierania artykułów blogowych:', error);
-		return null;
-	}
-}
+export const getBlogArticlesData = () =>
+	clientFetchWithCache<SlideDataBoxModel[]>({
+		key: 'articlesData',
+		url: `${URL}/api/articles`,
+	});
 
-export async function getArticlesData(): Promise<ArticleItemModel[] | null> {
-	try {
-		const res = await fetch(`${URL}/api/articles`);
-		if (!res.ok) return null;
-		const data = await res.json();
-		return data;
-	} catch (error) {
-		console.error('Błąd podczas pobierania artykułów blogowych:', error);
-		return null;
-	}
-}
+export const getArticlesData = () =>
+	clientFetchWithCache<ArticleItemModel[]>({
+		key: 'articlesData',
+		url: `${URL}/api/articles`,
+	});
 
-export async function getRentCarImagesData(): Promise<SlideDataBoxModel[] | null> {
-	try {
-		const res = await fetch(`${URL}/api/images`);
-		if (!res.ok) return null;
-		const data = await res.json();
-		return data;
-	} catch (error) {
-		console.error('Błąd podczas pobierania zdjęć:', error);
-		return null;
-	}
-}
+export const getRentCarImagesData = () =>
+	clientFetchWithCache<SlideDataBoxModel[]>({
+		key: 'rentCarImagesData',
+		url: `${URL}/api/images`,
+	});
 
-export async function getArticleById(id: string): Promise<ArticleDataModel | null> {
+export const getArticleById = async (id: string): Promise<ArticleDataModel | null> => {
 	try {
 		const res = await fetch(`${URL}/api/articles/${id}`, {
 			next: { revalidate: 60 },
@@ -79,4 +50,4 @@ export async function getArticleById(id: string): Promise<ArticleDataModel | nul
 		console.error('Błąd podczas pobierania artykułu:', error);
 		return null;
 	}
-}
+};
