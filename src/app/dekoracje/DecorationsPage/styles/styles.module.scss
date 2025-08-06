@@ -9,7 +9,7 @@
 	&__hero-image,
 	&__content-wrapper,
 	&__info,
-	&__info-text-content-box,
+	&__info-text-content,
 	&__form-container,
 	&__form-title-box,
 	&__form-title-info-box {
@@ -96,6 +96,10 @@
 		&--special {
 			padding-top: 50px;
 		}
+
+		&--info {
+			padding: 0 0.35rem 2.5rem;
+		}
 	}
 
 	&__info {
@@ -104,38 +108,47 @@
 	}
 
 	&__info-text-content {
-		padding-bottom: 1em;
+		padding: 1em 2em 2em;
+		width: 100%;
 	}
 
 	&__info-text-content-box {
-		margin: 2em;
-		padding: 2em 0.5em 0;
-		max-width: 325px;
-		border: none;
-		border-radius: 0.5em;
-
-		-webkit-box-shadow: 0px 0px 10px 2px rgba(25, 50, 63, 0.25);
-		-moz-box-shadow: 0px 0px 10px 2px rgba(25, 50, 63, 0.25);
-		box-shadow: 0px 0px 10px 2px rgba(25, 50, 63, 0.25);
+		padding: 2em 0;
+		width: 100%;
+		max-width: 350px;
+		text-align: left;
+		z-index: 10;
 
 		h3 {
-			padding: 1em;
+			padding-top: 1.25rem;
 			font-size: 1.5em;
 			font-weight: 400;
-			font-style: italic;
-			text-align: center;
 		}
 
 		p {
-			padding: 0 0.75em 2em;
-			text-align: center;
+			padding: 1.25em 0 1em;
 			font-weight: 350;
-			line-height: 1.6em;
-
-			span {
-				font-weight: 700;
-			}
+			line-height: 1.5em;
 		}
+
+		span {
+			font-weight: 500;
+		}
+	}
+
+	&__info-text-content-box:first-of-type {
+		padding: 0 0 2em;
+	}
+
+	&__info-text-content-box:last-of-type {
+		padding: 2em 0 0;
+	}
+
+	&__info-special-decoration {
+		height: 1px;
+		width: 50px;
+		border: 1px solid var(--dark-brown-color);
+		margin-bottom: 1em;
 	}
 
 	&__gallery {
@@ -385,8 +398,12 @@
 			font-size: 4rem;
 		}
 
+		&__info {
+			padding-bottom: 3rem;
+		}
+
 		&__info-text-content-box {
-			max-width: 350px;
+			max-width: 500px;
 		}
 
 		&__gallery {
@@ -458,11 +475,10 @@
 			}
 		}
 
-		&__content-wrapper,
-		&__info-text-content {
+		&__content-wrapper {
+			flex-direction: row;
 			width: 100%;
 			max-width: 1000px;
-			flex-direction: row;
 		}
 
 		&__title {
@@ -471,21 +487,6 @@
 
 		&__hero-image {
 			background-image: url('../../../../images/subpages/decorations-subpage/hero-bg-image-xl.jpg');
-		}
-
-		&__info-text-content {
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			padding-bottom: 3em;
-		}
-
-		&__info-text-content-box {
-			max-width: 425px;
-		}
-
-		&__info {
-			padding-bottom: 3rem;
 		}
 
 		&__gallery-mosaic-container {
@@ -516,6 +517,36 @@
 			&--special {
 				padding-top: 70px;
 			}
+		}
+
+		&__info-text-content {
+			display: grid;
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr);
+			padding: 4em 0 2em;
+			max-width: 1180px;
+		}
+
+		&__info-text-content-box {
+			align-self: start;
+			justify-self: center;
+
+			h3 {
+				font-size: 1.6em;
+			}
+
+			p {
+				font-size: 1.05em;
+			}
+		}
+
+		&__info-text-content-box:first-of-type,
+		&__info-text-content-box:last-of-type {
+			padding: 2em 0;
+		}
+
+		&__info-special-decoration {
+			display: none;
 		}
 
 		&__gallery {

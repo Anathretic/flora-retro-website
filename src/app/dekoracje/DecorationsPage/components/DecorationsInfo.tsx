@@ -1,17 +1,17 @@
-import { GoHeart } from 'react-icons/go';
-import { VscTools } from 'react-icons/vsc';
+import { GoHeartFill } from 'react-icons/go';
+import { IoIosColorPalette } from 'react-icons/io';
 import { PiFlower } from 'react-icons/pi';
-import { IoLocationOutline } from 'react-icons/io5';
+import { IoLocationSharp } from 'react-icons/io5';
 
 import styles from '../styles/styles.module.scss';
 
 export default function DecorationsInfo() {
 	return (
 		<section className={styles.decorations__info} id='informacje'>
-			<h2 className={styles.decorations__title}>Co mnie wyróżnia?</h2>
+			<h2 className={`${styles.decorations__title} ${styles['decorations__title--info']}`}>Unikalność</h2>
 			<div className={styles['decorations__info-text-content']}>
 				<div className={styles['decorations__info-text-content-box']}>
-					<GoHeart fontSize={56} color='#6b4d45' />
+					<GoHeartFill fontSize={56} color='#6b4d45' />
 					<h3>Indywidualne podejście</h3>
 					<p>
 						Każda realizacja to dla mnie nowe wyzwanie i wyjątkowa historia. Zależy mi, aby dekoracje w pełni oddawały
@@ -20,8 +20,9 @@ export default function DecorationsInfo() {
 						niepowtarzalną, jak i autentyczną.
 					</p>
 				</div>
+				<div className={styles['decorations__info-special-decoration']} />
 				<div className={styles['decorations__info-text-content-box']}>
-					<VscTools fontSize={56} color='#6b4d45' />
+					<IoIosColorPalette fontSize={56} color='#6b4d45' />
 					<h3>Ręcznie tworzone dekoracje</h3>
 					<p>
 						Wszystkie elementy przygotowuję samodzielnie, wkładając w nie serce, czas i pasję. Rękodzieło pozwala mi
@@ -29,6 +30,7 @@ export default function DecorationsInfo() {
 						Dzięki temu <span>każdy projekt jest unikalny, pełen duszy i subtelnego piękna.</span>
 					</p>
 				</div>
+				<div className={styles['decorations__info-special-decoration']} />
 				<div className={styles['decorations__info-text-content-box']}>
 					<PiFlower fontSize={56} color='#6b4d45' />
 					<h3>Styl boho & retro z duszą</h3>
@@ -41,8 +43,9 @@ export default function DecorationsInfo() {
 						pamięć.
 					</p>
 				</div>
+				<div className={styles['decorations__info-special-decoration']} />
 				<div className={styles['decorations__info-text-content-box']}>
-					<IoLocationOutline fontSize={56} color='#6b4d45' />
+					<IoLocationSharp fontSize={56} color='#6b4d45' />
 					<h3>Lokalnie i z sercem</h3>
 					<p>
 						<span>Działam jako mała, lokalna pracownia</span> – bez pośpiechu, z pełnym zaangażowaniem i otwartością na

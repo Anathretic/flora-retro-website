@@ -8,7 +8,7 @@ import styles from '../styles/styles.module.scss';
 export default function RentCarBenefits() {
 	return (
 		<section className={styles['rent-car__benefits']} id='informacje'>
-			<h2 className={styles['rent-car__title']}>Mercedes W108</h2>
+			<h2 className={`${styles['rent-car__title']} ${styles['rent-car__title--benefits']}`}>Mercedes</h2>
 			<div className={styles['rent-car__benefits-text-content']}>
 				<div className={styles['rent-car__benefits-text-content-box']}>
 					<SiMercedes fontSize={56} color='#6b4d45' />
@@ -19,6 +19,7 @@ export default function RentCarBenefits() {
 						wniesie nutę elegancji, nostalgii i filmowego klimatu. <span>Oto Twoja gwiazda!</span>
 					</p>
 				</div>
+				<div className={styles['rent-car__benefits-special-decoration']} />
 				<div className={styles['rent-car__benefits-text-content-box']}>
 					<PiCrown fontSize={56} color='#6b4d45' />
 					<h3>Ponadczasowa elegancja</h3>
@@ -31,6 +32,7 @@ export default function RentCarBenefits() {
 						</span>
 					</p>
 				</div>
+				<div className={styles['rent-car__benefits-special-decoration']} />
 				<div className={styles['rent-car__benefits-text-content-box']}>
 					<FaCameraRetro fontSize={56} color='#6b4d45' />
 					<h3>Efekt „wow” na zdjęciach</h3>
@@ -40,6 +42,7 @@ export default function RentCarBenefits() {
 						<span>Wnosi wyjątkowy klimat i sprawia, że każda chwila wygląda jak kadr z filmu.</span>
 					</p>
 				</div>
+				<div className={styles['rent-car__benefits-special-decoration']} />
 				<div className={styles['rent-car__benefits-text-content-box']}>
 					<GiSofa fontSize={56} color='#6b4d45' />
 					<h3>Komfort i klasa z innej epoki</h3>
