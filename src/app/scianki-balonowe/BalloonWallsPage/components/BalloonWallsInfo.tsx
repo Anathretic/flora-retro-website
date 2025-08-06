@@ -1,17 +1,16 @@
-import { HiOutlineChatBubbleLeftRight } from 'react-icons/hi2';
+import { FaComments, FaSmileWink } from 'react-icons/fa';
 import { PiTimer } from 'react-icons/pi';
 import { HiOutlineHandRaised } from 'react-icons/hi2';
-import { LiaSmileBeamSolid } from 'react-icons/lia';
 
 import styles from '../styles/styles.module.scss';
 
 export default function BalloonWallsInfo() {
 	return (
 		<section className={styles['balloon-walls__info']} id='informacje'>
-			<h2 className={styles['balloon-walls__title']}>Co kryje się za ścianką?</h2>
+			<h2 className={`${styles['balloon-walls__title']} ${styles['balloon-walls__title--info']}`}>Magia</h2>
 			<div className={styles['balloon-walls__info-text-content']}>
 				<div className={styles['balloon-walls__info-text-content-box']}>
-					<HiOutlineChatBubbleLeftRight fontSize={56} color='#6b4d45' />
+					<FaComments fontSize={56} color='#6b4d45' />
 					<h3>Najpierw słucham</h3>
 					<p>
 						Zanim pojawi się pierwszy balon, musi być rozmowa. Bez checklisty, bez ankiet. Czasem ktoś powie, że lubi
@@ -22,6 +21,7 @@ export default function BalloonWallsInfo() {
 						Wolę zapytać o nastrój niż o dokładny odcień różu. Bo tło też potrafi mówić, jeśli się je dobrze ustawi.
 					</p>
 				</div>
+				<div className={styles['balloon-walls__info-special-decoration']} />
 				<div className={styles['balloon-walls__info-text-content-box']}>
 					<PiTimer fontSize={56} color='#6b4d45' />
 					<h3>Czas jest kluczowy</h3>
@@ -35,6 +35,7 @@ export default function BalloonWallsInfo() {
 						</span>
 					</p>
 				</div>
+				<div className={styles['balloon-walls__info-special-decoration']} />
 				<div className={styles['balloon-walls__info-text-content-box']}>
 					<HiOutlineHandRaised fontSize={56} color='#6b4d45' />
 					<h3>To się czuje</h3>
@@ -47,8 +48,9 @@ export default function BalloonWallsInfo() {
 						Dekoracja rodzi się wtedy, gdy dłonie już wiedzą, co robić, nawet jeśli głowa jeszcze się waha.
 					</p>
 				</div>
+				<div className={styles['balloon-walls__info-special-decoration']} />
 				<div className={styles['balloon-walls__info-text-content-box']}>
-					<LiaSmileBeamSolid fontSize={56} color='#6b4d45' />
+					<FaSmileWink fontSize={56} color='#6b4d45' />
 					<h3>Nie tylko zdjęcia</h3>
 					<p>
 						Ścianka to nie tylko tło pod aparat. To miejsce, przy którym ktoś się przytuli, ktoś inny się wzruszy, a
