@@ -7,7 +7,7 @@ import animations from './styles/animations.module.scss';
 export default function WelcomeSection() {
 	return (
 		<section className={styles.welcome}>
-			<div className={styles.welcome__container}>
+			<div className={`${styles.welcome__container} ${animations['show-content']}`}>
 				<h1 className={styles.welcome__title}>Flora Retro</h1>
 				<p>Pracownia dekoracji</p>
 				<Link href='/dekoracje' className={styles['welcome__special-btn']}>
