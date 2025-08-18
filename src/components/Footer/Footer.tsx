@@ -20,9 +20,9 @@ export default function Footer() {
 			<div className={`${styles.footer__bar} ${styles['footer__bar--first']}`} />
 			<div className={styles.footer__container}>
 				<div className={styles.footer__box}>
-					<h2>
+					<div className={styles['footer__box-icon']}>
 						<Image src={WebsiteLogo} alt='Logo przekierowujące na górę strony' width={130} height={75} />
-					</h2>
+					</div>
 					<p>Profesjonalne dekoracje na każdą okazję!</p>
 					<div className={styles['footer__title-icons']}>
 						<a href='https://www.facebook.com/DekoracjeIzabelaSzczygiel' target='_blank' rel='noreferrer'>
@@ -36,7 +36,7 @@ export default function Footer() {
 				<div className={styles.footer__box}>
 					{showSpecialLinks && (
 						<>
-							<h3>Home</h3>
+							<span>Home</span>
 							<ul>
 								<>
 									{footerHomeItems.map((item, id) => (
@@ -50,7 +50,7 @@ export default function Footer() {
 					)}
 				</div>
 				<div className={styles.footer__box}>
-					<h3>Oferta</h3>
+					<span>Oferta</span>
 					<ul>
 						{footerOfferItems.map((item, id) => (
 							<li key={id}>
@@ -60,7 +60,7 @@ export default function Footer() {
 					</ul>
 				</div>
 				<div className={styles.footer__box}>
-					<h3>Więcej</h3>
+					<span>Więcej</span>
 					<ul>
 						{footerMoreItems.map((item, id) => (
 							<li key={id}>
