@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ArticlesAndAdvicesPage from './ArticlesAndAdvicesPage/ArticlesAndAdvicesPage';
+import ArticlesAndAdvicesPage from '@/features/articles/pages/ArticlesAndAdvicesPage';
 
 export const metadata: Metadata = {
 	title: 'Artykuły i porady',

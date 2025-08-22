@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import BalloonWallsPage from './BalloonWallsPage/BalloonWallsPage';
+import BalloonWallsPage from '@/features/balloon-walls/BalloonWallsPage';
 
 export const metadata: Metadata = {
 	title: 'Ścianki balonowe',
