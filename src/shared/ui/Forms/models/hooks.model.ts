@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import { UseFormReset } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { ContactFormModel } from '@/shared/models/form.model';
+import { ContactFormModel } from './contactForm.model';
 
 export type FormTypes = ContactFormModel;
 

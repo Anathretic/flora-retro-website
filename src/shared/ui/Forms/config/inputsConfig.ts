@@ -1,6 +1,6 @@
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
-import { ContactFormModel } from '@/shared/models/form.model';
-import { ContactFormInputConfigModel } from '@/shared/models/formElements.model';
+import { ContactFormModel } from '../models/contactForm.model';
+import { ContactFormInputConfigModel } from '../models/components.model';
 
 const today = new Date().toISOString().split('T')[0];
 
