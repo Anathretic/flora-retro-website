@@ -16,11 +16,13 @@ export function NavbarTitle({ divRef }: NavbarTitleModel) {
 		}
 
 		if (window.location.hash) {
-			window.history.replaceState('', document.title, window.location.pathname);
+			window.history.replaceState({}, document.title, window.location.pathname);
 		}
 	};
 
-	useEffect(() => scrollToTop, []);
+	useEffect(() => {
+		scrollToTop();
+	}, []);
 
 	return (
 		<div className={styles.navbar__title} onClick={scrollToTop}>
