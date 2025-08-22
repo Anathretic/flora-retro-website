@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import DecorationRentalPage from './DecorationRentalPage/DecorationRentalPage';
+import DecorationRentalPage from '@/features/rental/DecorationRentalPage';
 
 export const metadata: Metadata = {
 	title: 'Wypożyczalnia dekoracji',

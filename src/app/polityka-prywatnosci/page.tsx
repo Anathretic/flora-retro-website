@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import PrivacyPolicyPage from './PrivacyPolicyPage/PrivacyPolicyPage';
+import PrivacyPolicyPage from '@/features/privacy/PrivacyPolicyPage';
 
 export const metadata: Metadata = {
 	title: 'Polityka prywatności',

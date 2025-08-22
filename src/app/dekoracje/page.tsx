@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import DecorationsPage from './DecorationsPage/DecorationsPage';
+import DecorationsPage from '@/features/decorations/DecorationsPage';
 
 export const metadata: Metadata = {
 	title: 'Dekoracje ślubne i okolicznościowe',

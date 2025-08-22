@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
-import { getArticleById } from '@/helpers/getDataHelper';
-import ArticlePage from './ArticlePage/ArticlePage';
+import { getArticleById } from '@/shared/utils/getDataHelper';
+import ArticlePage from '@/features/articles/pages/ArticlePage';
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
 	const id = (await params).id;

@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Montserrat, Dancing_Script, Fleur_De_Leah } from 'next/font/google';
-import Providers from '@/context/Providers';
-import CookieBanner from '@/components/CookieBanner/CookieBanner';
+import Providers from '@/shared/context/Providers';
+import CookieBanner from '@/shared/ui/CookieBanner/CookieBanner';
 
-import '../styles/globals.scss';
+import '../shared/styles/variables.scss';
+import '../shared/styles/globals.scss';
 
 const montserrat = Montserrat({
 	subsets: ['latin'],

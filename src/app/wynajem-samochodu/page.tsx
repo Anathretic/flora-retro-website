@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import CarHirePage from './CarHirePage/CarHirePage';
+import CarHirePage from '@/features/car-hire/CarHirePage';
 
 export const metadata: Metadata = {
 	title: 'Wynajem samochodu',

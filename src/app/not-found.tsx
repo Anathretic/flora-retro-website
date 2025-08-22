@@ -2,7 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import NotFoundImage from '../images/subpages/not-found-subpage/not-found-image.png';
-import styles from '../styles/not-found/styles.module.scss';
+
+import styles from '../shared/styles/not-found/styles.module.scss';
 
 export default function NotFound() {
 	return (
