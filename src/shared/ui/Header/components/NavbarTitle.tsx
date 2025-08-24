@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import { NavbarTitleModel } from '../models/header.model';
 
-import WebsiteLogo from '../../../../images/website-logo-white.svg';
+import WebsiteLogo from '../../../assets/website-logo-white.svg';
 import styles from '../styles/styles.module.scss';
 
 export function NavbarTitle({ divRef }: NavbarTitleModel) {

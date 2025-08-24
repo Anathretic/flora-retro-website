@@ -67,19 +67,19 @@
 		}
 
 		&--0 {
-			background-image: url('../../../../images/sections/offer-section/flower_card.svg');
+			background-image: url('../images/flower_card.svg');
 		}
 
 		&--1 {
-			background-image: url('../../../../images/sections/offer-section/car_card.svg');
+			background-image: url('../images/car_card.svg');
 		}
 
 		&--2 {
-			background-image: url('../../../../images/sections/offer-section/balloon_card.svg');
+			background-image: url('../images/balloon_card.svg');
 		}
 
 		&--3 {
-			background-image: url('../../../../images/sections/offer-section/cart_card.svg');
+			background-image: url('../images/cart_card.svg');
 		}
 	}
 
@@ -110,7 +110,7 @@
 		height: 130px;
 		max-height: 64px;
 		color: var(--white-color);
-		background-image: url('../../../../images/sections/offer-section/button.svg');
+		background-image: url('../images/button.svg');
 		background-position: center;
 		background-size: cover;
 		font-size: 0.9em;

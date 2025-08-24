@@ -6,7 +6,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { contactFormInputsConfig } from './config/inputsConfig';
 import { useFormSubmits } from './hooks/useFormSubmits';
-import { contactSchema } from '@/schemas/schemas';
+import { contactSchema } from '@/shared/schemas/schemas';
 import { ContactFormComponentModel, ContactFormModel } from './models/contactForm.model';
 import {
 	FormSubmit,
