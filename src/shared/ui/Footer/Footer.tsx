@@ -7,7 +7,7 @@ import { footerHomeItems, footerMoreItems, footerOfferItems } from './footerItem
 import { FaFacebookSquare, FaInstagram, FaRegCopyright } from 'react-icons/fa';
 import { GiFlowerPot } from 'react-icons/gi';
 
-import WebsiteLogo from '../../../images/website-logo-dark.svg';
+import WebsiteLogo from '../../assets/website-logo-dark.svg';
 import styles from './styles/styles.module.scss';
 
 export default function Footer() {

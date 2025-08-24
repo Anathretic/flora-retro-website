@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import NotFoundImage from '../images/subpages/not-found-subpage/not-found-image.png';
+import NotFoundImage from '../shared/assets/not-found-image.png';
 
 import styles from '../shared/styles/not-found/styles.module.scss';
 

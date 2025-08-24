@@ -5,7 +5,7 @@
 	align-items: center;
 	min-height: 100vh;
 	width: 100%;
-	background-image: url('../../../../images/sections/welcome-section/hero-bg.jpg');
+	background-image: url('../images/hero-bg.jpg');
 	background-size: cover;
 	background-position: center;
 
@@ -114,7 +114,7 @@
 
 @media screen and (min-width: 768px) and (min-height: 640px) {
 	.welcome {
-		background-image: url('../../../../images/sections/welcome-section/hero-bg-xl.jpg');
+		background-image: url('../images/hero-bg-xl.jpg');
 
 		&__title {
 			font-size: 8rem;

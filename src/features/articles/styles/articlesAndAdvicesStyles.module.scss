@@ -32,7 +32,7 @@
 
 	&__hero-image {
 		height: 40vh;
-		background-image: url('../../../images/subpages/articles-subpage/hero-bg-image.jpg');
+		background-image: url('../images/hero-bg-image.jpg');
 		background-position: center;
 		background-size: cover;
 	}
@@ -169,7 +169,7 @@
 @media screen and (min-width: 768px) {
 	.articles {
 		&__hero-image {
-			background-image: url('../../../images/subpages/articles-subpage/hero-bg-image-xl.jpg');
+			background-image: url('../images/hero-bg-image-xl.jpg');
 		}
 
 		&__hero-image-title {
