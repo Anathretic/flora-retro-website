@@ -46,8 +46,8 @@ export const articleData = [
 	{
 		id: 2,
 		title: 'Jak wybrać auto do ślubu?',
-		text: 'Samochód ślubny to nie tylko środek transportu, ale też część całej oprawy – powinien pasować do klimatu ceremonii. W artykule podpowiadam, na co zwrócić uwagę przy wyborze auta, by było stylowo i komfortowo.',
-		specialText: 'Dzielimy się inspiracjami, jak go efektownie udekorować!',
+		text: 'Samochód ślubny to nie tylko środek transportu, ale też część całej oprawy – powinien pasować do klimatu ceremonii.',
+		specialText: 'W artykule podpowiadam, na co zwrócić uwagę przy wyborze auta, by było stylowo i komfortowo.',
 		href: '/artykuly-i-porady/jak-wybrac-auto-do-slubu',
 		image: '/blog-images/small/third-blog-image.jpg',
 		largeImage: '/blog-images/xl/third-blog-image-xl.jpg',
@@ -68,8 +68,8 @@ export const articleData = [
 	{
 		id: 3,
 		title: 'Dekoracje na przyjęcia',
-		text: 'Nie tylko ślub zasługuje na wyjątkową oprawę – każde przyjęcie może wyglądać jak z katalogu, jeśli postawisz na dobry pomysł. W artykule znajdziesz inspiracje na dekoracje w stylu retro, boho i glamour.',
-		specialText: 'Świetna baza, jeśli chcesz zorganizować coś z duszą i bez schematów.',
+		text: 'Nie tylko ślub zasługuje na wyjątkową oprawę – każde przyjęcie może wyglądać jak z katalogu, jeśli postawisz na dobry pomysł.',
+		specialText: 'Świetna baza, jeśli chcesz zorganizować coś z duszą i bez schematów pozostając w stylu retro.',
 		href: '/artykuly-i-porady/dekoracje-na-przyjecia',
 		image: '/blog-images/small/fourth-blog-image.jpg',
 		largeImage: '/blog-images/xl/fourth-blog-image-xl.jpg',
