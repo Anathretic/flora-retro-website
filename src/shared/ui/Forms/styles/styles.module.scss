@@ -110,6 +110,10 @@
 		letter-spacing: 1px;
 		transition: background-color 0.3s;
 		cursor: pointer;
+
+		&:active {
+			transform: translateY(1px);
+		}
 	}
 
 	&__submit {

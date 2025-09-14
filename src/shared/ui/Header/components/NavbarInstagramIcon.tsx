@@ -8,7 +8,7 @@ export function NavbarInstagramIcon({ onClick }: NavbarInstagramIconModel) {
 		<li className={`${styles['navbar__instagram-icon']} ${styles['navbar__instagram-icon-margin']}`}>
 			<a
 				className={styles['navbar__instagram-icon-link']}
-				href='https://www.instagram.com/izabela_szczygiel_dekoracje/'
+				href='https://www.instagram.com/flora_retro_dekoracje/'
 				onClick={onClick}
 				target='_blank'
 				rel='noreferrer'>

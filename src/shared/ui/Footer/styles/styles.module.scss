@@ -73,8 +73,14 @@
 		}
 	}
 
-	&__title-icons a {
-		font-size: 24px;
+	&__title-icons {
+		a {
+			font-size: 24px;
+		}
+
+		svg:active {
+			transform: translateY(1px);
+		}
 	}
 
 	&__copyright-box {

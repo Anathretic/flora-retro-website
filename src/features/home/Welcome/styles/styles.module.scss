@@ -59,6 +59,10 @@
 		letter-spacing: 1px;
 		transition: background-color 0.3s, color 0.3s, border-radius 0.5s;
 		cursor: pointer;
+
+		&:active {
+			transform: translateY(1px);
+		}
 	}
 
 	&__button {
@@ -169,6 +173,7 @@
 
 		&__container {
 			padding-bottom: 2em;
+
 			p {
 				bottom: 15%;
 				font-size: 1.65rem;
@@ -177,11 +182,14 @@
 
 		&__special-btn {
 			width: 260px;
+			background-color: var(--white-color);
+			color: var(--black-color);
 			font-size: 1.1em;
 
 			&:hover {
-				background-color: var(--dark-brown-color);
-				color: var(--white-color);
+				background-color: var(--white-color);
+				color: var(--black-color);
+				border-radius: 8em;
 			}
 		}
 
@@ -258,17 +266,6 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			grid-column: 2/3;
-		}
-
-		&__special-btn {
-			background-color: var(--white-color);
-			color: var(--black-color);
-
-			&:hover {
-				background-color: var(--white-color);
-				color: var(--black-color);
-				border-radius: 8em;
-			}
 		}
 
 		&__button {

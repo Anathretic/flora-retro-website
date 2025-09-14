@@ -107,6 +107,10 @@
 			letter-spacing: 1px;
 			transition: background-color 0.3s, box-shadow 0.3s;
 			cursor: pointer;
+
+			&:active {
+				transform: translateY(1px);
+			}
 		}
 	}
 
@@ -136,6 +140,10 @@
 		letter-spacing: 1px;
 		transition: background-color 0.3s, box-shadow 0.3s;
 		cursor: pointer;
+
+		&:active {
+			transform: translateY(1px);
+		}
 	}
 }
 

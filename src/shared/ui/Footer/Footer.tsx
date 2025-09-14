@@ -28,7 +28,7 @@ export default function Footer() {
 						<a href='https://www.facebook.com/DekoracjeIzabelaSzczygiel' target='_blank' rel='noreferrer'>
 							<FaFacebookSquare />
 						</a>
-						<a href='https://www.instagram.com/izabela_szczygiel_dekoracje/' target='_blank' rel='noreferrer'>
+						<a href='https://www.instagram.com/flora_retro_dekoracje/' target='_blank' rel='noreferrer'>
 							<FaInstagram />
 						</a>
 					</div>

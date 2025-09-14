@@ -74,15 +74,20 @@
 		border: none;
 		border-radius: 0.125em;
 		letter-spacing: 1px;
-		transition: background-color 0.3s, color 0.3s;
+		transition: background-color 0.3s, color 0.3s, border-radius 0.5s;
 		cursor: pointer;
 
 		&--after-click {
-			background-color: var(--dark-brown-color);
-			color: var(--white-color);
+			background-color: var(--white-color);
+			color: var(--black-color);
+			border-radius: 8em;
 			pointer-events: none;
 			cursor: default;
 		}
+	}
+
+	&__hero-image-btn:active {
+		transform: translateY(1px);
 	}
 
 	&__hero-image-link {
@@ -467,8 +472,9 @@
 			text-align: center;
 
 			&:hover {
-				background-color: var(--dark-brown-color);
-				color: var(--white-color);
+				background-color: var(--white-color);
+				color: var(--black-color);
+				border-radius: 8em;
 			}
 		}
 
