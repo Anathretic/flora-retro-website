@@ -47,6 +47,10 @@
 
 	&__title-box {
 		color: var(--white-color);
+
+		&:active {
+			transform: translateY(1px);
+		}
 	}
 
 	&__desktop {
@@ -108,6 +112,10 @@
 		padding: 0.5rem;
 		color: var(--white-color);
 		transition: color 0.3s ease-out;
+
+		&:active {
+			transform: translateY(1px);
+		}
 	}
 }
 
@@ -206,11 +214,13 @@
 			padding: 0 6rem;
 
 			&--subpage {
-				opacity: 0;
+				pointer-events: none;
 				transition: opacity 0.3s;
+				opacity: 0;
 			}
 
 			&--is-scrolled-on-subpage {
+				pointer-events: all;
 				opacity: 1;
 			}
 		}

@@ -20,7 +20,7 @@
 	font-size: inherit;
 	letter-spacing: 1px;
 	text-decoration: none;
-	transition: background-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, color 0.3s, border-radius 0.5s;
 	cursor: pointer;
 
 	&:active {
@@ -30,8 +30,9 @@
 
 @media screen and (min-width: 1024px) {
 	.btn:hover {
-		background-color: var(--dark-brown-color);
-		color: var(--white-color);
+		background-color: var(--white-color);
+		color: var(--black-color);
+		border-radius: 8em;
 	}
 }
 
