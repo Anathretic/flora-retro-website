@@ -1,6 +1,6 @@
 import styles from '../styles/styles.module.scss';
 
-import '../styles/gallery.scss';
+import '../../../shared/styles/gallery.scss';
 
 export default function DecorationsGallery() {
 	return (

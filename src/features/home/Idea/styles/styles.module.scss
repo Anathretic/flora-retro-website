@@ -14,6 +14,10 @@
 		width: 100%;
 	}
 
+	&__image {
+		display: none;
+	}
+
 	&__container {
 		padding: 1em 0;
 		margin: 0 auto;
@@ -70,26 +74,8 @@
 	&__special-decoration {
 		height: 1px;
 		width: 50px;
-		border: 1px solid var(--dark-brown-color);
+		border: 1px solid var(--black-color);
 		margin-bottom: 1em;
-	}
-
-	&__special-block {
-		position: absolute;
-		bottom: 0;
-		width: 40%;
-		height: 40px;
-		background-color: var(--dark-brown-color);
-
-		&--left {
-			left: -50px;
-			transform: skew(45deg);
-		}
-
-		&--right {
-			right: -50px;
-			transform: skew(-45deg);
-		}
 	}
 }
 
@@ -105,11 +91,6 @@
 	.idea {
 		&__content-box {
 			max-width: 460px;
-		}
-
-		&__special-block {
-			width: 35%;
-			height: 50px;
 		}
 	}
 }
@@ -138,49 +119,61 @@
 
 @media screen and (min-width: 1358px) {
 	.idea {
-		padding-top: 70px;
+		display: grid;
+		grid-template-rows: repeat(1, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		padding: 0;
+		margin: 0 auto;
+		max-width: 2620px;
+
+		&__image {
+			display: block;
+			background-image: url('../images/idea-image.jpg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			grid-column: 1/2;
+		}
 
 		&__content-container {
-			display: grid;
-			grid-template-rows: repeat(2, 1fr);
-			grid-template-columns: repeat(2, 1fr);
 			padding: 4em 0 2em;
 			max-width: 1180px;
+			width: 100%;
+			grid-column: 2/3;
 		}
 
 		&__title {
-			padding: 0.5rem 0.85rem;
+			padding: 70px 0.85rem 0.5rem;
 			font-size: 3.5rem;
 		}
 
 		&__content-box {
-			align-self: start;
 			justify-self: center;
+			max-width: 580px;
+			text-align: center;
+			padding: 3em 0;
 
 			h3 {
+				padding-top: 0;
 				font-size: 1.6em;
 			}
+		}
 
+		&__content-box:first-of-type {
+			padding: 0 0 3em;
+		}
+
+		&__content-box:last-of-type {
+			padding: 3em 0 1em;
+		}
+	}
+}
+
+@media screen and (min-width: 1536px) {
+	.idea {
+		&__content-box {
 			p {
 				font-size: 1.05em;
-			}
-		}
-
-		&__content-box:first-of-type,
-		&__content-box:last-of-type {
-			padding: 2em 0;
-		}
-
-		&__special-decoration {
-			display: none;
-		}
-
-		&__special-block {
-			height: 45px;
-			width: 42%;
-
-			&--right {
-				display: none;
 			}
 		}
 	}

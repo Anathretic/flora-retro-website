@@ -28,21 +28,23 @@ export default function BalloonWallsPage() {
 			<main>
 				<div className={styles['balloon-walls__container']}>
 					<div className={styles['balloon-walls__wrapper']}>
-						<div className={styles['balloon-walls__hero-image']}>
-							<h1 className={styles['balloon-walls__hero-image-title']}>Ścianki balonowe</h1>
-							<a href='tel:+48730940691' className={styles['balloon-walls__hero-image-link']}>
-								Zadzwoń
-							</a>
-							<button
-								type='button'
-								className={`${styles['balloon-walls__hero-image-btn']} ${
-									desktopBtnValue !== 'Zadzwoń' && styles['balloon-walls__hero-image-btn--after-click']
-								}`}
-								onClick={handleDesktopBtn}>
-								{desktopBtnValue}
-							</button>
+						<div className={styles['balloon-walls__special-wrapper']}>
+							<div className={styles['balloon-walls__hero-image']}>
+								<h1 className={styles['balloon-walls__hero-image-title']}>Ścianki balonowe</h1>
+								<a href='tel:+48730940691' className={styles['balloon-walls__hero-image-link']}>
+									Zadzwoń
+								</a>
+								<button
+									type='button'
+									className={`${styles['balloon-walls__hero-image-btn']} ${
+										desktopBtnValue !== 'Zadzwoń' && styles['balloon-walls__hero-image-btn--after-click']
+									}`}
+									onClick={handleDesktopBtn}>
+									{desktopBtnValue}
+								</button>
+							</div>
+							<BalloonWallsInfo />
 						</div>
-						<BalloonWallsInfo />
 						<BalloonWallsGallery />
 						<BalloonWallsForm />
 					</div>

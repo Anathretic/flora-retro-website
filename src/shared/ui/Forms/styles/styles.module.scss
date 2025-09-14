@@ -45,9 +45,9 @@
 		position: relative;
 		padding: 0.95em 3.25em 0.95em 0.75em;
 		width: 100%;
-		color: var(--dark-brown-color);
+		color: var(--black-color);
 		background-color: transparent;
-		border: 1px solid var(--dark-brown-color);
+		border: 1px solid var(--black-color);
 		font-family: var(--font-montserrat);
 		font-size: 0.9em;
 		letter-spacing: 1px;
@@ -64,8 +64,8 @@
 	&__input,
 	&__textarea {
 		&:focus {
-			border-color: var(--brown-color);
-			outline: var(--brown-color);
+			border-color: var(--dark-brown-color);
+			outline: var(--dark-brown-color);
 		}
 
 		&::placeholder {
@@ -96,7 +96,7 @@
 
 	&__submit,
 	&__return-btn {
-		padding: 0.85em 3em;
+		padding: 0.75em 3em;
 		margin: 1em 1em 1.25em;
 		width: 215px;
 		color: var(--white-color);

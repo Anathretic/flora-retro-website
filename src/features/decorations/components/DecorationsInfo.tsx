@@ -1,8 +1,3 @@
-import { GoHeartFill } from 'react-icons/go';
-import { IoIosColorPalette } from 'react-icons/io';
-import { PiFlower } from 'react-icons/pi';
-import { IoLocationSharp } from 'react-icons/io5';
-
 import styles from '../styles/styles.module.scss';
 
 export default function DecorationsInfo() {
@@ -11,7 +6,6 @@ export default function DecorationsInfo() {
 			<h2 className={`${styles.decorations__title} ${styles['decorations__title--info']}`}>Unikalność</h2>
 			<div className={styles['decorations__info-text-content']}>
 				<div className={styles['decorations__info-text-content-box']}>
-					<GoHeartFill fontSize={56} color='#6b4d45' />
 					<h3>Indywidualne podejście</h3>
 					<p>
 						Każda realizacja to dla mnie nowe wyzwanie i wyjątkowa historia. Zależy mi, aby dekoracje w pełni oddawały
@@ -22,7 +16,6 @@ export default function DecorationsInfo() {
 				</div>
 				<div className={styles['decorations__info-special-decoration']} />
 				<div className={styles['decorations__info-text-content-box']}>
-					<IoIosColorPalette fontSize={56} color='#6b4d45' />
 					<h3>Ręcznie tworzone dekoracje</h3>
 					<p>
 						Wszystkie elementy przygotowuję samodzielnie, wkładając w nie serce, czas i pasję. Rękodzieło pozwala mi
@@ -32,7 +25,6 @@ export default function DecorationsInfo() {
 				</div>
 				<div className={styles['decorations__info-special-decoration']} />
 				<div className={styles['decorations__info-text-content-box']}>
-					<PiFlower fontSize={56} color='#6b4d45' />
 					<h3>Styl boho & retro z duszą</h3>
 					<p>
 						Moje dekoracje czerpią inspirację z natury, estetyki vintage i swobodnej elegancji stylu boho.{' '}
@@ -41,17 +33,6 @@ export default function DecorationsInfo() {
 						</span>{' '}
 						Takie połączenia nadają każdej uroczystości lekkości, romantyzmu i przytulnego klimatu, który zapada w
 						pamięć.
-					</p>
-				</div>
-				<div className={styles['decorations__info-special-decoration']} />
-				<div className={styles['decorations__info-text-content-box']}>
-					<IoLocationSharp fontSize={56} color='#6b4d45' />
-					<h3>Lokalnie i z sercem</h3>
-					<p>
-						<span>Działam jako mała, lokalna pracownia</span> – bez pośpiechu, z pełnym zaangażowaniem i otwartością na
-						ludzi. Każde zlecenie traktuję jak osobistą misję, niezależnie od jego skali. Wierzę, że to właśnie
-						bezpośredni kontakt, szczerość i ciepło w relacji z klientem pozwalają tworzyć coś więcej niż tylko
-						dekoracje – prawdziwe wspomnienia.
 					</p>
 				</div>
 			</div>

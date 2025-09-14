@@ -53,7 +53,10 @@ export default function Header({ navbarItems }: HeaderModel) {
 	return (
 		<header ref={divRef}>
 			<div className={`${styles.header} ${isScrolled ? styles['header--is-scrolled'] : ''}`}>
-				<div className={`${styles.header__container} ${pathname !== '/' && styles['header__container--subpage']}`}>
+				<div
+					className={`${styles.header__container} ${pathname !== '/' && styles['header__container--subpage']} ${
+						isScrolled && styles['header__container--is-scrolled-on-subpage']
+					}`}>
 					<NavbarTitle divRef={divRef} />
 					<div className={styles['navbar__mobile-container']}>
 						<HiMenuAlt4
