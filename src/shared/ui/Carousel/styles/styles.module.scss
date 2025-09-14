@@ -1,25 +1,26 @@
 .icon {
-	fill: var(--dark-brown-color);
+	fill: var(--black-color);
 	width: 100%;
 	transition: fill 0.3s;
 }
 
 @media screen and (min-width: 1024px) {
 	.icon:hover {
-		fill: var(--brown-color);
+		fill: var(--dark-brown-color);
 	}
 }
 
 .btn {
 	padding: 1rem 2.5rem 1.125rem;
-	background-color: var(--dark-brown-color);
-	color: var(--white-color);
+	background-color: var(--white-color);
+	color: var(--black-color);
 	border: none;
 	border-radius: 0.125rem;
 	font-family: inherit;
 	font-size: inherit;
+	letter-spacing: 1px;
 	text-decoration: none;
-	transition: background-color 0.3s;
+	transition: background-color 0.3s, color 0.3s;
 	cursor: pointer;
 
 	&:active {
@@ -29,7 +30,8 @@
 
 @media screen and (min-width: 1024px) {
 	.btn:hover {
-		background-color: var(--brown-color);
+		background-color: var(--dark-brown-color);
+		color: var(--white-color);
 	}
 }
 

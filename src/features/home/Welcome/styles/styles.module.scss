@@ -20,32 +20,44 @@
 
 		p {
 			font-size: 1.25rem;
-			font-weight: 250;
+			font-weight: 300;
 			text-align: center;
 		}
+	}
+
+	&__image {
+		display: none;
 	}
 
 	&__title {
 		padding-top: 1em;
 		font-size: 4.5rem;
 		font-weight: 300;
-		font-family: var(--font-fleur-de-leah);
+		font-family: var(--font-love-light);
 		text-align: center;
+	}
+
+	&__mobile-text {
+		display: block;
+	}
+
+	&__desktop-text {
+		display: none;
 	}
 
 	&__special-btn {
 		padding: 0.85em 3em;
 		margin: 2.75em 1.5em 1.5em;
 		width: 215px;
-		color: var(--white-color);
-		background-color: var(--brown-color);
+		color: var(--black-color);
+		background-color: var(--white-color);
 		font-size: 1em;
 		text-align: center;
 		text-decoration: none;
 		border: none;
 		border-radius: 0.125em;
 		letter-spacing: 1px;
-		transition: background-color 0.3s;
+		transition: background-color 0.3s, color 0.3s, border-radius 0.5s;
 		cursor: pointer;
 	}
 
@@ -169,6 +181,7 @@
 
 			&:hover {
 				background-color: var(--dark-brown-color);
+				color: var(--white-color);
 			}
 		}
 
@@ -195,6 +208,71 @@
 				bottom: 15%;
 				font-size: 1.8rem;
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.welcome {
+		display: grid;
+		grid-template-rows: repeat(1, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		padding-top: 0;
+		margin: 0 auto;
+		max-width: 2720px;
+		background-image: none;
+		background-color: var(--brown-color);
+
+		&__container {
+			grid-column: 1/2;
+
+			p {
+				color: var(--white-color);
+				font-size: 1.2em;
+				width: 700px;
+
+				span {
+					font-weight: 450;
+				}
+			}
+		}
+
+		&__title {
+			color: var(--white-color);
+		}
+
+		&__mobile-text {
+			display: none;
+		}
+
+		&__desktop-text {
+			display: block;
+		}
+
+		&__image {
+			display: block;
+			width: 100%;
+			height: 100vh;
+			background-image: url('../images/hero-bg-xl.jpg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			grid-column: 2/3;
+		}
+
+		&__special-btn {
+			background-color: var(--white-color);
+			color: var(--black-color);
+
+			&:hover {
+				background-color: var(--white-color);
+				color: var(--black-color);
+				border-radius: 8em;
+			}
+		}
+
+		&__button {
+			display: none;
 		}
 	}
 }

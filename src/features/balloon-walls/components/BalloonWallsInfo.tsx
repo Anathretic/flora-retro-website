@@ -1,7 +1,3 @@
-import { FaComments, FaSmileWink } from 'react-icons/fa';
-import { PiTimer } from 'react-icons/pi';
-import { HiOutlineHandRaised } from 'react-icons/hi2';
-
 import styles from '../styles/styles.module.scss';
 
 export default function BalloonWallsInfo() {
@@ -10,7 +6,6 @@ export default function BalloonWallsInfo() {
 			<h2 className={`${styles['balloon-walls__title']} ${styles['balloon-walls__title--info']}`}>Magia</h2>
 			<div className={styles['balloon-walls__info-text-content']}>
 				<div className={styles['balloon-walls__info-text-content-box']}>
-					<FaComments fontSize={56} color='#6b4d45' />
 					<h3>Najpierw słucham</h3>
 					<p>
 						Zanim pojawi się pierwszy balon, musi być rozmowa. Bez checklisty, bez ankiet. Czasem ktoś powie, że lubi
@@ -23,7 +18,6 @@ export default function BalloonWallsInfo() {
 				</div>
 				<div className={styles['balloon-walls__info-special-decoration']} />
 				<div className={styles['balloon-walls__info-text-content-box']}>
-					<PiTimer fontSize={56} color='#6b4d45' />
 					<h3>Czas jest kluczowy</h3>
 					<p>
 						Każdy balon przechodzi przez moje ręce. Dosłownie. Kompozycja nie powstaje w programie — powstaje w realnym
@@ -37,20 +31,6 @@ export default function BalloonWallsInfo() {
 				</div>
 				<div className={styles['balloon-walls__info-special-decoration']} />
 				<div className={styles['balloon-walls__info-text-content-box']}>
-					<HiOutlineHandRaised fontSize={56} color='#6b4d45' />
-					<h3>To się czuje</h3>
-					<p>
-						Nie mam projektu w 3D. Składam wszystko stopniowo i bez pośpiechu. Czasem coś poprawiam kilka razy, zanim
-						powiem: „tak, właśnie tak ma być”.{' '}
-						<span>
-							Ta robota przypomina lepienie ciasta: trzeba wyczuć moment i zaufać rękom, i właśnie to lubię najbardziej.
-						</span>{' '}
-						Dekoracja rodzi się wtedy, gdy dłonie już wiedzą, co robić, nawet jeśli głowa jeszcze się waha.
-					</p>
-				</div>
-				<div className={styles['balloon-walls__info-special-decoration']} />
-				<div className={styles['balloon-walls__info-text-content-box']}>
-					<FaSmileWink fontSize={56} color='#6b4d45' />
 					<h3>Nie tylko zdjęcia</h3>
 					<p>
 						Ścianka to nie tylko tło pod aparat. To miejsce, przy którym ktoś się przytuli, ktoś inny się wzruszy, a
@@ -61,12 +41,6 @@ export default function BalloonWallsInfo() {
 					</p>
 				</div>
 			</div>
-			<div
-				className={`${styles['balloon-walls__info-special-block']} ${styles['balloon-walls__info-special-block--left']}`}
-			/>
-			<div
-				className={`${styles['balloon-walls__info-special-block']} ${styles['balloon-walls__info-special-block--right']}`}
-			/>
 		</section>
 	);
 }

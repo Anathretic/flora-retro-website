@@ -71,14 +71,29 @@ export default function Footer() {
 				</div>
 				{showSpecialLinks ? (
 					<>
-						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--first']}`} />
-						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--second']}`} />
-						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--third']}`} />
+						<GiFlowerPot
+							color='#553d37'
+							className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--first']}`}
+						/>
+						<GiFlowerPot
+							color='#553d37'
+							className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--second']}`}
+						/>
+						<GiFlowerPot
+							color='#553d37'
+							className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--third']}`}
+						/>
 					</>
 				) : (
 					<>
-						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--fourth']}`} />
-						<GiFlowerPot className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--fifth']}`} />
+						<GiFlowerPot
+							color='#402e29'
+							className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--fourth']}`}
+						/>
+						<GiFlowerPot
+							color='#402e29'
+							className={`${styles['footer__flower-icon']} ${styles['footer__flower-icon--fifth']}`}
+						/>
 					</>
 				)}
 			</div>

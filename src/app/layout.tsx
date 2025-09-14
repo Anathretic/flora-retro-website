@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Montserrat, Dancing_Script, Fleur_De_Leah } from 'next/font/google';
+import { Montserrat, Love_Light } from 'next/font/google';
 import Providers from '@/shared/context/Providers';
 import CookieBanner from '@/shared/ui/CookieBanner/CookieBanner';
 
@@ -12,17 +12,11 @@ const montserrat = Montserrat({
 	variable: '--font-montserrat',
 });
 
-const dancingScript = Dancing_Script({
-	subsets: ['latin'],
-	display: 'swap',
-	variable: '--font-dancing-script',
-});
-
-const fleurDeLeah = Fleur_De_Leah({
+const loveLight = Love_Light({
 	subsets: ['latin'],
 	display: 'swap',
 	weight: '400',
-	variable: '--font-fleur-de-leah',
+	variable: '--font-love-light',
 });
 
 export const metadata: Metadata = {
@@ -92,7 +86,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pl'>
-			<body className={`${montserrat.variable} ${dancingScript.variable} ${fleurDeLeah.variable}`}>
+			<body className={`${montserrat.variable} ${loveLight.variable}`}>
 				<Providers>{children}</Providers>
 				<CookieBanner />
 			</body>

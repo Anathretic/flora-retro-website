@@ -9,7 +9,7 @@
 
 	&__bar {
 		width: 100%;
-		border: 1px solid #6b4d455a;
+		border: 1px solid rgba(21, 15, 13, 0.35);
 
 		&--second {
 			margin-top: 0.65rem;
@@ -35,7 +35,7 @@
 
 		a {
 			padding: 2px 0.35rem 0.35rem;
-			color: var(--dark-brown-color);
+			color: var(--black-color);
 			text-decoration: none;
 			transition: color 0.3s ease-out;
 		}
@@ -155,7 +155,7 @@
 		}
 
 		&__box a:hover {
-			color: var(--brown-color);
+			color: var(--dark-brown-color);
 		}
 
 		&__box:nth-of-type(3) {

@@ -1,3 +1,3 @@
-export { default as RentCarBenefits } from './RentCarBenefits';
-export { default as RentCarImages } from './RentCarImages';
-export { default as RentCarForm } from './RentCarForm';
+export { default as CarHireBenefits } from './CarHireBenefits';
+export { default as CarHireImages } from './CarHireImages';
+export { default as CarHireForm } from './CarHireForm';

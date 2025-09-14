@@ -28,16 +28,14 @@ export default function Slide({ slide, current, handleSlideClick }: SlideModel) 
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}>
 			<div className={styles['slide__image-wrapper']}>
-				<img src={`${largeImage ? (isLarge ? largeImage : image) : image}`} alt={alt} className={styles.slide__image} />
+				<img src={`${isLarge ? largeImage : image}`} alt={alt} className={styles.slide__image} />
 			</div>
-			{title && (
-				<div className={styles.slide__content}>
-					<h3 className={styles.slide__headline}>{title}</h3>
-					<Link href={`${href}`} className={`${styles.slide__action} ${styles.btn}`} onClick={scrollToTop}>
-						Przeczytaj
-					</Link>
-				</div>
-			)}
+			<div className={styles.slide__content}>
+				<h3 className={styles.slide__headline}>{title}</h3>
+				<Link href={`${href}`} className={`${styles.slide__action} ${styles.btn}`} onClick={scrollToTop}>
+					Przeczytaj
+				</Link>
+			</div>
 		</li>
 	);
 }

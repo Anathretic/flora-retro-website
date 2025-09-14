@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Carousel } from 'react-responsive-carousel';
 import { getOpinionsData } from '@/shared/utils/getDataHelper';
 import { OpinionItem } from './components/OpinionItem';
@@ -13,9 +14,21 @@ import './styles/carousel.scss';
 export default function OpinionsSection() {
 	const [opinionsData, setOpinionsData] = useState<OpinionsDataModel[] | null>(null);
 
+	const isDesktop = useMediaQuery({ query: '(min-width: 1536px)' });
+
 	const fetchOpinions = async () => {
 		const data = await getOpinionsData();
 		setOpinionsData(data);
+	};
+
+	const groupOpinions = (opinions: OpinionsDataModel[], groupSize: number) => {
+		const groups = [];
+
+		for (let i = 0; i < opinions.length; i += groupSize) {
+			groups.push(opinions.slice(i, i + groupSize));
+		}
+
+		return groups;
 	};
 
 	useEffect(() => {
@@ -29,14 +42,26 @@ export default function OpinionsSection() {
 				<div className={styles.opinions__wrapper}>
 					{opinionsData && (
 						<Carousel
+							className='opinions-carousel'
 							showThumbs={false}
 							showStatus={false}
 							showIndicators={false}
 							interval={5000}
 							autoPlay
 							infiniteLoop>
-							{opinionsData.map(({ opinion }, id: number) => (
-								<OpinionItem key={id} title={opinion.title} content={opinion.content} name={opinion.name} />
+							{groupOpinions(opinionsData, isDesktop ? 3 : 1).map((group, index) => (
+								<div key={index} className={styles.opinions__group}>
+									{group.map((data: OpinionsDataModel, id: number) => (
+										<OpinionItem
+											key={id}
+											id={data.id}
+											title={data.opinion.title}
+											opinion={data.opinion.opinion}
+											name={data.opinion.name}
+											stars={data.opinion.stars}
+										/>
+									))}
+								</div>
 							))}
 						</Carousel>
 					)}

@@ -6,7 +6,7 @@ import { FaBriefcase, FaRegBuilding } from 'react-icons/fa';
 
 import styles from '../styles/styles.module.scss';
 
-export default function RentCarForm() {
+export default function CarHireForm() {
 	return (
 		<section className={styles['rent-car__form']} id='rezerwacja'>
 			<div className={styles['rent-car__form-container']}>

@@ -6,6 +6,10 @@
 	animation: slideOut 0.5s ease-out;
 }
 
+.animate-opacity {
+	animation: logoOpacity 1s forwards;
+}
+
 @keyframes slideIn {
 	0% {
 		-webkit-transform: translateX(120%);
@@ -25,5 +29,14 @@
 	100% {
 		-webkit-transform: translateX(120%);
 		transform: translateX(120%);
+	}
+}
+
+@keyframes logoOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }

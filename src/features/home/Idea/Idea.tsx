@@ -1,18 +1,13 @@
-import { BsCarFrontFill } from 'react-icons/bs';
-import { IoMdRose } from 'react-icons/io';
-import { FaFeatherAlt } from 'react-icons/fa';
-import { HiOutlineSparkles } from 'react-icons/hi';
-
 import styles from './styles/styles.module.scss';
 
 export default function IdeaSection() {
 	return (
 		<section id='idea' className={styles.idea}>
+			<div className={styles.idea__image} />
 			<div className={styles.idea__container}>
 				<h2 className={styles.idea__title}>Idea</h2>
 				<div className={styles['idea__content-container']}>
 					<div className={styles['idea__content-box']}>
-						<FaFeatherAlt fontSize={56} />
 						<h3>I. Piękno w stylu retro</h3>
 						<p>
 							W moich dekoracjach łączę miłość ze stylem retro dbając o każdy detal. Czerpię inspirację z dawnych lat, w
@@ -23,22 +18,7 @@ export default function IdeaSection() {
 					</div>
 					<div className={styles['idea__special-decoration']} />
 					<div className={styles['idea__content-box']}>
-						<IoMdRose fontSize={56} />
-						<h3>II. Emocje zamknięte w kwiatach</h3>
-						<p>
-							Każdą dekorację tworzę z myślą o emocjach – wzruszeniach, uśmiechach i wspomnieniach, które zostaną z Wami
-							na lata.{' '}
-							<span>
-								Kwiaty traktuję jak słowa, a za ich pomocą opowiadam historię miłości, bliskości i magii chwili.
-							</span>{' '}
-							Moim celem jest stworzenie przestrzeni, w której kolory, zapachy i atmosfera współgrają ze sobą.
-							Subtelnie, z wyczuciem, od serca.
-						</p>
-					</div>
-					<div className={styles['idea__special-decoration']} />
-					<div className={styles['idea__content-box']}>
-						<HiOutlineSparkles fontSize={56} />
-						<h3>III. Wyjątkowość w każdym detalu</h3>
+						<h3>II. Wyjątkowość w każdym detalu</h3>
 						<p>
 							<span>Nie tworzę dekoracji „z katalogu”. </span> Każdy projekt jest dla mnie osobisty - dopasowany do Was,
 							do miejsca i do emocji, które chcemy wspólnie podkreślić.{' '}
@@ -49,8 +29,7 @@ export default function IdeaSection() {
 					</div>
 					<div className={styles['idea__special-decoration']} />
 					<div className={styles['idea__content-box']}>
-						<BsCarFrontFill fontSize={56} />
-						<h3>IV. Dekoracje i klasyka na kołach</h3>
+						<h3>III. Dekoracje i klasyka na kołach</h3>
 						<p>
 							Zależy mi, by wszystko tworzyło spójną całość – dlatego{' '}
 							<span>oprócz florystyki oferuję także wynajem stylowego zabytkowego auta.</span> To nie tylko środek

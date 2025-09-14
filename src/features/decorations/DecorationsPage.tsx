@@ -28,21 +28,23 @@ export default function DecorationsPage() {
 			<main>
 				<div className={styles.decorations__container}>
 					<div className={styles.decorations__wrapper}>
-						<div className={styles['decorations__hero-image']}>
-							<h1 className={styles['decorations__hero-image-title']}>Dekoracje</h1>
-							<a href='tel:+48730940691' className={styles['decorations__hero-image-link']}>
-								Zadzwoń
-							</a>
-							<button
-								type='button'
-								className={`${styles['decorations__hero-image-btn']} ${
-									desktopBtnValue !== 'Zadzwoń' && styles['decorations__hero-image-btn--after-click']
-								}`}
-								onClick={handleDesktopBtn}>
-								{desktopBtnValue}
-							</button>
+						<div className={styles['decorations__special-wrapper']}>
+							<div className={styles['decorations__hero-image']}>
+								<h1 className={styles['decorations__hero-image-title']}>Dekoracje</h1>
+								<a href='tel:+48730940691' className={styles['decorations__hero-image-link']}>
+									Zadzwoń
+								</a>
+								<button
+									type='button'
+									className={`${styles['decorations__hero-image-btn']} ${
+										desktopBtnValue !== 'Zadzwoń' && styles['decorations__hero-image-btn--after-click']
+									}`}
+									onClick={handleDesktopBtn}>
+									{desktopBtnValue}
+								</button>
+							</div>
+							<DecorationsInfo />
 						</div>
-						<DecorationsInfo />
 						<DecorationsGallery />
 						<DecorationsForm />
 					</div>

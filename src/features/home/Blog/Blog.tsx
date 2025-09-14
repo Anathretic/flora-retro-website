@@ -5,7 +5,11 @@ import { getBlogArticlesData } from '@/shared/utils/getDataHelper';
 import Carousel from '@/shared/ui/Carousel/Carousel';
 import { SlideDataBoxModel } from '@/shared/models/carousel.model';
 
+import { IoArrowRedoCircleSharp } from 'react-icons/io5';
+
 import styles from './styles/styles.module.scss';
+import Link from 'next/link';
+import { scrollToTop } from '@/shared/utils/scrollToTopUtils';
 
 export default function BlogSection() {
 	const [slides, setSlides] = useState<SlideDataBoxModel[]>([]);
@@ -23,7 +27,12 @@ export default function BlogSection() {
 		<section id='blog' className={styles.blog}>
 			<div className={styles.blog__container}>
 				<div className={styles.blog__wrapper}>
-					<h2 className={styles.blog__title}>Blog</h2>
+					<h2 className={styles.blog__title}>
+						Blog{' '}
+						<Link href='/artykuly-i-porady' onClick={scrollToTop}>
+							<IoArrowRedoCircleSharp fontSize='42px' />
+						</Link>
+					</h2>
 					<Carousel slides={slides} />
 				</div>
 			</div>

@@ -32,12 +32,6 @@ export const getArticlesData = () =>
 		url: `${URL}/api/articles`,
 	});
 
-export const getRentCarImagesData = () =>
-	clientFetchWithCache<SlideDataBoxModel[]>({
-		key: 'rentCarImagesData',
-		url: `${URL}/api/images`,
-	});
-
 export const getArticleById = async (id: string): Promise<ArticleDataModel | null> => {
 	try {
 		const res = await fetch(`${URL}/api/articles/${id}`, {

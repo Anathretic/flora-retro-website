@@ -3,7 +3,7 @@ export const offerData = [
 		id: 0,
 		offer: {
 			subpage: '/dekoracje',
-			text: 'Kwiaty, światło, tkaniny – z tych elementów tworzę przestrzeń pełną emocji. Zależy mi, by dekoracje nie były tylko tłem, ale częścią historii.',
+			text: 'Kwiaty, światło, tkaniny – z tych elementów tworzę przestrzeń pełną emocji. Zależy mi, by dekoracje były tłem waszej pięknej historii.',
 			title: 'Dekoracje',
 			subtitle: 'Z myślą o Tobie',
 			keyValueArray: [

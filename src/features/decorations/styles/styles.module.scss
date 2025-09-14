@@ -27,6 +27,7 @@
 	}
 
 	&__wrapper,
+	&__special-wrapper,
 	&__hero-image,
 	&__info,
 	&__form,
@@ -53,29 +54,33 @@
 	}
 
 	&__hero-image-title {
-		padding: 1em 0.5em 1em;
+		padding: 1rem 0.5rem 2rem;
 		color: var(--white-color);
-		font-size: 3rem;
+		font-family: var(--font-love-light);
+		font-size: 4.75rem;
 	}
 
 	&__hero-image-btn,
 	&__hero-image-link {
 		padding: 0.85em 3em;
 		width: 215px;
-		color: var(--white-color);
-		background-color: var(--brown-color);
+		color: var(--black-color);
+		background-color: var(--white-color);
 		font-size: 1em;
 		font-family: inherit;
+		font-weight: 450;
 		text-align: center;
 		text-decoration: none;
 		border: none;
 		border-radius: 0.125em;
 		letter-spacing: 1px;
-		transition: background-color 0.3s;
+		transition: background-color 0.3s, color 0.3s;
 		cursor: pointer;
 
 		&--after-click {
 			background-color: var(--dark-brown-color);
+			color: var(--white-color);
+			pointer-events: none;
 			cursor: default;
 		}
 	}
@@ -90,7 +95,7 @@
 
 	&__title {
 		padding: 0 0.35rem 2rem;
-		color: var(--dark-brown-color);
+		color: var(--black-color);
 		font-size: 2.5rem;
 
 		&--special {
@@ -147,8 +152,8 @@
 	&__info-special-decoration {
 		height: 1px;
 		width: 50px;
-		border: 1px solid var(--dark-brown-color);
-		margin-bottom: 1em;
+		border: 1px solid var(--black-color);
+		margin: 1.25em 0 1em;
 	}
 
 	&__gallery {
@@ -210,7 +215,7 @@
 		}
 
 		a {
-			color: var(--dark-brown-color);
+			color: var(--black-color);
 			text-underline-offset: 2px;
 			transition: color 0.3s;
 		}
@@ -255,7 +260,7 @@
 		}
 
 		a {
-			color: var(--dark-brown-color);
+			color: var(--black-color);
 			text-underline-offset: 2px;
 			transition: color 0.3s;
 			cursor: pointer;
@@ -266,12 +271,12 @@
 		line-height: 1.6em;
 	}
 
-	&__info-special-block,
 	&__gallery-special-block {
 		position: absolute;
 		bottom: 0;
 		width: 40%;
 		height: 40px;
+		background-color: var(--white-color);
 
 		&--left {
 			left: -50px;
@@ -281,22 +286,6 @@
 		&--right {
 			right: -50px;
 			transform: skew(-45deg);
-		}
-	}
-
-	&__info-special-block {
-		background-color: var(--light-brown-color);
-	}
-
-	&__gallery-special-block {
-		background-color: var(--white-color);
-	}
-}
-
-@media screen and (max-width: 315px) {
-	.decorations {
-		&__hero-image-title {
-			font-size: 2.5rem;
 		}
 	}
 }
@@ -327,7 +316,7 @@
 		}
 
 		&__hero-image-title {
-			font-size: 3.35rem;
+			font-size: 5.5rem;
 		}
 	}
 }
@@ -339,6 +328,10 @@
 			padding: 1em 0.4em;
 			margin-left: -18px;
 			width: 84%;
+		}
+
+		&__hero-image-title {
+			font-size: 5.85rem;
 		}
 	}
 }
@@ -356,10 +349,6 @@
 	.decorations {
 		&__hero-image {
 			height: 100vh;
-		}
-
-		&__hero-image-title {
-			font-size: 4rem;
 		}
 	}
 }
@@ -392,10 +381,18 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
 	.decorations {
 		&__hero-image-title {
-			font-size: 4rem;
+			font-size: 7rem;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.decorations {
+		&__hero-image {
+			background-image: url('../images/hero-bg-image-xl.jpg');
 		}
 
 		&__info {
@@ -414,7 +411,6 @@
 			grid-column: 2/4;
 		}
 
-		&__info-special-block,
 		&__gallery-special-block {
 			width: 35%;
 			height: 50px;
@@ -429,6 +425,10 @@
 			max-width: 250px;
 			width: 250px;
 			text-align: center;
+		}
+
+		&__hero-image-title {
+			font-size: 8rem;
 		}
 	}
 }
@@ -455,10 +455,6 @@
 			height: 57vh;
 		}
 
-		&__hero-image-title {
-			font-size: 4.5rem;
-		}
-
 		&__hero-image-link {
 			display: none;
 		}
@@ -472,6 +468,7 @@
 
 			&:hover {
 				background-color: var(--dark-brown-color);
+				color: var(--white-color);
 			}
 		}
 
@@ -485,30 +482,38 @@
 			font-size: 3rem;
 		}
 
-		&__hero-image {
-			background-image: url('../images/hero-bg-image-xl.jpg');
-		}
-
 		&__gallery-mosaic-container {
 			width: 90%;
 		}
 
 		&__form-title-subtext a:hover,
 		&__form-title-info-box a:hover {
-			color: var(--brown-color);
+			color: var(--dark-brown-color);
 		}
 	}
 }
 
 @media screen and (min-width: 1358px) {
 	.decorations {
-		&__hero-image-title {
-			font-size: 5rem;
+		position: relative;
+
+		&__hero-image {
+			height: 100%;
+			grid-column: 1/2;
 		}
 
-		&__info,
+		&__hero-image-title {
+			font-size: 10rem;
+		}
+
 		&__form {
 			padding-top: 70px;
+		}
+
+		&__info {
+			padding-top: 10px;
+			padding-bottom: 0;
+			grid-column: 2/3;
 		}
 
 		&__title {
@@ -519,38 +524,38 @@
 			}
 
 			&--info {
+				position: absolute;
+				top: 0;
 				padding: 0.5rem 0.85rem;
+				transform: translateY(-100%);
+				pointer-events: none;
+				opacity: 0;
 			}
 		}
 
-		&__info-text-content {
+		&__special-wrapper {
 			display: grid;
-			grid-template-rows: repeat(2, 1fr);
+			grid-template-rows: repeat(1, 1fr);
 			grid-template-columns: repeat(2, 1fr);
-			padding: 4em 0 2em;
-			max-width: 1180px;
+			padding-top: 0;
+			margin: 0 auto;
+			max-width: 2720px;
+			background-image: none;
+			background-color: var(--white-color);
 		}
 
 		&__info-text-content-box {
-			align-self: start;
 			justify-self: center;
+			text-align: center;
 
 			h3 {
 				font-size: 1.6em;
-			}
-
-			p {
-				font-size: 1.05em;
 			}
 		}
 
 		&__info-text-content-box:first-of-type,
 		&__info-text-content-box:last-of-type {
 			padding: 2em 0;
-		}
-
-		&__info-special-decoration {
-			display: none;
 		}
 
 		&__gallery {
@@ -563,6 +568,7 @@
 
 		&__gallery-mosaic-container {
 			padding: 2em 0;
+			max-width: 1200px;
 		}
 
 		&__form-container {
@@ -589,11 +595,6 @@
 			font-size: 3.5rem;
 		}
 
-		&__form-title-info-box,
-		&__form-title-subtext {
-			font-size: 1.05rem;
-		}
-
 		&__form-title-subtext {
 			padding: 2rem 4rem 1rem 2.1rem;
 		}
@@ -602,14 +603,12 @@
 			padding: 2rem 2.25rem 2rem 2.6rem;
 			max-width: 400px;
 			justify-content: start;
-			font-size: 1.1rem;
 
 			li div:first-of-type {
 				margin-left: -9px;
 			}
 		}
 
-		&__info-special-block,
 		&__gallery-special-block {
 			height: 45px;
 			width: 42%;
@@ -625,6 +624,38 @@
 	.decorations {
 		&__hero-image-btn {
 			font-size: 1.1em;
+		}
+
+		&__hero-image-title {
+			font-size: 11rem;
+		}
+
+		&__info-text-content-box {
+			p {
+				font-size: 1.05em;
+			}
+		}
+
+		&__form-title-info-box,
+		&__form-title-subtext {
+			font-size: 1.05rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1780px) {
+	.decorations {
+		&__gallery-mosaic-container {
+			max-width: 1600px;
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.decorations {
+		&__hero-image {
+			height: 100vh;
+			max-height: 1420px;
 		}
 	}
 }

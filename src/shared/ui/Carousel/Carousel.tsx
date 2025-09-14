@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-
 import Slide from './components/Slide';
 import SliderControl from './components/SliderControl';
 import { useCarouselOptions } from './hooks/useCarouselOptions';
@@ -11,7 +10,7 @@ import { CarouselDataModel } from '@/shared/models/carousel.model';
 import styles from './styles/styles.module.scss';
 
 export default function Carousel({ slides }: CarouselDataModel) {
-	const [current, setCurrent] = useState(1);
+	const [current, setCurrent] = useState(0);
 
 	const { handleNextClick, handlePreviousClick, handleSlideClick, wrapperTransform } = useCarouselOptions({
 		setCurrent,

@@ -5,7 +5,9 @@ import { useEffect } from 'react';
 import { NavbarTitleModel } from '../models/header.model';
 
 import WebsiteLogo from '../../../assets/website-logo-white.svg';
+
 import styles from '../styles/styles.module.scss';
+import animations from '../styles/animations.module.scss';
 
 export function NavbarTitle({ divRef }: NavbarTitleModel) {
 	const scrollToTop = () => {
@@ -27,7 +29,13 @@ export function NavbarTitle({ divRef }: NavbarTitleModel) {
 	return (
 		<div className={styles.navbar__title} onClick={scrollToTop}>
 			<div className={styles['navbar__title-box']}>
-				<Image src={WebsiteLogo} alt='Logo przekierowujące na górę strony' width={110} height={75} />
+				<Image
+					className={animations['animate-opacity']}
+					src={WebsiteLogo}
+					alt='Logo przekierowujące na górę strony'
+					width={110}
+					height={75}
+				/>
 			</div>
 		</div>
 	);
