@@ -63,8 +63,14 @@
 }
 
 @media screen and (min-width: 1024px) {
-	.cookie-banner-link:hover {
-		color: var(--darker-yellow-color);
+	.cookie-banner-link {
+		&:hover {
+			color: var(--darker-yellow-color);
+		}
+
+		&:active {
+			opacity: 0.65;
+		}
 	}
 
 	.cookie-banner-button:hover {
