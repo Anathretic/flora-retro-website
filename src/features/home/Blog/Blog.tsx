@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react';
 import { getBlogArticlesData } from '@/shared/utils/getDataHelper';
 import Carousel from '@/shared/ui/Carousel/Carousel';
 import { SlideDataBoxModel } from '@/shared/models/carousel.model';
-
-import { IoArrowRedoCircleSharp } from 'react-icons/io5';
+import { BsChevronDoubleRight } from 'react-icons/bs';
 
 import styles from './styles/styles.module.scss';
 import Link from 'next/link';
@@ -30,7 +29,7 @@ export default function BlogSection() {
 					<h2 className={styles.blog__title}>
 						Blog{' '}
 						<Link href='/artykuly-i-porady' onClick={scrollToTop}>
-							<IoArrowRedoCircleSharp fontSize='42px' />
+							<BsChevronDoubleRight />
 						</Link>
 					</h2>
 					<Carousel slides={slides} />
