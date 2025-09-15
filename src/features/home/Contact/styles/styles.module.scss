@@ -155,6 +155,10 @@
 			a:hover {
 				color: var(--dark-brown-color);
 			}
+
+			a:active {
+				opacity: 0;
+			}
 		}
 	}
 }

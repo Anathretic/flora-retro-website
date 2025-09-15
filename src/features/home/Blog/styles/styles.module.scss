@@ -35,6 +35,10 @@
 			color: var(--black-color);
 			transition: color 0.3s;
 		}
+
+		svg:active {
+			transform: translateY(1px);
+		}
 	}
 
 	&__special-block {

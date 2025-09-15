@@ -191,6 +191,10 @@
 
 		&__item {
 			margin: 0 2rem;
+
+			a:active {
+				opacity: 0;
+			}
 		}
 
 		&__instagram-icon-margin {
