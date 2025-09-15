@@ -492,9 +492,15 @@
 			width: 90%;
 		}
 
-		&__form-title-subtext a:hover,
-		&__form-title-info-box a:hover {
-			color: var(--dark-brown-color);
+		&__form-title-subtext,
+		&__form-title-info-box {
+			a:hover {
+				color: var(--dark-brown-color);
+			}
+
+			a:active {
+				opacity: 0;
+			}
 		}
 	}
 }

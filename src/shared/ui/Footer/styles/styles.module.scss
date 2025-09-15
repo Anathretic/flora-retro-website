@@ -160,6 +160,16 @@
 			}
 		}
 
+		&__box {
+			ul {
+				li {
+					a:active {
+						opacity: 0;
+					}
+				}
+			}
+		}
+
 		&__box a:hover {
 			color: var(--dark-brown-color);
 		}
