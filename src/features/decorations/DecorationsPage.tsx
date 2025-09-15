@@ -31,7 +31,7 @@ export default function DecorationsPage() {
 						<div className={styles['decorations__special-wrapper']}>
 							<div className={styles['decorations__hero-image']}>
 								<h1 className={styles['decorations__hero-image-title']}>Dekoracje</h1>
-								<a href='tel:+48730940691' className={styles['decorations__hero-image-link']}>
+								<a href='tel:+48789049376' className={styles['decorations__hero-image-link']}>
 									Zadzwoń
 								</a>
 								<button

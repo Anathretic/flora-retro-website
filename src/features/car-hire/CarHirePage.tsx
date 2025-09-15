@@ -31,7 +31,7 @@ export default function CarHirePage() {
 						<div className={styles['rent-car__special-wrapper']}>
 							<div className={styles['rent-car__hero-image']}>
 								<h1 className={styles['rent-car__hero-image-title']}>Wynajem samochodu</h1>
-								<a href='tel:+48730940691' className={styles['rent-car__hero-image-link']}>
+								<a href='tel:+48789049376' className={styles['rent-car__hero-image-link']}>
 									Zadzwoń
 								</a>
 								<button
