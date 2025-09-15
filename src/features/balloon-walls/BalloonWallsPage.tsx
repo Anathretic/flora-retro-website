@@ -31,7 +31,7 @@ export default function BalloonWallsPage() {
 						<div className={styles['balloon-walls__special-wrapper']}>
 							<div className={styles['balloon-walls__hero-image']}>
 								<h1 className={styles['balloon-walls__hero-image-title']}>Ścianki balonowe</h1>
-								<a href='tel:+48730940691' className={styles['balloon-walls__hero-image-link']}>
+								<a href='tel:+48789049376' className={styles['balloon-walls__hero-image-link']}>
 									Zadzwoń
 								</a>
 								<button
