@@ -3,7 +3,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	height: 100vh;
 	width: 100%;
 	background-image: url('../images/hero-bg.jpg');
 	background-size: cover;
@@ -228,6 +228,7 @@
 		padding-top: 0;
 		margin: 0 auto;
 		max-width: 2720px;
+		max-height: 1820px;
 		background-image: none;
 		background-color: var(--brown-color);
 
@@ -261,6 +262,7 @@
 			display: block;
 			width: 100%;
 			height: 100vh;
+			max-height: 1820px;
 			background-image: url('../images/hero-bg-xl.jpg');
 			background-position: center;
 			background-repeat: no-repeat;
