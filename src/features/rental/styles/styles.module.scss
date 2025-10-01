@@ -1,123 +1,118 @@
-.decoration-rental {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+.decorations-rental {
+	position: relative;
+	width: 100%;
 	min-height: 100vh;
-	padding: 30px 0 40px;
+	overflow-x: hidden;
 
-	&__container {
+	&__container,
+	&__wrapper,
+	&__hero-image {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+	}
+
+	&__container {
+		position: relative;
+	}
+
+	&__container,
+	&__wrapper,
+	&__hero-image {
 		width: 100%;
 	}
 
-	&__title {
-		padding: 0 0.75em 1.5em;
-		margin: 0.75em 0;
-		font-weight: 400;
-		font-size: 1.25em;
-		text-align: center;
+	&__wrapper {
+		margin: 0 auto;
 	}
 
-	&__subtext {
-		padding: 0 0.75em 3em;
-		font-weight: 300;
-		font-size: 1em;
-		font-style: italic;
-		line-height: 1.6em;
-		text-align: center;
+	&__hero-image {
+		height: 60vh;
+		max-height: 1820px;
+		background-image: url('../images/hero-bg-image.jpg');
+		background-position: center;
+		background-size: cover;
 	}
 
-	&__special-btn {
-		padding: 0.85em 3em;
-		margin: 2.75em 1.5em 1.5em;
-		width: 215px;
+	&__hero-image-title {
+		padding: 1rem 0.5rem 2rem;
 		color: var(--white-color);
-		background-color: var(--dark-brown-color);
-		font-size: 1em;
+		font-family: var(--font-love-light);
+		font-size: 4.75rem;
+		font-weight: 300;
 		text-align: center;
-		text-decoration: none;
-		border: none;
-		border-radius: 0.125em;
-		letter-spacing: 1px;
-		transition: background-color 0.3s;
-		cursor: pointer;
+	}
+}
 
-		&:active {
-			transform: translateY(1px);
+@media screen and (min-width: 350px) {
+	.decorations-rental {
+		&__hero-image-title {
+			font-size: 5.5rem;
 		}
 	}
 }
 
-@media screen and (min-width: 375px) {
-	.decoration-rental {
-		&__title {
-			font-size: 1.5em;
+@media screen and (min-width: 400px) {
+	.decorations-rental {
+		&__hero-image-title {
+			font-size: 5.85rem;
 		}
+	}
+}
 
-		&__subtext {
-			font-size: 1.1em;
+@media screen and (max-height: 500px) {
+	.decorations-rental {
+		&__hero-image {
+			height: 100vh;
 		}
 	}
 }
 
 @media screen and (min-width: 640px) {
-	.decoration-rental {
-		&__title {
-			font-size: 1.75em;
-			width: 80%;
-		}
-
-		&__subtext {
-			width: 60%;
-		}
-
-		&__special-btn {
-			font-size: 1em;
+	.decorations-rental {
+		&__hero-image-title {
+			font-size: 7rem;
 		}
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.decoration-rental {
-		&__subtext {
-			font-size: 1.25em;
-			max-width: 500px;
+	.decorations-rental {
+		&__hero-image {
+			background-image: url('../images/hero-bg-image-xl.jpg');
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (min-height: 500px) {
+	.decorations-rental {
+		&__hero-image-title {
+			font-size: 8rem;
 		}
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.decoration-rental {
-		&__title {
-			font-size: 2em;
-			width: 70%;
-			max-width: 800px;
+	.decorations-rental {
+		&__hero-image {
+			height: 57vh;
 		}
+	}
+}
 
-		&__subtext {
-			width: 40%;
-			max-width: 550px;
-		}
-
-		&__special-btn {
-			width: 260px;
-			font-size: 1.1em;
-
-			&:hover {
-				background-color: var(--brown-color);
-			}
+@media screen and (min-width: 1358px) {
+	.decorations-rental {
+		&__hero-image-title {
+			font-size: 10rem;
 		}
 	}
 }
 
 @media screen and (min-width: 1536px) {
-	.decoration-rental {
-		&__link {
-			font-size: 1.1em;
+	.decorations-rental {
+		&__hero-image-title {
+			font-size: 11rem;
 		}
 	}
 }

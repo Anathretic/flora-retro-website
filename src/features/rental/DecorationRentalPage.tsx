@@ -1,24 +1,18 @@
 'use client';
 
-import Link from 'next/link';
-import { scrollToTop } from '@/shared/utils/scrollToTopUtils';
-
 import styles from './styles/styles.module.scss';
+import '../../shared/styles/globals.scss';
 
 export default function DecorationRentalPage() {
 	return (
-		<main>
-			<section className={styles['decoration-rental']}>
-				<div className={styles['decoration-rental__container']}>
-					<h1 className={styles['decoration-rental__title']}>Witaj użytkowniku!</h1>
-					<p className={styles['decoration-rental__subtext']}>
-						Pracujemy nad tym byś mógł skorzystać z pełnej oferty! :)
-					</p>
+		<main className='special-main'>
+			<div className={styles['decorations-rental__container']}>
+				<div className={styles['decorations-rental__wrapper']}>
+					<div className={styles['decorations-rental__hero-image']}>
+						<h1 className={styles['decorations-rental__hero-image-title']}>Wypożyczalnia</h1>
+					</div>
 				</div>
-				<Link className={styles['decoration-rental__special-btn']} href='/' onClick={scrollToTop}>
-					Home
-				</Link>
-			</section>
+			</div>
 		</main>
 	);
 }

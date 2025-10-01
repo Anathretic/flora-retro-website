@@ -30,20 +30,24 @@ export default function BalloonWallsPage() {
 					<div className={styles['balloon-walls__wrapper']}>
 						<div className={styles['balloon-walls__special-wrapper']}>
 							<div className={styles['balloon-walls__hero-image']}>
-								<h1 className={styles['balloon-walls__hero-image-title']}>Ścianki balonowe</h1>
-								<a href='tel:+48789049376' className={styles['balloon-walls__hero-image-link']}>
-									Zadzwoń
-								</a>
-								<button
-									type='button'
-									className={`${styles['balloon-walls__hero-image-btn']} ${
-										desktopBtnValue !== 'Zadzwoń' && styles['balloon-walls__hero-image-btn--after-click']
-									}`}
-									onClick={handleDesktopBtn}>
-									{desktopBtnValue}
-								</button>
+								<div className={styles['balloon-walls__special-image-container']}>
+									<h1 className={styles['balloon-walls__hero-image-title']}>Ścianki balonowe</h1>
+									<a href='tel:+48789049376' className={styles['balloon-walls__hero-image-link']}>
+										Zadzwoń
+									</a>
+									<button
+										type='button'
+										className={`${styles['balloon-walls__hero-image-btn']} ${
+											desktopBtnValue !== 'Zadzwoń' && styles['balloon-walls__hero-image-btn--after-click']
+										}`}
+										onClick={handleDesktopBtn}>
+										{desktopBtnValue}
+									</button>
+								</div>
 							</div>
-							<BalloonWallsInfo />
+							<div className={styles['balloon-walls__special-container']}>
+								<BalloonWallsInfo />
+							</div>
 						</div>
 						<BalloonWallsGallery />
 						<BalloonWallsForm />

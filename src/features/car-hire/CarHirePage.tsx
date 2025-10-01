@@ -30,20 +30,24 @@ export default function CarHirePage() {
 					<div className={styles['rent-car__wrapper']}>
 						<div className={styles['rent-car__special-wrapper']}>
 							<div className={styles['rent-car__hero-image']}>
-								<h1 className={styles['rent-car__hero-image-title']}>Wynajem samochodu</h1>
-								<a href='tel:+48789049376' className={styles['rent-car__hero-image-link']}>
-									Zadzwoń
-								</a>
-								<button
-									type='button'
-									className={`${styles['rent-car__hero-image-btn']} ${
-										desktopBtnValue !== 'Zadzwoń' && styles['rent-car__hero-image-btn--after-click']
-									}`}
-									onClick={handleDesktopBtn}>
-									{desktopBtnValue}
-								</button>
+								<div className={styles['rent-car__special-image-container']}>
+									<h1 className={styles['rent-car__hero-image-title']}>Wynajem samochodu</h1>
+									<a href='tel:+48789049376' className={styles['rent-car__hero-image-link']}>
+										Zadzwoń
+									</a>
+									<button
+										type='button'
+										className={`${styles['rent-car__hero-image-btn']} ${
+											desktopBtnValue !== 'Zadzwoń' && styles['rent-car__hero-image-btn--after-click']
+										}`}
+										onClick={handleDesktopBtn}>
+										{desktopBtnValue}
+									</button>
+								</div>
 							</div>
-							<CarHireBenefits />
+							<div className={styles['rent-car__special-container']}>
+								<CarHireBenefits />
+							</div>
 						</div>
 						<CarHireImages />
 						<CarHireForm />

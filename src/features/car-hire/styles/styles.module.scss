@@ -5,6 +5,8 @@
 	overflow-x: hidden;
 
 	&__container,
+	&__special-container,
+	&__special-image-container,
 	&__wrapper,
 	&__hero-image,
 	&__content-wrapper,
@@ -31,6 +33,7 @@
 
 	&__wrapper,
 	&__special-wrapper,
+	&__special-image-container,
 	&__hero-image,
 	&__benefits,
 	&__form,
@@ -526,7 +529,6 @@
 			grid-template-columns: repeat(2, 1fr);
 			padding-top: 0;
 			margin: 0 auto;
-			max-width: 2720px;
 			background-image: none;
 			background-color: var(--white-color);
 		}
@@ -639,6 +641,21 @@
 		&__hero-image {
 			height: 100vh;
 			max-height: 1420px;
+		}
+	}
+}
+
+@media screen and (min-width: 2720px) {
+	.rent-car {
+		&__hero-image {
+			display: flex;
+			justify-content: center;
+			align-items: end;
+		}
+
+		&__special-container,
+		&__special-image-container {
+			max-width: 1360px;
 		}
 	}
 }
