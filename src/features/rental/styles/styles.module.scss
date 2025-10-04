@@ -39,7 +39,7 @@
 		padding: 1rem 0.5rem 2rem;
 		color: var(--white-color);
 		font-family: var(--font-love-light);
-		font-size: 4.75rem;
+		font-size: 3.5rem;
 		font-weight: 300;
 		text-align: center;
 	}
@@ -48,7 +48,7 @@
 @media screen and (min-width: 350px) {
 	.decorations-rental {
 		&__hero-image-title {
-			font-size: 5.5rem;
+			font-size: 4.5rem;
 		}
 	}
 }
@@ -56,7 +56,7 @@
 @media screen and (min-width: 400px) {
 	.decorations-rental {
 		&__hero-image-title {
-			font-size: 5.85rem;
+			font-size: 5.25rem;
 		}
 	}
 }

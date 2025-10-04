@@ -1,10 +1,33 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import { useCartContext } from '@/shared/hooks/useCartContext';
 import CartItem from './CartItem';
 import { CartModel } from '../../models/components.model';
 
-export default function Cart({ setProductsData }: CartModel) {
+import styles from './styles/cart.module.scss';
+
+export default function Cart({ setProductsData, setShowCart }: CartModel) {
+	const [hasScroll, setHasScroll] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+	const [isScrolledToBottom, setIsScrolledToBottom] = useState(false);
+
 	const { cart, clearCart } = useCartContext();
+
+	const scrollRef = useRef<HTMLDivElement>(null);
+
 	const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+	const handleScroll = () => {
+		const el = scrollRef.current;
+		if (!el) return;
+
+		const { scrollTop, scrollHeight, clientHeight } = el;
+
+		setHasScroll(scrollHeight > clientHeight);
+		setIsScrolled(scrollTop > 1);
+		setIsScrolledToBottom(scrollTop + clientHeight >= scrollHeight - 1);
+	};
 
 	const handleRentItems = async () => {
 		if (cart.length === 0) {
@@ -40,16 +63,56 @@ export default function Cart({ setProductsData }: CartModel) {
 		}
 	};
 
+	useEffect(() => {
+		handleScroll();
+	}, [cart]);
+
+	useEffect(() => {
+		const el = scrollRef.current;
+		if (!el) return;
+
+		el.addEventListener('scroll', handleScroll);
+
+		return () => {
+			el.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
-		<div>
+		<div className={styles.cart}>
 			<h3>Koszyk</h3>
-			{cart.length === 0 && <p>Koszyk jest pusty</p>}
-			{cart.map(({ id, name, price, quantity }) => (
-				<CartItem key={id} id={id} name={name} quantity={quantity} price={price} />
-			))}
-			<p>Suma: {total.toFixed(2)} zł</p>
-			<button onClick={handleRentItems}>Wypożycz</button>
-			<button onClick={clearCart}>Zamknij</button>
+			<div
+				ref={scrollRef}
+				className={`${styles['cart__middle-container']} ${
+					cart.length === 0 && styles['cart__middle-container--special']
+				} ${hasScroll && isScrolled ? styles['cart__middle-container-with-top-mask'] : ''} 
+		${hasScroll && isScrolledToBottom ? styles['cart__middle-container-without-bottom-mask'] : ''}`}>
+				{cart.length === 0 ? (
+					<p className={styles['cart__special-message']}>Koszyk jest pusty!</p>
+				) : (
+					cart.map(({ id, name, price, quantity, image }) => (
+						<CartItem key={id} id={id} name={name} quantity={quantity} price={price} image={image} />
+					))
+				)}
+			</div>
+			<div className={styles['cart__bottom-container']}>
+				<p className={styles['cart__money-amount']}>
+					<span>Suma:</span>
+					<span>{total.toFixed(2)}zł</span>
+				</p>
+				<div className={styles['cart__btn-container']}>
+					<button type='button' onClick={handleRentItems}>
+						Wypożycz
+					</button>
+					<button
+						type='button'
+						onClick={() => {
+							setShowCart(false);
+						}}>
+						Zamknij
+					</button>
+				</div>
+			</div>
 		</div>
 	);
 }

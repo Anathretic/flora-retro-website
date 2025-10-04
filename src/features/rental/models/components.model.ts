@@ -1,10 +1,13 @@
 import { Dispatch, SetStateAction } from 'react';
 import { CartProductModel } from '@/shared/models/context.model';
 
-export interface CartModel {
-	setProductsData: Dispatch<SetStateAction<CartProductModel[] | null>>;
+export interface HeaderModel {
+	setShowCart: Dispatch<SetStateAction<boolean>>;
 }
 
+export interface CartModel extends HeaderModel {
+	setProductsData: Dispatch<SetStateAction<CartProductModel[] | null>>;
+}
 export interface FiltersEmitModel {
 	search: string;
 	priceRange: [number, number];
