@@ -6,7 +6,8 @@
 
 	&__container,
 	&__wrapper,
-	&__hero-image {
+	&__hero-image,
+	&__content-container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -19,7 +20,9 @@
 
 	&__container,
 	&__wrapper,
-	&__hero-image {
+	&__hero-image,
+	&__content,
+	&__content-container {
 		width: 100%;
 	}
 
@@ -43,12 +46,38 @@
 		font-weight: 300;
 		text-align: center;
 	}
+
+	&__content {
+		h2 {
+			padding-top: 46px;
+			padding-bottom: 2.5rem;
+			font-size: 2.5rem;
+			font-weight: 300;
+			text-align: center;
+		}
+	}
+
+	&__special-msg {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 400px;
+		width: 90%;
+		font-style: italic;
+		text-align: center;
+	}
 }
 
 @media screen and (min-width: 350px) {
 	.decorations-rental {
 		&__hero-image-title {
 			font-size: 4.5rem;
+		}
+
+		&__content {
+			h2 {
+				font-size: 2.75rem;
+			}
 		}
 	}
 }
@@ -82,6 +111,10 @@
 		&__hero-image {
 			background-image: url('../images/hero-bg-image-xl.jpg');
 		}
+
+		&__special-msg {
+			font-size: 1.1em;
+		}
 	}
 }
 
@@ -98,6 +131,12 @@
 		&__hero-image {
 			height: 57vh;
 		}
+
+		&__content {
+			h2 {
+				font-size: 3rem;
+			}
+		}
 	}
 }
 
@@ -105,6 +144,17 @@
 	.decorations-rental {
 		&__hero-image-title {
 			font-size: 10rem;
+		}
+
+		&__content {
+			h2 {
+				padding: 50px 0.85rem 30px;
+				font-size: 3.5rem;
+			}
+		}
+
+		&__special-msg {
+			font-size: 1.2em;
 		}
 	}
 }

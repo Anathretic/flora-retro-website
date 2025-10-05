@@ -1,0 +1,158 @@
+.filters {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	max-width: 900px;
+	padding: 2em 0 1em;
+
+	&__search,
+	&__price,
+	&__checkbox {
+		width: 90%;
+		max-width: 280px;
+	}
+
+	&__search {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		input {
+			padding-left: 0.65em;
+			height: 36px;
+			width: 100%;
+			background-color: #d9d9d9;
+			border: none;
+			font-family: var(--font-montserrat);
+			font-size: 0.9em;
+			transition: border 0.3s, box-shadow 0.3s;
+
+			&:focus {
+				border-color: var(--dark-brown-color);
+				outline: var(--dark-brown-color);
+			}
+
+			&::placeholder {
+				color: var(--placeholder-color);
+				opacity: 1;
+			}
+		}
+
+		svg {
+			position: absolute;
+			right: 10px;
+		}
+	}
+
+	&__price {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 1em;
+		transition: border 0.3s, box-shadow 0.3s;
+
+		input {
+			padding-right: 0.65em;
+			height: 36px;
+			width: 80px;
+			background-color: #d9d9d9;
+			border: none;
+			font-family: var(--font-montserrat);
+			font-size: 0.9em;
+			text-align: right;
+
+			&:focus {
+				border-color: var(--dark-brown-color);
+				outline: var(--dark-brown-color);
+			}
+
+			&::placeholder {
+				color: var(--placeholder-color);
+				opacity: 1;
+			}
+		}
+
+		span {
+			margin: 0 10px;
+		}
+	}
+
+	&__checkbox {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.65em 0;
+
+		input[type='checkbox'] {
+			transform: scale(1.25);
+			cursor: pointer;
+		}
+	}
+
+	&__special-decoration {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.filters {
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+		width: 900px;
+
+		&__special-decoration {
+			display: block;
+		}
+
+		&__price {
+			padding-top: 0;
+		}
+
+		&__checkbox {
+			padding: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 1358px) {
+	.filters {
+		width: 84%;
+		max-width: 1000px;
+
+		&__special-decoration {
+			display: block;
+		}
+
+		&__search {
+			justify-content: end;
+
+			input {
+				width: 240px;
+			}
+		}
+
+		&__price {
+			input {
+				width: 92px;
+			}
+		}
+
+		&__checkbox {
+			justify-content: start;
+
+			input {
+				margin-left: 80px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1536px) {
+	.filters {
+		width: 74%;
+	}
+}

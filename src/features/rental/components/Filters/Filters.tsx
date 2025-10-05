@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 import { FiltersEmitModel, FiltersModel } from '../../models/components.model';
+import { FaSearch } from 'react-icons/fa';
+
+import styles from './styles/styles.module.scss';
 
 export default function Filters({ setFilters }: FiltersModel) {
 	const [search, setSearch] = useState('');
@@ -10,62 +13,73 @@ export default function Filters({ setFilters }: FiltersModel) {
 	const [onlyAvailable, setOnlyAvailable] = useState(false);
 
 	const emit = (newFilters: Partial<FiltersEmitModel>) => {
+		const parsedMin = minPrice === '' ? 0 : Number(minPrice);
+		const parsedMax = maxPrice === '' ? 1000 : Number(maxPrice);
+
 		setFilters({
 			search,
-			priceRange: [minPrice === '' ? 0 : Number(minPrice), maxPrice === '' ? 1000 : Number(maxPrice)],
+			priceRange: [parsedMin, parsedMax],
 			onlyAvailable,
 			...newFilters,
 		});
 	};
 
 	return (
-		<div>
-			<h4>Filtry</h4>
-			<input
-				type='text'
-				placeholder='Wyszukaj po nazwie'
-				value={search}
-				onChange={e => {
-					setSearch(e.target.value);
-					emit({ search: e.target.value });
-				}}
-			/>
-			<div>
+		<div className={styles.filters}>
+			<label className={styles['filters__search']}>
+				<FaSearch />
 				<input
-					type='number'
-					value={minPrice}
-					min={0}
-					max={1000}
-					placeholder='od'
+					type='text'
+					placeholder='Podaj nazwę artykułu'
+					value={search}
 					onChange={e => {
-						setMinPrice(e.target.value);
-						emit({
-							priceRange: [
-								e.target.value === '' ? 0 : Number(e.target.value),
-								maxPrice === '' ? 1000 : Number(maxPrice),
-							],
-						});
+						setSearch(e.target.value);
+						emit({ search: e.target.value });
 					}}
 				/>
-				-
-				<input
-					type='number'
-					value={maxPrice}
-					min={0}
-					max={1000}
-					placeholder='do'
-					onChange={e => {
-						setMaxPrice(e.target.value);
-						emit({
-							priceRange: [
-								minPrice === '' ? 0 : Number(minPrice),
-								e.target.value === '' ? 1000 : Number(e.target.value),
-							],
-						});
-					}}
-				/>
+			</label>
+			<span className={styles['filters__special-decoration']}>|</span>
+			<div className={styles['filters__price']}>
+				Cena:{' '}
+				<div>
+					<input
+						type='text'
+						inputMode='numeric'
+						pattern='[0-9]*'
+						value={minPrice}
+						placeholder='od'
+						onChange={e => {
+							const v = e.target.value;
+							if (/^\d*$/.test(v)) {
+								setMinPrice(v);
+								emit({
+									priceRange: [v === '' ? 0 : Number(v), maxPrice === '' ? 1000 : Number(maxPrice)],
+								});
+							}
+						}}
+					/>
+					<span>-</span>
+					<input
+						type='text'
+						inputMode='numeric'
+						pattern='[0-9]*'
+						value={maxPrice}
+						placeholder='do'
+						onChange={e => {
+							const v = e.target.value;
+							if (/^\d*$/.test(v)) {
+								setMaxPrice(v);
+								emit({
+									priceRange: [minPrice === '' ? 0 : Number(minPrice), v === '' ? 1000 : Number(v)],
+								});
+							}
+						}}
+					/>
+				</div>
 			</div>
-			<label>
+			<span className={styles['filters__special-decoration']}>|</span>
+			<label className={styles['filters__checkbox']}>
+				Tylko dostępne:
 				<input
 					type='checkbox'
 					checked={onlyAvailable}
@@ -74,7 +88,6 @@ export default function Filters({ setFilters }: FiltersModel) {
 						emit({ onlyAvailable: e.target.checked });
 					}}
 				/>
-				Tylko dostępne
 			</label>
 		</div>
 	);
