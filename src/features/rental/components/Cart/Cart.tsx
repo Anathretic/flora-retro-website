@@ -30,11 +30,6 @@ export default function Cart({ setProductsData, setShowCart }: CartModel) {
 	};
 
 	const handleRentItems = async () => {
-		if (cart.length === 0) {
-			alert('Koszyk jest pusty!');
-			return;
-		}
-
 		try {
 			for (const item of cart) {
 				const response = await fetch('/api/rent', {
@@ -101,10 +96,14 @@ export default function Cart({ setProductsData, setShowCart }: CartModel) {
 					<span>{total.toFixed(2)}zł</span>
 				</p>
 				<div className={styles['cart__btn-container']}>
-					<button type='button' onClick={handleRentItems}>
+					<button
+						className={`${styles.cart__button} ${cart.length === 0 && styles['cart__button--disabled']}`}
+						type='button'
+						onClick={handleRentItems}>
 						Wypożycz
 					</button>
 					<button
+						className={styles.cart__button}
 						type='button'
 						onClick={() => {
 							setShowCart(false);

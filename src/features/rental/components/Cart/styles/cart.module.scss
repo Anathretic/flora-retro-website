@@ -13,9 +13,9 @@
 	color: var(--black-color);
 	z-index: 100;
 
-	-webkit-box-shadow: 0px 0px 46px -15px rgba(21, 15, 13, 1);
-	-moz-box-shadow: 0px 0px 46px -15px rgba(21, 15, 13, 1);
-	box-shadow: 0px 0px 46px -15px rgba(21, 15, 13, 1);
+	-webkit-box-shadow: 0px 0px 26px -15px rgba(21, 15, 13, 1);
+	-moz-box-shadow: 0px 0px 26px -15px rgba(21, 15, 13, 1);
+	box-shadow: 0px 0px 26px -15px rgba(21, 15, 13, 1);
 
 	h3 {
 		padding: 1em 0 0.5em;
@@ -110,7 +110,6 @@
 			width: 90%;
 			height: 36px;
 			color: var(--white-color);
-			background-color: var(--dark-brown-color);
 			font-family: var(--font-montserrat);
 			font-size: 0.9em;
 			text-align: center;
@@ -172,6 +171,16 @@
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		overflow: hidden;
+	}
+
+	&__button {
+		background-color: var(--dark-brown-color);
+
+		&--disabled {
+			background-color: var(--placeholder-color);
+			pointer-events: none;
+			cursor: default;
+		}
 	}
 }
 
