@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import { FieldError, FieldErrorsImpl, Merge, UseFormRegister } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { ContactFormModel } from './contactForm.model';
+import { ContactFormModel, RentalFormModel } from './contactForm.model';
 
 type Form = ContactFormModel;
 type ErrorMessage = string | FieldError | Merge<FieldError, FieldErrorsImpl<Form>> | undefined;
@@ -18,9 +18,9 @@ interface InputDefaultModel extends DefaultModel {
 	min?: string | number;
 }
 
-export interface ContactFormInputConfigModel extends InputDefaultModel {
+export interface FormInputConfigModel extends InputDefaultModel {
 	isInvalid: boolean;
-	register: ReturnType<UseFormRegister<ContactFormModel>>;
+	register: ReturnType<UseFormRegister<ContactFormModel | RentalFormModel>>;
 }
 
 export interface InputAndTextareaModel extends InputDefaultModel {
@@ -28,8 +28,9 @@ export interface InputAndTextareaModel extends InputDefaultModel {
 	readOnly?: boolean;
 }
 
-export interface SubmitModel extends ReturnButtonModel {
+export interface SubmitModel {
 	buttonText: string;
+	isLoading: boolean;
 	setButtonText: Dispatch<SetStateAction<string>>;
 }
 
@@ -40,4 +41,6 @@ export type ReCaptchaV2Model = {
 
 export type ReturnButtonModel = {
 	isLoading: boolean;
+	href?: string;
+	setShowPopup?: Dispatch<SetStateAction<boolean>>;
 };

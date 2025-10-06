@@ -25,6 +25,13 @@
 		}
 	}
 
+	&__special-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
 	&__image {
 		display: none;
 	}
@@ -227,7 +234,6 @@
 		grid-template-columns: repeat(2, 1fr);
 		padding-top: 0;
 		margin: 0 auto;
-		max-width: 2720px;
 		max-height: 1820px;
 		background-image: none;
 		background-color: var(--brown-color);
@@ -272,6 +278,18 @@
 
 		&__button {
 			display: none;
+		}
+	}
+}
+
+@media screen and (min-width: 2720px) {
+	.welcome {
+		&__container {
+			justify-self: end;
+		}
+
+		&__special-container {
+			width: 1360px;
 		}
 	}
 }

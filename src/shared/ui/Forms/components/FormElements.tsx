@@ -82,7 +82,9 @@ export const FormSubmit: React.FC<SubmitModel> = ({ isLoading, buttonText, setBu
 		}
 	};
 
-	useEffect(checkButtonValue, [buttonText]);
+	useEffect(() => {
+		checkButtonValue();
+	}, [buttonText]);
 
 	return (
 		<div className={styles.form__box}>
@@ -93,15 +95,40 @@ export const FormSubmit: React.FC<SubmitModel> = ({ isLoading, buttonText, setBu
 	);
 };
 
-export const ReturnButton: React.FC<ReturnButtonModel> = ({ isLoading }) => {
+export const ReturnButton: React.FC<ReturnButtonModel> = ({ isLoading, href, setShowPopup }) => {
 	return (
 		<div className={styles.form__box}>
-			<Link
-				className={`${styles['form__return-btn']} ${isLoading && styles['form__return-btn--opacity']}`}
-				href='/'
-				onClick={scrollToTop}>
-				Powrót
-			</Link>
+			{setShowPopup ? (
+				<button
+					className={`${styles['form__return-btn']} ${isLoading && styles['form__return-btn--opacity']}`}
+					type='button'
+					onClick={() => {
+						setShowPopup(false);
+					}}>
+					Powrót
+				</button>
+			) : (
+				<Link
+					className={`${styles['form__return-btn']} ${isLoading && styles['form__return-btn--opacity']}`}
+					href={href as string}
+					onClick={scrollToTop}>
+					Powrót
+				</Link>
+			)}
+		</div>
+	);
+};
+
+export const RulesInfo: React.FC = () => {
+	return (
+		<div className={styles.form__box}>
+			<p className={styles['form__box-special-text']}>
+				Poprzez kliknięcie przycisku &quot;Wyślij&quot; akceptujesz{' '}
+				<Link href='/polityka-prywatnosci' onClick={scrollToTop}>
+					politykę prywatności
+				</Link>{' '}
+				oraz wyrażasz zgodę na realizację zamówienia.
+			</p>
 		</div>
 	);
 };

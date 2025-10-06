@@ -1,0 +1,30 @@
+.loader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	z-index: 100;
+
+	&__spinner {
+		position: relative;
+		width: 1em;
+		height: 1em;
+		border-radius: 50%;
+		font-size: 60px;
+		overflow: hidden;
+	}
+}
+
+@media screen {
+	.loader {
+		min-height: 600px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.loader {
+		&__spinner {
+			font-size: 80px;
+		}
+	}
+}

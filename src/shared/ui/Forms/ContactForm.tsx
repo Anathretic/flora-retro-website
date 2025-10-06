@@ -66,7 +66,7 @@ export default function ContactForm({ subject }: ContactFormComponentModel) {
 
 	useEffect(() => {
 		checkPathnameValue();
-	});
+	}, []);
 
 	return (
 		<form className={styles.contact__form} onSubmit={handleSubmit(contactSubmit)}>
@@ -93,7 +93,7 @@ export default function ContactForm({ subject }: ContactFormComponentModel) {
 			/>
 			<ReCaptchaV2Component refCaptcha={refCaptcha} reCaptchaErrorValue={reCaptchaErrorValue} />
 			<FormSubmit buttonText={buttonText} setButtonText={setButtonText} isLoading={isLoading} />
-			{isSubpage && <ReturnButton isLoading={isLoading} />}
+			{isSubpage && <ReturnButton isLoading={isLoading} href='/' />}
 		</form>
 	);
 }

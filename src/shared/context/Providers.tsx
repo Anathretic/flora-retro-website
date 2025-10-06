@@ -1,10 +1,15 @@
 'use client';
 
-import { ProvidersModel } from '../models/context.model';
+import CartProvider from './CartContext';
 import FooterLinksProvider from './FooterLinksContext';
+import { ProvidersModel } from '../models/context.model';
 
 export function Providers({ children }: ProvidersModel) {
-	return <FooterLinksProvider>{children}</FooterLinksProvider>;
+	return (
+		<CartProvider>
+			<FooterLinksProvider>{children}</FooterLinksProvider>
+		</CartProvider>
+	);
 }
 
 export default Providers;

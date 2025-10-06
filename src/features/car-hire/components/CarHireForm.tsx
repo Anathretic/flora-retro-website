@@ -59,7 +59,7 @@ export default function CarHireForm() {
 							</div>
 							<div>
 								<p>NIP:</p>
-								<p>922-289-02-46</p>
+								<p>9222890246</p>
 							</div>
 						</li>
 					</ul>

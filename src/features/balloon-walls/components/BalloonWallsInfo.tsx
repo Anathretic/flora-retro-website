@@ -9,23 +9,22 @@ export default function BalloonWallsInfo() {
 					<h3>Najpierw słucham</h3>
 					<p>
 						Zanim pojawi się pierwszy balon, musi być rozmowa. Bez checklisty, bez ankiet. Czasem ktoś powie, że lubi
-						ciepłe kolory albo że kocha las — i już wiadomo, jak ma wyglądać dekoracja.{' '}
+						ciepłe kolory albo że kocha las – i już wiadomo, jak ma wyglądać dekoracja.{' '}
 						<span>
 							Ścianka balonowa może mieć charakter, jeśli jest zakorzeniona w czyjejś historii, a nie katalogu.
 						</span>{' '}
-						Wolę zapytać o nastrój niż o dokładny odcień różu. Bo tło też potrafi mówić, jeśli się je dobrze ustawi.
+						Wolę zapytać o nastrój niż o dokładny odcień różu. Tło też potrafi mówić, jeśli się je dobrze ustawi.
 					</p>
 				</div>
 				<div className={styles['balloon-walls__info-special-decoration']} />
 				<div className={styles['balloon-walls__info-text-content-box']}>
 					<h3>Czas jest kluczowy</h3>
 					<p>
-						Każdy balon przechodzi przez moje ręce. Dosłownie. Kompozycja nie powstaje w programie — powstaje w realnym
+						Każdy balon przechodzi przez moje ręce. Dosłownie. Kompozycja nie powstaje w programie – powstaje w realnym
 						tempie, w ciszy, czasem przy radiu. Trzeba sprawdzić proporcje, ustawić rytm kolorów, odsunąć się dwa metry
 						i spojrzeć jeszcze raz.{' '}
 						<span>
-							Nie ma dwóch takich samych ścianek, bo każda ma swoją historię, przestrzeń i błysk, który wychodzi gdzieś
-							po drodze.
+							Nie ma dwóch takich samych ścianek.
 						</span>
 					</p>
 				</div>
@@ -36,7 +35,7 @@ export default function BalloonWallsInfo() {
 						Ścianka to nie tylko tło pod aparat. To miejsce, przy którym ktoś się przytuli, ktoś inny się wzruszy, a
 						ktoś wybuchnie śmiechem. Czasem zostaje tam kwiatek z bukietu, szminka na balonie albo odpruty guzik z
 						marynarki.
-						<span> To te drobne ślady sprawiają, że dekoracja przestaje być tylko ładna — zaczyna być prawdziwa</span>.
+						<span> To te drobne ślady sprawiają, że dekoracja przestaje być tylko ładna – zaczyna być prawdziwa</span>.
 						I właśnie o to chodzi.
 					</p>
 				</div>

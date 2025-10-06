@@ -10,7 +10,7 @@ I chose Next.js for this project to explore its approach to server-side renderin
 
 ## Links, Tools & Tech-stack
 
-**Used:** React (incl. react-hook-form), Next.js, TypeScript, SASS, Yup
+**Used:** React (incl. react-hook-form), Next.js, TypeScript, SASS, Yup, MongoDB
 
 **Tools:** [EmailJS](https://www.emailjs.com/), [Google reCaptcha](https://www.google.com/recaptcha/about/)
 

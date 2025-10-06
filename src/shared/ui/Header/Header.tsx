@@ -8,7 +8,7 @@ import { NavbarInstagramIcon } from './components/NavbarInstagramIcon';
 import { HeaderModel } from './models/header.model';
 import { AiOutlineClose } from 'react-icons/ai';
 import { HiMenuAlt4 } from 'react-icons/hi';
-
+ 
 import styles from './styles/styles.module.scss';
 import animations from './styles/animations.module.scss';
 

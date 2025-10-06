@@ -25,3 +25,16 @@ export const contactSchema = (isSubpage: boolean) => {
 		date: isSubpage ? yup.string().required(errorMessage.requiredField) : yup.string().notRequired(),
 	});
 };
+
+export const rentalSchema = yup.object({
+	firstname: yup
+		.string()
+		.min(3, 'Imię jest zbyt krótkie!')
+		.max(16, 'Imię jest zbyt długie!')
+		.minUppercase(1, 'Imię zaczyna się dużą literą!')
+		.matches(/^[A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ]+$/, 'Tylko litery! Bez spacji!')
+		.required(errorMessage.requiredField),
+	email: yup.string().email('Wprowadź poprawny e-mail!').required(errorMessage.requiredField),
+	phone: yup.string().phone('PL', 'Podaj prawidłowy numer!').required(errorMessage.requiredField),
+	date: yup.string().required(errorMessage.requiredField),
+});
