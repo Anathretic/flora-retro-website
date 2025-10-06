@@ -10,7 +10,6 @@ export interface CartModel extends HeaderModel {
 }
 
 export interface CartPopupModel {
-	setProductsData: Dispatch<SetStateAction<CartProductModel[] | null>>;
 	setShowPopup: Dispatch<SetStateAction<boolean>>;
 }
 export interface FiltersEmitModel {

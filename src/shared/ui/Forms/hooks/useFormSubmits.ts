@@ -10,6 +10,9 @@ export function useFormSubmits<T extends FormTypes>({
 	setIsLoading,
 	subject,
 	refCaptcha,
+	cart,
+	handleRentItems,
+	setShowFinishMessage,
 }: UseFormSubmitsModel<T>) {
 	const contactSubmit: SubmitHandler<ContactFormModel> = async ({ firstname, email, phone, date, message }) => {
 		setIsLoading(true);
@@ -66,12 +69,18 @@ export function useFormSubmits<T extends FormTypes>({
 		const token = refCaptcha.current?.getValue();
 		refCaptcha.current?.reset();
 
+		const formattedItems = cart.map(item => `${item.name} - (x${item.quantity}) - ${item.price}zł`).join('\n');
+
+		const totalPrice = cart.reduce((sum, item) => sum + item.quantity * item.price, 0);
+
 		const params = {
 			firstname,
 			subject,
 			email,
 			phone,
 			date,
+			items: formattedItems,
+			total: `${totalPrice.toFixed(2)}zł`,
 			'g-recaptcha-response': token,
 		};
 
@@ -83,9 +92,11 @@ export function useFormSubmits<T extends FormTypes>({
 					params,
 					`${process.env.NEXT_PUBLIC_PUBLIC_KEY}`
 				)
-				.then(() => {
+				.then(async () => {
+					await handleRentItems();
 					reset();
 					setButtonText('Wysłane!');
+					setShowFinishMessage(true);
 				})
 				.catch(err => {
 					setReCaptchaErrorValue('Coś poszło nie tak..');

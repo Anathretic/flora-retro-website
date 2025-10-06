@@ -6,13 +6,14 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { rentalFormInputsConfig } from './config/inputsConfig';
 import { useFormSubmits } from './hooks/useFormSubmits';
+import { useRentItems } from '@/shared/hooks/useRentItems';
 import { rentalSchema } from '@/shared/schemas/schemas';
 import { RentalFormComponentModel, RentalFormModel } from './models/contactForm.model';
-import { FormSubmit, InputElement, ReCaptchaV2Component, ReturnButton } from './components/FormElements';
+import { FormSubmit, InputElement, ReCaptchaV2Component, ReturnButton, RulesInfo } from './components/FormElements';
 
 import styles from './styles/styles.module.scss';
 
-export default function RentalForm({ subject, setShowPopup }: RentalFormComponentModel) {
+export default function RentalForm({ subject, setShowPopup, setShowFinishMessage }: RentalFormComponentModel) {
 	const [buttonText, setButtonText] = useState('Wyślij');
 	const [reCaptchaErrorValue, setReCaptchaErrorValue] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
@@ -33,6 +34,8 @@ export default function RentalForm({ subject, setShowPopup }: RentalFormComponen
 
 	const refCaptcha = useRef<ReCAPTCHA>(null);
 
+	const { handleRentItems, cart } = useRentItems();
+
 	const { rentalSubmit } = useFormSubmits<RentalFormModel>({
 		reset,
 		setButtonText,
@@ -40,6 +43,9 @@ export default function RentalForm({ subject, setShowPopup }: RentalFormComponen
 		setIsLoading,
 		subject,
 		refCaptcha,
+		cart,
+		handleRentItems,
+		setShowFinishMessage,
 	});
 
 	const rentalFormInputs = rentalFormInputsConfig(errors, register);
@@ -68,6 +74,7 @@ export default function RentalForm({ subject, setShowPopup }: RentalFormComponen
 			<ReCaptchaV2Component refCaptcha={refCaptcha} reCaptchaErrorValue={reCaptchaErrorValue} />
 			<FormSubmit buttonText={buttonText} setButtonText={setButtonText} isLoading={isLoading} />
 			<ReturnButton isLoading={isLoading} setShowPopup={setShowPopup} />
+			<RulesInfo />
 		</form>
 	);
 }

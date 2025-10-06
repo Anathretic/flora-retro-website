@@ -60,13 +60,17 @@ export default function PrivacyPolicyPage() {
 						<div className={styles['terms-and-conditions__box']}>
 							<h2>3. Zakres zbieranych danych</h2>
 							<p>
-								Podczas korzystania z mojej strony internetowej, w tym formularzy kontaktowych, zbieram dane osobowe w
-								następujących przypadkach:
+								Podczas korzystania z mojej strony internetowej, w tym formularzy kontaktowych oraz formularza
+								wypożyczalni, zbieram dane osobowe w następujących przypadkach:
 							</p>
 							<ul>
 								<li>
 									Formularz kontaktowy – Użytkownik podaje swoje imię, nr telefonu oraz adres e-mail w celu
 									skontaktowania się z Firmą
+								</li>
+								<li>
+									Formularz wypożyczalni – dane zbierane są w celu realizacji wypożyczenia, na takich samych zasadach
+									przetwarzania danych jak w formularzach kontaktowych
 								</li>
 							</ul>
 						</div>

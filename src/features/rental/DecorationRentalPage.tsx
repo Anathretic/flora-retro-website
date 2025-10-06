@@ -77,7 +77,7 @@ export default function DecorationRentalPage() {
 							{showCart && <Cart setShowCart={setShowCart} setShowPopup={setShowPopup} />}
 						</section>
 					</div>
-					{showPopup && <CartPopup setProductsData={setProductsData} setShowPopup={setShowPopup} />}
+					{showPopup && <CartPopup setShowPopup={setShowPopup} />}
 				</div>
 			</main>
 			<Footer />

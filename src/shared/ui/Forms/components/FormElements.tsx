@@ -118,3 +118,17 @@ export const ReturnButton: React.FC<ReturnButtonModel> = ({ isLoading, href, set
 		</div>
 	);
 };
+
+export const RulesInfo: React.FC = () => {
+	return (
+		<div className={styles.form__box}>
+			<p className={styles['form__box-special-text']}>
+				Poprzez kliknięcie przycisku &quot;Wyślij&quot; akceptujesz{' '}
+				<Link href='/polityka-prywatnosci' onClick={scrollToTop}>
+					politykę prywatności
+				</Link>{' '}
+				oraz wyrażasz zgodę na realizację zamówienia.
+			</p>
+		</div>
+	);
+};

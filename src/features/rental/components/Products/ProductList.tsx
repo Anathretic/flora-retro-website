@@ -11,6 +11,8 @@ export default function ProductList({ products, filters }: ProductListModel) {
 		return matchesName && matchesPrice && matchesAvailability;
 	});
 
+	if (products.length === 0) return;
+
 	return (
 		<div className={styles['product-list']}>
 			{filtered.length === 0 ? (

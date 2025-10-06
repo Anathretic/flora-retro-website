@@ -26,6 +26,20 @@
 		padding: 1em;
 	}
 
+	&__box-special-text {
+		padding: 0 2em;
+		margin-bottom: 1em;
+		font-size: 0.9em;
+		line-height: 1.6em;
+		text-align: center;
+
+		a {
+			color: var(--dark-brown-color);
+			text-underline-offset: 2px;
+			transition: color 0.3s;
+		}
+	}
+
 	&__recaptcha-box {
 		padding: 1em 0 1em 4px;
 
@@ -188,6 +202,16 @@
 
 		&__loader {
 			height: 22px;
+		}
+
+		&__box-special-text {
+			a:hover {
+				color: var(--brown-color);
+			}
+
+			a:active {
+				opacity: 0.65;
+			}
 		}
 	}
 }

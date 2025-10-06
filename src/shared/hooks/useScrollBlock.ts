@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export const useScrollBlock = (shouldBlock: boolean) => {
+export function useScrollBlock(shouldBlock: boolean) {
 	useEffect(() => {
 		const body = document.body;
 
@@ -14,4 +14,4 @@ export const useScrollBlock = (shouldBlock: boolean) => {
 			body.classList.remove('scroll-block');
 		};
 	}, [shouldBlock]);
-};
+}

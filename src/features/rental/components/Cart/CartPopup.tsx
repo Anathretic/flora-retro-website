@@ -1,52 +1,62 @@
 'use client';
 
-import { useCartContext } from '@/shared/hooks/useCartContext';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { useScrollBlock } from '@/shared/hooks/useScrollBlock';
 import RentalForm from '@/shared/ui/Forms/RentalForm';
 import { CartPopupModel } from '../../models/components.model';
 
 import styles from './styles/cartPopup.module.scss';
 
-export default function CartPopup({ setShowPopup, setProductsData }: CartPopupModel) {
-	const { cart, clearCart } = useCartContext();
+export default function CartPopup({ setShowPopup }: CartPopupModel) {
+	const [showFinishMessage, setShowFinishMessage] = useState(false);
+	const [counter, setCounter] = useState(5);
+
+	const router = useRouter();
 
 	useScrollBlock(true);
 
-	const handleRentItems = async () => {
-		try {
-			for (const item of cart) {
-				const response = await fetch('/api/rent', {
-					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({ id: item.id, quantity: item.quantity }),
-				});
+	useEffect(() => {
+		if (!showFinishMessage) return;
 
-				const data = await response.json();
-
-				if (!response.ok) {
-					alert(`Błąd przy produkcie ${item.name}: ${data.error}`);
-					return;
+		const interval = setInterval(() => {
+			setCounter(prev => {
+				if (prev <= 1) {
+					clearInterval(interval);
+					return 0;
 				}
-			}
+				return prev - 1;
+			});
+		}, 1000);
 
-			alert('Produkty wypożyczone pomyślnie!');
-			clearCart();
+		return () => clearInterval(interval);
+	}, [showFinishMessage]);
 
-			await fetch('/api/products')
-				.then(res => res.json())
-				.then(data => setProductsData(data));
-		} catch (error) {
-			console.error(error);
-			alert('Błąd serwera. Spróbuj ponownie później.');
+	useEffect(() => {
+		if (showFinishMessage && counter === 0) {
+			router.push('/');
 		}
-	};
+	}, [counter, showFinishMessage, router]);
 
 	return (
 		<div className={styles['cart-popup']}>
 			<div className={styles['cart-popup__wrapper']}>
 				<div className={styles['cart-popup__container']}>
-					<p className={styles['cart-popup__title']}>Twoje dane</p>
-					<RentalForm subject='Wypożyczalnia' setShowPopup={setShowPopup} />
+					{showFinishMessage ? (
+						<div className={styles['cart-popup__finish-message']}>
+							<p>Udało się! Teraz tylko poczekaj na telefon lub wiadomość e-mail i dogadamy wszystkie szczegóły! :)</p>
+							<span>Powrót na stronę główną nastąpi za {counter}s...</span>
+						</div>
+					) : (
+						<>
+							<p className={styles['cart-popup__title']}>Twoje dane</p>
+							<RentalForm
+								subject='Wypożyczalnia'
+								setShowPopup={setShowPopup}
+								setShowFinishMessage={setShowFinishMessage}
+							/>
+						</>
+					)}
 				</div>
 			</div>
 		</div>

@@ -15,6 +15,7 @@ export type ContactFormComponentModel = {
 export type RentalFormComponentModel = {
 	subject: string;
 	setShowPopup: Dispatch<SetStateAction<boolean>>;
+	setShowFinishMessage: Dispatch<SetStateAction<boolean>>;
 };
 
 export type ContactFormModel = Pick<DefaultFormModel, 'firstname' | 'email' | 'phone' | 'message' | 'date'>;
