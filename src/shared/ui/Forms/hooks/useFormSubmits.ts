@@ -64,7 +64,7 @@ export function useFormSubmits<T extends FormTypes>({
 		setIsLoading(true);
 		setReCaptchaErrorValue('');
 
-		if (!refCaptcha) return;
+		if (!refCaptcha || !cart || !handleRentItems || !setShowFinishMessage) return;
 
 		const token = refCaptcha.current?.getValue();
 		refCaptcha.current?.reset();
