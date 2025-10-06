@@ -149,6 +149,7 @@
 @media screen and (min-width: 900px) {
 	.footer {
 		&__container {
+			align-items: normal;
 			flex-direction: row;
 		}
 
@@ -194,7 +195,6 @@
 	.footer {
 		&__container {
 			margin: 2.5rem 0 0;
-			align-items: normal;
 			flex-direction: row;
 			flex-wrap: wrap;
 		}
