@@ -1,0 +1,45 @@
+.cart-popup {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.75);
+	overflow-y: auto;
+	z-index: 500;
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-height: 100%;
+	}
+
+	&__container {
+		width: 100%;
+		max-width: 600px;
+		max-height: 99.9vh;
+		background-color: var(--white-color);
+		overflow-y: auto;
+	}
+
+	&__title {
+		padding: 1.5em 0 0.75em;
+		font-size: 1.75em;
+		width: 100%;
+		font-weight: 300;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 575px) {
+	.cart-popup {
+		&__title {
+			font-size: 1.75em;
+		}
+	}
+}

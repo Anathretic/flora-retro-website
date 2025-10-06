@@ -7,12 +7,12 @@ import { CartModel } from '../../models/components.model';
 
 import styles from './styles/cart.module.scss';
 
-export default function Cart({ setProductsData, setShowCart }: CartModel) {
+export default function Cart({ setShowCart, setShowPopup }: CartModel) {
 	const [hasScroll, setHasScroll] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isScrolledToBottom, setIsScrolledToBottom] = useState(false);
 
-	const { cart, clearCart } = useCartContext();
+	const { cart } = useCartContext();
 
 	const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -27,35 +27,6 @@ export default function Cart({ setProductsData, setShowCart }: CartModel) {
 		setHasScroll(scrollHeight > clientHeight);
 		setIsScrolled(scrollTop > 1);
 		setIsScrolledToBottom(scrollTop + clientHeight >= scrollHeight - 1);
-	};
-
-	const handleRentItems = async () => {
-		try {
-			for (const item of cart) {
-				const response = await fetch('/api/rent', {
-					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({ id: item.id, quantity: item.quantity }),
-				});
-
-				const data = await response.json();
-
-				if (!response.ok) {
-					alert(`Błąd przy produkcie ${item.name}: ${data.error}`);
-					return;
-				}
-			}
-
-			alert('Produkty wypożyczone pomyślnie!');
-			clearCart();
-
-			await fetch('/api/products')
-				.then(res => res.json())
-				.then(data => setProductsData(data));
-		} catch (error) {
-			console.error(error);
-			alert('Błąd serwera. Spróbuj ponownie później.');
-		}
 	};
 
 	useEffect(() => {
@@ -99,7 +70,9 @@ export default function Cart({ setProductsData, setShowCart }: CartModel) {
 					<button
 						className={`${styles.cart__button} ${cart.length === 0 && styles['cart__button--disabled']}`}
 						type='button'
-						onClick={handleRentItems}>
+						onClick={() => {
+							setShowPopup(true);
+						}}>
 						Wypożycz
 					</button>
 					<button

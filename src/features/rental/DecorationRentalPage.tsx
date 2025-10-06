@@ -7,6 +7,7 @@ import Header from './components/Navbar/Navbar';
 import Loader from './components/Loader/Loader';
 import ProductList from './components/Products/ProductList';
 import Cart from './components/Cart/Cart';
+import CartPopup from './components/Cart/CartPopup';
 import Footer from '@/shared/ui/Footer/Footer';
 import { FiltersEmitModel } from './models/components.model';
 import { CartProductModel } from '@/shared/models/context.model';
@@ -18,6 +19,7 @@ export default function DecorationRentalPage() {
 	const [productsData, setProductsData] = useState<CartProductModel[] | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [showCart, setShowCart] = useState(false);
+	const [showPopup, setShowPopup] = useState(false);
 	const [filters, setFilters] = useState<FiltersEmitModel>({
 		search: '',
 		priceRange: [0, 1000],
@@ -72,9 +74,10 @@ export default function DecorationRentalPage() {
 									</p>
 								)}
 							</div>
-							{showCart && <Cart setProductsData={setProductsData} setShowCart={setShowCart} />}
+							{showCart && <Cart setShowCart={setShowCart} setShowPopup={setShowPopup} />}
 						</section>
 					</div>
+					{showPopup && <CartPopup setProductsData={setProductsData} setShowPopup={setShowPopup} />}
 				</div>
 			</main>
 			<Footer />

@@ -4,46 +4,36 @@ import { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { contactFormInputsConfig } from './config/inputsConfig';
+import { rentalFormInputsConfig } from './config/inputsConfig';
 import { useFormSubmits } from './hooks/useFormSubmits';
-import { contactSchema } from '@/shared/schemas/schemas';
-import { ContactFormComponentModel, ContactFormModel } from './models/contactForm.model';
-import {
-	FormSubmit,
-	InputElement,
-	ReCaptchaV2Component,
-	ReturnButton,
-	TextareaElement,
-} from './components/FormElements';
-
-import * as yup from 'yup';
+import { rentalSchema } from '@/shared/schemas/schemas';
+import { RentalFormComponentModel, RentalFormModel } from './models/contactForm.model';
+import { FormSubmit, InputElement, ReCaptchaV2Component, ReturnButton } from './components/FormElements';
 
 import styles from './styles/styles.module.scss';
 
-export default function ContactForm({ subject }: ContactFormComponentModel) {
+export default function RentalForm({ subject, setShowPopup }: RentalFormComponentModel) {
 	const [buttonText, setButtonText] = useState('Wyślij');
 	const [reCaptchaErrorValue, setReCaptchaErrorValue] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
-	const [isSubpage, setIsSubpage] = useState(false);
 	const {
 		register,
 		handleSubmit,
 		reset,
 		formState: { errors },
-	} = useForm<ContactFormModel>({
+	} = useForm<RentalFormModel>({
 		defaultValues: {
 			firstname: '',
 			email: '',
 			phone: '',
-			message: '',
 			date: '',
 		},
-		resolver: yupResolver(contactSchema(isSubpage) as yup.ObjectSchema<ContactFormModel>),
+		resolver: yupResolver(rentalSchema),
 	});
 
 	const refCaptcha = useRef<ReCAPTCHA>(null);
 
-	const { contactSubmit } = useFormSubmits<ContactFormModel>({
+	const { rentalSubmit } = useFormSubmits<RentalFormModel>({
 		reset,
 		setButtonText,
 		setReCaptchaErrorValue,
@@ -52,11 +42,7 @@ export default function ContactForm({ subject }: ContactFormComponentModel) {
 		refCaptcha,
 	});
 
-	const contactFormInputs = contactFormInputsConfig(errors, register, isSubpage);
-
-	const checkPathnameValue = () => {
-		setIsSubpage(document.location.pathname !== '/');
-	};
+	const rentalFormInputs = rentalFormInputsConfig(errors, register);
 
 	useEffect(() => {
 		if (refCaptcha.current?.getValue() === '') {
@@ -64,13 +50,9 @@ export default function ContactForm({ subject }: ContactFormComponentModel) {
 		}
 	}, []);
 
-	useEffect(() => {
-		checkPathnameValue();
-	}, []);
-
 	return (
-		<form className={styles.contact__form} onSubmit={handleSubmit(contactSubmit)}>
-			{contactFormInputs.map((input, id) => (
+		<form className={styles.rental__form} onSubmit={handleSubmit(rentalSubmit)}>
+			{rentalFormInputs.map((input, id) => (
 				<InputElement
 					key={id}
 					label={input.label}
@@ -83,17 +65,9 @@ export default function ContactForm({ subject }: ContactFormComponentModel) {
 					{...input.register}
 				/>
 			))}
-			<TextareaElement
-				label='Wiadomość:'
-				inputName='message'
-				placeholder='Wprowadź wiadomość'
-				errorMessage={errors.message?.message}
-				aria-invalid={errors.message ? true : false}
-				{...register('message')}
-			/>
 			<ReCaptchaV2Component refCaptcha={refCaptcha} reCaptchaErrorValue={reCaptchaErrorValue} />
 			<FormSubmit buttonText={buttonText} setButtonText={setButtonText} isLoading={isLoading} />
-			{isSubpage && <ReturnButton isLoading={isLoading} href='/' />}
+			<ReturnButton isLoading={isLoading} setShowPopup={setShowPopup} />
 		</form>
 	);
 }

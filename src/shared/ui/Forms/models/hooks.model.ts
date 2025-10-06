@@ -1,9 +1,9 @@
 import { Dispatch, SetStateAction } from 'react';
 import { UseFormReset } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { ContactFormModel } from './contactForm.model';
+import { ContactFormModel, RentalFormModel } from './contactForm.model';
 
-export type FormTypes = ContactFormModel;
+export type FormTypes = ContactFormModel | RentalFormModel;
 
 export type UseFormSubmitsModel<T extends FormTypes> = {
 	reset: UseFormReset<T>;

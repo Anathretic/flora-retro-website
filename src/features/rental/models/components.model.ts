@@ -6,7 +6,12 @@ export interface HeaderModel {
 }
 
 export interface CartModel extends HeaderModel {
+	setShowPopup: Dispatch<SetStateAction<boolean>>;
+}
+
+export interface CartPopupModel {
 	setProductsData: Dispatch<SetStateAction<CartProductModel[] | null>>;
+	setShowPopup: Dispatch<SetStateAction<boolean>>;
 }
 export interface FiltersEmitModel {
 	search: string;

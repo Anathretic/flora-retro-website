@@ -1,7 +1,7 @@
 import { SubmitHandler } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { FormTypes, UseFormSubmitsModel } from '../models/hooks.model';
-import { ContactFormModel } from '../models/contactForm.model';
+import { ContactFormModel, RentalFormModel } from '../models/contactForm.model';
 
 export function useFormSubmits<T extends FormTypes>({
 	reset,
@@ -57,5 +57,50 @@ export function useFormSubmits<T extends FormTypes>({
 		}
 	};
 
-	return { contactSubmit };
+	const rentalSubmit: SubmitHandler<RentalFormModel> = async ({ firstname, email, phone, date }) => {
+		setIsLoading(true);
+		setReCaptchaErrorValue('');
+
+		if (!refCaptcha) return;
+
+		const token = refCaptcha.current?.getValue();
+		refCaptcha.current?.reset();
+
+		const params = {
+			firstname,
+			subject,
+			email,
+			phone,
+			date,
+			'g-recaptcha-response': token,
+		};
+
+		if (token) {
+			await emailjs
+				.send(
+					`${process.env.NEXT_PUBLIC_SERVICE_ID}`,
+					`${process.env.NEXT_PUBLIC_RENTAL_TEMPLATE_ID}`,
+					params,
+					`${process.env.NEXT_PUBLIC_PUBLIC_KEY}`
+				)
+				.then(() => {
+					reset();
+					setButtonText('Wysłane!');
+				})
+				.catch(err => {
+					setReCaptchaErrorValue('Coś poszło nie tak..');
+					if (err instanceof Error) {
+						console.log(`Twój błąd: ${err.message}`);
+					}
+				})
+				.finally(() => {
+					setIsLoading(false);
+				});
+		} else {
+			setIsLoading(false);
+			setReCaptchaErrorValue('Nie bądź 🤖!');
+		}
+	};
+
+	return { contactSubmit, rentalSubmit };
 }

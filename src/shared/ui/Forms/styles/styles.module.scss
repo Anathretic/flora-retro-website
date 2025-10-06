@@ -1,4 +1,5 @@
-.contact {
+.contact,
+.rental {
 	&__form {
 		width: 100%;
 		max-width: 600px;
@@ -97,7 +98,6 @@
 	&__submit,
 	&__return-btn {
 		padding: 0.75em 3em;
-		margin: 1em 1em 1.25em;
 		width: 215px;
 		color: var(--white-color);
 		background-color: var(--dark-brown-color);
@@ -120,6 +120,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin: 1em 1em 1.25em;
 	}
 
 	&__submit--is-loading {
@@ -127,6 +128,7 @@
 	}
 
 	&__return-btn {
+		margin: 0 1em 1.25em;
 		opacity: 1;
 
 		&--opacity {
