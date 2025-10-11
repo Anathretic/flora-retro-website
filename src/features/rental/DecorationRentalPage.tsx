@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useFooterLinksContext } from '@/shared/hooks/useFooterLinksContext';
+import { useProducts } from './hooks/useProducts';
 import Filters from './components/Filters/Filters';
 import Header from './components/Navbar/Navbar';
 import Loader from './components/Loader/Loader';
@@ -10,14 +11,11 @@ import Cart from './components/Cart/Cart';
 import CartPopup from './components/Cart/CartPopup';
 import Footer from '@/shared/ui/Footer/Footer';
 import { FiltersEmitModel } from './models/components.model';
-import { CartProductModel } from '@/shared/models/context.model';
 
 import styles from './styles/styles.module.scss';
 import '../../shared/styles/globals.scss';
 
 export default function DecorationRentalPage() {
-	const [productsData, setProductsData] = useState<CartProductModel[] | null>(null);
-	const [isLoading, setIsLoading] = useState(true);
 	const [showCart, setShowCart] = useState(false);
 	const [showPopup, setShowPopup] = useState(false);
 	const [filters, setFilters] = useState<FiltersEmitModel>({
@@ -28,26 +26,7 @@ export default function DecorationRentalPage() {
 
 	const { setShowSpecialLinks } = useFooterLinksContext();
 
-	const fetchProducts = async () => {
-		try {
-			const res = await fetch('/api/products');
-			if (!res.ok) {
-				throw new Error('Błąd pobierania danych');
-			}
-			const data = await res.json();
-			setProductsData(data);
-			setTimeout(() => {
-				setIsLoading(false);
-			}, 500);
-		} catch (error) {
-			console.error(error);
-			setIsLoading(false);
-		}
-	};
-
-	useEffect(() => {
-		fetchProducts();
-	}, []);
+	const { error, isLoading, productsData } = useProducts();
 
 	useEffect(() => {
 		setShowSpecialLinks(false);
@@ -72,6 +51,9 @@ export default function DecorationRentalPage() {
 									<p className={styles['decorations-rental__special-msg']}>
 										Brak dostępnych produktów. Pracujemy nad tym! :)
 									</p>
+								)}
+								{!isLoading && error && (
+									<p className={styles['decorations-rental__special-msg']}>Błąd serwera! Spróbuj później.</p>
 								)}
 							</div>
 							{showCart && <Cart setShowCart={setShowCart} setShowPopup={setShowPopup} />}

@@ -71,5 +71,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			changeFrequency: 'monthly',
 			priority: 0.9,
 		},
+		{
+			url: `${baseUrl}/artykuly-i-porady/stol-weselny-ktory-zachwyci`,
+			lastModified: date,
+			changeFrequency: 'monthly',
+			priority: 0.9,
+		},
+		{
+			url: `${baseUrl}/artykuly-i-porady/idealna-papeteria-slubna`,
+			lastModified: date,
+			changeFrequency: 'monthly',
+			priority: 0.9,
+		},
 	];
 }

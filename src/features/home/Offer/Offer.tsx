@@ -17,11 +17,6 @@ export default function OfferSection() {
 
 	const isDesktop = useMediaQuery({ query: '(min-width: 1536px)' });
 
-	const fetchOffers = async () => {
-		const data = await getOfferData();
-		setOfferData(data);
-	};
-
 	const groupOffers = (offers: OfferDataModel[], groupSize: number) => {
 		const groups = [];
 
@@ -33,6 +28,11 @@ export default function OfferSection() {
 	};
 
 	useEffect(() => {
+		const fetchOffers = async () => {
+			const data = await getOfferData();
+			setOfferData(data);
+		};
+
 		fetchOffers();
 	}, []);
 

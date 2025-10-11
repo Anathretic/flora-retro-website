@@ -1,23 +1,25 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
+import { useScrolled } from '@/shared/hooks/useScrolled';
 import { NavbarTitle } from './components/NavbarTitle';
 import { NavbarItem } from './components/NavbarItem';
 import { NavbarInstagramIcon } from './components/NavbarInstagramIcon';
 import { HeaderModel } from './models/header.model';
 import { AiOutlineClose } from 'react-icons/ai';
 import { HiMenuAlt4 } from 'react-icons/hi';
- 
+
 import styles from './styles/styles.module.scss';
 import animations from './styles/animations.module.scss';
 
 export default function Header({ navbarItems }: HeaderModel) {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [isAnimating, setIsAnimating] = useState(false);
-	const [isScrolled, setIsScrolled] = useState(false);
 
 	const pathname = usePathname();
+
+	const isScrolled = useScrolled();
 
 	const divRef = useRef<HTMLDivElement | null>(null);
 
@@ -33,22 +35,6 @@ export default function Header({ navbarItems }: HeaderModel) {
 	const handleAnimationEnd = () => {
 		setIsAnimating(false);
 	};
-
-	const handleScroll = () => {
-		if (window.scrollY > 30) {
-			setIsScrolled(true);
-		} else {
-			setIsScrolled(false);
-		}
-	};
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
 
 	return (
 		<header ref={divRef}>

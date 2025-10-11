@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useCartContext } from '@/shared/hooks/useCartContext';
+import { useScrolled } from '@/shared/hooks/useScrolled';
 import { NavbarTitle } from './components/NavbarTitle';
 import { HeaderModel } from '../../models/components.model';
 import { FaHome, FaShoppingCart } from 'react-icons/fa';
@@ -10,27 +11,11 @@ import { FaHome, FaShoppingCart } from 'react-icons/fa';
 import styles from './styles/styles.module.scss';
 
 export default function Header({ setShowCart }: HeaderModel) {
-	const [isScrolled, setIsScrolled] = useState(false);
-
 	const { cart } = useCartContext();
 
+	const isScrolled = useScrolled();
+
 	const divRef = useRef<HTMLDivElement | null>(null);
-
-	const handleScroll = () => {
-		if (window.scrollY > 30) {
-			setIsScrolled(true);
-		} else {
-			setIsScrolled(false);
-		}
-	};
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
 
 	return (
 		<header ref={divRef}>

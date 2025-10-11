@@ -11,12 +11,12 @@ import styles from '../styles/articlesAndAdvicesStyles.module.scss';
 export default function ArticlesArray() {
 	const [articlesData, setArticlesData] = useState<ArticleItemModel[] | null>(null);
 
-	const fetchBlogArticlesData = async () => {
-		const data = await getArticlesData();
-		if (data) setArticlesData(data);
-	};
-
 	useEffect(() => {
+		const fetchBlogArticlesData = async () => {
+			const data = await getArticlesData();
+			if (data) setArticlesData(data);
+		};
+
 		fetchBlogArticlesData();
 	}, []);
 

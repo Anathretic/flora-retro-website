@@ -16,11 +16,6 @@ export default function OpinionsSection() {
 
 	const isDesktop = useMediaQuery({ query: '(min-width: 1536px)' });
 
-	const fetchOpinions = async () => {
-		const data = await getOpinionsData();
-		setOpinionsData(data);
-	};
-
 	const groupOpinions = (opinions: OpinionsDataModel[], groupSize: number) => {
 		const groups = [];
 
@@ -32,6 +27,11 @@ export default function OpinionsSection() {
 	};
 
 	useEffect(() => {
+		const fetchOpinions = async () => {
+			const data = await getOpinionsData();
+			setOpinionsData(data);
+		};
+
 		fetchOpinions();
 	}, []);
 
