@@ -9,24 +9,24 @@ export interface CartModel extends HeaderModel {
 	setShowPopup: Dispatch<SetStateAction<boolean>>;
 }
 
-export interface CartPopupModel {
+export type CartPopupModel = {
 	setShowPopup: Dispatch<SetStateAction<boolean>>;
-}
-export interface FiltersEmitModel {
+};
+export type FiltersEmitModel = {
 	search: string;
 	priceRange: [number, number];
 	onlyAvailable: boolean;
-}
+};
 
-export interface FiltersModel {
+export type FiltersModel = {
 	setFilters: (filters: FiltersEmitModel) => void;
-}
+};
 
-export interface ProductCardModel {
+export type ProductCardModel = {
 	product: CartProductModel;
-}
+};
 
-export interface ProductListModel {
+export type ProductListModel = {
 	products: CartProductModel[];
 	filters: FiltersEmitModel;
-}
+};

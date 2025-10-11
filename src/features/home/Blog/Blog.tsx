@@ -13,12 +13,12 @@ import { scrollToTop } from '@/shared/utils/scrollToTopUtils';
 export default function BlogSection() {
 	const [slides, setSlides] = useState<SlideDataBoxModel[]>([]);
 
-	const fetchBlogArticles = async () => {
-		const data = await getBlogArticlesData();
-		if (data) setSlides(data);
-	};
-
 	useEffect(() => {
+		const fetchBlogArticles = async () => {
+			const data = await getBlogArticlesData();
+			if (data) setSlides(data);
+		};
+
 		fetchBlogArticles();
 	}, []);
 

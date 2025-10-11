@@ -1,48 +1,21 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useCartContext } from '@/shared/hooks/useCartContext';
+import { useScrollStatus } from '../../hooks/useScrollStatus';
 import CartItem from './CartItem';
 import { CartModel } from '../../models/components.model';
 
 import styles from './styles/cart.module.scss';
 
 export default function Cart({ setShowCart, setShowPopup }: CartModel) {
-	const [hasScroll, setHasScroll] = useState(false);
-	const [isScrolled, setIsScrolled] = useState(false);
-	const [isScrolledToBottom, setIsScrolledToBottom] = useState(false);
-
 	const { cart } = useCartContext();
 
 	const scrollRef = useRef<HTMLDivElement>(null);
 
+	const { hasScroll, isScrolled, isScrolledToBottom } = useScrollStatus({ scrollRef, cart });
+
 	const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
-	const handleScroll = () => {
-		const el = scrollRef.current;
-		if (!el) return;
-
-		const { scrollTop, scrollHeight, clientHeight } = el;
-
-		setHasScroll(scrollHeight > clientHeight);
-		setIsScrolled(scrollTop > 1);
-		setIsScrolledToBottom(scrollTop + clientHeight >= scrollHeight - 1);
-	};
-
-	useEffect(() => {
-		handleScroll();
-	}, [cart]);
-
-	useEffect(() => {
-		const el = scrollRef.current;
-		if (!el) return;
-
-		el.addEventListener('scroll', handleScroll);
-
-		return () => {
-			el.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
 
 	return (
 		<div className={styles.cart}>

@@ -1,8 +1,8 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useScrollBlock } from '@/shared/hooks/useScrollBlock';
+import { useCountdownRedirect } from '../../hooks/useCountdownRedirect';
 import RentalForm from '@/shared/ui/Forms/RentalForm';
 import { CartPopupModel } from '../../models/components.model';
 
@@ -10,33 +10,10 @@ import styles from './styles/cartPopup.module.scss';
 
 export default function CartPopup({ setShowPopup }: CartPopupModel) {
 	const [showFinishMessage, setShowFinishMessage] = useState(false);
-	const [counter, setCounter] = useState(5);
 
-	const router = useRouter();
+	const counter = useCountdownRedirect({ startCount: 5, redirectTo: '/', start: showFinishMessage });
 
 	useScrollBlock(true);
-
-	useEffect(() => {
-		if (!showFinishMessage) return;
-
-		const interval = setInterval(() => {
-			setCounter(prev => {
-				if (prev <= 1) {
-					clearInterval(interval);
-					return 0;
-				}
-				return prev - 1;
-			});
-		}, 1000);
-
-		return () => clearInterval(interval);
-	}, [showFinishMessage]);
-
-	useEffect(() => {
-		if (showFinishMessage && counter === 0) {
-			router.push('/');
-		}
-	}, [counter, showFinishMessage, router]);
 
 	return (
 		<div className={styles['cart-popup']}>
