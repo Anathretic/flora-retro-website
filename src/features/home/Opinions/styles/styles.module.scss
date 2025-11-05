@@ -64,24 +64,34 @@
 			text-align: center;
 		}
 
-		p {
-			padding: 0.5em 0.25em 3.5em 0;
-			font-weight: 400;
-			text-align: center;
-		}
-
-		span {
+		a {
 			position: absolute;
 			bottom: 15px;
 			right: 15px;
+			color: var(--white-color);
 			font-weight: 200;
 			text-align: right;
+			text-underline-offset: 1px;
+			text-decoration-thickness: 1px;
+			transition: color 0.3s;
 		}
+	}
+
+	&__box-date {
+		padding: 3em 0 1em;
+		font-weight: 200;
+		font-style: italic;
 	}
 
 	&__box-star {
 		margin: 0 0.15em;
 		fill: var(--yellow-color);
+	}
+
+	&__box-text {
+		padding: 0.5em 0.25em 3.5em 0;
+		font-weight: 400;
+		text-align: center;
 	}
 
 	&__box-image {
@@ -95,28 +105,68 @@
 		background-size: cover;
 		background-position: center;
 
-		&--0 {
+		&--1 {
 			background-image: url('../images/opinion-image/first-opinion.jpg');
 		}
 
-		&--1 {
+		&--2 {
 			background-image: url('../images/opinion-image/second-opinion.jpg');
 		}
 
-		&--2 {
+		&--3 {
 			background-image: url('../images/opinion-image/third-opinion.jpg');
 		}
 
-		&--3 {
+		&--4 {
 			background-image: url('../images/opinion-image/fourth-opinion.jpg');
 		}
 
-		&--4 {
+		&--5 {
 			background-image: url('../images/opinion-image/fifth-opinion.jpg');
 		}
 
-		&--5 {
+		&--6 {
 			background-image: url('../images/opinion-image/sixth-opinion.jpg');
+		}
+
+		&--7 {
+			background-image: url('../images/opinion-image/seventh-opinion.jpg');
+		}
+
+		&--8 {
+			background-image: url('../images/opinion-image/eighth-opinion.jpg');
+		}
+
+		&--9 {
+			background-image: url('../images/opinion-image/nineth-opinion.jpg');
+		}
+
+		&--10 {
+			background-image: url('../images/opinion-image/tenth-opinion.jpg');
+		}
+
+		&--11 {
+			background-image: url('../images/opinion-image/eleventh-opinion.jpg');
+		}
+
+		&--12 {
+			background-image: url('../images/opinion-image/twelveth-opinion.jpg');
+		}
+
+		&--13 {
+			background-image: url('../images/opinion-image/thirteenth-opinion.jpg');
+		}
+
+		&--14 {
+			background-image: url('../images/opinion-image/fourteenth-opinion.jpg');
+		}
+
+		&--15 {
+			background-image: url('../images/opinion-image/fifteenth-opinion.jpg');
+		}
+
+		&--16 {
+			background-image: url('../images/opinion-image/sixteenth-opinion.jpg');
 		}
 	}
 
@@ -197,6 +247,10 @@
 		&__box {
 			h3 {
 				font-size: 1.2em;
+			}
+
+			a:hover {
+				color: var(--light-brown-color);
 			}
 		}
 

@@ -112,10 +112,6 @@
 		&__title {
 			padding-top: 0.25em;
 		}
-
-		&__button {
-			display: none;
-		}
 	}
 }
 
@@ -165,6 +161,14 @@
 		&__arrow-icon {
 			font-size: 52px;
 			color: var(--white-color);
+		}
+	}
+}
+
+@media screen and (max-height: 950px) {
+	.welcome {
+		&__button {
+			display: none;
 		}
 	}
 }
