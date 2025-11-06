@@ -6,6 +6,11 @@
 	grid-auto-rows: 240px;
 }
 
+.image-mosaic-reverse {
+	padding-top: 1rem;
+	transform: scaleX(-1);
+}
+
 .card {
 	display: flex;
 	flex-direction: column;
