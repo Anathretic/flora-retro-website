@@ -1,9 +1,10 @@
 export type OpinionItemModel = {
 	id: number;
-	title: string;
-	opinion: string;
+	date: string;
+	review_text: string;
 	name: string;
 	stars: number;
+	profileUrl: string;
 };
 
 export interface StarRatingModel {

@@ -1,7 +1,6 @@
 'use client';
 
 import styles from '../styles/styles.module.scss';
-
 import '../styles/gallery.scss';
 
 export default function CarHireImages() {
@@ -14,17 +13,32 @@ export default function CarHireImages() {
 						<img
 							src='/car-images/first-car-image.jpg'
 							alt='Obraz przedstawiający udekorowanego Mercedesa W108 stojącego na kostce na tle lasu'
-							className={`${styles['rent-car__gallery-image']} ${styles['rent-car__gallery-image--first']} card card-tall card-wide card-with-bg`}
+							className={`${styles['rent-car__gallery-image']} ${styles['rent-car__gallery-image--first']} card card-tall card-wide`}
 						/>
 						<img
 							src='/car-images/second-car-image.jpg'
 							alt='Obraz przedstawiający udekorowanego Mercedesa W108 stojącego przy restauracji, który prezentuje się w blasku oświetlenia parkingu'
-							className={`${styles['rent-car__gallery-image']} ${styles['rent-car__gallery-image--second']} card card-tall card-wide card-with-bg`}
+							className={`${styles['rent-car__gallery-image']} ${styles['rent-car__gallery-image--second']} card card-tall card-wide`}
 						/>
 						<img
 							src='/car-images/third-car-image.jpg'
 							alt='Obraz przedstawiający udekorowanego Mercedesa W108 stojącego przy bazylice'
-							className={`${styles['rent-car__gallery-image']} ${styles['rent-car__gallery-image--third']} card card-tall card-wide card-with-bg`}
+							className={`${styles['rent-car__gallery-image']} ${styles['rent-car__gallery-image--third']} card card-tall card-wide`}
+						/>
+						<img
+							src='/car-images/fourth-car-image.jpg'
+							alt='Obraz przedstawiający udekorowanego Mercedesa W108 stojącego przy restauracji'
+							className={`${styles['rent-car__gallery-image']} ${styles['rent-car__gallery-image--fourth']} card card-tall card-wide`}
+						/>
+						<img
+							src='/car-images/fifth-car-image.jpeg'
+							alt='Obraz przedstawiający udekorowanego Mercedesa W108 stojącego na drewnianym moście'
+							className={`${styles['rent-car__gallery-image']} ${styles['rent-car__gallery-image--fifth']} card card-tall card-wide`}
+						/>
+						<img
+							src='/car-images/sixth-car-image.jpg'
+							alt='Obraz przedstawiający udekorowanego Mercedesa W108 stojącego przy restauracji'
+							className={`${styles['rent-car__gallery-image']} ${styles['rent-car__gallery-image--sixth']} card card-tall card-wide`}
 						/>
 					</div>
 				</div>

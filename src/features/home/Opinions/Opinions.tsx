@@ -29,7 +29,9 @@ export default function OpinionsSection() {
 	useEffect(() => {
 		const fetchOpinions = async () => {
 			const data = await getOpinionsData();
-			setOpinionsData(data);
+			if (!data) return;
+			const sortedData = data.sort((a, b) => b.id - a.id);
+			setOpinionsData(sortedData);
 		};
 
 		fetchOpinions();
@@ -55,10 +57,11 @@ export default function OpinionsSection() {
 										<OpinionItem
 											key={id}
 											id={data.id}
-											title={data.opinion.title}
-											opinion={data.opinion.opinion}
+											date={data.opinion.date}
+											review_text={data.opinion.review_text}
 											name={data.opinion.name}
 											stars={data.opinion.stars}
+											profileUrl={data.opinion.profileUrl}
 										/>
 									))}
 								</div>

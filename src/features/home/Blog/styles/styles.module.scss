@@ -27,19 +27,6 @@
 		font-size: 2.5rem;
 		text-align: center;
 		font-weight: 300;
-
-		a {
-			position: absolute;
-			top: 11px;
-			right: -36px;
-			font-size: 32px;
-			color: var(--black-color);
-			transition: color 0.3s;
-		}
-
-		svg:active {
-			transform: translateY(1px);
-		}
 	}
 
 	&__special-block {
@@ -82,10 +69,6 @@
 	.blog {
 		&__title {
 			font-size: 3rem;
-
-			a:hover {
-				color: var(--dark-brown-color);
-			}
 		}
 	}
 }
@@ -97,12 +80,6 @@
 		&__title {
 			padding: 0.5rem 0.85rem 3.5rem;
 			font-size: 3.5rem;
-
-			a {
-				top: 24px;
-				right: -28px;
-				font-size: 36px;
-			}
 		}
 
 		&__special-block {

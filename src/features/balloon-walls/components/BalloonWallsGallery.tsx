@@ -11,28 +11,28 @@ export default function BalloonWallsGallery() {
 					<div className='image-mosaic'>
 						<img
 							src='/balloon-walls-images/first-balloon-walls-image.jpg'
-							alt='Obraz przedstawiający bukiet fioletowych kwiatów'
-							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--first']} card card-tall card-wide card-with-bg`}
+							alt='Obraz przedstawiający ściankę balonową'
+							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--first']} card card-tall card-wide`}
 						/>
 						<img
 							src='/balloon-walls-images/second-balloon-walls-image.jpg'
-							alt='Obraz przedstawiający udekorowaną salę weselną'
-							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--second']} card card-tall card-with-bg`}
+							alt='Obraz przedstawiający ściankę balonową'
+							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--second']} card card-tall`}
 						/>
 						<img
 							src='/balloon-walls-images/third-balloon-walls-image.jpg'
-							alt='Obraz przedstawiający udekorowaną salę weselną'
-							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--third']} card card-with-bg`}
+							alt='Obraz przedstawiający ściankę balonową'
+							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--third']} card`}
 						/>
 						<img
 							src='/balloon-walls-images/fourth-balloon-walls-image.jpg'
-							alt='Obraz przedstawiający dekorację weselnego stołu'
-							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--fourth']} card card-with-bg`}
+							alt='Obraz przedstawiający ściankę balonową'
+							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--fourth']} card`}
 						/>
 						<img
 							src='/balloon-walls-images/fifth-balloon-walls-image.jpg'
-							alt='Obraz przedstawiający ślubną dekorację kościoła'
-							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--fifth']} card card-with-bg`}
+							alt='Obraz przedstawiający ściankę balonową'
+							className={`${styles['balloon-walls__gallery-image']} ${styles['balloon-walls__gallery-image--fifth']} card`}
 						/>
 					</div>
 				</div>

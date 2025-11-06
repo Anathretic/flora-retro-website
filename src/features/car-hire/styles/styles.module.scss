@@ -366,7 +366,10 @@
 	.decorations {
 		&__gallery-image--first,
 		&__gallery-image--second,
-		&__gallery-image--third {
+		&__gallery-image--third,
+		&__gallery-image--fourth,
+		&__gallery-image--fifth,
+		&__gallery-image--sixth {
 			grid-column: 1/-1;
 		}
 	}
