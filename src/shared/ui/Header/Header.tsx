@@ -58,8 +58,9 @@ export default function Header({ navbarItems }: HeaderModel) {
 							<div
 								className={`${styles['navbar__mobile-wrapper']} ${
 									toggleMenu ? animations['animate-fade-in'] : animations['animate-fade-out']
-								}`}>
-								<nav className={styles.navbar__mobile}>
+								}`}
+								onClick={handleMenuClose}>
+								<nav className={styles.navbar__mobile} onClick={e => e.stopPropagation()}>
 									<ul
 										onAnimationEnd={handleAnimationEnd}
 										className={`${styles['navbar__mobile-list']} ${
