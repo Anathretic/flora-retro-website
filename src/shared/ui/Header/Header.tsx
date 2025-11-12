@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useScrolled } from '@/shared/hooks/useScrolled';
 import { NavbarTitle } from './components/NavbarTitle';
 import { NavbarItem } from './components/NavbarItem';
@@ -26,15 +26,19 @@ export default function Header({ navbarItems }: HeaderModel) {
 	const handleMenuClose = () => {
 		setIsAnimating(true);
 		setToggleMenu(false);
-
-		setTimeout(() => {
-			setIsAnimating(false);
-		}, 450);
 	};
 
 	const handleAnimationEnd = () => {
 		setIsAnimating(false);
 	};
+
+	useEffect(() => {
+		if (toggleMenu || isAnimating) {
+			document.body.classList.add(`${styles['scroll-block']}`);
+		} else {
+			document.body.classList.remove(`${styles['scroll-block']}`);
+		}
+	}, [toggleMenu, isAnimating]);
 
 	return (
 		<header ref={divRef}>
@@ -51,27 +55,32 @@ export default function Header({ navbarItems }: HeaderModel) {
 							onClick={() => setToggleMenu(true)}
 						/>
 						{(toggleMenu || isAnimating) && (
-							<nav className={styles.navbar__mobile}>
-								<ul
-									onAnimationEnd={handleAnimationEnd}
-									className={`${styles['navbar__mobile-list']} ${
-										toggleMenu ? animations['animate-slide-in'] : animations['animate-slide-out']
-									}`}>
-									<li className={styles['navbar__mobile-exit-icon']}>
-										<AiOutlineClose fontSize={28} onClick={handleMenuClose} />
-									</li>
-									{navbarItems.map(({ title, section }) => (
-										<NavbarItem
-											key={title}
-											title={title}
-											section={section}
-											classProps={styles['navbar__item-margin']}
-											onClick={handleMenuClose}
-										/>
-									))}
-									<NavbarInstagramIcon onClick={handleMenuClose} />
-								</ul>
-							</nav>
+							<div
+								className={`${styles['navbar__mobile-wrapper']} ${
+									toggleMenu ? animations['animate-fade-in'] : animations['animate-fade-out']
+								}`}>
+								<nav className={styles.navbar__mobile}>
+									<ul
+										onAnimationEnd={handleAnimationEnd}
+										className={`${styles['navbar__mobile-list']} ${
+											toggleMenu ? animations['animate-slide-in'] : animations['animate-slide-out']
+										}`}>
+										<li className={styles['navbar__mobile-exit-icon']}>
+											<AiOutlineClose fontSize={28} onClick={handleMenuClose} />
+										</li>
+										{navbarItems.map(({ title, section }) => (
+											<NavbarItem
+												key={title}
+												title={title}
+												section={section}
+												classProps={styles['navbar__item-margin']}
+												onClick={handleMenuClose}
+											/>
+										))}
+										<NavbarInstagramIcon onClick={handleMenuClose} />
+									</ul>
+								</nav>
+							</div>
 						)}
 					</div>
 					<nav className={styles.navbar__desktop}>
