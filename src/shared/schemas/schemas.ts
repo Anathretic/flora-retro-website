@@ -23,6 +23,7 @@ export const contactSchema = (isSubpage: boolean) => {
 			.max(2500, 'Nie więcej niż 500 słów..')
 			.required(errorMessage.requiredField),
 		date: isSubpage ? yup.string().required(errorMessage.requiredField) : yup.string().notRequired(),
+		privacyPolicy: yup.boolean().oneOf([true], 'Musisz wyrazić zgodę na politykę prywatności'),
 	});
 };
 
@@ -37,4 +38,5 @@ export const rentalSchema = yup.object({
 	email: yup.string().email('Wprowadź poprawny e-mail!').required(errorMessage.requiredField),
 	phone: yup.string().phone('PL', 'Podaj prawidłowy numer!').required(errorMessage.requiredField),
 	date: yup.string().required(errorMessage.requiredField),
+	privacyPolicy: yup.boolean().oneOf([true], 'Musisz wyrazić zgodę na politykę prywatności'),
 });

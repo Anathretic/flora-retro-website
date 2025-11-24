@@ -28,6 +28,10 @@ export interface InputAndTextareaModel extends InputDefaultModel {
 	readOnly?: boolean;
 }
 
+export interface CheckboxModel extends DefaultModel, React.InputHTMLAttributes<HTMLInputElement> {
+	inputName: string;
+}
+
 export interface SubmitModel {
 	buttonText: string;
 	isLoading: boolean;

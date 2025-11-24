@@ -24,6 +24,39 @@
 
 	&__box {
 		padding: 1em;
+
+		&--checkbox {
+			width: 100%;
+
+			div {
+				display: flex;
+				justify-content: space-between;
+				align-items: start;
+				flex-direction: row;
+				width: 100%;
+			}
+
+			input[type='checkbox'] {
+				width: 18px;
+				height: 18px;
+			}
+
+			label {
+				padding: 0 0.75em 0 0;
+				font-size: 0.75em;
+				line-height: 1.6em;
+
+				a {
+					color: inherit;
+					text-underline-offset: 2px;
+					transition: color 0.3s;
+				}
+			}
+
+			&-error {
+				color: var(--error-color);
+			}
+		}
 	}
 
 	&__box-special-text {
@@ -163,6 +196,7 @@
 
 @media screen and (min-width: 400px) {
 	.form {
+		&__box--checkbox div,
 		&__input,
 		&__textarea,
 		&__label {
@@ -181,6 +215,20 @@
 
 @media screen and (min-width: 1024px) {
 	.form {
+		&__box {
+			&--checkbox {
+				label {
+					a:hover {
+						color: var(--dark-brown-color);
+					}
+
+					a:active {
+						opacity: 0.65;
+					}
+				}
+			}
+		}
+
 		&__label,
 		&__submit,
 		&__return-btn {
