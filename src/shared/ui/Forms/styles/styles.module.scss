@@ -227,6 +227,12 @@
 					}
 				}
 			}
+
+			&--checkbox-error {
+				a:hover {
+					color: var(--error-color) !important;
+				}
+			}
 		}
 
 		&__label,
