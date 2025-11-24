@@ -9,6 +9,7 @@ import { useFormSubmits } from './hooks/useFormSubmits';
 import { contactSchema } from '@/shared/schemas/schemas';
 import { ContactFormComponentModel, ContactFormModel } from './models/contactForm.model';
 import {
+	CheckboxElement,
 	FormSubmit,
 	InputElement,
 	ReCaptchaV2Component,
@@ -37,6 +38,7 @@ export default function ContactForm({ subject }: ContactFormComponentModel) {
 			phone: '',
 			message: '',
 			date: '',
+			privacyPolicy: false,
 		},
 		resolver: yupResolver(contactSchema(isSubpage) as yup.ObjectSchema<ContactFormModel>),
 	});
@@ -92,6 +94,12 @@ export default function ContactForm({ subject }: ContactFormComponentModel) {
 				{...register('message')}
 			/>
 			<ReCaptchaV2Component refCaptcha={refCaptcha} reCaptchaErrorValue={reCaptchaErrorValue} />
+			<CheckboxElement
+				label='Wyrażam zgodę na przetwarzanie moich danych zgodnie z obowiązującą '
+				inputName='privacyPolicy'
+				{...register('privacyPolicy')}
+				errorMessage={errors.privacyPolicy?.message}
+			/>
 			<FormSubmit buttonText={buttonText} setButtonText={setButtonText} isLoading={isLoading} />
 			{isSubpage && <ReturnButton isLoading={isLoading} href='/' />}
 		</form>

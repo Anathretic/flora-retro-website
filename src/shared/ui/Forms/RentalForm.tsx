@@ -9,7 +9,16 @@ import { useFormSubmits } from './hooks/useFormSubmits';
 import { useRentItems } from '@/shared/hooks/useRentItems';
 import { rentalSchema } from '@/shared/schemas/schemas';
 import { RentalFormComponentModel, RentalFormModel } from './models/contactForm.model';
-import { FormSubmit, InputElement, ReCaptchaV2Component, ReturnButton, RulesInfo } from './components/FormElements';
+import {
+	CheckboxElement,
+	FormSubmit,
+	InputElement,
+	ReCaptchaV2Component,
+	ReturnButton,
+	RulesInfo,
+} from './components/FormElements';
+
+import * as yup from 'yup';
 
 import styles from './styles/styles.module.scss';
 
@@ -28,8 +37,9 @@ export default function RentalForm({ subject, setShowPopup, setShowFinishMessage
 			email: '',
 			phone: '',
 			date: '',
+			privacyPolicy: false,
 		},
-		resolver: yupResolver(rentalSchema),
+		resolver: yupResolver(rentalSchema as yup.ObjectSchema<RentalFormModel>),
 	});
 
 	const refCaptcha = useRef<ReCAPTCHA>(null);
@@ -72,6 +82,12 @@ export default function RentalForm({ subject, setShowPopup, setShowFinishMessage
 				/>
 			))}
 			<ReCaptchaV2Component refCaptcha={refCaptcha} reCaptchaErrorValue={reCaptchaErrorValue} />
+			<CheckboxElement
+				label='Wyrażam zgodę na przetwarzanie moich danych zgodnie z obowiązującą '
+				inputName='privacyPolicy'
+				{...register('privacyPolicy')}
+				errorMessage={errors.privacyPolicy?.message}
+			/>
 			<FormSubmit buttonText={buttonText} setButtonText={setButtonText} isLoading={isLoading} />
 			<ReturnButton isLoading={isLoading} setShowPopup={setShowPopup} />
 			<RulesInfo />

@@ -4,7 +4,13 @@ import { useMediaQuery } from 'react-responsive';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { FormLoader } from './FormLoader';
 import { scrollToTop } from '@/shared/utils/scrollToTopUtils';
-import { InputAndTextareaModel, ReCaptchaV2Model, ReturnButtonModel, SubmitModel } from '../models/components.model';
+import {
+	CheckboxModel,
+	InputAndTextareaModel,
+	ReCaptchaV2Model,
+	ReturnButtonModel,
+	SubmitModel,
+} from '../models/components.model';
 
 import styles from '../styles/styles.module.scss';
 
@@ -57,6 +63,25 @@ export const TextareaElement: React.FC<InputAndTextareaModel> = React.forwardRef
 });
 
 TextareaElement.displayName = 'TextareaElement';
+
+export const CheckboxElement: React.FC<CheckboxModel> = React.forwardRef<HTMLInputElement, CheckboxModel>(
+	({ label, inputName, errorMessage, ...props }, ref) => {
+		return (
+			<div className={`${styles.form__box} ${styles['form__box--checkbox']}`}>
+				<div>
+					<label
+						className={`${styles.form__label} ${errorMessage && styles['form__box--checkbox-error']}`}
+						htmlFor={inputName}>
+						{label} <Link href='/polityka-prywatnosci'>polityką prywatności.</Link>
+					</label>
+					<input className={styles.form__input} type='checkbox' id={inputName} ref={ref} {...props} />
+				</div>
+			</div>
+		);
+	}
+);
+
+CheckboxElement.displayName = 'CheckboxElement';
 
 export const ReCaptchaV2Component: React.FC<ReCaptchaV2Model> = ({ refCaptcha, reCaptchaErrorValue }) => {
 	const isMobile = useMediaQuery({ query: '(max-width: 499px)' });

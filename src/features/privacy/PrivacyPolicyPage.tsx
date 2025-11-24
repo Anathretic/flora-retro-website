@@ -72,6 +72,10 @@ export default function PrivacyPolicyPage() {
 									Formularz wypożyczalni – dane zbierane są w celu realizacji wypożyczenia, na takich samych zasadach
 									przetwarzania danych jak w formularzach kontaktowych
 								</li>
+								<li>
+									Dane techniczne – w szczególności adres IP, dane przeglądarki, dane zbierane automatycznie przez pliki
+									cookies oraz mechanizmy Google reCAPTCHA służące ochronie formularzy przed botami.
+								</li>
 							</ul>
 						</div>
 						<div className={styles['terms-and-conditions__box']}>
@@ -79,6 +83,10 @@ export default function PrivacyPolicyPage() {
 							<p>Dane osobowe zbierane przez Firmę są przetwarzane w następujących celach:</p>
 							<ul>
 								<li>Realizacja zapytań użytkownika poprzez formularz kontaktowy</li>
+								<li>Realizacja wypożyczeń oraz przygotowanie wycen i ofert</li>
+								<li>Odpowiedzi na przesłane wiadomości i utrzymanie korespondencji</li>
+								<li>Zapewnienie prawidłowego działania strony internetowej</li>
+								<li>Ochrona formularzy przed nieautoryzowanym użyciem (Google reCAPTCHA)</li>
 							</ul>
 						</div>
 						<div className={styles['terms-and-conditions__box']}>
@@ -86,14 +94,19 @@ export default function PrivacyPolicyPage() {
 							<p>Dane osobowe przetwarzane są na podstawie:</p>
 							<ul>
 								<li>
-									Art. 6 ust. 1 lit. a RODO – zgoda osoby, której dane dotyczą (np. zgoda na kontakt w formularzach)
+									Art. 6 ust. 1 lit. a RODO – zgoda osoby, której dane dotyczą (np. zgoda na kontakt w formularzu).
 								</li>
-								<li>Art. 6 ust. 1 lit. b RODO – przetwarzanie niezbędne do wykonania umowy</li>
+								<li>
+									Art. 6 ust. 1 lit. b RODO – przetwarzanie niezbędne do wykonania umowy lub przygotowania oferty.
+								</li>
 								<li>
 									Art. 6 ust. 1 lit. f RODO – uzasadniony interes administratora danych, jakim jest zapewnienie
-									prawidłowego funkcjonowania strony internetowej
+									prawidłowego działania strony internetowej i ochrona formularzy.
 								</li>
-								<li>Google LLC (w zakresie ochrony formularzy przez Google reCAPTCHA v2)</li>
+								<li>
+									Usługi Google LLC (w szczególności Google reCAPTCHA v2), które mogą przetwarzać dane użytkownika
+									zgodnie z własną polityką prywatności.
+								</li>
 							</ul>
 						</div>
 						<div className={styles['terms-and-conditions__box']}>
@@ -108,10 +121,15 @@ export default function PrivacyPolicyPage() {
 							<p>Twoje dane osobowe mogą być przekazywane następującym podmiotom:</p>
 							<ul className={styles['terms-and-conditions__cookie-box-ul']}>
 								<li>
-									Firmom świadczącym usługi IT, w tym hostingowe, na rzecz Firmy, które pomagają w utrzymaniu strony
-									internetowej
+									Firmom świadczącym usługi IT, w tym hostingowe, które zapewniają prawidłowe działanie strony
+									internetowej.
 								</li>
-								<li>Podmiotom upoważnionym do uzyskania danych na podstawie przepisów prawa</li>
+								<li>
+									MongoDB Inc. – dostawcy usługi przechowywania danych MongoDB Atlas, na podstawie umowy powierzenia
+									danych.
+								</li>
+								<li>Google LLC – w zakresie działania usługi Google reCAPTCHA oraz innych usług technicznych.</li>
+								<li>Podmiotom upoważnionym do uzyskania danych na podstawie przepisów prawa.</li>
 							</ul>
 						</div>
 						<div className={styles['terms-and-conditions__box']}>
@@ -129,15 +147,32 @@ export default function PrivacyPolicyPage() {
 									cloud.google.com/security/products/recaptcha
 								</a>
 							</p>
+							<p>
+								W związku z korzystaniem z Google reCAPTCHA niektóre dane mogą być przekazywane poza Europejski Obszar
+								Gospodarczy (np. do USA) zgodnie z mechanizmami zgodności z RODO, takimi jak standardowe klauzule umowne
+								lub EU–US Data Privacy Framework.
+							</p>
 						</div>
 						<div className={styles['terms-and-conditions__box']}>
-							<h2>9. Twoje prawa</h2>
+							<h2>9. Pliki cookies</h2>
+							<p>
+								Strona korzysta z plików cookies niezbędnych do jej prawidłowego funkcjonowania, w szczególności plików
+								cookies związanych z usługą Google reCAPTCHA. Pliki te mogą zapisywać dane techniczne, takie jak adres
+								IP czy informacje o przeglądarce.
+							</p>
+							<p>
+								Cookies na tej stronie nie są wykorzystywane do celów marketingowych ani do tworzenia profili
+								użytkowników.
+							</p>
+						</div>
+						<div className={styles['terms-and-conditions__box']}>
+							<h2>10. Twoje prawa</h2>
 							<p>Zgodnie z przepisami RODO, przysługuje Ci szereg praw dotyczących Twoich danych osobowych, w tym:</p>
 							<ul className='terms-and-conditions__special-ul'>
 								<li>Prawo dostępu do swoich danych</li>
-								<li>Prawo do sprostowania swoich danych</li>
+								<li>Prawo do sprostowania danych</li>
 								<li>Prawo do usunięcia danych (tzw. prawo do bycia zapomnianym)</li>
-								<li>Prawo do ograniczenia przetwarzania danych</li>
+								<li>Prawo do ograniczenia przetwarzania</li>
 								<li>Prawo do przenoszenia danych</li>
 								<li>Prawo do sprzeciwu wobec przetwarzania danych</li>
 							</ul>
@@ -147,15 +182,15 @@ export default function PrivacyPolicyPage() {
 							</p>
 						</div>
 						<div className={styles['terms-and-conditions__box']}>
-							<h2>10. Bezpieczeństwo danych</h2>
+							<h2>11. Bezpieczeństwo danych</h2>
 							<p>
 								Dokładam wszelkich starań, aby chronić Twoje dane osobowe przed dostępem osób nieupoważnionych, ich
-								utratą, zniszczeniem lub uszkodzeniem. Stosuję odpowiednie środki techniczne i organizacyjne w celu
-								zapewnienia bezpieczeństwa przetwarzanych danych.
+								utratą, zniszczeniem lub uszkodzeniem. Stosuję odpowiednie środki techniczne i organizacyjne, w tym
+								szyfrowanie połączeń oraz bezpieczne przechowywanie danych na serwerach MongoDB Atlas.
 							</p>
 						</div>
 						<div className={styles['terms-and-conditions__box']}>
-							<h2>11. Zmiany w Polityce Prywatności</h2>
+							<h2>12. Zmiany w Polityce Prywatności</h2>
 							<p>
 								Niniejsza polityka prywatności może ulec zmianie. W przypadku istotnych zmian w sposobie przetwarzania
 								Twoich danych osobowych, poinformuję Cię o tym poprzez zamieszczenie odpowiedniej informacji na mojej

@@ -6,6 +6,7 @@ type DefaultFormModel = {
 	message: string;
 	phone: string;
 	date: string;
+	privacyPolicy: boolean;
 };
 
 export type ContactFormComponentModel = {
@@ -18,6 +19,9 @@ export type RentalFormComponentModel = {
 	setShowFinishMessage: Dispatch<SetStateAction<boolean>>;
 };
 
-export type ContactFormModel = Pick<DefaultFormModel, 'firstname' | 'email' | 'phone' | 'message' | 'date'>;
+export type ContactFormModel = Pick<
+	DefaultFormModel,
+	'firstname' | 'email' | 'phone' | 'message' | 'date' | 'privacyPolicy'
+>;
 
-export type RentalFormModel = Pick<DefaultFormModel, 'firstname' | 'email' | 'phone' | 'date'>;
+export type RentalFormModel = Pick<DefaultFormModel, 'firstname' | 'email' | 'phone' | 'date' | 'privacyPolicy'>;

@@ -14,11 +14,18 @@ export function useFormSubmits<T extends FormTypes>({
 	handleRentItems,
 	setShowFinishMessage,
 }: UseFormSubmitsModel<T>) {
-	const contactSubmit: SubmitHandler<ContactFormModel> = async ({ firstname, email, phone, date, message }) => {
+	const contactSubmit: SubmitHandler<ContactFormModel> = async ({
+		firstname,
+		email,
+		phone,
+		date,
+		message,
+		privacyPolicy,
+	}) => {
 		setIsLoading(true);
 		setReCaptchaErrorValue('');
 
-		if (!refCaptcha) return;
+		if (!refCaptcha || !privacyPolicy) return;
 
 		const token = refCaptcha.current?.getValue();
 		refCaptcha.current?.reset();
@@ -60,11 +67,11 @@ export function useFormSubmits<T extends FormTypes>({
 		}
 	};
 
-	const rentalSubmit: SubmitHandler<RentalFormModel> = async ({ firstname, email, phone, date }) => {
+	const rentalSubmit: SubmitHandler<RentalFormModel> = async ({ firstname, email, phone, date, privacyPolicy }) => {
 		setIsLoading(true);
 		setReCaptchaErrorValue('');
 
-		if (!refCaptcha || !cart || !handleRentItems || !setShowFinishMessage) return;
+		if (!refCaptcha || !cart || !handleRentItems || !setShowFinishMessage || !privacyPolicy) return;
 
 		const token = refCaptcha.current?.getValue();
 		refCaptcha.current?.reset();
