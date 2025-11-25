@@ -67,11 +67,12 @@ TextareaElement.displayName = 'TextareaElement';
 export const CheckboxElement: React.FC<CheckboxModel> = React.forwardRef<HTMLInputElement, CheckboxModel>(
 	({ label, inputName, errorMessage, ...props }, ref) => {
 		return (
-			<div className={`${styles.form__box} ${styles['form__box--checkbox']}`}>
+			<div
+				className={`${styles.form__box} ${styles['form__box--checkbox']} ${
+					errorMessage && styles['form__box--checkbox-error']
+				}`}>
 				<div>
-					<label
-						className={`${styles.form__label} ${errorMessage && styles['form__box--checkbox-error']}`}
-						htmlFor={inputName}>
+					<label className={`${styles.form__label}`} htmlFor={inputName}>
 						{label} <Link href='/polityka-prywatnosci'>polityką prywatności.</Link>
 					</label>
 					<input className={styles.form__input} type='checkbox' id={inputName} ref={ref} {...props} />
