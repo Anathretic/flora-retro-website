@@ -43,18 +43,26 @@
 
 			label {
 				padding: 0 0.75em 0 0;
+				color: var(--black-color);
 				font-size: 0.75em;
 				line-height: 1.6em;
+				transition: color 0.3s;
 
 				a {
-					color: inherit;
+					color: var(--black-color);
 					text-underline-offset: 2px;
 					transition: color 0.3s;
 				}
 			}
+		}
 
-			&-error {
+		&--checkbox-error {
+			label {
 				color: var(--error-color);
+
+				a {
+					color: var(--error-color);
+				}
 			}
 		}
 	}
