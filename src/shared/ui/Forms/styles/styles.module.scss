@@ -237,8 +237,10 @@
 			}
 
 			&--checkbox-error {
-				a:hover {
-					color: var(--error-color) !important;
+				label {
+					a:hover {
+						color: var(--error-color);
+					}
 				}
 			}
 		}
