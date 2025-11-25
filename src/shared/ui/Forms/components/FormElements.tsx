@@ -72,7 +72,7 @@ export const CheckboxElement: React.FC<CheckboxModel> = React.forwardRef<HTMLInp
 					errorMessage && styles['form__box--checkbox-error']
 				}`}>
 				<div>
-					<label className={`${styles.form__label}`} htmlFor={inputName}>
+					<label className={styles.form__label} htmlFor={inputName}>
 						{label} <Link href='/polityka-prywatnosci'>polityką prywatności.</Link>
 					</label>
 					<input className={styles.form__input} type='checkbox' id={inputName} ref={ref} {...props} />
