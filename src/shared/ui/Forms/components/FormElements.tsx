@@ -22,7 +22,7 @@ export const InputElement: React.FC<InputAndTextareaModel> = React.forwardRef<HT
 					{label}
 				</label>
 				<input
-					className={styles.form__input}
+					className={`${styles.form__input} ${type === 'date' && styles['form__input--date']}`}
 					type={type}
 					id={inputName}
 					placeholder={placeholder}
